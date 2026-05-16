@@ -1,0 +1,239 @@
+
+services:
+  # ============================================
+  # PostgreSQL - Usuarios
+  # ============================================
+  postgres_users:
+    image: postgres:16-alpine
+    container_name: postgres_users
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER_USUARIOS}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD_USUARIOS}
+      POSTGRES_DB: encordados_users
+    volumes:
+      - postgres_users_data:/var/lib/postgresql/data
+    networks:
+      - encordados_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER_USUARIOS}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================
+  # PostgreSQL - Materials
+  # ============================================
+  postgres_materials:
+    image: postgres:16-alpine
+    container_name: postgres_materials
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER_MATERIALS}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD_MATERIALS}
+      POSTGRES_DB: encordados_materials
+    volumes:
+      - postgres_materials_data:/var/lib/postgresql/data
+    networks:
+      - encordados_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER_MATERIALS}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================
+  # MongoDB - Pedidos
+  # ============================================
+  mongo_pedidos:
+    image: mongo:7
+    container_name: mongo_pedidos
+    environment:
+      MONGO_USER: ${MONGO_USER_PEDIDOS}
+      MONGO_PASSWORD: ${MONGO_PASSWORD_PEDIDOS}
+      MONGO_DATABASE: pedidos_db
+      MONGO_INITDB_DATABASE: admin
+      REPLICA_SET_NAME: rs0
+    entrypoint: ["/bin/bash", "/scripts/mongo-entrypoint.sh"]
+    volumes:
+      - mongo_pedidos_data:/data/db
+      - ./mongo/mongo-entrypoint.sh:/scripts/mongo-entrypoint.sh:ro
+    networks:
+      - encordados_network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "rs.isMaster().ismaster"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+
+  # ============================================
+  # MongoDB - Talleres
+  # ============================================
+  mongo_talleres:
+    image: mongo:7
+    container_name: mongo_talleres
+    environment:
+      MONGO_USER: ${MONGO_USER_TALLERES}
+      MONGO_PASSWORD: ${MONGO_PASSWORD_TALLERES}
+      MONGO_DATABASE: talleres_db
+      MONGO_INITDB_DATABASE: admin
+      REPLICA_SET_NAME: rs0
+    entrypoint: ["/bin/bash", "/scripts/mongo-entrypoint.sh"]
+    volumes:
+      - mongo_talleres_data:/data/db
+      - ./mongo/mongo-entrypoint.sh:/scripts/mongo-entrypoint.sh:ro
+    networks:
+      - encordados_network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "rs.isMaster().ismaster"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+
+  # ============================================
+  # Redis - Cache
+  # ============================================
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    command: redis-server --requirepass ${REDIS_PASSWORD}
+    volumes:
+      - redis_data:/data
+    networks:
+      - encordados_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================
+  # Backend - .NET API
+  # ============================================
+  backend:
+    build:
+      context: ./back-encordados
+      dockerfile: Dockerfile
+    container_name: backend_encordados
+    depends_on:
+      postgres_users:
+        condition: service_healthy
+      postgres_materials:
+        condition: service_healthy
+      mongo_pedidos:
+        condition: service_healthy
+      mongo_talleres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      # Application Settings
+      AllowedHosts: "*"
+      Development: false
+      ASPNETCORE_ENVIRONMENT: Production
+      # Database URLs
+      DATABASE_URL_USER: ${DATABASE_URL_USER}
+      DATABASE_URL_MATERIALS: ${DATABASE_URL_MATERIALS}
+      MONGODB_URI_PEDIDOS: ${MONGODB_URI_PEDIDOS}
+      MONGODB_URI_TALLERES: ${MONGODB_URI_TALLERES}
+      
+      # Redis Cache
+      redis__url: ${REDIS_CACHE_URL}
+      
+      # JWT Authentication
+      Jwt__Key: ${JWT_KEY}
+      Jwt__Issuer: ${JWT_ISSUER}
+      Jwt__Audience: ${JWT_AUDIENCE}
+      Jwt__ExpireMinutes: "60"
+      
+      # SMTP Email Configuration
+      Smtp__Host: ${SMTP_HOST}
+      Smtp__Port: "${SMTP_PORT}"
+      Smtp__Username: ${SMTP_USERNAME}
+      Smtp__Password: ${SMTP_PASSWORD}
+      Smtp__FromEmail: ${SMTP_FROMEMAIL}
+      Smtp__FromName: ${SMTP_FROMNAME}
+      Smtp__AdminEmail: ${SMTP_ADMINEMAIL}
+      
+      # Storage Configuration
+      Storage__UploadPath: "./uploads"
+      Storage__MaxFileSize: "10MB"
+      Storage__AllowedExtensions: ".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx"
+      Storage__AllowedContentTypes: "image/jpeg,image/png,image/gif,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      
+      # Application Configuration
+      App__FrontendUrl: ${App__FrontendUrl}
+      App__ServerUrl: ${App__ServerUrl}
+      App__PasswordResetExpiryMinutes: ${App__PasswordResetExpiryMinutes}
+      App__EmailOtpExpiryMinutes: ${App__EmailOtpExpiryMinutes}
+      
+      # Server Configuration
+      Server__Url: ${SERVER_URL}
+      
+      # CORS Configuration
+      Cors__AllowedOrigins__0: ${Cors__AllowedOrigins__0}
+      Cors__AllowedOrigins__1: ${Cors__AllowedOrigins__1}
+      Cors__AllowedOrigins__2: ${Cors__AllowedOrigins__2}
+      
+      # Cloudinary Configuration
+      Cloudinary__CloudName: ${Cloudinary_CloudName}
+      Cloudinary__ApiKey: ${Cloudinary_ApiKey}
+      Cloudinary__ApiSecret: ${Cloudinary_ApiSecret}
+      
+      # ASP.NET Core Configuration
+      ASPNETCORE_URLS: http://+:80
+    networks:
+      - encordados_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # ============================================
+  # Frontend - Angular
+  # ============================================
+  frontend:
+    build:
+      context: ./front-encordados
+      dockerfile: Dockerfile
+    container_name: frontend_encordados
+    networks:
+      - encordados_network
+    depends_on:
+      - backend
+
+  # ============================================
+  # Nginx - Reverse Proxy
+  # ============================================
+  nginx:
+    image: nginx:alpine
+    container_name: nginx_encordados
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    networks:
+      - encordados_network
+    depends_on:
+      - backend
+      - frontend
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  encordados_network:
+    driver: bridge
+
+volumes:
+  postgres_users_data:
+  postgres_materials_data:
+  mongo_pedidos_data:
+  mongo_talleres_data:
+  redis_data:
