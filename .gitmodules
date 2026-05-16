@@ -2,3 +2,7 @@
 	path = back-encordados
 	url = https://github.com/Aragorn7372/back-encordados.git
 	branch = dev
+[submodule "front-encordados"]
+	path = front-encordados
+	url = https://github.com/JorgeMrj/front-encordados.git
+	branch = dev
