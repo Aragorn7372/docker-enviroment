@@ -180,6 +180,12 @@ services:
       Cloudinary__ApiKey: ${Cloudinary_ApiKey}
       Cloudinary__ApiSecret: ${Cloudinary_ApiSecret}
       
+      # WhatsApp Configuration
+      App__WhatsAppEnabled: ${WhatsAppEnabled}
+      App__WhatsAppPhoneNumberId: ${WhatsAppPhoneNumberId}
+      App__WhatsAppAccessToken: ${WhatsAppAccessToken}
+      App__WhatsAppApiVersion: ${WhatsAppApiVersion}
+      
       # ASP.NET Core Configuration
       ASPNETCORE_URLS: http://+:80
     networks:
