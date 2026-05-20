@@ -204,6 +204,9 @@ services:
     build:
       context: ./front-encordados
       dockerfile: Dockerfile
+      args:
+        PRODUCTION: ${PRODUCTION}
+        API_URL: ${API_URL}
     container_name: frontend_encordados
     networks:
       - encordados_network
