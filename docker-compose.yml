@@ -235,6 +235,20 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
+      
+  # ============================================
+  # Backend - Coverage Report (Web)
+  # ============================================
+  backend_coverage:
+    build:
+      context: ./back-encordados
+      dockerfile: Dockerfile
+      target: coverageweb 
+      args:
+        - RUN_TESTS=true 
+    container_name: backend_coverage
+    networks:
+      - encordados_network
 
 networks:
   encordados_network:
