@@ -102,8 +102,11 @@ jobs:
   test-back:
     needs: build-back
     runs-on: ubuntu-latest
-
     steps:
+      - name: Install Spanish locale
+        run: |
+          sudo locale-gen es_ES.UTF-8
+          sudo update-locale LANG=es_ES.UTF-8 LC_ALL=es_ES.UTF-8
       - name: Checkout monorepo (with submodules)
         uses: actions/checkout@v4
         with:
