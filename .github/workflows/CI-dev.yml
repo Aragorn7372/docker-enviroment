@@ -58,7 +58,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: front-encordados
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Build Angular (production)
         working-directory: front-encordados
