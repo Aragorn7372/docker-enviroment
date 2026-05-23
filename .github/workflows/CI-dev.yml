@@ -2,6 +2,9 @@ name: CI – Dev Build & Test
 
 # Se activa cuando cualquiera de los dos submódulos hace push a dev
 on:
+  push:
+    branches:
+      - dev
   repository_dispatch:
     types: [submodule_updated]
 
@@ -39,6 +42,12 @@ jobs:
         
       - name: Checkout front-encordados submodule
         run: git clone https://x-access-token:${{ secrets.FRONTEND_REPO_PAT }}@github.com/JorgeMrj/front-encordados.git front-encordados
+     
+      - name: Debug directory
+        run: |
+           pwd
+           ls -la
+           ls -la back-encordados/
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -70,6 +79,12 @@ jobs:
         
       - name: Checkout back-encordados submodule
         run: git clone https://x-access-token:${{ secrets.BACKEND_REPO_PAT }}@github.com/Aragorn7372/back-encordados.git back-encordados
+      
+      - name: Debug directory
+        run: |
+           pwd
+           ls -la
+           ls -la back-encordados/
 
       - name: Setup .NET 10
         uses: actions/setup-dotnet@v4
