@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.9081384755542059" branch-rate="0.753607103218646" lines-covered="5981" lines-valid="6586" branches-covered="1358" branches-valid="1802" complexity="2312" version="0" timestamp="1779543218">
+<coverage line-rate="0.9081384755542059" branch-rate="0.753607103218646" lines-covered="5981" lines-valid="6586" branches-covered="1358" branches-valid="1802" complexity="2312" version="0" timestamp="1779543425">
   <sources>
     <source>/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/</source>
   </sources>
