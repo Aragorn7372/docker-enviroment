@@ -102,6 +102,9 @@ jobs:
   test-back:
     needs: build-back
     runs-on: ubuntu-latest
+    env:
+      LANG: es_ES.UTF-8
+      LC_ALL: es_ES.UTF-8
     steps:
       - name: Install Spanish locale
         run: |
