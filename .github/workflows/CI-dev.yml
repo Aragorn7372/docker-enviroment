@@ -2,6 +2,9 @@ name: CI – Dev Build & Test
 
 # Se activa cuando cualquiera de los dos submódulos hace push a dev
 on:
+  push:
+    branches:
+      - dev
   repository_dispatch:
     types: [submodule_updated]
 
