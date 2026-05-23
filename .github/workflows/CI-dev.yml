@@ -34,6 +34,7 @@ jobs:
       - name: Checkout monorepo (with submodules)
         uses: actions/checkout@v4
         with:
+          ref: dev
           submodules: false
         
       - name: Checkout front-encordados submodule
@@ -64,6 +65,7 @@ jobs:
       - name: Checkout monorepo (with submodules)
         uses: actions/checkout@v4
         with:
+          ref: dev
           submodules: false
         
       - name: Checkout back-encordados submodule
@@ -90,6 +92,7 @@ jobs:
       - name: Checkout monorepo (with submodules)
         uses: actions/checkout@v4
         with:
+          ref: dev
           submodules: false
         
       - name: Checkout back-encordados submodule
