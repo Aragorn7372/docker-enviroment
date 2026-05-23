@@ -41,7 +41,7 @@ jobs:
           submodules: false
         
       - name: Checkout front-encordados submodule
-        run: git clone https://x-access-token:${{ secrets.FRONTEND_REPO_PAT }}@github.com/JorgeMrj/front-encordados.git front-encordados
+        run: git clone --branch dev https://x-access-token:${{ secrets.FRONTEND_REPO_PAT }}@github.com/JorgeMrj/front-encordados.git front-encordados
      
       - name: Debug directory
         run: |
@@ -78,7 +78,7 @@ jobs:
           submodules: false
         
       - name: Checkout back-encordados submodule
-        run: git clone https://x-access-token:${{ secrets.BACKEND_REPO_PAT }}@github.com/Aragorn7372/back-encordados.git back-encordados
+        run: git clone --branch dev https://x-access-token:${{ secrets.BACKEND_REPO_PAT }}@github.com/Aragorn7372/back-encordados.git back-encordados
       
       - name: Debug directory
         run: |
@@ -111,7 +111,7 @@ jobs:
           submodules: false
         
       - name: Checkout back-encordados submodule
-        run: git clone https://x-access-token:${{ secrets.BACKEND_REPO_PAT }}@github.com/Aragorn7372/back-encordados.git back-encordados
+        run: git clone --branch dev https://x-access-token:${{ secrets.BACKEND_REPO_PAT }}@github.com/Aragorn7372/back-encordados.git back-encordados
 
       - name: Setup .NET 10
         uses: actions/setup-dotnet@v4
