@@ -163,6 +163,57 @@ jobs:
             name: coverage-report
             path: generated/coverage
 
+      - name: Publish API for Bruno tests
+        working-directory: back-encordados
+        run: dotnet publish BackEncordados.slnx --no-restore -c Release -o ./publish
+
+      - name: Start API in background for Bruno tests
+        working-directory: back-encordados
+        run: |
+          nohup dotnet ./publish/BackEncordados.dll > ./api.log 2>&1 &
+          echo "PID=$!"
+        env:
+          ASPNETCORE_ENVIRONMENT: "Development"
+          ASPNETCORE_URLS: "http://localhost:5032"
+          Development: "true"
+          App__WhatsAppEnabled: "false"
+          JWT_KEY: ${{ secrets.JWT_KEY_CI }}
+          Cloudinary__CloudName: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          Cloudinary__ApiKey: ${{ secrets.CLOUDINARY_API_KEY }}
+          Cloudinary__ApiSecret: ${{ secrets.CLOUDINARY_API_SECRET }}
+
+      - name: Wait for API ready
+        working-directory: back-encordados
+        run: |
+          echo "Waiting for API to be ready..."
+          for i in $(seq 1 30); do
+            status=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:5032/health 2>/dev/null)
+            if [ "$status" = "200" ]; then
+              echo "API is ready!"
+              exit 0
+            fi
+            echo "Attempt $i: status=$status, waiting 2s..."
+            sleep 2
+          done
+          echo "API failed to start within 60s"
+          cat api.log
+          exit 1
+
+      - name: Setup Node.js for Bruno CLI
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Bruno CLI
+        run: npm install -g @usebruno/cli
+
+      - name: Run Bruno API tests
+        working-directory: back-encordados/EncordadosBruno
+        run: bru run --env local --reporter-html bruno-report.html --insecure --verbose
+
+      - name: Copy Bruno report to generated/
+        run: cp back-encordados/EncordadosBruno/bruno-report.html generated/bruno-report.html
+
       - name: Deploy to dev-test branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
