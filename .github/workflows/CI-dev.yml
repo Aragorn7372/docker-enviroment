@@ -210,9 +210,83 @@ jobs:
         run: |
            sleep 3
            curl -s http://localhost:5032/health > /dev/null || true
+      - name: Generate environment with JWT tokens
+        working-directory: back-encordados/EncordadosBruno
+        run: |
+          OWNER_RESP=$(curl -s -X POST http://localhost:5032/api/Auth/signin \
+            -H "Content-Type: application/json" \
+            -d '{"Username":"owner_principal","Password":"owner123"}')
+          TOKEN_OWNER=$(echo "$OWNER_RESP" | jq -r '.token')
+          USER_ID_OWNER=$(echo "$OWNER_RESP" | jq -r '.user.id // "01KS0Q28TE2EFVQTCW8EN0W0MF"')
+
+          ADMIN_RESP=$(curl -s -X POST http://localhost:5032/api/Auth/signin \
+            -H "Content-Type: application/json" \
+            -d '{"Username":"admin_encordados","Password":"admin123"}')
+          TOKEN_ADMIN=$(echo "$ADMIN_RESP" | jq -r '.token')
+
+          ENCORDER_RESP=$(curl -s -X POST http://localhost:5032/api/Auth/signin \
+            -H "Content-Type: application/json" \
+            -d '{"Username":"carlos_encordador","Password":"encorder123"}')
+          TOKEN_ENCODER=$(echo "$ENCORDER_RESP" | jq -r '.token')
+          USER_ID_CARLOS=$(echo "$ENCORDER_RESP" | jq -r '.user.id // ""')
+
+          USER_RESP=$(curl -s -X POST http://localhost:5032/api/Auth/signin \
+            -H "Content-Type: application/json" \
+            -d '{"Username":"jugador_juan","Password":"user123"}')
+          TOKEN_JUAN=$(echo "$USER_RESP" | jq -r '.token')
+          USER_ID_JUAN=$(echo "$USER_RESP" | jq -r '.user.id // ""')
+
+          SUP_RESP=$(curl -s -X POST http://localhost:5032/api/Auth/signin \
+            -H "Content-Type: application/json" \
+            -d '{"Username":"supervisor_luis","Password":"supervisor123"}')
+          TOKEN_SUPERVISOR=$(echo "$SUP_RESP" | jq -r '.token')
+          USER_ID_LUIS=$(echo "$SUP_RESP" | jq -r '.user.id // ""')
+
+          cat > environments/ci.yml << EOF
+          name: ci
+          variables:
+            - name: api-url
+              value: http://localhost:5032
+            - name: token
+              value: "$TOKEN_JUAN"
+            - name: token_owner
+              value: "$TOKEN_OWNER"
+            - name: token_admin
+              value: "$TOKEN_ADMIN"
+            - name: token_encoder
+              value: "$TOKEN_ENCODER"
+            - name: token_encorder_carlos
+              value: "$TOKEN_ENCODER"
+            - name: token_juan
+              value: "$TOKEN_JUAN"
+            - name: token_supervisor
+              value: "$TOKEN_SUPERVISOR"
+            - name: token_luis_supervisor
+              value: "$TOKEN_SUPERVISOR"
+            - name: test_player_token
+              value: "$TOKEN_JUAN"
+            - name: test_player_name
+              value: "jugador_juan"
+            - name: user_id_owner
+              value: "$USER_ID_OWNER"
+            - name: user_id_admin
+              value: ""
+            - name: user_id_juan
+              value: "$USER_ID_JUAN"
+            - name: user_id_carlos
+              value: "$USER_ID_CARLOS"
+            - name: user_id_luis
+              value: "$USER_ID_LUIS"
+            - name: supervisor_id_luis
+              value: "01KR424NQJKTASKDL3M5NP7GHS"
+            - name: supervisor_id_pablo
+              value: "01KR424NQJKUBMAEM4N6OQ8JIT"
+            - name: tournamentId
+              value: "01KS0Q28TEJ0SYA6JJ5H4W4CMP"
+          EOF
       - name: Run Bruno API tests
         working-directory: back-encordados/EncordadosBruno
-        run: bru run --env local --reporter-html bruno-report.html --insecure --verbose
+        run: bru run --env ci --reporter-html bruno-report.html --insecure --verbose
 
       - name: Copy Bruno report to generated/
         run: cp back-encordados/EncordadosBruno/bruno-report.html generated/bruno-report.html
