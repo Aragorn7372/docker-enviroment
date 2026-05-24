@@ -177,7 +177,7 @@ jobs:
           ASPNETCORE_URLS: "http://localhost:5032"
           Development: "true"
           App__WhatsAppEnabled: "false"
-          JWT_KEY: ${{ secrets.JWT_KEY_CI }}
+          JWT__KEY: ${{ secrets.JWT_KEY_CI }}
           Cloudinary__CloudName: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
           Cloudinary__ApiKey: ${{ secrets.CLOUDINARY_API_KEY }}
           Cloudinary__ApiSecret: ${{ secrets.CLOUDINARY_API_SECRET }}
