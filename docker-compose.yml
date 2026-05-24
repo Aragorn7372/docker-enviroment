@@ -162,16 +162,16 @@ services:
       Storage__AllowedContentTypes: "image/jpeg,image/png,image/gif,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
       
       # Application Configuration
-      App__FrontendUrl: ${App__FrontendUrl}
-      App__ServerUrl: ${App__ServerUrl}
-      App__PasswordResetExpiryMinutes: ${App__PasswordResetExpiryMinutes}
-      App__EmailOtpExpiryMinutes: ${App__EmailOtpExpiryMinutes}
       
       # Server Configuration
       Server__Url: ${SERVER_URL}
       
       # CORS Configuration
-      Cors__AllowedOrigins__0: ${Cors__AllowedOrigins__0}
+      Cors__App__FrontendUrl: ${App__FrontendUrl}
+      App__ServerUrl: ${App__ServerUrl}
+      App__PasswordResetExpiryMinutes: ${App__PasswordResetExpiryMinutes}
+      App__EmailOtpExpiryMinutes: ${App__EmailOtpExpiryMinutes}
+      AllowedOrigins__0: ${Cors__AllowedOrigins__0}
       Cors__AllowedOrigins__1: ${Cors__AllowedOrigins__1}
       Cors__AllowedOrigins__2: ${Cors__AllowedOrigins__2}
       
