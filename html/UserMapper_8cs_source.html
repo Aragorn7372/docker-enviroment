@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Usuarios/Mapper/UserMapper.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('UserMapper_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UserMapper.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="UserMapper_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html">BackEncordados.Usuarios.Dto</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Usuarios_1_1Mapper.html">    5</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Mapper.html">BackEncordados.Usuarios.Mapper</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>UserMapper</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">UserResponseDto</a> ToDto(<span class="keyword">this</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a> user, <a class="code hl_interface" href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html">ICloudinaryService</a> cloudinary)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">UserResponseDto</a>(</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            user.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a61d2355b7f92923174618f57fb8f04f0">Username</a>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            cloudinary.<a class="code hl_function" href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html#a4378431d4a1237be4c9643e6b936c769">ResolveImageUrl</a>(user.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a1ff4eee3ced1fa62b2ad3e42e7165fa7">ImageUrl</a>, CloudinaryConstants.FOLDER_USUARIOS),</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            user.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a75991eb16dbabf1736d113bad37b8eef">Name</a>,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            user.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#aeb99c5e413794b236fad1b8895825194">Bonos</a></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            );</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a58afc8b24eedd10a753a89e40aabd21b">UserWithIdDto</a> ToDtoWithId(<span class="keyword">this</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a> user, <a class="code hl_interface" href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html">ICloudinaryService</a> cloudinary)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a58afc8b24eedd10a753a89e40aabd21b">UserWithIdDto</a>(</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            user.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a2d167b78ab9337442d10aa5e65bc1cd8">Id</a>.ToString(),</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            user.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a61d2355b7f92923174618f57fb8f04f0">Username</a>,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            cloudinary.<a class="code hl_function" href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html#a4378431d4a1237be4c9643e6b936c769">ResolveImageUrl</a>(user.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a1ff4eee3ced1fa62b2ad3e42e7165fa7">ImageUrl</a>, CloudinaryConstants.FOLDER_USUARIOS),</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            user.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a75991eb16dbabf1736d113bad37b8eef">Name</a>,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            user.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a9824f0d1b6e1f8ec58ff68b6a32ce247">Email</a>,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            user.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a657e922bf2905fabbb4e69244ff9fd5d">Role</a>,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            user.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#ae1fda01475b760b37e739c4a064bb273">TournamentId</a>?.ToString()</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            );</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a> ToModel(<span class="keyword">this</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ContactoPostRequestDto.html">ContactoPostRequestDto</a> request) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a> {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            Name = request.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ContactoPostRequestDto.html#a76038a4d0df60755dd30fe306666cb76">Name</a>,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            Email = request.Email ?? Guid.NewGuid().ToString(),</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            Phone = request.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ContactoPostRequestDto.html#a6e56c9b806e1c108b0fb37baaa196e12">Phone</a>,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            Username = Ulid.NewUlid().ToString(),</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            TournamentId = request.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ContactoPostRequestDto.html#a3addcea51fd66d5f5c7ae09c5c094944">TournamentId</a>,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            PasswordHash = BCrypt.Net.BCrypt.HashPassword(Guid.NewGuid().ToString(), workFactor: 11),</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        };</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+</div>
+<div class="ttc" id="aPurchasedController_8cs_html_a2cca664a5a4cb21c8352e11d88fa47ef"><div class="ttname"><a href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a></div><div class="ttdeci">BackEncordados.Usuarios.Model.User.UserRoles Role</div><div class="ttdef"><b>Definition</b> <a href="PurchasedController_8cs_source.html#l00014">PurchasedController.cs:14</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Dto_1_1ContactoPostRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ContactoPostRequestDto.html">BackEncordados.Usuarios.Dto.ContactoPostRequestDto</a></div><div class="ttdoc">DTO de solicitud para crear un contacto asociado a un torneo.</div><div class="ttdef"><b>Definition</b> <a href="ContactoPostRequestDto_8cs_source.html#l00013">ContactoPostRequestDto.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Dto_1_1ContactoPostRequestDto_html_a3addcea51fd66d5f5c7ae09c5c094944"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ContactoPostRequestDto.html#a3addcea51fd66d5f5c7ae09c5c094944">BackEncordados.Usuarios.Dto.ContactoPostRequestDto.TournamentId</a></div><div class="ttdeci">Ulid TournamentId</div><div class="ttdoc">Identificador ULID del torneo al que se asocia este contacto.</div><div class="ttdef"><b>Definition</b> <a href="ContactoPostRequestDto_8cs_source.html#l00025">ContactoPostRequestDto.cs:25</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Dto_1_1ContactoPostRequestDto_html_a6e56c9b806e1c108b0fb37baaa196e12"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ContactoPostRequestDto.html#a6e56c9b806e1c108b0fb37baaa196e12">BackEncordados.Usuarios.Dto.ContactoPostRequestDto.Phone</a></div><div class="ttdeci">string? Phone</div><div class="ttdoc">Teléfono del contacto. Opcional si se proporciona Email.</div><div class="ttdef"><b>Definition</b> <a href="ContactoPostRequestDto_8cs_source.html#l00022">ContactoPostRequestDto.cs:22</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Dto_1_1ContactoPostRequestDto_html_a76038a4d0df60755dd30fe306666cb76"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ContactoPostRequestDto.html#a76038a4d0df60755dd30fe306666cb76">BackEncordados.Usuarios.Dto.ContactoPostRequestDto.Name</a></div><div class="ttdeci">string Name</div><div class="ttdoc">Nombre completo del contacto. Entre 3 y 200 caracteres.</div><div class="ttdef"><b>Definition</b> <a href="ContactoPostRequestDto_8cs_source.html#l00018">ContactoPostRequestDto.cs:18</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">BackEncordados.Usuarios.Model.User.UserRoles</a></div><div class="ttdoc">Constantes para los roles de usuario.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00049">User.cs:50</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a54373adaa756848426e2a7469dedffd7"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">BackEncordados.Usuarios.Model.User.UserRoles.USER</a></div><div class="ttdeci">const string USER</div><div class="ttdoc">Rol de usuario estándar con permisos básicos.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00055">User.cs:55</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">BackEncordados.Usuarios.Model.User</a></div><div class="ttdoc">Entidad de dominio que representa un usuario. Autenticación con email/password hasheado con BCrypt....</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00011">User.cs:12</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a1ff4eee3ced1fa62b2ad3e42e7165fa7"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a1ff4eee3ced1fa62b2ad3e42e7165fa7">BackEncordados.Usuarios.Model.User.ImageUrl</a></div><div class="ttdeci">string ImageUrl</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00032">User.cs:32</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a2d167b78ab9337442d10aa5e65bc1cd8"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a2d167b78ab9337442d10aa5e65bc1cd8">BackEncordados.Usuarios.Model.User.Id</a></div><div class="ttdeci">Ulid Id</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00013">User.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a61d2355b7f92923174618f57fb8f04f0"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a61d2355b7f92923174618f57fb8f04f0">BackEncordados.Usuarios.Model.User.Username</a></div><div class="ttdeci">string Username</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00015">User.cs:15</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a657e922bf2905fabbb4e69244ff9fd5d"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a657e922bf2905fabbb4e69244ff9fd5d">BackEncordados.Usuarios.Model.User.Role</a></div><div class="ttdeci">string Role</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00025">User.cs:25</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a75991eb16dbabf1736d113bad37b8eef"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a75991eb16dbabf1736d113bad37b8eef">BackEncordados.Usuarios.Model.User.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00017">User.cs:17</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a9824f0d1b6e1f8ec58ff68b6a32ce247"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a9824f0d1b6e1f8ec58ff68b6a32ce247">BackEncordados.Usuarios.Model.User.Email</a></div><div class="ttdeci">string Email</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00019">User.cs:19</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_ae1fda01475b760b37e739c4a064bb273"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#ae1fda01475b760b37e739c4a064bb273">BackEncordados.Usuarios.Model.User.TournamentId</a></div><div class="ttdeci">Ulid? TournamentId</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00027">User.cs:27</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_aeb99c5e413794b236fad1b8895825194"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#aeb99c5e413794b236fad1b8895825194">BackEncordados.Usuarios.Model.User.Bonos</a></div><div class="ttdeci">double Bonos</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00036">User.cs:36</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html">BackEncordados.Common.Service.Cloudinary.ICloudinaryService</a></div><div class="ttdoc">Define el contrato para el servicio de gestión de imágenes en Cloudinary.</div><div class="ttdef"><b>Definition</b> <a href="ICloudinaryService_8cs_source.html#l00049">ICloudinaryService.cs:50</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService_html_a4378431d4a1237be4c9643e6b936c769"><div class="ttname"><a href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html#a4378431d4a1237be4c9643e6b936c769">BackEncordados.Common.Service.Cloudinary.ICloudinaryService.ResolveImageUrl</a></div><div class="ttdeci">string ResolveImageUrl(string storedValue, string folder)</div><div class="ttdoc">Resuelve el valor almacenado en base de datos a una URL completa de imagen.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a></div><div class="ttdef"><b>Definition</b> <a href="CloudinaryConstants_8cs_source.html#l00001">CloudinaryConstants.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html">BackEncordados.Usuarios.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ChangePasswordRequestDto_8cs_source.html#l00003">ChangePasswordRequestDto.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Dto_html_a58afc8b24eedd10a753a89e40aabd21b"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a58afc8b24eedd10a753a89e40aabd21b">BackEncordados.Usuarios.Dto.UserWithIdDto</a></div><div class="ttdeci">record UserWithIdDto(string UserId, string Username, string ImageUrl, string Name, string Email, string Role, string? TournamentId)</div><div class="ttdoc">DTO de respuesta que incluye el identificador del usuario junto con sus datos básicos.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Dto_html_a8eb3609d4002341b1cea9fdb4f7b221a"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">BackEncordados.Usuarios.Dto.UserResponseDto</a></div><div class="ttdeci">record UserResponseDto(string Username, string ImageUrl, string Name, double Bonos)</div><div class="ttdoc">DTO de respuesta con la información mínima de un usuario para vistas públicas o listados.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Mapper_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Mapper.html">BackEncordados.Usuarios.Mapper</a></div><div class="ttdef"><b>Definition</b> <a href="UserMapper_8cs_source.html#l00005">UserMapper.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a></div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00005">User.cs:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_fd3792cbbf285840670a23aad598bd09.html">Usuarios</a></li><li class="navelem"><a class="el" href="dir_2bba622483b5738586b7b44c853ff66a.html">Mapper</a></li><li class="navelem"><a class="el" href="UserMapper_8cs.html">UserMapper.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

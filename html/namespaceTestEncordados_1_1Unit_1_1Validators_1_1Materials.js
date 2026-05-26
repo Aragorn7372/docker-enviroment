@@ -1,0 +1,6 @@
+var namespaceTestEncordados_1_1Unit_1_1Validators_1_1Materials =
+[
+    [ "CuerdaRequestValidatorTests", "classTestEncordados_1_1Unit_1_1Validators_1_1Materials_1_1CuerdaRequestValidatorTests.html", "classTestEncordados_1_1Unit_1_1Validators_1_1Materials_1_1CuerdaRequestValidatorTests" ],
+    [ "MaterialPatchValidatorTests", "classTestEncordados_1_1Unit_1_1Validators_1_1Materials_1_1MaterialPatchValidatorTests.html", "classTestEncordados_1_1Unit_1_1Validators_1_1Materials_1_1MaterialPatchValidatorTests" ],
+    [ "MaterialRequestValidatorTests", "classTestEncordados_1_1Unit_1_1Validators_1_1Materials_1_1MaterialRequestValidatorTests.html", "classTestEncordados_1_1Unit_1_1Validators_1_1Materials_1_1MaterialRequestValidatorTests" ]
+];

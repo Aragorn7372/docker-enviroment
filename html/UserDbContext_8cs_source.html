@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Common/Database/Config/UserDbContext.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('UserDbContext_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UserDbContext.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="UserDbContext_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Helpers.html">BackEncordados.Common.Database.Helpers</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Microsoft.EntityFrameworkCore;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html">BackEncordados.Common.Database.Config</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a874b9c7897e5684ed9363273862c07ae">   32</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a874b9c7897e5684ed9363273862c07ae">UserDbContext</a>(DbContextOptions&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a874b9c7897e5684ed9363273862c07ae">UserDbContext</a>&gt; options) : DbContext(options)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ConfigureConventions(ModelConfigurationBuilder configurationBuilder)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnModelCreating(ModelBuilder modelBuilder)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        base.OnModelCreating(modelBuilder);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        SeedData(modelBuilder);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        modelBuilder.Entity&lt;<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>&gt;(entity =&gt;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            entity.ToTable(<span class="stringliteral">&quot;users&quot;</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            entity.HasKey(e =&gt; e.Id);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            entity.Property(e =&gt; e.Id).HasConversion&lt;<a class="code hl_class" href="classBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1UlidToStringConverterNonNullable.html">UlidToStringConverterNonNullable</a>&gt;().HasValueGenerator&lt;UlidValueGenerator&gt;();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            entity.Property(e =&gt; e.Username).IsRequired().HasMaxLength(50).IsUnicode(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            entity.Property(e =&gt; e.Email).IsRequired().HasMaxLength(100).IsUnicode(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            entity.Property(u =&gt; u.PasswordHash).IsRequired();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            entity.Property(u =&gt; u.Role).IsRequired().HasMaxLength(20);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            entity.Property(u =&gt; u.Phone).HasMaxLength(20);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            entity.Property(u =&gt; u.ImageUrl).IsRequired().HasMaxLength(500);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            entity.Property(u =&gt; u.CloudinaryPublicId).HasMaxLength(300);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            entity.Property(u =&gt; u.IsDeleted).HasDefaultValue(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            entity.Property(u =&gt; u.Bonos).HasDefaultValue(0);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            entity.Property(u =&gt; u.Version).IsConcurrencyToken();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            entity.ConfigureTimestamps();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            entity.HasIndex(e =&gt; e.Email).IsUnique().HasDatabaseName(<span class="stringliteral">&quot;IX_users_email_unique&quot;</span>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            entity.HasIndex(e =&gt; e.Username).IsUnique().HasDatabaseName(<span class="stringliteral">&quot;IX_users_username_unique&quot;</span>);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            entity.HasQueryFilter(u =&gt; !u.IsDeleted);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            entity.Property(u =&gt; u.TournamentId).HasConversion&lt;<a class="code hl_class" href="classBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1UlidToStringConverter.html">UlidToStringConverter</a>&gt;().IsRequired(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        });</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">public</span> DbSet&lt;User&gt; Users { <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">null</span>!;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> SeedData(ModelBuilder modelBuilder)</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="comment">// Generar hashes de contraseñas para los datos de prueba</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        var adminPasswordHash = BCrypt.Net.BCrypt.HashPassword(<span class="stringliteral">&quot;admin123&quot;</span>, workFactor: 11);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        var userPasswordHash = BCrypt.Net.BCrypt.HashPassword(<span class="stringliteral">&quot;user123&quot;</span>, workFactor: 11);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        var encorderPasswordHash = BCrypt.Net.BCrypt.HashPassword(<span class="stringliteral">&quot;encorder123&quot;</span>, workFactor: 11);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        var ownerPasswordHash = BCrypt.Net.BCrypt.HashPassword(<span class="stringliteral">&quot;owner123&quot;</span>, workFactor: 11);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        var supervisorPasswordHash = BCrypt.Net.BCrypt.HashPassword(<span class="stringliteral">&quot;supervisor123&quot;</span>, workFactor: 11);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        var juan = Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TD6SAPN0GN0XKRPK5D&quot;</span>);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        var ana = Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TE3RJTW6W35NJRMTZ4&quot;</span>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        var pedro = Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TED4PWJPT7DMJ46WBN&quot;</span>);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        var carlos = Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TE7CMWS2D8RVDFA7YJ&quot;</span>);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        var maria = Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TE6CVB0NYYANTWEK7B&quot;</span>);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        var admin= Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TESE956013XYJKP6ST&quot;</span>);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        var owner= Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TE2EFVQTCW8EN0W0MF&quot;</span>);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        var supervisor1 = Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TEHA2KF5YM3J6QS5Z9&quot;</span>);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        var supervisor2 = Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TEXTDY9TQNRAXKAJ81&quot;</span>);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        var t1 = Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TEJ0SYA6JJ5H4W4CMP&quot;</span>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        var t2 = Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TE9N7TG55K98TCB4X0&quot;</span>);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        var user = Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TE5BA449NS2EVCBTDQ&quot;</span>);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        var users = <span class="keyword">new</span> List&lt;User&gt;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <span class="comment">// Usuario ADMIN</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <span class="keyword">new</span>() {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                Id = admin,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                Username = <span class="stringliteral">&quot;admin_encordados&quot;</span>,</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                Name = <span class="stringliteral">&quot;Administrador&quot;</span>,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                Email = <span class="stringliteral">&quot;admin@encordados.com&quot;</span>,</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                Phone = <span class="stringliteral">&quot;912345678&quot;</span>,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                PasswordHash = adminPasswordHash,</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">ADMIN</a>,</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                IsDeleted = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                CreatedAt = DateTime.UtcNow.AddMonths(-6),</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-6),</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                TournamentId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            },</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <span class="comment">// Usuario OWNER</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            <span class="keyword">new</span>() {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                Id = owner,</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                Username = <span class="stringliteral">&quot;owner_principal&quot;</span>,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                Name = <span class="stringliteral">&quot;Propietario&quot;</span>,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                Email = <span class="stringliteral">&quot;owner@encordados.com&quot;</span>,</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                Phone = <span class="stringliteral">&quot;923456789&quot;</span>,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                PasswordHash = ownerPasswordHash,</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">OWNER</a>,</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                IsDeleted = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                CreatedAt = DateTime.UtcNow.AddMonths(-5),</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-5),</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                TournamentId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            },</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>              </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            <span class="comment">// Usuario ENCORDER 1</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            <span class="keyword">new</span>() {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                Id = carlos,</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                Username = <span class="stringliteral">&quot;carlos_encordador&quot;</span>,</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                Name = <span class="stringliteral">&quot;Carlos García&quot;</span>,</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                Email = <span class="stringliteral">&quot;carlos@encordados.com&quot;</span>,</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                Phone = <span class="stringliteral">&quot;934567890&quot;</span>,</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                PasswordHash = encorderPasswordHash,</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">ENCORDER</a>,</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                IsDeleted = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                CreatedAt = DateTime.UtcNow.AddMonths(-4),</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-4),</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                TournamentId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            },</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <span class="comment">// Usuario ENCORDER 2</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="keyword">new</span>() {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                Id = maria,</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                Username = <span class="stringliteral">&quot;maria_encordadora&quot;</span>,</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                Name = <span class="stringliteral">&quot;María López&quot;</span>,</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                Email = <span class="stringliteral">&quot;maria@encordados.com&quot;</span>,</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                Phone = <span class="stringliteral">&quot;945678901&quot;</span>,</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                PasswordHash = encorderPasswordHash,</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">ENCORDER</a>,</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                IsDeleted = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                CreatedAt = DateTime.UtcNow.AddMonths(-3),</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-3),</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                TournamentId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            },</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            <span class="comment">// Usuario JUGADOR 1</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            <span class="keyword">new</span>() {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                Id = juan,</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                Username = <span class="stringliteral">&quot;jugador_juan&quot;</span>,</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                Name = <span class="stringliteral">&quot;Juan Martínez&quot;</span>,</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                Email = <span class="stringliteral">&quot;juan@tenis.com&quot;</span>,</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                Phone = <span class="stringliteral">&quot;956789012&quot;</span>,</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                PasswordHash = userPasswordHash,</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a>,</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                IsDeleted = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                CreatedAt = DateTime.UtcNow.AddMonths(-2),</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-2),</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                TournamentId = t1,</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                Bonos = 100.0,</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            },</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            <span class="comment">// Usuario JUGADOR 2</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            <span class="keyword">new</span>() {</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                Id = ana,</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                Username = <span class="stringliteral">&quot;jugador_ana&quot;</span>,</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                Name = <span class="stringliteral">&quot;Ana Pérez&quot;</span>,</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                Email = <span class="stringliteral">&quot;ana@tenis.com&quot;</span>,</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                Phone = <span class="stringliteral">&quot;967890123&quot;</span>,</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                PasswordHash = userPasswordHash,</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a>,</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                IsDeleted = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                CreatedAt = DateTime.UtcNow.AddMonths(-1),</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-1),</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                TournamentId = t1,</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                Bonos = 25.0,</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            },</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            <span class="comment">// Usuario JUGADOR 3</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            <span class="keyword">new</span>() {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                Id = pedro,</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                Username = <span class="stringliteral">&quot;jugador_pedro&quot;</span>,</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                Name = <span class="stringliteral">&quot;Pedro Rodríguez&quot;</span>,</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                Email = <span class="stringliteral">&quot;pedro@tenis.com&quot;</span>,</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                Phone = <span class="stringliteral">&quot;978901234&quot;</span>,</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                PasswordHash = userPasswordHash,</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a>,</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                IsDeleted = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                CreatedAt = DateTime.UtcNow,</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                UpdatedAt = DateTime.UtcNow,</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                TournamentId = t2,</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                Bonos = 0,</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            },</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            <span class="comment">// Usuario SUPERVISOR 1</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            <span class="keyword">new</span>() {</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                Id = supervisor1,</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                    Username = <span class="stringliteral">&quot;supervisor_luis&quot;</span>,</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                Name = <span class="stringliteral">&quot;Luis Fernández&quot;</span>,</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                Email = <span class="stringliteral">&quot;luis@encordados.com&quot;</span>,</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                Phone = <span class="stringliteral">&quot;989012345&quot;</span>,</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                PasswordHash = supervisorPasswordHash,</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a082ca66e612ccc70d8e002ec2d79dcac">SUPERVISOR</a>,</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                IsDeleted = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                CreatedAt = DateTime.UtcNow.AddMonths(-3),</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-3),</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                TournamentId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            },</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            <span class="comment">// Usuario SUPERVISOR 2</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            <span class="keyword">new</span>() {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                Id = supervisor2,</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                Username = <span class="stringliteral">&quot;supervisor_pablo&quot;</span>,</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                Name = <span class="stringliteral">&quot;Pablo Sánchez&quot;</span>,</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                Email = <span class="stringliteral">&quot;pablo@encordados.com&quot;</span>,</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                Phone = <span class="stringliteral">&quot;990123456&quot;</span>,</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                PasswordHash = supervisorPasswordHash,</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a082ca66e612ccc70d8e002ec2d79dcac">SUPERVISOR</a>,</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                IsDeleted = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                CreatedAt = DateTime.UtcNow.AddMonths(-2),</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-2),</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                TournamentId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            },</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>            <span class="keyword">new</span>() {</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                Id = user,</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                Username = <span class="stringliteral">&quot;user&quot;</span>,</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                Name = <span class="stringliteral">&quot;User&quot;</span>,</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                Email = <span class="stringliteral">&quot;user@example.com&quot;</span>,</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                Phone = <span class="stringliteral">&quot;999999000&quot;</span>,</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                PasswordHash = userPasswordHash,</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a>,</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                IsDeleted = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                CreatedAt = DateTime.UtcNow,</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                UpdatedAt = DateTime.UtcNow,</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                TournamentId = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>            }</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        };</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        modelBuilder.Entity&lt;<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>&gt;().HasData(users);</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    }</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>}</div>
+</div>
+<div class="ttc" id="aPurchasedController_8cs_html_a2cca664a5a4cb21c8352e11d88fa47ef"><div class="ttname"><a href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a></div><div class="ttdeci">BackEncordados.Usuarios.Model.User.UserRoles Role</div><div class="ttdef"><b>Definition</b> <a href="PurchasedController_8cs_source.html#l00014">PurchasedController.cs:14</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1UlidToStringConverterNonNullable_html"><div class="ttname"><a href="classBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1UlidToStringConverterNonNullable.html">BackEncordados.Common.Database.Helpers.UlidToStringConverterNonNullable</a></div><div class="ttdoc">ValueConverter de EF Core que convierte Ulid no-nullable a string no-nullable y viceversa....</div><div class="ttdef"><b>Definition</b> <a href="UlidToStringConverter_8cs_source.html#l00035">UlidToStringConverter.cs:36</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1UlidToStringConverter_html"><div class="ttname"><a href="classBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1UlidToStringConverter.html">BackEncordados.Common.Database.Helpers.UlidToStringConverter</a></div><div class="ttdoc">ValueConverter de EF Core que convierte Ulid nullable a string nullable y viceversa....</div><div class="ttdef"><b>Definition</b> <a href="UlidToStringConverter_8cs_source.html#l00014">UlidToStringConverter.cs:15</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">BackEncordados.Usuarios.Model.User.UserRoles</a></div><div class="ttdoc">Constantes para los roles de usuario.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00049">User.cs:50</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a082ca66e612ccc70d8e002ec2d79dcac"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a082ca66e612ccc70d8e002ec2d79dcac">BackEncordados.Usuarios.Model.User.UserRoles.SUPERVISOR</a></div><div class="ttdeci">const string SUPERVISOR</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00060">User.cs:60</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a54373adaa756848426e2a7469dedffd7"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">BackEncordados.Usuarios.Model.User.UserRoles.USER</a></div><div class="ttdeci">const string USER</div><div class="ttdoc">Rol de usuario estándar con permisos básicos.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00055">User.cs:55</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a6b308802168ec5c8cc62d74631698b6f"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">BackEncordados.Usuarios.Model.User.UserRoles.OWNER</a></div><div class="ttdeci">const string OWNER</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00057">User.cs:57</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a9a1dd51b12767c87dfafb4dd11fc1d8e"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">BackEncordados.Usuarios.Model.User.UserRoles.ENCORDER</a></div><div class="ttdeci">const string ENCORDER</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00059">User.cs:59</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_ad3cded80c57a57fac13e69200cfe1ea3"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">BackEncordados.Usuarios.Model.User.UserRoles.ADMIN</a></div><div class="ttdeci">const string ADMIN</div><div class="ttdoc">Rol de administrador con acceso total al sistema.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00052">User.cs:52</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">BackEncordados.Usuarios.Model.User</a></div><div class="ttdoc">Entidad de dominio que representa un usuario. Autenticación con email/password hasheado con BCrypt....</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00011">User.cs:12</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html">BackEncordados.Common.Database.Config</a></div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00005">MaterialsDbContext.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_a874b9c7897e5684ed9363273862c07ae"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a874b9c7897e5684ed9363273862c07ae">BackEncordados.Common.Database.Config.UserDbContext</a></div><div class="ttdeci">class UserDbContext(DbContextOptions&lt; UserDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión de usuarios del sistema. Administra la tabla users con autentica...</div><div class="ttdef"><b>Definition</b> <a href="UserDbContext_8cs_source.html#l00032">UserDbContext.cs:32</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Helpers_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Helpers.html">BackEncordados.Common.Database.Helpers</a></div><div class="ttdef"><b>Definition</b> <a href="ITimestamped_8cs_source.html#l00001">ITimestamped.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a></div><div class="ttdef"><b>Definition</b> <a href="CloudinaryConstants_8cs_source.html#l00001">CloudinaryConstants.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a></div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00005">User.cs:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_afba70cf93ee60e99301b0a379d3918b.html">Common</a></li><li class="navelem"><a class="el" href="dir_3a597ee37998100b154c75c1a58e724e.html">Database</a></li><li class="navelem"><a class="el" href="dir_29db0ba816201d8e632c76280be6d8ae.html">Config</a></li><li class="navelem"><a class="el" href="UserDbContext_8cs.html">UserDbContext.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

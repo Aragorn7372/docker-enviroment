@@ -1,0 +1,7 @@
+<map id="Gráfico de jerarquía de clases" name="Gráfico de jerarquía de clases">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,45,187,70"/>
+<area shape="rect" id="Node000001" href="$classBackEncordados_1_1Common_1_1Database_1_1Config_1_1VersionInterceptor.html" title="Interceptor de EF Core que incrementa automáticamente el token de concurrencia Version de las entidad..." alt="" coords="235,5,497,45"/>
+<area shape="poly" id="edge35_Node000000_Node000001" title=" " alt="" coords="200,42,234,38,235,44,201,48"/>
+<area shape="rect" id="Node000002" href="$classBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1TimestampInterceptor.html" title="Interceptor de EF Core que actualiza automáticamente los timestamps CreatedAt y UpdatedAt de todas la..." alt="" coords="235,69,497,109"/>
+<area shape="poly" id="edge36_Node000000_Node000002" title=" " alt="" coords="201,67,235,71,234,76,200,72"/>
+</map>

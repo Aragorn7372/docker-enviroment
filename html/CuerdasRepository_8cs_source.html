@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Materials/Repository/Strings/CuerdasRepository.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('CuerdasRepository_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CuerdasRepository.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="CuerdasRepository_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html">BackEncordados.Common.Database.Config</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html">BackEncordados.Materials.Dto.Strings</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Model.html">BackEncordados.Materials.Model</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Microsoft.EntityFrameworkCore;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Materials_1_1Repository_1_1Strings.html">    6</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Repository_1_1Strings.html">BackEncordados.Materials.Repository.Strings</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span> <span class="keyword">class </span>CuerdasRepository(ILogger&lt;CuerdasRepository&gt;logger, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a059e238e4bbb11feb9df70d8f0ed32df">MaterialsDbContext</a> context): <a class="code hl_interface" href="interfaceBackEncordados_1_1Materials_1_1Repository_1_1Strings_1_1ICuerdasRepository.html">ICuerdasRepository</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">public</span> async Task&lt;(IEnumerable&lt;Cuerdas&gt; Items, <span class="keywordtype">int</span> TotalCount)&gt; FindAllAsync(<a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html#a82d80fa03d70e58f43731a7068cc8251">CuerdaFilterdto</a> filter)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        logger.LogInformation(<span class="stringliteral">&quot;Buscando cuerdas con filtro: search={Marca}, Page={Page}, PageSize={PageSize}&quot;</span>, filter.Search,filter.Page,filter.Size);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        var query = context.Cuerdas.AsNoTracking().AsQueryable();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        query = query.Where(c=&gt;!c.IsDeleted);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">if</span> (filter.TournamentId != <span class="keyword">null</span>) </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            query = query.Where(c =&gt; c.TournamentId == filter.TournamentId);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(filter.Search))</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            query = query.Where(c =&gt;EF.Functions.Like(c.Marca,$<span class="stringliteral">&quot;%{filter.Search}%&quot;</span>)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            ||EF.Functions.Like(c.Modelo,$<span class="stringliteral">&quot;%{filter.Search}%&quot;</span>)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            || EF.Functions.Like(c.StringFormat.ToString(),$<span class="stringliteral">&quot;%{filter.Search}%&quot;</span>)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            || EF.Functions.Like(c.StringsType.ToString(),$<span class="stringliteral">&quot;%{filter.Search}%&quot;</span>)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            || EF.Functions.Like(c.Id.ToString(),$<span class="stringliteral">&quot;%{filter.Search}%&quot;</span>));</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        var totalCount = await query.CountAsync();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordtype">bool</span> isDesc= filter.Direction.ToLower() == <span class="stringliteral">&quot;desc&quot;</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        query = filter.SortBy.ToLower() <span class="keywordflow">switch</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="stringliteral">&quot;marca&quot;</span> =&gt; isDesc ? query.OrderByDescending(c =&gt; c.Marca) : query.OrderBy(c =&gt; c.Marca),</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="stringliteral">&quot;modelo&quot;</span> =&gt; isDesc ? query.OrderByDescending(c =&gt; c.Modelo) : query.OrderBy(c =&gt; c.Modelo),</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="stringliteral">&quot;stock&quot;</span> =&gt; isDesc ? query.OrderByDescending(c =&gt; c.Stock) : query.OrderBy(c =&gt; c.Stock),</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="stringliteral">&quot;precio&quot;</span> =&gt; isDesc ? query.OrderByDescending(c =&gt; c.Precio) : query.OrderBy(c =&gt; c.Precio),</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="stringliteral">&quot;calibre&quot;</span> =&gt; isDesc ? query.OrderByDescending(c =&gt; c.Calibre) : query.OrderBy(c =&gt; c.Calibre),</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="stringliteral">&quot;stringformat&quot;</span> =&gt; isDesc ? query.OrderByDescending(c =&gt; c.StringFormat) : query.OrderBy(c =&gt; c.StringFormat),</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="stringliteral">&quot;stringstype&quot;</span> =&gt; isDesc ? query.OrderByDescending(c =&gt; c.StringsType) : query.OrderBy(c =&gt; c.StringsType),</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            _ =&gt; isDesc ? query.OrderByDescending(c =&gt; c.Id) : query.OrderBy(c =&gt; c.Id)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        };</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        var items = await query.Skip(filter.Page * filter.Size).Take(filter.Size).ToListAsync();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> (Items: items, TotalCount: totalCount);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">public</span> async Task&lt;Cuerdas?&gt; FindByIdAsync(<span class="keywordtype">long</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        logger.LogInformation(<span class="stringliteral">&quot;Buscando cuerda con ID {Id}&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> await context.Cuerdas.AsNoTracking().FirstOrDefaultAsync(c =&gt; c.Id == <span class="keywordtype">id</span> &amp;&amp; !c.IsDeleted);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">public</span> async Task&lt;Cuerdas?&gt; FindByNameAsync(<span class="keywordtype">string</span> name)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        logger.LogInformation(<span class="stringliteral">&quot;Buscando cuerda con Name {Name} &quot;</span>, name);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">return</span> await context.Cuerdas.AsNoTracking().FirstOrDefaultAsync(c =&gt; (c.Marca == name || c.Modelo == name) &amp;&amp; !c.IsDeleted);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keyword">public</span> async Task&lt;Cuerdas?&gt; UpdateAsync(<a class="code hl_class" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html">Cuerdas</a> item, <span class="keywordtype">long</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        logger.LogInformation(<span class="stringliteral">&quot;actualizando cuerda con ID {Id}&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        var cuerda= await context.Cuerdas.FindAsync(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">if</span> (cuerda == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a3ba3b4a57b923d351296fe35e9beef79">Marca</a>)) cuerda.Marca = item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a3ba3b4a57b923d351296fe35e9beef79">Marca</a>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a6c0e733a891956616fab2553a591923d">Modelo</a>)) cuerda.Modelo = item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a6c0e733a891956616fab2553a591923d">Modelo</a>;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">if</span> (item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#aa573c913f82cef836353be71d0d6be45">Stock</a> &gt;= 0) cuerda.Stock = item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#aa573c913f82cef836353be71d0d6be45">Stock</a>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordflow">if</span> (item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a10090c4c766b0932cf00b5744d3a72f5">Precio</a> &gt;= 0) cuerda.Precio = item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a10090c4c766b0932cf00b5744d3a72f5">Precio</a>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordflow">if</span> (item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a045383ba4eb0eff5ab7f7b0a04766373">Calibre</a> &gt; 0) cuerda.Calibre = item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a045383ba4eb0eff5ab7f7b0a04766373">Calibre</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        cuerda.StringFormat = item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a5544f011956d4d2e62665bbec1e1722e">StringFormat</a>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        cuerda.StringsType = item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#ade215249cc5dff2c9b831f2b13a0bcee">StringsType</a>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a16ab4b41b5be580acc31f4f0536963e4">ImageUrl</a>)) cuerda.ImageUrl = item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a16ab4b41b5be580acc31f4f0536963e4">ImageUrl</a>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#acf7fb217da8c25ca2b5d7643bd9364c7">CloudinaryPublicId</a>)) cuerda.CloudinaryPublicId = item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#acf7fb217da8c25ca2b5d7643bd9364c7">CloudinaryPublicId</a>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        var cuerdaSaved=context.Cuerdas.Update(cuerda);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        await context.SaveChangesAsync();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">return</span> cuerdaSaved.Entity;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keyword">public</span> async Task&lt;bool&gt; DeleteAsync(<span class="keywordtype">long</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        logger.LogInformation(<span class="stringliteral">&quot;Eliminando cuerda con ID {Id}&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        var cuerda = await context.Cuerdas.FindAsync(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">if</span> (cuerda == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        cuerda.IsDeleted = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        context.Cuerdas.Update(cuerda);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        await context.SaveChangesAsync();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keyword">public</span> async Task&lt;Cuerdas&gt; CreateAsync(<a class="code hl_class" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html">Cuerdas</a> item)</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    {</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        logger.LogInformation(<span class="stringliteral">&quot;Creando nueva cuerda: {Marca} {Modelo}&quot;</span>, item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a3ba3b4a57b923d351296fe35e9beef79">Marca</a>, item.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a6c0e733a891956616fab2553a591923d">Modelo</a>);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        var saved=await context.Cuerdas.AddAsync(item);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        await context.SaveChangesAsync();</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordflow">return</span> saved.Entity;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>}</div>
+</div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html">BackEncordados.Materials.Model.Cuerdas</a></div><div class="ttdoc">Entidad que representa una cuerda de encordado en el inventario del sistema.</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00092">Cuerdas.cs:93</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_a045383ba4eb0eff5ab7f7b0a04766373"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a045383ba4eb0eff5ab7f7b0a04766373">BackEncordados.Materials.Model.Cuerdas.Calibre</a></div><div class="ttdeci">double Calibre</div><div class="ttdoc">Calibre o grosor de la cuerda en milímetros (ej: 1.25, 1.30).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00119">Cuerdas.cs:119</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_a10090c4c766b0932cf00b5744d3a72f5"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a10090c4c766b0932cf00b5744d3a72f5">BackEncordados.Materials.Model.Cuerdas.Precio</a></div><div class="ttdeci">double Precio</div><div class="ttdoc">Precio unitario (default -1 = no definido).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00110">Cuerdas.cs:110</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_a16ab4b41b5be580acc31f4f0536963e4"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a16ab4b41b5be580acc31f4f0536963e4">BackEncordados.Materials.Model.Cuerdas.ImageUrl</a></div><div class="ttdeci">string ImageUrl</div><div class="ttdoc">URL de la imagen de la cuerda (Cloudinary o imagen por defecto).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00131">Cuerdas.cs:131</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_a3ba3b4a57b923d351296fe35e9beef79"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a3ba3b4a57b923d351296fe35e9beef79">BackEncordados.Materials.Model.Cuerdas.Marca</a></div><div class="ttdeci">string Marca</div><div class="ttdoc">Marca de la cuerda (ej: &quot;Luxilon&quot;, &quot;Babolat&quot;, &quot;Wilson&quot;).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00101">Cuerdas.cs:101</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_a5544f011956d4d2e62665bbec1e1722e"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a5544f011956d4d2e62665bbec1e1722e">BackEncordados.Materials.Model.Cuerdas.StringFormat</a></div><div class="ttdeci">FormatoCuerda StringFormat</div><div class="ttdoc">Formato de venta: Reel (bobina) o Set (juego individual).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00113">Cuerdas.cs:113</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_a6c0e733a891956616fab2553a591923d"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a6c0e733a891956616fab2553a591923d">BackEncordados.Materials.Model.Cuerdas.Modelo</a></div><div class="ttdeci">string Modelo</div><div class="ttdoc">Modelo o nombre específico de la cuerda.</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00104">Cuerdas.cs:104</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_aa573c913f82cef836353be71d0d6be45"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#aa573c913f82cef836353be71d0d6be45">BackEncordados.Materials.Model.Cuerdas.Stock</a></div><div class="ttdeci">int Stock</div><div class="ttdoc">Cantidad disponible en inventario (default -1 = no medido).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00107">Cuerdas.cs:107</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_acf7fb217da8c25ca2b5d7643bd9364c7"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#acf7fb217da8c25ca2b5d7643bd9364c7">BackEncordados.Materials.Model.Cuerdas.CloudinaryPublicId</a></div><div class="ttdeci">string? CloudinaryPublicId</div><div class="ttdoc">ID público en Cloudinary para gestión de la imagen.</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00134">Cuerdas.cs:134</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_ade215249cc5dff2c9b831f2b13a0bcee"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#ade215249cc5dff2c9b831f2b13a0bcee">BackEncordados.Materials.Model.Cuerdas.StringsType</a></div><div class="ttdeci">StringsType StringsType</div><div class="ttdoc">Tipo de cuerda (Polyester, Multifilament, NaturalGut, SyntheticGut, Hybrid).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00116">Cuerdas.cs:116</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Materials_1_1Repository_1_1Strings_1_1ICuerdasRepository_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Materials_1_1Repository_1_1Strings_1_1ICuerdasRepository.html">BackEncordados.Materials.Repository.Strings.ICuerdasRepository</a></div><div class="ttdoc">Interfaz del repositorio específico para Cuerdas.</div><div class="ttdef"><b>Definition</b> <a href="ICuerdasRepository_8cs_source.html#l00018">ICuerdasRepository.cs:19</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html">BackEncordados.Common.Database.Config</a></div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00005">MaterialsDbContext.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_a059e238e4bbb11feb9df70d8f0ed32df"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a059e238e4bbb11feb9df70d8f0ed32df">BackEncordados.Common.Database.Config.MaterialsDbContext</a></div><div class="ttdeci">class MaterialsDbContext(DbContextOptions&lt; MaterialsDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión del catálogo de materiales e insumos de encordados....</div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00042">MaterialsDbContext.cs:42</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html">BackEncordados.Materials.Dto.Strings</a></div><div class="ttdef"><b>Definition</b> <a href="CuerdaFilterdto_8cs_source.html#l00001">CuerdaFilterdto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings_html_a82d80fa03d70e58f43731a7068cc8251"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html#a82d80fa03d70e58f43731a7068cc8251">BackEncordados.Materials.Dto.Strings.CuerdaFilterdto</a></div><div class="ttdeci">record CuerdaFilterdto(Ulid? TournamentId, string Search, int Page=0, int Size=10, string SortBy=&quot;name&quot;, string Direction=&quot;asc&quot;)</div><div class="ttdoc">DTO de filtro para la búsqueda paginada de cuerdas.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Model.html">BackEncordados.Materials.Model</a></div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00004">Cuerdas.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Repository_1_1Strings_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Repository_1_1Strings.html">BackEncordados.Materials.Repository.Strings</a></div><div class="ttdef"><b>Definition</b> <a href="CuerdasRepository_8cs_source.html#l00006">CuerdasRepository.cs:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_0048e789433b5fe1cb671302277b48d6.html">Materials</a></li><li class="navelem"><a class="el" href="dir_f08ebc526bae18aab3592cc25f193907.html">Repository</a></li><li class="navelem"><a class="el" href="dir_4ba91323af619400f2d903cf3810afa3.html">Strings</a></li><li class="navelem"><a class="el" href="CuerdasRepository_8cs.html">CuerdasRepository.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

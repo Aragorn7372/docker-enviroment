@@ -1,0 +1,13 @@
+<map id="BackEncordados.Common.Database.Helpers.ITimestamped" name="BackEncordados.Common.Database.Helpers.ITimestamped">
+<area shape="rect" id="Node000001" title="Interfaz que define las propiedades de timestamps para entidades que requieren auditoría temporal: Cr..." alt="" coords="5,133,268,173"/>
+<area shape="rect" id="Node000002" href="$classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html" title="Entidad que representa una cuerda de encordado en el inventario del sistema." alt="" coords="319,5,517,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,124,244,89,315,55,346,43,348,48,317,60,246,94,184,128"/>
+<area shape="rect" id="Node000003" href="$classBackEncordados_1_1Materials_1_1Model_1_1Material.html" title="Entidad que representa un material de encordado (grips, overgrips, amortiguadores,..." alt="" coords="319,69,517,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,128,329,107,330,112,239,133"/>
+<area shape="rect" id="Node000004" href="$classBackEncordados_1_1Purchased_1_1Model_1_1PedidoLinea.html" title="Entidad que representa una línea individual de pedido (una raqueta a encordar)." alt="" coords="316,133,520,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="282,151,316,151,316,156,282,156"/>
+<area shape="rect" id="Node000005" href="$classBackEncordados_1_1Purchased_1_1Model_1_1Pedidos.html" title="Entidad que representa un pedido de encordado agrupando una o más líneas (raquetas)." alt="" coords="316,197,520,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="239,174,330,195,329,200,238,179"/>
+<area shape="rect" id="Node000006" href="$classBackEncordados_1_1Usuarios_1_1Model_1_1User.html" title="Entidad de dominio que representa un usuario. Autenticación con email/password hasheado con BCrypt...." alt="" coords="321,261,515,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="184,178,246,213,317,247,348,259,346,264,315,252,244,218,182,183"/>
+</map>

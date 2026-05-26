@@ -1,0 +1,5 @@
+var namespaceTestEncordados_1_1Unit_1_1Validators_1_1Usuarios =
+[
+    [ "ChangeRoleRequestDtoValidatorTests", "classTestEncordados_1_1Unit_1_1Validators_1_1Usuarios_1_1ChangeRoleRequestDtoValidatorTests.html", "classTestEncordados_1_1Unit_1_1Validators_1_1Usuarios_1_1ChangeRoleRequestDtoValidatorTests" ],
+    [ "UserRequestDtoValidatorTests", "classTestEncordados_1_1Unit_1_1Validators_1_1Usuarios_1_1UserRequestDtoValidatorTests.html", "classTestEncordados_1_1Unit_1_1Validators_1_1Usuarios_1_1UserRequestDtoValidatorTests" ]
+];

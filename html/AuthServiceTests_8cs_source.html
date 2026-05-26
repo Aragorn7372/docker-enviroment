@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/TestEncordados/Unit/Services/AuthService/AuthServiceTests.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('AuthServiceTests_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AuthServiceTests.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="AuthServiceTests_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cache.html">BackEncordados.Common.Service.Cache</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Service_1_1Email.html">BackEncordados.Common.Service.Email</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Utils.html">BackEncordados.Common.Utils</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html">BackEncordados.Usuarios.Dto</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Errors.html">BackEncordados.Usuarios.Errors</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Repository.html">BackEncordados.Usuarios.Repository</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>FluentAssertions;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using </span>Microsoft.Extensions.Logging;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using </span>Moq;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="AuthServiceTests_8cs.html#a116d317a4e95ea210464a71d790cd933">   11</a></span><span class="keyword">using </span><a class="code hl_typedef" href="AuthServiceTests_8cs.html#a116d317a4e95ea210464a71d790cd933">AuthServiceType</a> = <a class="code hl_namespace" href="namespaceBackEncordados.html">BackEncordados</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios.html">Usuarios</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service.html">Service</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth.html">Auth</a>.AuthService;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="AuthServiceTests_8cs.html#a2240276a632fcd27d00dfda9235b80f8">   12</a></span><span class="keyword">using </span><a class="code hl_typedef" href="AuthServiceTests_8cs.html#a2240276a632fcd27d00dfda9235b80f8">IJwtServiceType</a> = <a class="code hl_namespace" href="namespaceBackEncordados.html">BackEncordados</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios.html">Usuarios</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service.html">Service</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth.html">Auth</a>.<a class="code hl_interface" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtService.html">IJwtService</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespaceTestEncordados_1_1Unit_1_1Services.html">   14</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceTestEncordados_1_1Unit_1_1Services_1_1AuthService.html">TestEncordados.Unit.Services.AuthService</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html">   16</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html">AuthServiceTests</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">private</span> readonly Mock&lt;IUserRepository&gt; _mockUserRepo;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">private</span> readonly Mock&lt;IJwtServiceType&gt; _mockJwtService;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">private</span> readonly Mock&lt;ILogger&lt;AuthServiceType&gt;&gt; _mockLogger;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">private</span> readonly Mock&lt;ICacheService&gt; _mockCache;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">private</span> readonly Mock&lt;IEmailService&gt; _mockEmailService;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">private</span> readonly <a class="code hl_typedef" href="AuthServiceTests_8cs.html#a116d317a4e95ea210464a71d790cd933">AuthServiceType</a> _service;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#ac6fa768590990a3e32551bc07dead2d3">   25</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#ac6fa768590990a3e32551bc07dead2d3">AuthServiceTests</a>()</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        _mockUserRepo = <span class="keyword">new</span> Mock&lt;IUserRepository&gt;();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        _mockJwtService = <span class="keyword">new</span> Mock&lt;IJwtServiceType&gt;();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        _mockLogger = <span class="keyword">new</span> Mock&lt;ILogger&lt;AuthServiceType&gt;&gt;();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        _mockCache = <span class="keyword">new</span> Mock&lt;ICacheService&gt;();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        _mockEmailService = <span class="keyword">new</span> Mock&lt;IEmailService&gt;();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        _service = <span class="keyword">new</span> <a class="code hl_typedef" href="AuthServiceTests_8cs.html#a116d317a4e95ea210464a71d790cd933">AuthServiceType</a>(</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            _mockUserRepo.Object,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            _mockJwtService.Object,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            _mockLogger.Object,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            _mockCache.Object,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            _mockEmailService.Object);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">private</span> <span class="keyword">static</span> <a class="code hl_property" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a642b21b162d23b553b90cd097e0a6024">RegisterDto</a> CreateRegisterDto(<span class="keywordtype">string</span> username = <span class="stringliteral">&quot;testuser&quot;</span>, <span class="keywordtype">string</span> email = <span class="stringliteral">&quot;test@example.com&quot;</span>, <span class="keywordtype">string</span> password = <span class="stringliteral">&quot;Password123!&quot;</span>) =&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">new</span>() { Username = username, Email = email, Password = password };</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">private</span> <span class="keyword">static</span> <a class="code hl_property" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a0108fa3b0511cdefd7d496d463f2af68">LoginDto</a> CreateLoginDto(<span class="keywordtype">string</span> username = <span class="stringliteral">&quot;testuser&quot;</span>, <span class="keywordtype">string</span> password = <span class="stringliteral">&quot;Password123!&quot;</span>) =&gt;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">new</span>() { Username = username, Password = password };</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">private</span> <span class="keyword">static</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a> CreateUser(</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        Ulid? <span class="keywordtype">id</span> = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">string</span> username = <span class="stringliteral">&quot;testuser&quot;</span>,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">string</span> email = <span class="stringliteral">&quot;test@example.com&quot;</span>,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">string</span> passwordHash = <span class="stringliteral">&quot;hashedpassword&quot;</span>,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">string</span> role = <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a>) =&gt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">new</span>()</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            Id = <span class="keywordtype">id</span> ?? Ulid.NewUlid(),</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            Username = username,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            Email = email,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            PasswordHash = passwordHash,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = role,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            IsDeleted = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            CreatedAt = DateTime.UtcNow</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        };</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    [Test]</div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a300f0db938e3e92e086c195424568b91">   65</a></span>    <span class="keyword">public</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a300f0db938e3e92e086c195424568b91">SignUpAsync_ValidDto_ReturnsSuccess</a>()</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        var dto = CreateRegisterDto();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        var user = CreateUser();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        _mockUserRepo.Setup(r =&gt; r.FindByUsernameAsync(dto.Username)).ReturnsAsync((<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>?)<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        _mockUserRepo.Setup(r =&gt; r.FindByEmailAsync(dto.Email)).ReturnsAsync((<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>?)<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        _mockUserRepo.Setup(r =&gt; r.SaveAsync(It.IsAny&lt;<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>&gt;())).ReturnsAsync(user);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        _mockJwtService.Setup(j =&gt; j.GenerateToken(It.IsAny&lt;<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>&gt;())).Returns(<span class="stringliteral">&quot;jwt_token&quot;</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        var result = await _service.SignUpAsync(dto);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        result.IsSuccess.Should().BeTrue();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        result.Value.Token.Should().Be(<span class="stringliteral">&quot;jwt_token&quot;</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        result.Value.User.Username.Should().Be(dto.Username);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    [Test]</div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a13ea787be10e4d6bb847abf206bdcc72">   83</a></span>    <span class="keyword">public</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a13ea787be10e4d6bb847abf206bdcc72">SignUpAsync_DuplicateUsername_ReturnsConflict</a>()</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        var dto = CreateRegisterDto();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        var existingUser = CreateUser();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        _mockUserRepo.Setup(r =&gt; r.FindByUsernameAsync(dto.Username)).ReturnsAsync(existingUser);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        var result = await _service.SignUpAsync(dto);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        result.IsFailure.Should().BeTrue();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        result.Error.Should().BeOfType&lt;<a class="code hl_typedef" href="TournamentsController_8cs.html#a503b2aceecc7d41141e3471a398d33a8">ConflictError</a>&gt;();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    [Test]</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a5a3418dd8fbe28e9f9e95bc3f31ea365">   97</a></span>    <span class="keyword">public</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a5a3418dd8fbe28e9f9e95bc3f31ea365">SignUpAsync_DuplicateEmail_ReturnsConflict</a>()</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        var dto = CreateRegisterDto();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        var existingUser = CreateUser(email: dto.Email);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        _mockUserRepo.Setup(r =&gt; r.FindByUsernameAsync(dto.Username)).ReturnsAsync((<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>?)<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        _mockUserRepo.Setup(r =&gt; r.FindByEmailAsync(dto.Email)).ReturnsAsync(existingUser);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        var result = await _service.SignUpAsync(dto);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        result.IsFailure.Should().BeTrue();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        result.Error.Should().BeOfType&lt;<a class="code hl_typedef" href="TournamentsController_8cs.html#a503b2aceecc7d41141e3471a398d33a8">ConflictError</a>&gt;();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
+</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    [Test]</div>
+<div class="foldopen" id="foldopen00112" data-start="{" data-end="}">
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#af68156225de45cd6685db1d8874d0ffc">  112</a></span>    <span class="keyword">public</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#af68156225de45cd6685db1d8874d0ffc">SignInAsync_ValidCredentials_ReturnsSuccess</a>()</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        var dto = CreateLoginDto();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        var passwordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password, 11);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        var user = CreateUser(passwordHash: passwordHash);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        _mockUserRepo.Setup(r =&gt; r.FindByUsernameAsync(dto.Username)).ReturnsAsync(user);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        _mockJwtService.Setup(j =&gt; j.GenerateToken(user)).Returns(<span class="stringliteral">&quot;jwt_token&quot;</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        var result = await _service.SignInAsync(dto);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        result.IsSuccess.Should().BeTrue();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        result.Value.Token.Should().Be(<span class="stringliteral">&quot;jwt_token&quot;</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    [Test]</div>
+<div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#abbfe057a9a13d58520101312c23ae6f3">  128</a></span>    <span class="keyword">public</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#abbfe057a9a13d58520101312c23ae6f3">SignInAsync_UserNotFound_ReturnsUnauthorized</a>()</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        var dto = CreateLoginDto();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        _mockUserRepo.Setup(r =&gt; r.FindByUsernameAsync(dto.Username)).ReturnsAsync((<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>?)<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        var result = await _service.SignInAsync(dto);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        result.IsFailure.Should().BeTrue();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        result.Error.Should().BeOfType&lt;UnauthorizedError&gt;();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    [Test]</div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#ae6604d5a52d064b7b512740cd2d6f98c">  141</a></span>    <span class="keyword">public</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#ae6604d5a52d064b7b512740cd2d6f98c">SignInAsync_WrongPassword_ReturnsUnauthorized</a>()</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        var dto = CreateLoginDto();</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        var user = CreateUser(passwordHash: BCrypt.Net.BCrypt.HashPassword(<span class="stringliteral">&quot;wrongpassword&quot;</span>, 11));</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        _mockUserRepo.Setup(r =&gt; r.FindByUsernameAsync(dto.Username)).ReturnsAsync(user);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        var result = await _service.SignInAsync(dto);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        result.IsFailure.Should().BeTrue();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        result.Error.Should().BeOfType&lt;UnauthorizedError&gt;();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    [Test]</div>
+<div class="foldopen" id="foldopen00155" data-start="{" data-end="}">
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a919295a2fda3575e78b605e87b95fda8">  155</a></span>    <span class="keyword">public</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a919295a2fda3575e78b605e87b95fda8">GetEmailAsync_ExistingEmail_ReturnsSuccess</a>()</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        var email = <span class="stringliteral">&quot;test@example.com&quot;</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        var user = CreateUser(email: email);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        _mockUserRepo.Setup(r =&gt; r.FindByEmailAsync(email)).ReturnsAsync(user);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        _mockCache.Setup(c =&gt; c.SetAsync(It.IsAny&lt;<span class="keywordtype">string</span>&gt;(), It.IsAny&lt;Ulid&gt;(), It.IsAny&lt;TimeSpan?&gt;()))</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            .Returns(Task.CompletedTask);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        _mockEmailService.Setup(e =&gt; e.EnqueueEmailAsync(It.IsAny&lt;<a class="code hl_class" href="classBackEncordados_1_1Common_1_1Service_1_1Email_1_1EmailMessage.html">EmailMessage</a>&gt;()))</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            .Returns(Task.CompletedTask);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        var result = await _service.GetEmailAsync(email);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        result.IsSuccess.Should().BeTrue();</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    [Test]</div>
+<div class="foldopen" id="foldopen00172" data-start="{" data-end="}">
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a9f57fb8071a1a3b4738087eece866155">  172</a></span>    <span class="keyword">public</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a9f57fb8071a1a3b4738087eece866155">GetEmailAsync_NonExistingEmail_ReturnsUserNotFoundError</a>()</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        var email = <span class="stringliteral">&quot;nonexistent@example.com&quot;</span>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        _mockUserRepo.Setup(r =&gt; r.FindByEmailAsync(email)).ReturnsAsync((<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>?)<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        var result = await _service.GetEmailAsync(email);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        result.IsFailure.Should().BeTrue();</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        result.Error.Should().BeOfType&lt;UserNotFoundError&gt;();</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    }</div>
+</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    [Test]</div>
+<div class="foldopen" id="foldopen00185" data-start="{" data-end="}">
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#abec4efe6a344c6794d82ac16ef4522a3">  185</a></span>    <span class="keyword">public</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#abec4efe6a344c6794d82ac16ef4522a3">ChangePasswordAsync_ExpiredGuid_ReturnsTimeoutError</a>()</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        var guid = Guid.NewGuid();</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        var dto = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ChangePasswordRequestDto.html">ChangePasswordRequestDto</a> { NewPassword = <span class="stringliteral">&quot;NewPassword123!&quot;</span> };</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        _mockCache.Setup(c =&gt; c.GetAsync&lt;Ulid?&gt;($<span class="stringliteral">&quot;PasswordChange{guid}&quot;</span>)).ReturnsAsync((Ulid?)<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        var result = await _service.ChangePasswordAsync(guid, dto);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        result.IsFailure.Should().BeTrue();</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        result.Error.Should().BeOfType&lt;PasswordChangeExpiredTimeout&gt;();</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    }</div>
+</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    [Test]</div>
+<div class="foldopen" id="foldopen00199" data-start="{" data-end="}">
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a66d60a2f45c8db714cd59487056451da">  199</a></span>    <span class="keyword">public</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a66d60a2f45c8db714cd59487056451da">ChangePasswordAsync_ValidGuid_ReturnsSuccess</a>()</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        var guid = Guid.NewGuid();</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        var userId = Ulid.NewUlid();</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        var dto = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ChangePasswordRequestDto.html">ChangePasswordRequestDto</a> { NewPassword = <span class="stringliteral">&quot;NewPassword123!&quot;</span> };</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        var user = CreateUser(<span class="keywordtype">id</span>: userId, passwordHash: BCrypt.Net.BCrypt.HashPassword(<span class="stringliteral">&quot;oldpassword&quot;</span>, 11));</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keyword">const</span> <span class="keywordtype">string</span> cacheKey = <span class="stringliteral">&quot;password_&quot;</span>;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        _mockCache.Setup(c =&gt; c.GetAsync&lt;Ulid?&gt;($<span class="stringliteral">&quot;{cacheKey}{guid}&quot;</span>)).ReturnsAsync(userId);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        _mockUserRepo.Setup(r =&gt; r.FindByIdAsync(userId)).ReturnsAsync(user);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        _mockUserRepo.Setup(r =&gt; r.UpdateAsync(It.IsAny&lt;<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>&gt;())).ReturnsAsync(user);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        _mockCache.Setup(c =&gt; c.RemoveAsync($<span class="stringliteral">&quot;{cacheKey}{guid}&quot;</span>)).Returns(Task.CompletedTask);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        var result = await _service.ChangePasswordAsync(guid, dto);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        result.IsSuccess.Should().BeTrue();</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    }</div>
+</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    [Test]</div>
+<div class="foldopen" id="foldopen00218" data-start="{" data-end="}">
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a4613bfdabf420000af2c20c26271d160">  218</a></span>    <span class="keyword">public</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a4613bfdabf420000af2c20c26271d160">ChangePasswordAsync_SamePassword_ReturnsValidationError</a>()</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    {</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        var guid = Guid.NewGuid();</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        var userId = Ulid.NewUlid();</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        var newPassword = <span class="stringliteral">&quot;SamePassword123!&quot;</span>;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        var dto = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ChangePasswordRequestDto.html">ChangePasswordRequestDto</a> { NewPassword = newPassword };</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        var user = CreateUser(<span class="keywordtype">id</span>: userId, passwordHash: BCrypt.Net.BCrypt.HashPassword(newPassword, 11));</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="keyword">const</span> <span class="keywordtype">string</span> cacheKey = <span class="stringliteral">&quot;password_&quot;</span>;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        _mockCache.Setup(c =&gt; c.GetAsync&lt;Ulid?&gt;($<span class="stringliteral">&quot;{cacheKey}{guid}&quot;</span>)).ReturnsAsync(userId);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        _mockUserRepo.Setup(r =&gt; r.FindByIdAsync(userId)).ReturnsAsync(user);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        var result = await _service.ChangePasswordAsync(guid, dto);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        result.IsFailure.Should().BeTrue();</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        result.Error.Should().BeOfType&lt;<a class="code hl_typedef" href="TournamentsController_8cs.html#a79a4b3266c6227d5ebf2b2863585518f">ValidationError</a>&gt;();</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    }</div>
+</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>}</div>
+</div>
+</div>
+<div class="ttc" id="aAuthServiceTests_8cs_html_a116d317a4e95ea210464a71d790cd933"><div class="ttname"><a href="AuthServiceTests_8cs.html#a116d317a4e95ea210464a71d790cd933">AuthServiceType</a></div><div class="ttdeci">BackEncordados.Usuarios.Service.Auth.AuthService AuthServiceType</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00011">AuthServiceTests.cs:11</a></div></div>
+<div class="ttc" id="aAuthServiceTests_8cs_html_a2240276a632fcd27d00dfda9235b80f8"><div class="ttname"><a href="AuthServiceTests_8cs.html#a2240276a632fcd27d00dfda9235b80f8">IJwtServiceType</a></div><div class="ttdeci">BackEncordados.Usuarios.Service.Auth.IJwtService IJwtServiceType</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00012">AuthServiceTests.cs:12</a></div></div>
+<div class="ttc" id="aPurchasedController_8cs_html_a2cca664a5a4cb21c8352e11d88fa47ef"><div class="ttname"><a href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a></div><div class="ttdeci">BackEncordados.Usuarios.Model.User.UserRoles Role</div><div class="ttdef"><b>Definition</b> <a href="PurchasedController_8cs_source.html#l00014">PurchasedController.cs:14</a></div></div>
+<div class="ttc" id="aTournamentsController_8cs_html_a503b2aceecc7d41141e3471a398d33a8"><div class="ttname"><a href="TournamentsController_8cs.html#a503b2aceecc7d41141e3471a398d33a8">ConflictError</a></div><div class="ttdeci">BackEncordados.Talleres.Error.ConflictError ConflictError</div><div class="ttdef"><b>Definition</b> <a href="TournamentsController_8cs_source.html#l00010">TournamentsController.cs:10</a></div></div>
+<div class="ttc" id="aTournamentsController_8cs_html_a79a4b3266c6227d5ebf2b2863585518f"><div class="ttname"><a href="TournamentsController_8cs.html#a79a4b3266c6227d5ebf2b2863585518f">ValidationError</a></div><div class="ttdeci">BackEncordados.Talleres.Error.ValidationError ValidationError</div><div class="ttdef"><b>Definition</b> <a href="TournamentsController_8cs_source.html#l00011">TournamentsController.cs:11</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Common_1_1Service_1_1Email_1_1EmailMessage_html"><div class="ttname"><a href="classBackEncordados_1_1Common_1_1Service_1_1Email_1_1EmailMessage.html">BackEncordados.Common.Service.Email.EmailMessage</a></div><div class="ttdoc">Representa un mensaje de correo electrónico con todos los datos necesarios para su envío.</div><div class="ttdef"><b>Definition</b> <a href="IEmailService_8cs_source.html#l00007">IEmailService.cs:8</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Dto_1_1ChangePasswordRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ChangePasswordRequestDto.html">BackEncordados.Usuarios.Dto.ChangePasswordRequestDto</a></div><div class="ttdoc">DTO de solicitud para cambiar la contraseña de un usuario.</div><div class="ttdef"><b>Definition</b> <a href="ChangePasswordRequestDto_8cs_source.html#l00013">ChangePasswordRequestDto.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">BackEncordados.Usuarios.Model.User.UserRoles</a></div><div class="ttdoc">Constantes para los roles de usuario.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00049">User.cs:50</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a54373adaa756848426e2a7469dedffd7"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">BackEncordados.Usuarios.Model.User.UserRoles.USER</a></div><div class="ttdeci">const string USER</div><div class="ttdoc">Rol de usuario estándar con permisos básicos.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00055">User.cs:55</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">BackEncordados.Usuarios.Model.User</a></div><div class="ttdoc">Entidad de dominio que representa un usuario. Autenticación con email/password hasheado con BCrypt....</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00011">User.cs:12</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests_html"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html">TestEncordados.Unit.Services.AuthService.AuthServiceTests</a></div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00016">AuthServiceTests.cs:17</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests_html_a13ea787be10e4d6bb847abf206bdcc72"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a13ea787be10e4d6bb847abf206bdcc72">TestEncordados.Unit.Services.AuthService.AuthServiceTests.SignUpAsync_DuplicateUsername_ReturnsConflict</a></div><div class="ttdeci">async Task SignUpAsync_DuplicateUsername_ReturnsConflict()</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00083">AuthServiceTests.cs:83</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests_html_a300f0db938e3e92e086c195424568b91"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a300f0db938e3e92e086c195424568b91">TestEncordados.Unit.Services.AuthService.AuthServiceTests.SignUpAsync_ValidDto_ReturnsSuccess</a></div><div class="ttdeci">async Task SignUpAsync_ValidDto_ReturnsSuccess()</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00065">AuthServiceTests.cs:65</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests_html_a4613bfdabf420000af2c20c26271d160"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a4613bfdabf420000af2c20c26271d160">TestEncordados.Unit.Services.AuthService.AuthServiceTests.ChangePasswordAsync_SamePassword_ReturnsValidationError</a></div><div class="ttdeci">async Task ChangePasswordAsync_SamePassword_ReturnsValidationError()</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00218">AuthServiceTests.cs:218</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests_html_a5a3418dd8fbe28e9f9e95bc3f31ea365"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a5a3418dd8fbe28e9f9e95bc3f31ea365">TestEncordados.Unit.Services.AuthService.AuthServiceTests.SignUpAsync_DuplicateEmail_ReturnsConflict</a></div><div class="ttdeci">async Task SignUpAsync_DuplicateEmail_ReturnsConflict()</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00097">AuthServiceTests.cs:97</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests_html_a66d60a2f45c8db714cd59487056451da"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a66d60a2f45c8db714cd59487056451da">TestEncordados.Unit.Services.AuthService.AuthServiceTests.ChangePasswordAsync_ValidGuid_ReturnsSuccess</a></div><div class="ttdeci">async Task ChangePasswordAsync_ValidGuid_ReturnsSuccess()</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00199">AuthServiceTests.cs:199</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests_html_a919295a2fda3575e78b605e87b95fda8"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a919295a2fda3575e78b605e87b95fda8">TestEncordados.Unit.Services.AuthService.AuthServiceTests.GetEmailAsync_ExistingEmail_ReturnsSuccess</a></div><div class="ttdeci">async Task GetEmailAsync_ExistingEmail_ReturnsSuccess()</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00155">AuthServiceTests.cs:155</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests_html_a9f57fb8071a1a3b4738087eece866155"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#a9f57fb8071a1a3b4738087eece866155">TestEncordados.Unit.Services.AuthService.AuthServiceTests.GetEmailAsync_NonExistingEmail_ReturnsUserNotFoundError</a></div><div class="ttdeci">async Task GetEmailAsync_NonExistingEmail_ReturnsUserNotFoundError()</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00172">AuthServiceTests.cs:172</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests_html_abbfe057a9a13d58520101312c23ae6f3"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#abbfe057a9a13d58520101312c23ae6f3">TestEncordados.Unit.Services.AuthService.AuthServiceTests.SignInAsync_UserNotFound_ReturnsUnauthorized</a></div><div class="ttdeci">async Task SignInAsync_UserNotFound_ReturnsUnauthorized()</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00128">AuthServiceTests.cs:128</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests_html_abec4efe6a344c6794d82ac16ef4522a3"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#abec4efe6a344c6794d82ac16ef4522a3">TestEncordados.Unit.Services.AuthService.AuthServiceTests.ChangePasswordAsync_ExpiredGuid_ReturnsTimeoutError</a></div><div class="ttdeci">async Task ChangePasswordAsync_ExpiredGuid_ReturnsTimeoutError()</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00185">AuthServiceTests.cs:185</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests_html_ac6fa768590990a3e32551bc07dead2d3"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#ac6fa768590990a3e32551bc07dead2d3">TestEncordados.Unit.Services.AuthService.AuthServiceTests.AuthServiceTests</a></div><div class="ttdeci">AuthServiceTests()</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00025">AuthServiceTests.cs:25</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests_html_ae6604d5a52d064b7b512740cd2d6f98c"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#ae6604d5a52d064b7b512740cd2d6f98c">TestEncordados.Unit.Services.AuthService.AuthServiceTests.SignInAsync_WrongPassword_ReturnsUnauthorized</a></div><div class="ttdeci">async Task SignInAsync_WrongPassword_ReturnsUnauthorized()</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00141">AuthServiceTests.cs:141</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests_html_af68156225de45cd6685db1d8874d0ffc"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1AuthServiceTests.html#af68156225de45cd6685db1d8874d0ffc">TestEncordados.Unit.Services.AuthService.AuthServiceTests.SignInAsync_ValidCredentials_ReturnsSuccess</a></div><div class="ttdeci">async Task SignInAsync_ValidCredentials_ReturnsSuccess()</div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00112">AuthServiceTests.cs:112</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtService_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtService.html">BackEncordados.Usuarios.Service.Auth.IJwtService</a></div><div class="ttdoc">Servicio para generación y validación de tokens JWT.</div><div class="ttdef"><b>Definition</b> <a href="IJwtService_8cs_source.html#l00008">IJwtService.cs:9</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Service_1_1Cache_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cache.html">BackEncordados.Common.Service.Cache</a></div><div class="ttdef"><b>Definition</b> <a href="CacheService_8cs_source.html#l00004">CacheService.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Service_1_1Email_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Service_1_1Email.html">BackEncordados.Common.Service.Email</a></div><div class="ttdef"><b>Definition</b> <a href="EmailBackgroundService_8cs_source.html#l00003">EmailBackgroundService.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Utils_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Utils.html">BackEncordados.Common.Utils</a></div><div class="ttdef"><b>Definition</b> <a href="TapAsync_8cs_source.html#l00003">TapAsync.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html">BackEncordados.Usuarios.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ChangePasswordRequestDto_8cs_source.html#l00003">ChangePasswordRequestDto.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Dto_html_a0108fa3b0511cdefd7d496d463f2af68"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a0108fa3b0511cdefd7d496d463f2af68">BackEncordados.Usuarios.Dto.LoginDto</a></div><div class="ttdeci">record LoginDto</div><div class="ttdoc">DTO para el inicio de sesión de usuarios. Credenciales necesarias para obtener token JWT.</div><div class="ttdef"><b>Definition</b> <a href="UserDto_8cs_source.html#l00117">UserDto.cs:118</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Dto_html_a642b21b162d23b553b90cd097e0a6024"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a642b21b162d23b553b90cd097e0a6024">BackEncordados.Usuarios.Dto.RegisterDto</a></div><div class="ttdeci">record RegisterDto</div><div class="ttdoc">DTO para el registro de nuevos usuarios. Define los datos necesarios para crear una nueva cuenta.</div><div class="ttdef"><b>Definition</b> <a href="UserDto_8cs_source.html#l00073">UserDto.cs:74</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Errors_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Errors.html">BackEncordados.Usuarios.Errors</a></div><div class="ttdef"><b>Definition</b> <a href="AuthError_8cs_source.html#l00003">AuthError.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a></div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00005">User.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Repository_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Repository.html">BackEncordados.Usuarios.Repository</a></div><div class="ttdef"><b>Definition</b> <a href="IUserRepository_8cs_source.html#l00004">IUserRepository.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth.html">BackEncordados.Usuarios.Service.Auth</a></div><div class="ttdef"><b>Definition</b> <a href="AuthService_8cs_source.html#l00013">AuthService.cs:13</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Service_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Service.html">BackEncordados.Usuarios.Service</a></div><div class="ttdef"><b>Definition</b> <a href="AuthService_8cs_source.html#l00013">AuthService.cs:13</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios.html">BackEncordados.Usuarios</a></div><div class="ttdef"><b>Definition</b> <a href="AuthController_8cs_source.html#l00007">AuthController.cs:7</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_html"><div class="ttname"><a href="namespaceBackEncordados.html">BackEncordados</a></div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00005">MaterialsDbContext.cs:5</a></div></div>
+<div class="ttc" id="anamespaceTestEncordados_1_1Unit_1_1Services_1_1AuthService_html"><div class="ttname"><a href="namespaceTestEncordados_1_1Unit_1_1Services_1_1AuthService.html">TestEncordados.Unit.Services.AuthService</a></div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00014">AuthServiceTests.cs:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_780b0e0e1bd31577874252649f607c71.html">TestEncordados</a></li><li class="navelem"><a class="el" href="dir_48c6692f9b3c243174e0def3ed0bbfd9.html">Unit</a></li><li class="navelem"><a class="el" href="dir_dd163bb5a9487d04f3852660f12d7407.html">Services</a></li><li class="navelem"><a class="el" href="dir_d47fec0131fb3fe5940291af66c14606.html">AuthService</a></li><li class="navelem"><a class="el" href="AuthServiceTests_8cs.html">AuthServiceTests.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

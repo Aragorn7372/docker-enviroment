@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Purchased/Validator/PurchasedRequestValidator.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('PurchasedRequestValidator_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PurchasedRequestValidator.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="PurchasedRequestValidator_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cache.html">BackEncordados.Common.Service.Cache</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cache_1_1keys.html">BackEncordados.Common.Service.Cache.keys</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Purchased_1_1Dto.html">BackEncordados.Purchased.Dto</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Purchased_1_1Model.html">BackEncordados.Purchased.Model</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Repository.html">BackEncordados.Talleres.Repository</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Repository.html">BackEncordados.Usuarios.Repository</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>FluentValidation;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Purchased_1_1Validator.html">BackEncordados.Purchased.Validator</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Purchased_1_1Validator_1_1PurchasedRequestValidator.html">   31</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classBackEncordados_1_1Purchased_1_1Validator_1_1PurchasedRequestValidator.html">PurchasedRequestValidator</a> : AbstractValidator&lt;PurchasedRequestDto&gt;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Purchased_1_1Validator_1_1PurchasedRequestValidator.html#acafcf94717f149d76d92a2021ef37c2e">   39</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classBackEncordados_1_1Purchased_1_1Validator_1_1PurchasedRequestValidator.html#acafcf94717f149d76d92a2021ef37c2e">PurchasedRequestValidator</a>(<a class="code hl_interface" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html">ITournamentRepository</a> tournamentRepository, <a class="code hl_interface" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html">IUserRepository</a> userRepository, <a class="code hl_interface" href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cache_1_1ICacheService.html">ICacheService</a> cache)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        RuleFor(x =&gt; x.TournamentId)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            .Cascade(CascadeMode.Stop)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            .NotNull().WithMessage(<span class="stringliteral">&quot;El ID del torneo es obligatorio&quot;</span>)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            .MustAsync(async (<span class="keywordtype">id</span>, cancellation) =&gt;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                var tournament = await tournamentRepository.<a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a0948ab9e8f01aec88ca57ad0f27a2389">FindByIdAsync</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <span class="keywordflow">return</span> tournament != <span class="keyword">null</span> &amp;&amp; !tournament.IsDeleted;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            })</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            .WithMessage(<span class="stringliteral">&quot;El torneo no existe o ha sido cancelado.&quot;</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        RuleFor(x =&gt; x.PlayerName)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            .Cascade(CascadeMode.Stop)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            .NotEmpty().WithMessage(<span class="stringliteral">&quot;El nombre del jugador es obligatorio&quot;</span>)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            .CustomAsync(async (username, context, cancellation) =&gt;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordtype">string</span> key = CacheKeys.UserKey + username;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                var player = await cache.GetAsync&lt;<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>?&gt;(key);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>? user = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordflow">if</span> (player == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    user = await userRepository.<a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a8c224a4192214560682e9e7f7f540421">FindByUsernameAsync</a>(username!);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                    <span class="keywordflow">if</span> (user == <span class="keyword">null</span> || user.IsDeleted || user.Role != <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a>)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                        context.AddFailure(<span class="stringliteral">&quot;El jugador no existe, no tiene permisos o fue eliminado.&quot;</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                    }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    player = user;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    await cache.SetAsync(key, player);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                context.RootContextData[<span class="stringliteral">&quot;PlayerUlid&quot;</span>] = player;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            });</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        RuleFor(x =&gt; x.AssignedToName)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            .Cascade(CascadeMode.Stop)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            .NotEmpty().WithMessage(<span class="stringliteral">&quot;El nombre del encordador es obligatorio&quot;</span>)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            .CustomAsync(async (username, context, cancellation) =&gt;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                <span class="keywordtype">string</span> key = CacheKeys.UserKey + username;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                var assigned = await cache.GetAsync&lt;<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>?&gt;(key);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <span class="keywordflow">if</span> (assigned == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                    var user = await userRepository.<a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a8c224a4192214560682e9e7f7f540421">FindByUsernameAsync</a>(username!);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                    <span class="keywordflow">if</span> (user == <span class="keyword">null</span> || user.IsDeleted ||</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                       (user.Role != <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">ENCORDER</a> &amp;&amp; user.Role != <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">OWNER</a>))</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                    {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                        context.AddFailure(<span class="stringliteral">&quot;El encordador asignado no es válido o fue eliminado.&quot;</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                    }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    assigned = user;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    await cache.SetAsync(key, assigned);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                context.RootContextData[<span class="stringliteral">&quot;AssignedToGuid&quot;</span>] = assigned;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            });</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        RuleFor(x =&gt; x.PayStatus)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            .NotEmpty().WithMessage(<span class="stringliteral">&quot;El estado de pago no puede estar vacío.&quot;</span>)</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            .Must(status =&gt; Enum.GetNames&lt;<a class="code hl_enumeration" href="namespaceBackEncordados_1_1Purchased_1_1Model.html#a38c4ee19210abb9188ff415f6e8241bb">PaymentStatus</a>&gt;()</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                .Any(name =&gt; name.Equals(status, StringComparison.OrdinalIgnoreCase)))</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            .WithMessage(x =&gt; $<span class="stringliteral">&quot;El valor &#39;{x.PayStatus}&#39; no es válido. Opciones: {string.Join(&quot;</span>, <span class="stringliteral">&quot;, Enum.GetNames&lt;PaymentStatus&gt;())}&quot;</span>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        RuleFor(x =&gt; x.Lineas)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            .NotEmpty().WithMessage(<span class="stringliteral">&quot;Debe haber al menos una línea de pedido&quot;</span>)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            .ForEach(linea =&gt; linea.SetValidator(<span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Purchased_1_1Validator_1_1PedidoLineaRequestValidator.html">PedidoLineaRequestValidator</a>()));</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
+</div>
+<div class="ttc" id="aclassBackEncordados_1_1Purchased_1_1Validator_1_1PedidoLineaRequestValidator_html"><div class="ttname"><a href="classBackEncordados_1_1Purchased_1_1Validator_1_1PedidoLineaRequestValidator.html">BackEncordados.Purchased.Validator.PedidoLineaRequestValidator</a></div><div class="ttdoc">Validates a PedidoLineaRequestDto for a single line item within a purchase order.</div><div class="ttdef"><b>Definition</b> <a href="PedidoLineaValidator_8cs_source.html#l00026">PedidoLineaValidator.cs:27</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Purchased_1_1Validator_1_1PurchasedRequestValidator_html"><div class="ttname"><a href="classBackEncordados_1_1Purchased_1_1Validator_1_1PurchasedRequestValidator.html">BackEncordados.Purchased.Validator.PurchasedRequestValidator</a></div><div class="ttdoc">Validates a PurchasedRequestDto before a purchase order is created.</div><div class="ttdef"><b>Definition</b> <a href="PurchasedRequestValidator_8cs_source.html#l00031">PurchasedRequestValidator.cs:32</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Purchased_1_1Validator_1_1PurchasedRequestValidator_html_acafcf94717f149d76d92a2021ef37c2e"><div class="ttname"><a href="classBackEncordados_1_1Purchased_1_1Validator_1_1PurchasedRequestValidator.html#acafcf94717f149d76d92a2021ef37c2e">BackEncordados.Purchased.Validator.PurchasedRequestValidator.PurchasedRequestValidator</a></div><div class="ttdeci">PurchasedRequestValidator(ITournamentRepository tournamentRepository, IUserRepository userRepository, ICacheService cache)</div><div class="ttdoc">Initializes a new PurchasedRequestValidator with all rule definitions.</div><div class="ttdef"><b>Definition</b> <a href="PurchasedRequestValidator_8cs_source.html#l00039">PurchasedRequestValidator.cs:39</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">BackEncordados.Usuarios.Model.User.UserRoles</a></div><div class="ttdoc">Constantes para los roles de usuario.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00049">User.cs:50</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a54373adaa756848426e2a7469dedffd7"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">BackEncordados.Usuarios.Model.User.UserRoles.USER</a></div><div class="ttdeci">const string USER</div><div class="ttdoc">Rol de usuario estándar con permisos básicos.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00055">User.cs:55</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a6b308802168ec5c8cc62d74631698b6f"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">BackEncordados.Usuarios.Model.User.UserRoles.OWNER</a></div><div class="ttdeci">const string OWNER</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00057">User.cs:57</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a9a1dd51b12767c87dfafb4dd11fc1d8e"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">BackEncordados.Usuarios.Model.User.UserRoles.ENCORDER</a></div><div class="ttdeci">const string ENCORDER</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00059">User.cs:59</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">BackEncordados.Usuarios.Model.User</a></div><div class="ttdoc">Entidad de dominio que representa un usuario. Autenticación con email/password hasheado con BCrypt....</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00011">User.cs:12</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Common_1_1Service_1_1Cache_1_1ICacheService_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cache_1_1ICacheService.html">BackEncordados.Common.Service.Cache.ICacheService</a></div><div class="ttdoc">Define el contrato para los servicios de caché del sistema, soportando una estrategia de dos niveles ...</div><div class="ttdef"><b>Definition</b> <a href="ICacheService_8cs_source.html#l00044">ICacheService.cs:45</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html">BackEncordados.Talleres.Repository.ITournamentRepository</a></div><div class="ttdoc">Contrato del repositorio de torneos que define las operaciones de acceso a datos sobre la entidad Tou...</div><div class="ttdef"><b>Definition</b> <a href="ITournamentRepository_8cs_source.html#l00030">ITournamentRepository.cs:31</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html_a0948ab9e8f01aec88ca57ad0f27a2389"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a0948ab9e8f01aec88ca57ad0f27a2389">BackEncordados.Talleres.Repository.ITournamentRepository.FindByIdAsync</a></div><div class="ttdeci">Task&lt; Tournaments?&gt; FindByIdAsync(Ulid id)</div><div class="ttdoc">Busca un torneo por ULID incluyendo las asignaciones trabajador-máquina.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html">BackEncordados.Usuarios.Repository.IUserRepository</a></div><div class="ttdoc">Contrato del repositorio de usuarios que define las operaciones de acceso a datos sobre la entidad Us...</div><div class="ttdef"><b>Definition</b> <a href="IUserRepository_8cs_source.html#l00029">IUserRepository.cs:30</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html_a8c224a4192214560682e9e7f7f540421"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a8c224a4192214560682e9e7f7f540421">BackEncordados.Usuarios.Repository.IUserRepository.FindByUsernameAsync</a></div><div class="ttdeci">Task&lt; User?&gt; FindByUsernameAsync(string username)</div><div class="ttdoc">Busca un usuario por su nombre de usuario.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Service_1_1Cache_1_1keys_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cache_1_1keys.html">BackEncordados.Common.Service.Cache.keys</a></div><div class="ttdef"><b>Definition</b> <a href="CacheKeys_8cs_source.html#l00001">CacheKeys.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Service_1_1Cache_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cache.html">BackEncordados.Common.Service.Cache</a></div><div class="ttdef"><b>Definition</b> <a href="CacheService_8cs_source.html#l00004">CacheService.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Dto.html">BackEncordados.Purchased.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="FilterPurchasedDto_8cs_source.html#l00001">FilterPurchasedDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Model.html">BackEncordados.Purchased.Model</a></div><div class="ttdef"><b>Definition</b> <a href="PaymentStatus_8cs_source.html#l00001">PaymentStatus.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Model_html_a38c4ee19210abb9188ff415f6e8241bb"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Model.html#a38c4ee19210abb9188ff415f6e8241bb">BackEncordados.Purchased.Model.PaymentStatus</a></div><div class="ttdeci">PaymentStatus</div><div class="ttdoc">Enum que define los posibles estados de pago de un pedido.</div><div class="ttdef"><b>Definition</b> <a href="PaymentStatus_8cs_source.html#l00014">PaymentStatus.cs:15</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Validator_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Validator.html">BackEncordados.Purchased.Validator</a></div><div class="ttdef"><b>Definition</b> <a href="PedidoLineaValidator_8cs_source.html#l00005">PedidoLineaValidator.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Repository_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Repository.html">BackEncordados.Talleres.Repository</a></div><div class="ttdef"><b>Definition</b> <a href="ITournamentRepository_8cs_source.html#l00004">ITournamentRepository.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a></div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00005">User.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Repository_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Repository.html">BackEncordados.Usuarios.Repository</a></div><div class="ttdef"><b>Definition</b> <a href="IUserRepository_8cs_source.html#l00004">IUserRepository.cs:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_2f669d235345eea30705f4ca88b64b3a.html">Purchased</a></li><li class="navelem"><a class="el" href="dir_ca3977bf8977cef5e65d9ebe5e66694b.html">Validator</a></li><li class="navelem"><a class="el" href="PurchasedRequestValidator_8cs.html">PurchasedRequestValidator.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

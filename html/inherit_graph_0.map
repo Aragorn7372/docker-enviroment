@@ -1,0 +1,25 @@
+<map id="Gráfico de jerarquía de clases" name="Gráfico de jerarquía de clases">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,379,140,404"/>
+<area shape="rect" id="Node000001" href="$classBackEncordados_1_1Materials_1_1Validator_1_1Materials_1_1MaterialPatchValidator.html" title="Validador FluentValidation para MaterialPatchDto." alt="" coords="206,5,443,60"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="73,364,80,304,99,225,113,183,132,141,156,103,186,69,204,56,207,60,190,73,161,106,137,144,118,185,104,226,86,305,78,365"/>
+<area shape="rect" id="Node000002" href="$classBackEncordados_1_1Materials_1_1Validator_1_1Materials_1_1MaterialRequestValidator.html" title="Validador FluentValidation para MaterialRequestDto." alt="" coords="197,84,452,139"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="77,364,89,318,110,260,142,201,162,173,186,149,204,137,207,141,190,153,166,177,146,203,115,262,94,319,82,365"/>
+<area shape="rect" id="Node000003" href="$classBackEncordados_1_1Materials_1_1Validator_1_1Strings_1_1CuerdaPatchValidator.html" title="Validador FluentValidation para CuerdaPatchDto." alt="" coords="189,163,460,203"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="81,365,96,330,119,289,149,248,186,213,208,201,210,206,190,217,153,251,123,292,101,332,86,367"/>
+<area shape="rect" id="Node000004" href="$classBackEncordados_1_1Materials_1_1Validator_1_1Strings_1_1CuerdaRequestValidator.html" title="Validador FluentValidation para CuerdaRequestDto." alt="" coords="209,228,440,283"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="94,367,135,329,187,293,214,280,216,285,189,298,138,333,97,370"/>
+<area shape="rect" id="Node000005" href="$classBackEncordados_1_1Purchased_1_1Validator_1_1PedidoLineaRequestValidator.html" title="Validates a PedidoLineaRequestDto for a single line item within a purchase order." alt="" coords="188,307,461,347"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="130,372,187,357,236,345,237,350,189,362,131,378"/>
+<area shape="rect" id="Node000006" href="$classBackEncordados_1_1Purchased_1_1Validator_1_1PurchasedPatchValidator.html" title="Validates a PurchasedPatchDto for partial order updates. Only validates fields that are present (non&#45;..." alt="" coords="203,371,446,411"/>
+<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="154,389,203,389,203,394,154,394"/>
+<area shape="rect" id="Node000007" href="$classBackEncordados_1_1Purchased_1_1Validator_1_1PurchasedRequestValidator.html" title="Validates a PurchasedRequestDto before a purchase order is created." alt="" coords="194,435,455,475"/>
+<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="131,405,189,421,237,433,236,438,187,426,130,410"/>
+<area shape="rect" id="Node000008" href="$classBackEncordados_1_1Purchased_1_1Validator_1_1StringSetupPatchValidator.html" title="Validates a StringSetupDto when used in a patch (partial update) scenario for a PedidoLinea line item..." alt="" coords="199,499,450,539"/>
+<area shape="poly" id="edge8_Node000000_Node000008" title=" " alt="" coords="96,412,137,450,189,485,218,497,216,502,187,490,134,454,93,416"/>
+<area shape="rect" id="Node000009" href="$classBackEncordados_1_1Purchased_1_1Validator_1_1StringSetupRequestValidator.html" title="Validates a StringSetupDto for the creation (not patch) scenario." alt="" coords="190,563,459,603"/>
+<area shape="poly" id="edge9_Node000000_Node000009" title=" " alt="" coords="87,415,103,447,126,483,155,519,190,549,211,561,209,566,186,554,151,523,122,486,99,449,83,418"/>
+<area shape="rect" id="Node000010" href="$classBackEncordados_1_1Usuarios_1_1Validator_1_1ChangeRoleRequestDtoValidator.html" title="Validador FluentValidation para ChangeRoleRequestDto." alt="" coords="206,628,443,683"/>
+<area shape="poly" id="edge10_Node000000_Node000010" title=" " alt="" coords="83,417,96,460,117,513,148,567,168,592,190,613,208,626,205,630,186,617,164,595,144,570,112,515,91,462,77,418"/>
+<area shape="rect" id="Node000011" href="$classBackEncordados_1_1Usuarios_1_1Validator_1_1UserRequestDtoValidator.html" title="Validador FluentValidation para UserRequestDto." alt="" coords="201,707,448,747"/>
+<area shape="poly" id="edge11_Node000000_Node000011" title=" " alt="" coords="79,418,87,475,105,550,120,589,138,626,161,662,190,692,209,705,206,709,186,696,157,665,134,629,115,591,100,551,82,476,73,418"/>
+</map>

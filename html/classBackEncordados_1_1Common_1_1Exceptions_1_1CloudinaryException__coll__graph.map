@@ -1,0 +1,5 @@
+<map id="BackEncordados.Common.Exceptions.CloudinaryException" name="BackEncordados.Common.Exceptions.CloudinaryException">
+<area shape="rect" id="Node000001" title="Excepción base para todos los errores relacionados con Cloudinary. Proporciona constructores con mens..." alt="" coords="5,79,276,119"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="97,5,184,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,44,143,79,138,79,138,44"/>
+</map>

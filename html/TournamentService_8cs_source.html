@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Talleres/Service/TournamentService.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('TournamentService_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TournamentService.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="TournamentService_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Errors.html">BackEncordados.Common.Errors</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Utils.html">BackEncordados.Common.Utils</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html">BackEncordados.Talleres.Dto</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Error.html">BackEncordados.Talleres.Error</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Mapper.html">BackEncordados.Talleres.Mapper</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Model.html">BackEncordados.Talleres.Model</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Repository.html">BackEncordados.Talleres.Repository</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Errors.html">BackEncordados.Usuarios.Errors</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Mapper.html">BackEncordados.Usuarios.Mapper</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Repository.html">BackEncordados.Usuarios.Repository</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">using </span>CSharpFunctionalExtensions;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="TournamentService_8cs.html#a503b2aceecc7d41141e3471a398d33a8">   15</a></span><span class="keyword">using </span><a class="code hl_typedef" href="TournamentsController_8cs.html#a503b2aceecc7d41141e3471a398d33a8">ConflictError</a> = <a class="code hl_namespace" href="namespaceBackEncordados.html">BackEncordados</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres.html">Talleres</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Error.html">Error</a>.ConflictError;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="TournamentService_8cs.html#a79a4b3266c6227d5ebf2b2863585518f">   16</a></span><span class="keyword">using </span><a class="code hl_typedef" href="TournamentsController_8cs.html#a79a4b3266c6227d5ebf2b2863585518f">ValidationError</a> = <a class="code hl_namespace" href="namespaceBackEncordados.html">BackEncordados</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres.html">Talleres</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Error.html">Error</a>.ValidationError;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Service.html">BackEncordados.Talleres.Service</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">public</span> <span class="keyword">class </span>TournamentService(</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    ILogger&lt;TournamentService&gt; logger,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_interface" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html">ITournamentRepository</a> repository, </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_interface" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html">IUserRepository</a> userRepository,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_interface" href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html">ICloudinaryService</a> cloudinary</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    ): ITournamentService</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">private</span> async Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; BuildResponseAsync(<a class="code hl_variable" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#af6124b908c5cc5c83d9bac689e10e7a4">Tournaments</a> tournament, <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>? preloadedOwner = <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        var allIds = tournament.WorkersList</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            .Union(tournament.SupervisorList)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            .Append(tournament.Owner)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            .Distinct()</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            .ToList();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        var users = await userRepository.FindByIdsAsync(allIds);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        var userDict = users.ToDictionary(u =&gt; u.Id);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">if</span> (!userDict.ContainsKey(tournament.Owner))</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keywordflow">if</span> (preloadedOwner is not <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                userDict[preloadedOwner.Id] = preloadedOwner;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                var ownerUser = await userRepository.FindByIdAsync(tournament.Owner);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="keywordflow">if</span> (ownerUser is <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                    <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                        <span class="keyword">new</span> UserNotFoundError(<span class="stringliteral">&quot;owner de torneo no encontrado&quot;</span>));</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                userDict[tournament.Owner] = ownerUser;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        var workers = tournament.WorkersList</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            .Where(<span class="keywordtype">id</span> =&gt; userDict.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            .Select(<span class="keywordtype">id</span> =&gt; userDict[<span class="keywordtype">id</span>].ToDto(cloudinary))</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            .ToList();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        var supervisors = tournament.SupervisorList</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            .Where(<span class="keywordtype">id</span> =&gt; userDict.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            .Select(<span class="keywordtype">id</span> =&gt; userDict[<span class="keywordtype">id</span>].ToDto(cloudinary))</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            .ToList();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        var owner = userDict[tournament.Owner].ToDto(cloudinary);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">return</span> Result.Success&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            tournament.ToTournamentResponseDetailsDto(workers, owner, supervisors, cloudinary));</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keyword">public</span> async Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; GetTournament(Ulid <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        logger.LogInformation(<span class="stringliteral">&quot;Getting tournament {Id}&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        var tournament = await repository.FindByIdAsync(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">if</span> (tournament is <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            logger.LogWarning(<span class="stringliteral">&quot;Tournament with id {Id} not found&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(<span class="keyword">new</span> TournamentNotFoundError());</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordflow">return</span> await BuildResponseAsync(tournament);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    }</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keyword">public</span> async Task&lt;PageResponseDto&lt;TournamentResponseDto&gt;&gt; GetAllTournamentsAsync(<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a2555b1a1734527adc84331c092a9e5c6">FilterTournamentDto</a> filter)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        var paged= await repository.FindAllAsync(filter);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordtype">int</span> totalPages = filter.Size &gt; 0 ? (int)Math.Ceiling(paged.TotalCount / (<span class="keywordtype">double</span>)filter.Size) : 0;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> PageResponseDto&lt;TournamentResponseDto&gt;(</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            Content: paged.Items.Select(item =&gt; item.ToTournamentResponseDto(cloudinary)).ToList(),</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            TotalPages: totalPages,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            TotalElements: paged.TotalCount,</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            PageSize: filter.Size,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            PageNumber: filter.Page,    </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            TotalPageElements: paged.Items.Count(),</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            SortBy: filter.SortBy,</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            Direction: filter.Direction</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        );</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keyword">public</span> async Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; CreateTournament(</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <a class="code hl_class" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html">TournamentAdminRequestDto</a> adminRequest)</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    {</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        logger.LogInformation(<span class="stringliteral">&quot;Creating tournament with title {Title}&quot;</span>, adminRequest.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html#af633a9cb47de86f762e6d10410293e37">Name</a>);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        var user = await userRepository.FindByIdAsync(adminRequest.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html#a4a3395f588b7a2c43eae295c51902ac2">OwnerId</a>);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keywordflow">if</span> (user is <span class="keyword">null</span> || user.Role!= <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">OWNER</a>) </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(<span class="keyword">new</span> UserNotFoundError(<span class="stringliteral">&quot;usuario invalido o no encontrado&quot;</span>))</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                .TapError((() =&gt; logger.LogInformation(<span class="stringliteral">&quot;Usuario invalido o no encontrado con id {Id}&quot;</span>,adminRequest.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html#a4a3395f588b7a2c43eae295c51902ac2">OwnerId</a>)));</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        var imageUrl= CloudinaryConstants.DEFAULT_IMAGE_TALLERES;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keywordtype">string</span>? publicId=<span class="keyword">null</span>;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="keywordflow">if</span> (adminRequest.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html#af7c38f0726cd7369a51bc49b70c91b7d">Logotype</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            var upload= await cloudinary.UploadWithAutoNameAsync(adminRequest.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html#af7c38f0726cd7369a51bc49b70c91b7d">Logotype</a>, adminRequest.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html#af633a9cb47de86f762e6d10410293e37">Name</a>, CloudinaryConstants.FOLDER_TALLERES);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            imageUrl = upload.ImageUrl;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            publicId = upload.PublicId;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        }</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        var saved = await repository.SaveAsync(adminRequest.ToTournaments(imageUrl,publicId));</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keywordflow">return</span> await BuildResponseAsync(saved, user);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    }</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keyword">public</span> async Task&lt;Result&lt;TournamentResponseDto, TournamentsErrors&gt;&gt; UpdateTournament(Ulid <span class="keywordtype">id</span>, <a class="code hl_class" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html">TournamentPatchDto</a> request)</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        logger.LogInformation(<span class="stringliteral">&quot;Updating tournament {Id}&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        var oldTournament =await repository.FindByIdAsync(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordflow">if</span> (oldTournament is <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            logger.LogWarning(<span class="stringliteral">&quot;Tournament with id {Id} not found&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a72dc68c0f87607cd84c5396cf7632205">TournamentResponseDto</a>, TournamentsErrors&gt;(</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                    <span class="keyword">new</span> TournamentNotFoundError());</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        }</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">if</span> (request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#a28c12595c73e662cfa5218dc607b604b">EndTournament</a> != <span class="keyword">null</span>) </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            oldTournament.EndTournament = request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#a28c12595c73e662cfa5218dc607b604b">EndTournament</a>.Value;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="keywordflow">if</span> (request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#a2cb14a609a97f70bafec5422f34bdb09">StartTournament</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            oldTournament.StartTournament = request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#a2cb14a609a97f70bafec5422f34bdb09">StartTournament</a>.Value;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="keywordflow">if</span> (request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#a252fef75ab4b88fecc327c686cea2c83">Name</a> != <span class="keyword">null</span> || request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#a252fef75ab4b88fecc327c686cea2c83">Name</a>?.Trim().Length &gt; 0)</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            oldTournament.Title = request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#a252fef75ab4b88fecc327c686cea2c83">Name</a>;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keywordflow">if</span> (request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#add4d3e5b9dc84a83a57d3e0527a7a64f">Logotype</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <span class="keywordflow">if</span> (oldTournament.Logotype != CloudinaryConstants.DEFAULT_IMAGE_TALLERES) </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                await cloudinary.DeleteAsync(oldTournament.LogotypePublicId!);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            var upload= await cloudinary.UploadWithAutoNameAsync(request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#add4d3e5b9dc84a83a57d3e0527a7a64f">Logotype</a>, <span class="keywordtype">id</span>.ToString(), CloudinaryConstants.FOLDER_TALLERES);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            oldTournament.Logotype = upload.ImageUrl;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            oldTournament.LogotypePublicId = upload.PublicId;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        }</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        <span class="keywordflow">return</span> await repository.UpdateAsync(<span class="keywordtype">id</span>, oldTournament) is {} updated</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            ? Result.Success&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a72dc68c0f87607cd84c5396cf7632205">TournamentResponseDto</a>, TournamentsErrors&gt;(updated.ToTournamentResponseDto(cloudinary))</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            : Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a72dc68c0f87607cd84c5396cf7632205">TournamentResponseDto</a>, TournamentsErrors&gt;(<span class="keyword">new</span> <a class="code hl_typedef" href="TournamentsController_8cs.html#a503b2aceecc7d41141e3471a398d33a8">ConflictError</a>(<span class="stringliteral">&quot;Error updating tournament&quot;</span>));</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    }</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="keyword">public</span> async Task&lt;Result&lt;Unit, TournamentsErrors&gt;&gt; DeleteTournament(Ulid <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    {</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        logger.LogInformation(<span class="stringliteral">&quot;Deleting tournament {Id}&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        <span class="keywordflow">return</span> await repository.DeleteAsync(<span class="keywordtype">id</span>) </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            ? Result.Success&lt;<a class="code hl_struct" href="structBackEncordados_1_1Common_1_1Utils_1_1Unit.html">Unit</a>, TournamentsErrors&gt;(<a class="code hl_struct" href="structBackEncordados_1_1Common_1_1Utils_1_1Unit.html">Unit</a>.<a class="code hl_variable" href="structBackEncordados_1_1Common_1_1Utils_1_1Unit.html#abcc404a1344cb3a5e76a9c917da625a7">Value</a>) </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            : Result.Failure&lt;<a class="code hl_struct" href="structBackEncordados_1_1Common_1_1Utils_1_1Unit.html">Unit</a>, TournamentsErrors&gt;(<span class="keyword">new</span> TournamentNotFoundError());</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keyword">public</span> async Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; AssignWorkerMachine(Ulid tournamentId, <a class="code hl_class" href="classBackEncordados_1_1Talleres_1_1Dto_1_1WorkerMachineAssignmentRequestDto.html">WorkerMachineAssignmentRequestDto</a> request)</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        logger.LogInformation(<span class="stringliteral">&quot;Assigning worker machine {Id}&quot;</span>, tournamentId);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        var workerUlid= Ulid.TryParse(request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1WorkerMachineAssignmentRequestDto.html#af78a05412c87f6031485858a094f296c">UserId</a>, out var ulid) ? ulid : Ulid.Empty;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keywordflow">if</span> (workerUlid == Ulid.Empty)        {</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            logger.LogWarning(<span class="stringliteral">&quot;Invalid user id {Id}&quot;</span>, request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1WorkerMachineAssignmentRequestDto.html#af78a05412c87f6031485858a094f296c">UserId</a>);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(<span class="keyword">new</span> <a class="code hl_typedef" href="TournamentsController_8cs.html#a79a4b3266c6227d5ebf2b2863585518f">ValidationError</a>(<span class="stringliteral">&quot;Invalid user id&quot;</span>));</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        }</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        var tournamentUpdated =await repository.AsignWorker(tournamentId, workerUlid, request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1WorkerMachineAssignmentRequestDto.html#a17161efdeddbc5908e7bc09f9953e01a">MachineName</a>);</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        <span class="keywordflow">if</span> (tournamentUpdated is <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            logger.LogWarning(<span class="stringliteral">&quot;Tournament with id {Id} not found&quot;</span>, tournamentId);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(<span class="keyword">new</span> TournamentNotFoundError());</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        }</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="keywordflow">return</span> await BuildResponseAsync(tournamentUpdated);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    }</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keyword">public</span> async Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; UnassignWorkerMachine(Ulid tournamentId, <span class="keywordtype">string</span> request)</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        logger.LogInformation(<span class="stringliteral">&quot;Unassigning worker machine {Id}&quot;</span>, tournamentId);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        var workerUlid= Ulid.TryParse(request, out var ulid) ? ulid : Ulid.Empty;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        <span class="keywordflow">if</span> (workerUlid == Ulid.Empty)        {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            logger.LogWarning(<span class="stringliteral">&quot;Invalid user id {Id}&quot;</span>, request);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(<span class="keyword">new</span> <a class="code hl_typedef" href="TournamentsController_8cs.html#a79a4b3266c6227d5ebf2b2863585518f">ValidationError</a>(<span class="stringliteral">&quot;Invalid user id&quot;</span>));</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        }</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        var tournamentUpdated =await repository.RemoveWorker(tournamentId, workerUlid);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        <span class="keywordflow">if</span> (tournamentUpdated is <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        {</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            logger.LogWarning(<span class="stringliteral">&quot;Tournament with id {Id} not found&quot;</span>, tournamentId);</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(<span class="keyword">new</span> TournamentNotFoundError());</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        }</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <span class="keywordflow">return</span> await BuildResponseAsync(tournamentUpdated);</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    }</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keyword">public</span> async Task&lt;Result&lt;IEnumerable&lt;WorkerMachineAssignmentResponseDto&gt;, TournamentsErrors&gt;&gt; GetAssignedWorkerMachines(Ulid tournamentId)</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        logger.LogInformation(<span class="stringliteral">&quot;Getting assigned worker machines for tournament {Id}&quot;</span>, tournamentId);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        var assignments = await repository.GetAssignedWorkerMachinesAsync(tournamentId);</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        <span class="keywordflow">if</span> (assignments == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        {</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            logger.LogWarning(<span class="stringliteral">&quot;Tournament with id {Id} not found or deleted&quot;</span>, tournamentId);</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            <span class="keywordflow">return</span> Result.Failure&lt;IEnumerable&lt;WorkerMachineAssignmentResponseDto&gt;, TournamentsErrors&gt;(</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                <span class="keyword">new</span> TournamentNotFoundError());</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        var workerMachineAssignments = assignments.ToList();</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        var workerIds = workerMachineAssignments.Select(a =&gt; a.WorkerId);</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        var users = await userRepository.FindByIdsAsync(workerIds);</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        var userDict = users.ToDictionary(u =&gt; u.Id);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        var responseDtos = workerMachineAssignments</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            .Where(a =&gt; userDict.ContainsKey(a.WorkerId))</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            .Select(a =&gt; a.ToWorkerMachineAssignmentResponseDto(userDict[a.WorkerId].ToDto(cloudinary)))</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            .ToList();</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        <span class="keywordflow">return</span> Result.Success&lt;IEnumerable&lt;WorkerMachineAssignmentResponseDto&gt;, TournamentsErrors&gt;(responseDtos);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    }</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <span class="keyword">public</span> async Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; GetTournamentByName(<span class="keywordtype">string</span> name)</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    {</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        logger.LogInformation(<span class="stringliteral">&quot;Getting tournament {Id}&quot;</span>, name);</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        var tournament = await repository.FindByNameAsync(name);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        <span class="keywordflow">if</span> (tournament is <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        {</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>            logger.LogWarning(<span class="stringliteral">&quot;Tournament with id {Id} not found&quot;</span>, name);</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(<span class="keyword">new</span> TournamentNotFoundError());</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        }</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>        <span class="keywordflow">return</span> await BuildResponseAsync(tournament);</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    }</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    <span class="keyword">public</span> async Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; OwnerCreateTournament(<a class="code hl_class" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentRequestDto.html">TournamentRequestDto</a> request, Ulid ownerId) {</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>        var user= await userRepository.FindByIdAsync(ownerId);</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        <span class="keywordflow">if</span> (user is <span class="keyword">null</span> || user.Role!= <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">OWNER</a>) </div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>            <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(<span class="keyword">new</span> UserNotFoundError(<span class="stringliteral">&quot;usuario invalido o no encontrado&quot;</span>))</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                .TapError((() =&gt; logger.LogInformation(<span class="stringliteral">&quot;Usuario con id {Id} invalido o no encontrado&quot;</span>,ownerId)));</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>        var imageUrl= CloudinaryConstants.DEFAULT_IMAGE_TALLERES;</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>        <span class="keywordtype">string</span>? publicId=<span class="keyword">null</span>;</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>        <span class="keywordflow">if</span> (request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#add4d3e5b9dc84a83a57d3e0527a7a64f">Logotype</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>            var upload= await cloudinary.UploadWithAutoNameAsync(request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#add4d3e5b9dc84a83a57d3e0527a7a64f">Logotype</a>, request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#a252fef75ab4b88fecc327c686cea2c83">Name</a>, CloudinaryConstants.FOLDER_TALLERES);</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>            imageUrl = upload.ImageUrl;</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>            publicId = upload.PublicId;</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        }</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        var saved = await repository.SaveAsync(request.ToTournaments(ownerId,imageUrl,publicId));</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        <span class="keywordflow">return</span> await BuildResponseAsync(saved, user);</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    }</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span> </div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    <span class="keyword">public</span> async Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; AssingSupervisor(<a class="code hl_class" href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html">SupervisorAsignmentRequestDto</a> request) {</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>        </div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>        logger.LogInformation(<span class="stringliteral">&quot;Assigning worker machine {Id}&quot;</span>, request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html#a0d87c6c8bc20ec21fe86da6f8a4eb7e2">TournamentId</a>);</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>        var supervisorId= Ulid.TryParse(request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html#a5c1121eaf4bfd551bd0bb5b85e3b56e8">SupervisorId</a>, out var ulid) ? ulid : Ulid.Empty;</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>        <span class="keywordflow">if</span> (supervisorId == Ulid.Empty)        {</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>            logger.LogWarning(<span class="stringliteral">&quot;Invalid user id {Id}&quot;</span>, request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html#a5c1121eaf4bfd551bd0bb5b85e3b56e8">SupervisorId</a>);</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>            <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(<span class="keyword">new</span> <a class="code hl_typedef" href="TournamentsController_8cs.html#a79a4b3266c6227d5ebf2b2863585518f">ValidationError</a>(<span class="stringliteral">&quot;Invalid user id&quot;</span>));</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>        }</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>        var tournamentUpdated =await repository.AsignSupervisor(request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html#a0d87c6c8bc20ec21fe86da6f8a4eb7e2">TournamentId</a>, supervisorId);</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>        <span class="keywordflow">if</span> (tournamentUpdated is <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>        {</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>            logger.LogWarning(<span class="stringliteral">&quot;Tournament with id {Id} not found&quot;</span>, request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html#a5c1121eaf4bfd551bd0bb5b85e3b56e8">SupervisorId</a>);</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>            <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(<span class="keyword">new</span> TournamentNotFoundError());</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>        }</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>        <span class="keywordflow">return</span> await BuildResponseAsync(tournamentUpdated);</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>    }</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span> </div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>    <span class="keyword">public</span> async Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; AnassingSupervisor(<a class="code hl_class" href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html">SupervisorAsignmentRequestDto</a> request) {</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>        logger.LogInformation(<span class="stringliteral">&quot;Assigning worker machine {Id}&quot;</span>, request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html#a0d87c6c8bc20ec21fe86da6f8a4eb7e2">TournamentId</a>);</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        var supervisorId= Ulid.TryParse(request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html#a5c1121eaf4bfd551bd0bb5b85e3b56e8">SupervisorId</a>, out var ulid) ? ulid : Ulid.Empty;</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>        <span class="keywordflow">if</span> (supervisorId == Ulid.Empty)        {</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>            logger.LogWarning(<span class="stringliteral">&quot;Invalid user id {Id}&quot;</span>, request);</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>            <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(<span class="keyword">new</span> <a class="code hl_typedef" href="TournamentsController_8cs.html#a79a4b3266c6227d5ebf2b2863585518f">ValidationError</a>(<span class="stringliteral">&quot;Invalid user id&quot;</span>));</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>        }</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>        var tournamentUpdated =await repository.RemoveSupervisor(request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html#a0d87c6c8bc20ec21fe86da6f8a4eb7e2">TournamentId</a>, supervisorId);</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>        <span class="keywordflow">if</span> (tournamentUpdated is <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>        {</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>            logger.LogWarning(<span class="stringliteral">&quot;Tournament with id {Id} not found&quot;</span>, request.<a class="code hl_property" href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html#a0d87c6c8bc20ec21fe86da6f8a4eb7e2">TournamentId</a>);</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>            <span class="keywordflow">return</span> Result.Failure&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>, <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">DomainErrors</a>&gt;(<span class="keyword">new</span> TournamentNotFoundError());</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>        }</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>        <span class="keywordflow">return</span> await BuildResponseAsync(tournamentUpdated);</div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>    }</div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>}</div>
+<div class="ttc" id="aTournamentsController_8cs_html_a503b2aceecc7d41141e3471a398d33a8"><div class="ttname"><a href="TournamentsController_8cs.html#a503b2aceecc7d41141e3471a398d33a8">ConflictError</a></div><div class="ttdeci">BackEncordados.Talleres.Error.ConflictError ConflictError</div><div class="ttdef"><b>Definition</b> <a href="TournamentsController_8cs_source.html#l00010">TournamentsController.cs:10</a></div></div>
+<div class="ttc" id="aTournamentsController_8cs_html_a79a4b3266c6227d5ebf2b2863585518f"><div class="ttname"><a href="TournamentsController_8cs.html#a79a4b3266c6227d5ebf2b2863585518f">ValidationError</a></div><div class="ttdeci">BackEncordados.Talleres.Error.ValidationError ValidationError</div><div class="ttdef"><b>Definition</b> <a href="TournamentsController_8cs_source.html#l00011">TournamentsController.cs:11</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html">BackEncordados.Talleres.Dto.SupervisorAsignmentRequestDto</a></div><div class="ttdoc">DTO de solicitud para asignar un supervisor a un torneo.</div><div class="ttdef"><b>Definition</b> <a href="SupervisorAsignmentRequestDto_8cs_source.html#l00013">SupervisorAsignmentRequestDto.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto_html_a0d87c6c8bc20ec21fe86da6f8a4eb7e2"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html#a0d87c6c8bc20ec21fe86da6f8a4eb7e2">BackEncordados.Talleres.Dto.SupervisorAsignmentRequestDto.TournamentId</a></div><div class="ttdeci">Ulid TournamentId</div><div class="ttdoc">Identificador ULID del torneo al que se asignará el supervisor.</div><div class="ttdef"><b>Definition</b> <a href="SupervisorAsignmentRequestDto_8cs_source.html#l00016">SupervisorAsignmentRequestDto.cs:16</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto_html_a5c1121eaf4bfd551bd0bb5b85e3b56e8"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html#a5c1121eaf4bfd551bd0bb5b85e3b56e8">BackEncordados.Talleres.Dto.SupervisorAsignmentRequestDto.SupervisorId</a></div><div class="ttdeci">string SupervisorId</div><div class="ttdoc">Identificador del supervisor (ULID en formato string). Entre 1 y 100 caracteres.</div><div class="ttdef"><b>Definition</b> <a href="SupervisorAsignmentRequestDto_8cs_source.html#l00021">SupervisorAsignmentRequestDto.cs:21</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html">BackEncordados.Talleres.Dto.TournamentAdminRequestDto</a></div><div class="ttdoc">DTO de solicitud para creación de torneo por administrador.</div><div class="ttdef"><b>Definition</b> <a href="TournamentAdminRequestDto_8cs_source.html#l00013">TournamentAdminRequestDto.cs:14</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto_html_a4a3395f588b7a2c43eae295c51902ac2"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html#a4a3395f588b7a2c43eae295c51902ac2">BackEncordados.Talleres.Dto.TournamentAdminRequestDto.OwnerId</a></div><div class="ttdeci">Ulid OwnerId</div><div class="ttdoc">ULID del usuario propietario del torneo.</div><div class="ttdef"><b>Definition</b> <a href="TournamentAdminRequestDto_8cs_source.html#l00022">TournamentAdminRequestDto.cs:22</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto_html_af633a9cb47de86f762e6d10410293e37"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html#af633a9cb47de86f762e6d10410293e37">BackEncordados.Talleres.Dto.TournamentAdminRequestDto.Name</a></div><div class="ttdeci">string Name</div><div class="ttdoc">Nombre del torneo. Entre 1 y 200 caracteres.</div><div class="ttdef"><b>Definition</b> <a href="TournamentAdminRequestDto_8cs_source.html#l00019">TournamentAdminRequestDto.cs:19</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto_html_af7c38f0726cd7369a51bc49b70c91b7d"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html#af7c38f0726cd7369a51bc49b70c91b7d">BackEncordados.Talleres.Dto.TournamentAdminRequestDto.Logotype</a></div><div class="ttdeci">IFormFile? Logotype</div><div class="ttdoc">Archivo de imagen para el logotipo del torneo (opcional).</div><div class="ttdef"><b>Definition</b> <a href="TournamentAdminRequestDto_8cs_source.html#l00030">TournamentAdminRequestDto.cs:30</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto_html"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html">BackEncordados.Talleres.Dto.TournamentPatchDto</a></div><div class="ttdoc">DTO de solicitud para actualización parcial de un torneo.</div><div class="ttdef"><b>Definition</b> <a href="TournamentPatchDto_8cs_source.html#l00012">TournamentPatchDto.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto_html_a252fef75ab4b88fecc327c686cea2c83"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#a252fef75ab4b88fecc327c686cea2c83">BackEncordados.Talleres.Dto.TournamentPatchDto.Name</a></div><div class="ttdeci">string? Name</div><div class="ttdoc">Nuevo nombre del torneo (opcional). Entre 1 y 200 caracteres si se proporciona.</div><div class="ttdef"><b>Definition</b> <a href="TournamentPatchDto_8cs_source.html#l00017">TournamentPatchDto.cs:17</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto_html_a28c12595c73e662cfa5218dc607b604b"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#a28c12595c73e662cfa5218dc607b604b">BackEncordados.Talleres.Dto.TournamentPatchDto.EndTournament</a></div><div class="ttdeci">DateTime? EndTournament</div><div class="ttdoc">Nueva fecha de finalización del torneo (opcional).</div><div class="ttdef"><b>Definition</b> <a href="TournamentPatchDto_8cs_source.html#l00019">TournamentPatchDto.cs:19</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto_html_a2cb14a609a97f70bafec5422f34bdb09"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#a2cb14a609a97f70bafec5422f34bdb09">BackEncordados.Talleres.Dto.TournamentPatchDto.StartTournament</a></div><div class="ttdeci">DateTime? StartTournament</div><div class="ttdoc">Nueva fecha de inicio del torneo (opcional).</div><div class="ttdef"><b>Definition</b> <a href="TournamentPatchDto_8cs_source.html#l00021">TournamentPatchDto.cs:21</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto_html_add4d3e5b9dc84a83a57d3e0527a7a64f"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html#add4d3e5b9dc84a83a57d3e0527a7a64f">BackEncordados.Talleres.Dto.TournamentPatchDto.Logotype</a></div><div class="ttdeci">IFormFile? Logotype</div><div class="ttdoc">Nuevo logotipo del torneo (opcional).</div><div class="ttdef"><b>Definition</b> <a href="TournamentPatchDto_8cs_source.html#l00023">TournamentPatchDto.cs:23</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1TournamentRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentRequestDto.html">BackEncordados.Talleres.Dto.TournamentRequestDto</a></div><div class="ttdoc">DTO de solicitud para creación de un torneo por parte de un supervisor o usuario estándar.</div><div class="ttdef"><b>Definition</b> <a href="TournamentRequestDto_8cs_source.html#l00013">TournamentRequestDto.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1WorkerMachineAssignmentRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1WorkerMachineAssignmentRequestDto.html">BackEncordados.Talleres.Dto.WorkerMachineAssignmentRequestDto</a></div><div class="ttdoc">DTO de solicitud para asignar un trabajador a una máquina en un torneo.</div><div class="ttdef"><b>Definition</b> <a href="WorkerMachineAssignmentRequestDto_8cs_source.html#l00013">WorkerMachineAssignmentRequestDto.cs:14</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1WorkerMachineAssignmentRequestDto_html_a17161efdeddbc5908e7bc09f9953e01a"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1WorkerMachineAssignmentRequestDto.html#a17161efdeddbc5908e7bc09f9953e01a">BackEncordados.Talleres.Dto.WorkerMachineAssignmentRequestDto.MachineName</a></div><div class="ttdeci">string MachineName</div><div class="ttdoc">Nombre de la máquina asignada. Entre 1 y 50 caracteres.</div><div class="ttdef"><b>Definition</b> <a href="WorkerMachineAssignmentRequestDto_8cs_source.html#l00022">WorkerMachineAssignmentRequestDto.cs:22</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1WorkerMachineAssignmentRequestDto_html_af78a05412c87f6031485858a094f296c"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1WorkerMachineAssignmentRequestDto.html#af78a05412c87f6031485858a094f296c">BackEncordados.Talleres.Dto.WorkerMachineAssignmentRequestDto.UserId</a></div><div class="ttdeci">string UserId</div><div class="ttdoc">Identificador del usuario/trabajador (ULID en formato string).</div><div class="ttdef"><b>Definition</b> <a href="WorkerMachineAssignmentRequestDto_8cs_source.html#l00017">WorkerMachineAssignmentRequestDto.cs:17</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">BackEncordados.Usuarios.Model.User.UserRoles</a></div><div class="ttdoc">Constantes para los roles de usuario.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00049">User.cs:50</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a6b308802168ec5c8cc62d74631698b6f"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">BackEncordados.Usuarios.Model.User.UserRoles.OWNER</a></div><div class="ttdeci">const string OWNER</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00057">User.cs:57</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">BackEncordados.Usuarios.Model.User</a></div><div class="ttdoc">Entidad de dominio que representa un usuario. Autenticación con email/password hasheado con BCrypt....</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00011">User.cs:12</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html">BackEncordados.Common.Service.Cloudinary.ICloudinaryService</a></div><div class="ttdoc">Define el contrato para el servicio de gestión de imágenes en Cloudinary.</div><div class="ttdef"><b>Definition</b> <a href="ICloudinaryService_8cs_source.html#l00049">ICloudinaryService.cs:50</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html">BackEncordados.Talleres.Repository.ITournamentRepository</a></div><div class="ttdoc">Contrato del repositorio de torneos que define las operaciones de acceso a datos sobre la entidad Tou...</div><div class="ttdef"><b>Definition</b> <a href="ITournamentRepository_8cs_source.html#l00030">ITournamentRepository.cs:31</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html">BackEncordados.Usuarios.Repository.IUserRepository</a></div><div class="ttdoc">Contrato del repositorio de usuarios que define las operaciones de acceso a datos sobre la entidad Us...</div><div class="ttdef"><b>Definition</b> <a href="IUserRepository_8cs_source.html#l00029">IUserRepository.cs:30</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ExportManifestDto_8cs_source.html#l00001">ExportManifestDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Errors_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Errors.html">BackEncordados.Common.Errors</a></div><div class="ttdef"><b>Definition</b> <a href="DomainErrors_8cs_source.html#l00001">DomainErrors.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Errors_html_ae3ae3461e756de34adfcb3f9bfda6293"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293">BackEncordados.Common.Errors.DomainErrors</a></div><div class="ttdeci">record DomainErrors(string Error)</div><div class="ttdoc">Record base para todos los errores de dominio de la aplicación. Implementa el patrón Result mediante ...</div><div class="ttdef"><b>Definition</b> <a href="DomainErrors_8cs_source.html#l00028">DomainErrors.cs:28</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a></div><div class="ttdef"><b>Definition</b> <a href="CloudinaryConstants_8cs_source.html#l00001">CloudinaryConstants.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Utils_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Utils.html">BackEncordados.Common.Utils</a></div><div class="ttdef"><b>Definition</b> <a href="TapAsync_8cs_source.html#l00003">TapAsync.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Dto.html">BackEncordados.Talleres.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="FilterTournamentDto_8cs_source.html#l00001">FilterTournamentDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Dto_html_a2555b1a1734527adc84331c092a9e5c6"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a2555b1a1734527adc84331c092a9e5c6">BackEncordados.Talleres.Dto.FilterTournamentDto</a></div><div class="ttdeci">record FilterTournamentDto(string Search, Ulid? UserId, int Page=0, int Size=10, string SortBy=&quot;name&quot;, string Direction=&quot;asc&quot;)</div><div class="ttdoc">DTO de filtro y paginación para la consulta de torneos.</div><div class="ttdef"><b>Definition</b> <a href="FilterTournamentDto_8cs_source.html#l00019">FilterTournamentDto.cs:19</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Dto_html_a72dc68c0f87607cd84c5396cf7632205"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a72dc68c0f87607cd84c5396cf7632205">BackEncordados.Talleres.Dto.TournamentResponseDto</a></div><div class="ttdeci">record TournamentResponseDto(Ulid Id, string Name, DateTime EndTournament, DateTime StartTournament, string Logotype)</div><div class="ttdoc">DTO de respuesta con la información básica de un torneo.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Dto_html_a7b9aa5319ccef52006cf2c896a59eba9"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">BackEncordados.Talleres.Dto.TournamentResponseDetailsDto</a></div><div class="ttdeci">record TournamentResponseDetailsDto(Ulid Id, string Name, DateTime StartDate, DateTime EndDate, string Logotype, List&lt; UserResponseDto &gt; User, UserResponseDto Owner, List&lt; UserResponseDto &gt; Supevisors)</div><div class="ttdoc">DTO de respuesta con información detallada de un torneo, incluyendo usuarios, propietario y superviso...</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Error_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Error.html">BackEncordados.Talleres.Error</a></div><div class="ttdef"><b>Definition</b> <a href="TournamentsErrors_8cs_source.html#l00003">TournamentsErrors.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Mapper_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Mapper.html">BackEncordados.Talleres.Mapper</a></div><div class="ttdef"><b>Definition</b> <a href="TournamentsMapper_8cs_source.html#l00006">TournamentsMapper.cs:6</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html">BackEncordados.Talleres.Model</a></div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00004">Tournaments.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_af6124b908c5cc5c83d9bac689e10e7a4"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#af6124b908c5cc5c83d9bac689e10e7a4">BackEncordados.Talleres.Model.Tournaments</a></div><div class="ttdeci">record Tournaments</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00006">Tournaments.cs:8</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Repository_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Repository.html">BackEncordados.Talleres.Repository</a></div><div class="ttdef"><b>Definition</b> <a href="ITournamentRepository_8cs_source.html#l00004">ITournamentRepository.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Service_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Service.html">BackEncordados.Talleres.Service</a></div><div class="ttdef"><b>Definition</b> <a href="ITournamentService_8cs_source.html#l00008">ITournamentService.cs:8</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres.html">BackEncordados.Talleres</a></div><div class="ttdef"><b>Definition</b> <a href="TournamentsController_8cs_source.html#l00013">TournamentsController.cs:13</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Errors_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Errors.html">BackEncordados.Usuarios.Errors</a></div><div class="ttdef"><b>Definition</b> <a href="AuthError_8cs_source.html#l00003">AuthError.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Mapper_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Mapper.html">BackEncordados.Usuarios.Mapper</a></div><div class="ttdef"><b>Definition</b> <a href="UserMapper_8cs_source.html#l00005">UserMapper.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a></div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00005">User.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Repository_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Repository.html">BackEncordados.Usuarios.Repository</a></div><div class="ttdef"><b>Definition</b> <a href="IUserRepository_8cs_source.html#l00004">IUserRepository.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_html"><div class="ttname"><a href="namespaceBackEncordados.html">BackEncordados</a></div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00005">MaterialsDbContext.cs:5</a></div></div>
+<div class="ttc" id="astructBackEncordados_1_1Common_1_1Utils_1_1Unit_html"><div class="ttname"><a href="structBackEncordados_1_1Common_1_1Utils_1_1Unit.html">BackEncordados.Common.Utils.Unit</a></div><div class="ttdoc">Tipo funcional que representa la ausencia de un valor (unidad).</div><div class="ttdef"><b>Definition</b> <a href="UnitClass_8cs_source.html#l00012">UnitClass.cs:13</a></div></div>
+<div class="ttc" id="astructBackEncordados_1_1Common_1_1Utils_1_1Unit_html_abcc404a1344cb3a5e76a9c917da625a7"><div class="ttname"><a href="structBackEncordados_1_1Common_1_1Utils_1_1Unit.html#abcc404a1344cb3a5e76a9c917da625a7">BackEncordados.Common.Utils.Unit.Value</a></div><div class="ttdeci">static readonly Unit Value</div><div class="ttdoc">Instancia singleton de Unit.</div><div class="ttdef"><b>Definition</b> <a href="UnitClass_8cs_source.html#l00015">UnitClass.cs:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_28130524fe5c59a249a71dcd6e9a5488.html">Talleres</a></li><li class="navelem"><a class="el" href="dir_faa437e218cb4b5dc8a1118fffc86298.html">Service</a></li><li class="navelem"><a class="el" href="TournamentService_8cs.html">TournamentService.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

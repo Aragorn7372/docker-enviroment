@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Usuarios/Service/Auth/IJwtTokenExtractor.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('IJwtTokenExtractor_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">IJwtTokenExtractor.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="IJwtTokenExtractor_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Security.Claims;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth.html">BackEncordados.Usuarios.Service.Auth</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html">    8</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html">IJwtTokenExtractor</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#a82057354009802123f9843f3c2fb2188">   13</a></span>    <span class="keywordtype">long</span>? <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#a82057354009802123f9843f3c2fb2188">ExtractUserId</a>(<span class="keywordtype">string</span> token);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#aa81d7b8b1f204b796e67a4408fd1359b">   18</a></span>    <span class="keywordtype">string</span>? <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#aa81d7b8b1f204b796e67a4408fd1359b">ExtractRole</a>(<span class="keywordtype">string</span> token);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#a97b232ddf8f664780a29884a444d8774">   23</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#a97b232ddf8f664780a29884a444d8774">IsAdmin</a>(<span class="keywordtype">string</span> token);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#aaa88fe11998e9681eed5abe2e8d1e944">   28</a></span>    (<span class="keywordtype">long</span>? <a class="code hl_variable" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#aae84f4ea9254a37ea6b1421b560a1a3d">UserId</a>, <span class="keywordtype">bool</span> <a class="code hl_variable" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#a86d1a921c21ec2ae7b3c0878f1a0e9f3">IsAdmin</a>, <span class="keywordtype">string</span>? <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a>) <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#aaa88fe11998e9681eed5abe2e8d1e944">ExtractUserInfo</a>(<span class="keywordtype">string</span> token);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#ab1d799d20cab87452df81fd972d5582f">   33</a></span>    ClaimsPrincipal? <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#ab1d799d20cab87452df81fd972d5582f">ExtractClaims</a>(<span class="keywordtype">string</span> token);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#aa5680c49e6c5ef8c9ff9ec1f646198ba">   38</a></span>    <span class="keywordtype">string</span>? <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#aa5680c49e6c5ef8c9ff9ec1f646198ba">ExtractEmail</a>(<span class="keywordtype">string</span> token);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#a3bbbbb81e3ab9dd5cbad27299821bd7f">   43</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#a3bbbbb81e3ab9dd5cbad27299821bd7f">IsValidTokenFormat</a>(<span class="keywordtype">string</span> token);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+</div>
+<div class="ttc" id="aPurchasedController_8cs_html_a2cca664a5a4cb21c8352e11d88fa47ef"><div class="ttname"><a href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a></div><div class="ttdeci">BackEncordados.Usuarios.Model.User.UserRoles Role</div><div class="ttdef"><b>Definition</b> <a href="PurchasedController_8cs_source.html#l00014">PurchasedController.cs:14</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html">BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor</a></div><div class="ttdoc">Interfaz para extraer información de tokens JWT.</div><div class="ttdef"><b>Definition</b> <a href="IJwtTokenExtractor_8cs_source.html#l00008">IJwtTokenExtractor.cs:9</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor_html_a3bbbbb81e3ab9dd5cbad27299821bd7f"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#a3bbbbb81e3ab9dd5cbad27299821bd7f">BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor.IsValidTokenFormat</a></div><div class="ttdeci">bool IsValidTokenFormat(string token)</div><div class="ttdoc">Valida el formato del token (no verifica expiración).</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor_html_a82057354009802123f9843f3c2fb2188"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#a82057354009802123f9843f3c2fb2188">BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor.ExtractUserId</a></div><div class="ttdeci">long? ExtractUserId(string token)</div><div class="ttdoc">Extrae el ID del usuario del token.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor_html_a86d1a921c21ec2ae7b3c0878f1a0e9f3"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#a86d1a921c21ec2ae7b3c0878f1a0e9f3">BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor.IsAdmin</a></div><div class="ttdeci">long? bool IsAdmin</div><div class="ttdef"><b>Definition</b> <a href="IJwtTokenExtractor_8cs_source.html#l00028">IJwtTokenExtractor.cs:28</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor_html_a97b232ddf8f664780a29884a444d8774"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#a97b232ddf8f664780a29884a444d8774">BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor.IsAdmin</a></div><div class="ttdeci">bool IsAdmin(string token)</div><div class="ttdoc">Determina si el usuario es admin.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor_html_aa5680c49e6c5ef8c9ff9ec1f646198ba"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#aa5680c49e6c5ef8c9ff9ec1f646198ba">BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor.ExtractEmail</a></div><div class="ttdeci">string? ExtractEmail(string token)</div><div class="ttdoc">Extrae el email del usuario del token.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor_html_aa81d7b8b1f204b796e67a4408fd1359b"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#aa81d7b8b1f204b796e67a4408fd1359b">BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor.ExtractRole</a></div><div class="ttdeci">string? ExtractRole(string token)</div><div class="ttdoc">Extrae el rol del usuario del token.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor_html_aaa88fe11998e9681eed5abe2e8d1e944"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#aaa88fe11998e9681eed5abe2e8d1e944">BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor.ExtractUserInfo</a></div><div class="ttdeci">long? bool? string Role ExtractUserInfo(string token)</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor_html_aae84f4ea9254a37ea6b1421b560a1a3d"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#aae84f4ea9254a37ea6b1421b560a1a3d">BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor.UserId</a></div><div class="ttdeci">long? UserId</div><div class="ttdoc">Extrae información completa del usuario.</div><div class="ttdef"><b>Definition</b> <a href="IJwtTokenExtractor_8cs_source.html#l00028">IJwtTokenExtractor.cs:28</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor_html_ab1d799d20cab87452df81fd972d5582f"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html#ab1d799d20cab87452df81fd972d5582f">BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor.ExtractClaims</a></div><div class="ttdeci">ClaimsPrincipal? ExtractClaims(string token)</div><div class="ttdoc">Extrae todos los claims del token.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth.html">BackEncordados.Usuarios.Service.Auth</a></div><div class="ttdef"><b>Definition</b> <a href="AuthService_8cs_source.html#l00013">AuthService.cs:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_fd3792cbbf285840670a23aad598bd09.html">Usuarios</a></li><li class="navelem"><a class="el" href="dir_fd7cdfa12ff7437a1ec6865f33914fa7.html">Service</a></li><li class="navelem"><a class="el" href="dir_f96711cb102e610547dfaa3c9e637677.html">Auth</a></li><li class="navelem"><a class="el" href="IJwtTokenExtractor_8cs.html">IJwtTokenExtractor.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

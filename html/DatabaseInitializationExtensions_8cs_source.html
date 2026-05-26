@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Infraestructure/DatabaseInitializationExtensions.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('DatabaseInitializationExtensions_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DatabaseInitializationExtensions.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="DatabaseInitializationExtensions_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html">BackEncordados.Common.Database.Config</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Serilog;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Infraestructure.html">BackEncordados.Infraestructure</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>DatabaseInitializationExtensions</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">public</span> <span class="keyword">static</span> async Task <a class="code hl_function" href="Program_8cs.html#afcc82f01924c2cf1838aba213e068061">InitializeDatabaseAsync</a>(<span class="keyword">this</span> WebApplication <a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        Log.Information(<span class="stringliteral">&quot;Inicializando base de datos...&quot;</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">using </span>var scope = <a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.Services.CreateScope();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        var user = scope.ServiceProvider.GetRequiredService&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a874b9c7897e5684ed9363273862c07ae">UserDbContext</a>&gt;();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        var partidos = scope.ServiceProvider.GetRequiredService&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#ab77e5c2557105dfeff621db130666e4f">TalleresDbContext</a>&gt;();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        var pedidos = scope.ServiceProvider.GetRequiredService&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#ad88c9780837c9f6201cc1127856fe504">PedidosDbContext</a>&gt;();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        var materials= scope.ServiceProvider.GetRequiredService&lt;<a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a059e238e4bbb11feb9df70d8f0ed32df">MaterialsDbContext</a>&gt;();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        var logger = scope.ServiceProvider.GetRequiredService&lt;ILogger&lt;Program&gt;&gt;();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        await materials.Database.EnsureCreatedAsync();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        await user.Database.EnsureCreatedAsync();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        await partidos.Database.EnsureCreatedAsync();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        await pedidos.Database.EnsureCreatedAsync();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        logger.LogInformation(<span class="stringliteral">&quot;Base de datos verificada (tablas creadas si no existían)&quot;</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
+<div class="ttc" id="aProgram_8cs_html_a7b225fcb720e4d5ed2bbf60e28a25e6d"><div class="ttname"><a href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a></div><div class="ttdeci">var app</div><div class="ttdef"><b>Definition</b> <a href="Program_8cs_source.html#l00048">Program.cs:48</a></div></div>
+<div class="ttc" id="aProgram_8cs_html_afcc82f01924c2cf1838aba213e068061"><div class="ttname"><a href="Program_8cs.html#afcc82f01924c2cf1838aba213e068061">InitializeDatabaseAsync</a></div><div class="ttdeci">await app. InitializeDatabaseAsync()</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html">BackEncordados.Common.Database.Config</a></div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00005">MaterialsDbContext.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_a059e238e4bbb11feb9df70d8f0ed32df"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a059e238e4bbb11feb9df70d8f0ed32df">BackEncordados.Common.Database.Config.MaterialsDbContext</a></div><div class="ttdeci">class MaterialsDbContext(DbContextOptions&lt; MaterialsDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión del catálogo de materiales e insumos de encordados....</div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00042">MaterialsDbContext.cs:42</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_a874b9c7897e5684ed9363273862c07ae"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a874b9c7897e5684ed9363273862c07ae">BackEncordados.Common.Database.Config.UserDbContext</a></div><div class="ttdeci">class UserDbContext(DbContextOptions&lt; UserDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión de usuarios del sistema. Administra la tabla users con autentica...</div><div class="ttdef"><b>Definition</b> <a href="UserDbContext_8cs_source.html#l00032">UserDbContext.cs:32</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_ab77e5c2557105dfeff621db130666e4f"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#ab77e5c2557105dfeff621db130666e4f">BackEncordados.Common.Database.Config.TalleresDbContext</a></div><div class="ttdeci">class TalleresDbContext(DbContextOptions&lt; TalleresDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión de torneos y talleres de encordado. Administra la tabla Tourname...</div><div class="ttdef"><b>Definition</b> <a href="TalleresDbContext_8cs_source.html#l00035">TalleresDbContext.cs:35</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_ad88c9780837c9f6201cc1127856fe504"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#ad88c9780837c9f6201cc1127856fe504">BackEncordados.Common.Database.Config.PedidosDbContext</a></div><div class="ttdeci">class PedidosDbContext(DbContextOptions&lt; PedidosDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión de pedidos de encordados. Administra las tablas Pedidos (solicit...</div><div class="ttdef"><b>Definition</b> <a href="PedidosDbContext_8cs_source.html#l00033">PedidosDbContext.cs:33</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Infraestructure_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Infraestructure.html">BackEncordados.Infraestructure</a></div><div class="ttdef"><b>Definition</b> <a href="AppConfig_8cs_source.html#l00001">AppConfig.cs:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_fca39826044f67dd320ad6baeec845bf.html">Infraestructure</a></li><li class="navelem"><a class="el" href="DatabaseInitializationExtensions_8cs.html">DatabaseInitializationExtensions.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

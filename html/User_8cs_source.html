@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Usuarios/Model/User.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('User_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">User.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="User_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.ComponentModel.DataAnnotations;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Helpers.html">BackEncordados.Common.Database.Helpers</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">    5</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">   11</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a> : <a class="code hl_interface" href="interfaceBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1ITimestamped.html">ITimestamped</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a2d167b78ab9337442d10aa5e65bc1cd8">   13</a></span>    <span class="keyword">public</span> Ulid <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a2d167b78ab9337442d10aa5e65bc1cd8">Id</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = Ulid.NewUlid();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a61d2355b7f92923174618f57fb8f04f0">   15</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a61d2355b7f92923174618f57fb8f04f0">Username</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a75991eb16dbabf1736d113bad37b8eef">   17</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a75991eb16dbabf1736d113bad37b8eef">Name</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a9824f0d1b6e1f8ec58ff68b6a32ce247">   19</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a9824f0d1b6e1f8ec58ff68b6a32ce247">Email</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#ac17e4433e0f46ea3a998ab4fe909137d">   21</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span>? <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#ac17e4433e0f46ea3a998ab4fe909137d">Phone</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a189f892158bb04a29848feb1637bc050">   23</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a189f892158bb04a29848feb1637bc050">PasswordHash</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a657e922bf2905fabbb4e69244ff9fd5d">   25</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = UserRoles.USER;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#ae1fda01475b760b37e739c4a064bb273">   27</a></span>    <span class="keyword">public</span> Ulid? <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#ae1fda01475b760b37e739c4a064bb273">TournamentId</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a90c42fc134522c890804cb1630e0e20a">   30</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a90c42fc134522c890804cb1630e0e20a">IsDeleted</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a1ff4eee3ced1fa62b2ad3e42e7165fa7">   32</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a1ff4eee3ced1fa62b2ad3e42e7165fa7">ImageUrl</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }=CloudinaryConstants.DEFAULT_IMAGE_USUARIOS;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a80997e728b95f9493f7c3f1c2d8ce100">   34</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span>? <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a80997e728b95f9493f7c3f1c2d8ce100">CloudinaryPublicId</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#aeb99c5e413794b236fad1b8895825194">   36</a></span>    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#aeb99c5e413794b236fad1b8895825194">Bonos</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    [ConcurrencyCheck]</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a00dbea00890aaebb46b96f81e2ff334b">   39</a></span>    <span class="keyword">public</span> <span class="keywordtype">long</span> <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a00dbea00890aaebb46b96f81e2ff334b">Version</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a753bd6c69dafe9a47d2dca4dbf6c973f">   41</a></span>    <span class="keyword">public</span> DateTime <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a753bd6c69dafe9a47d2dca4dbf6c973f">CreatedAt</a> { <span class="keyword">get</span>; init; } = DateTime.UtcNow;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a450d88f2c0fe7112c4702198a998f87a">   43</a></span>    <span class="keyword">public</span> DateTime <a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a450d88f2c0fe7112c4702198a998f87a">UpdatedAt</a> { <span class="keyword">get</span>; init; } = DateTime.UtcNow;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="};">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">   49</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">   52</a></span>        <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">ADMIN</a> = <span class="stringliteral">&quot;ADMIN&quot;</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">   55</a></span>        <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a> = <span class="stringliteral">&quot;USER&quot;</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">   57</a></span>        <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">OWNER</a> = <span class="stringliteral">&quot;OWNER&quot;</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">   59</a></span>        <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">ENCORDER</a> = <span class="stringliteral">&quot;ENCORDER&quot;</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a082ca66e612ccc70d8e002ec2d79dcac">   60</a></span>        <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a082ca66e612ccc70d8e002ec2d79dcac">SUPERVISOR</a> = <span class="stringliteral">&quot;SUPERVISOR&quot;</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+</div>
+</div>
+<div class="ttc" id="aPurchasedController_8cs_html_a2cca664a5a4cb21c8352e11d88fa47ef"><div class="ttname"><a href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a></div><div class="ttdeci">BackEncordados.Usuarios.Model.User.UserRoles Role</div><div class="ttdef"><b>Definition</b> <a href="PurchasedController_8cs_source.html#l00014">PurchasedController.cs:14</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">BackEncordados.Usuarios.Model.User.UserRoles</a></div><div class="ttdoc">Constantes para los roles de usuario.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00049">User.cs:50</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a082ca66e612ccc70d8e002ec2d79dcac"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a082ca66e612ccc70d8e002ec2d79dcac">BackEncordados.Usuarios.Model.User.UserRoles.SUPERVISOR</a></div><div class="ttdeci">const string SUPERVISOR</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00060">User.cs:60</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a54373adaa756848426e2a7469dedffd7"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">BackEncordados.Usuarios.Model.User.UserRoles.USER</a></div><div class="ttdeci">const string USER</div><div class="ttdoc">Rol de usuario estándar con permisos básicos.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00055">User.cs:55</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a6b308802168ec5c8cc62d74631698b6f"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">BackEncordados.Usuarios.Model.User.UserRoles.OWNER</a></div><div class="ttdeci">const string OWNER</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00057">User.cs:57</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a9a1dd51b12767c87dfafb4dd11fc1d8e"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">BackEncordados.Usuarios.Model.User.UserRoles.ENCORDER</a></div><div class="ttdeci">const string ENCORDER</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00059">User.cs:59</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_ad3cded80c57a57fac13e69200cfe1ea3"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">BackEncordados.Usuarios.Model.User.UserRoles.ADMIN</a></div><div class="ttdeci">const string ADMIN</div><div class="ttdoc">Rol de administrador con acceso total al sistema.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00052">User.cs:52</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">BackEncordados.Usuarios.Model.User</a></div><div class="ttdoc">Entidad de dominio que representa un usuario. Autenticación con email/password hasheado con BCrypt....</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00011">User.cs:12</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a00dbea00890aaebb46b96f81e2ff334b"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a00dbea00890aaebb46b96f81e2ff334b">BackEncordados.Usuarios.Model.User.Version</a></div><div class="ttdeci">long Version</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00039">User.cs:39</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a189f892158bb04a29848feb1637bc050"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a189f892158bb04a29848feb1637bc050">BackEncordados.Usuarios.Model.User.PasswordHash</a></div><div class="ttdeci">string PasswordHash</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00023">User.cs:23</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a1ff4eee3ced1fa62b2ad3e42e7165fa7"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a1ff4eee3ced1fa62b2ad3e42e7165fa7">BackEncordados.Usuarios.Model.User.ImageUrl</a></div><div class="ttdeci">string ImageUrl</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00032">User.cs:32</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a2d167b78ab9337442d10aa5e65bc1cd8"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a2d167b78ab9337442d10aa5e65bc1cd8">BackEncordados.Usuarios.Model.User.Id</a></div><div class="ttdeci">Ulid Id</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00013">User.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a450d88f2c0fe7112c4702198a998f87a"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a450d88f2c0fe7112c4702198a998f87a">BackEncordados.Usuarios.Model.User.UpdatedAt</a></div><div class="ttdeci">DateTime UpdatedAt</div><div class="ttdoc">Fecha y hora de la última modificación del registro en formato UTC.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00043">User.cs:43</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a61d2355b7f92923174618f57fb8f04f0"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a61d2355b7f92923174618f57fb8f04f0">BackEncordados.Usuarios.Model.User.Username</a></div><div class="ttdeci">string Username</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00015">User.cs:15</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a753bd6c69dafe9a47d2dca4dbf6c973f"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a753bd6c69dafe9a47d2dca4dbf6c973f">BackEncordados.Usuarios.Model.User.CreatedAt</a></div><div class="ttdeci">DateTime CreatedAt</div><div class="ttdoc">Fecha y hora de creación del registro en formato UTC.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00041">User.cs:41</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a75991eb16dbabf1736d113bad37b8eef"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a75991eb16dbabf1736d113bad37b8eef">BackEncordados.Usuarios.Model.User.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00017">User.cs:17</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a80997e728b95f9493f7c3f1c2d8ce100"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a80997e728b95f9493f7c3f1c2d8ce100">BackEncordados.Usuarios.Model.User.CloudinaryPublicId</a></div><div class="ttdeci">string? CloudinaryPublicId</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00034">User.cs:34</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a90c42fc134522c890804cb1630e0e20a"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a90c42fc134522c890804cb1630e0e20a">BackEncordados.Usuarios.Model.User.IsDeleted</a></div><div class="ttdeci">bool IsDeleted</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00030">User.cs:30</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_a9824f0d1b6e1f8ec58ff68b6a32ce247"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a9824f0d1b6e1f8ec58ff68b6a32ce247">BackEncordados.Usuarios.Model.User.Email</a></div><div class="ttdeci">string Email</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00019">User.cs:19</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_ac17e4433e0f46ea3a998ab4fe909137d"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#ac17e4433e0f46ea3a998ab4fe909137d">BackEncordados.Usuarios.Model.User.Phone</a></div><div class="ttdeci">string? Phone</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00021">User.cs:21</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_ae1fda01475b760b37e739c4a064bb273"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#ae1fda01475b760b37e739c4a064bb273">BackEncordados.Usuarios.Model.User.TournamentId</a></div><div class="ttdeci">Ulid? TournamentId</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00027">User.cs:27</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html_aeb99c5e413794b236fad1b8895825194"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#aeb99c5e413794b236fad1b8895825194">BackEncordados.Usuarios.Model.User.Bonos</a></div><div class="ttdeci">double Bonos</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00036">User.cs:36</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1ITimestamped_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1ITimestamped.html">BackEncordados.Common.Database.Helpers.ITimestamped</a></div><div class="ttdoc">Interfaz que define las propiedades de timestamps para entidades que requieren auditoría temporal: Cr...</div><div class="ttdef"><b>Definition</b> <a href="ITimestamped_8cs_source.html#l00014">ITimestamped.cs:15</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Helpers_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Helpers.html">BackEncordados.Common.Database.Helpers</a></div><div class="ttdef"><b>Definition</b> <a href="ITimestamped_8cs_source.html#l00001">ITimestamped.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a></div><div class="ttdef"><b>Definition</b> <a href="CloudinaryConstants_8cs_source.html#l00001">CloudinaryConstants.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a></div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00005">User.cs:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_fd3792cbbf285840670a23aad598bd09.html">Usuarios</a></li><li class="navelem"><a class="el" href="dir_925d84a26ad7217e52a415355a3a166a.html">Model</a></li><li class="navelem"><a class="el" href="User_8cs.html">User.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

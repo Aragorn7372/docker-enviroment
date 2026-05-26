@@ -1,0 +1,17 @@
+var searchData=
+[
+  ['icacheservicetype_0',['icacheservicetype',['../UserServiceTests_8cs.html#adcd32ccc0d0540ca7ac36acbc481c222',1,'ICacheServiceType:&#160;UserServiceTests.cs'],['../PurchasedRequestValidatorTests_8cs.html#adcd32ccc0d0540ca7ac36acbc481c222',1,'ICacheServiceType:&#160;PurchasedRequestValidatorTests.cs'],['../PurchasedServiceTests_8cs.html#adcd32ccc0d0540ca7ac36acbc481c222',1,'ICacheServiceType:&#160;PurchasedServiceTests.cs']]],
+  ['icloudinaryservicetype_1',['icloudinaryservicetype',['../PurchasedServiceTests_8cs.html#acf995cce94560280a687fa55d7663487',1,'ICloudinaryServiceType:&#160;PurchasedServiceTests.cs'],['../TournamentServiceTests_8cs.html#acf995cce94560280a687fa55d7663487',1,'ICloudinaryServiceType:&#160;TournamentServiceTests.cs'],['../UserServiceTests_8cs.html#acf995cce94560280a687fa55d7663487',1,'ICloudinaryServiceType:&#160;UserServiceTests.cs']]],
+  ['icuerdasrepositorytype_2',['ICuerdasRepositoryType',['../CuerdasServiceTests_8cs.html#a368e57fe37283237cd06674d91d31127',1,'CuerdasServiceTests.cs']]],
+  ['iemailservicetype_3',['iemailservicetype',['../PurchasedServiceTests_8cs.html#a95fdf01130ea4d3a8b0486858f0dca3c',1,'IEmailServiceType:&#160;PurchasedServiceTests.cs'],['../UserServiceTests_8cs.html#a95fdf01130ea4d3a8b0486858f0dca3c',1,'IEmailServiceType:&#160;UserServiceTests.cs']]],
+  ['ijwtservicetype_4',['IJwtServiceType',['../AuthServiceTests_8cs.html#a2240276a632fcd27d00dfda9235b80f8',1,'AuthServiceTests.cs']]],
+  ['ijwttokenextractortype_5',['IJwtTokenExtractorType',['../JwtTokenExtractorTests_8cs.html#ab0a50ea6bf87745f5d48d5809600bd3e',1,'JwtTokenExtractorTests.cs']]],
+  ['imaterialsrepositorytype_6',['IMaterialsRepositoryType',['../MaterialsServiceTests_8cs.html#ab24c2e62483074c61f8e9746671f7ec6',1,'MaterialsServiceTests.cs']]],
+  ['iodirectory_7',['IODirectory',['../ExportArchiveManager_8cs.html#add1fbdababb069f1fd51819c7dea543b',1,'ExportArchiveManager.cs']]],
+  ['iofile_8',['IOFile',['../ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7',1,'ExportArchiveManager.cs']]],
+  ['iopath_9',['IOPath',['../ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906',1,'ExportArchiveManager.cs']]],
+  ['ipuchasedrepositorytype_10',['IPuchasedRepositoryType',['../PurchasedServiceTests_8cs.html#ab1dee08fdcf1a00774e5fe68bcc841b1',1,'PurchasedServiceTests.cs']]],
+  ['itournamentrepositorytype_11',['itournamentrepositorytype',['../TournamentServiceTests_8cs.html#af4125ef005c8d650f9524be6e08fe4ce',1,'ITournamentRepositoryType:&#160;TournamentServiceTests.cs'],['../PurchasedRequestValidatorTests_8cs.html#af4125ef005c8d650f9524be6e08fe4ce',1,'ITournamentRepositoryType:&#160;PurchasedRequestValidatorTests.cs']]],
+  ['iuserrepositorytype_12',['iuserrepositorytype',['../PurchasedServiceTests_8cs.html#a70aa6a3a9ebb9c175c3d7b5fca55af2f',1,'IUserRepositoryType:&#160;PurchasedServiceTests.cs'],['../TournamentServiceTests_8cs.html#a70aa6a3a9ebb9c175c3d7b5fca55af2f',1,'IUserRepositoryType:&#160;TournamentServiceTests.cs'],['../UserServiceTests_8cs.html#a70aa6a3a9ebb9c175c3d7b5fca55af2f',1,'IUserRepositoryType:&#160;UserServiceTests.cs'],['../PurchasedRequestValidatorTests_8cs.html#a70aa6a3a9ebb9c175c3d7b5fca55af2f',1,'IUserRepositoryType:&#160;PurchasedRequestValidatorTests.cs']]],
+  ['iwhatsappservicetype_13',['IWhatsAppServiceType',['../PurchasedServiceTests_8cs.html#a0edebf83bce71e4039556585f74d887e',1,'PurchasedServiceTests.cs']]]
+];

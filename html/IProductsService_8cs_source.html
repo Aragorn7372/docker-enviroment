@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Materials/Service/Common/IProductsService.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('IProductsService_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">IProductsService.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="IProductsService_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Utils.html">BackEncordados.Common.Utils</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html">BackEncordados.Materials.Dto.Strings</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>CSharpFunctionalExtensions;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Materials_1_1Service.html">    6</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Service_1_1Common.html">BackEncordados.Materials.Service.Common</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html">   58</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html">IProductsService</a>&lt;T,E,R,P, F&gt;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#a25a3bc2d5da9dfb1739dba5bc4641841">   61</a></span>    Task&lt;PageResponseDto&lt;T&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#a25a3bc2d5da9dfb1739dba5bc4641841">FindAllAsync</a>(F filter);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#a596f5046e1703a17c24b266131bf5254">   64</a></span>    Task&lt;Result&lt;T,E&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#a596f5046e1703a17c24b266131bf5254">FindByNameAsync</a>(<span class="keywordtype">string</span> name);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#ad8e734cb1b08fde86b42c0a75e2df537">   67</a></span>    Task&lt;Result&lt;T,E&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#ad8e734cb1b08fde86b42c0a75e2df537">FindByIdAsync</a>(<span class="keywordtype">long</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#acd46ffb44c066cfb5d02bf6ecb017611">   70</a></span>    Task&lt;Result&lt;T,E&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#acd46ffb44c066cfb5d02bf6ecb017611">CreateAsync</a>(R request);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#a9c7c89768a4f065e918c2588731d3376">   73</a></span>    Task&lt;Result&lt;T, E&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#a9c7c89768a4f065e918c2588731d3376">UpdateAsync</a>(<span class="keywordtype">long</span> <span class="keywordtype">id</span>, P request);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#a896bc05cb9cec97a04e6ec95c94f5bb4">   76</a></span>    Task&lt;Result&lt;Unit,E&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#a896bc05cb9cec97a04e6ec95c94f5bb4">DeleteAsync</a>(<span class="keywordtype">long</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+</div>
+</div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html">BackEncordados.Materials.Service.Common.IProductsService</a></div><div class="ttdoc">Interfaz genérica del servicio base para productos (materiales y cuerdas).</div><div class="ttdef"><b>Definition</b> <a href="IProductsService_8cs_source.html#l00058">IProductsService.cs:59</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService_html_a25a3bc2d5da9dfb1739dba5bc4641841"><div class="ttname"><a href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#a25a3bc2d5da9dfb1739dba5bc4641841">BackEncordados.Materials.Service.Common.IProductsService.FindAllAsync</a></div><div class="ttdeci">Task&lt; PageResponseDto&lt; T &gt; &gt; FindAllAsync(F filter)</div><div class="ttdoc">Búsqueda paginada con filtros y ordenamiento.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService_html_a596f5046e1703a17c24b266131bf5254"><div class="ttname"><a href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#a596f5046e1703a17c24b266131bf5254">BackEncordados.Materials.Service.Common.IProductsService.FindByNameAsync</a></div><div class="ttdeci">Task&lt; Result&lt; T, E &gt; &gt; FindByNameAsync(string name)</div><div class="ttdoc">Búsqueda por nombre exacto.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService_html_a896bc05cb9cec97a04e6ec95c94f5bb4"><div class="ttname"><a href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#a896bc05cb9cec97a04e6ec95c94f5bb4">BackEncordados.Materials.Service.Common.IProductsService.DeleteAsync</a></div><div class="ttdeci">Task&lt; Result&lt; Unit, E &gt; &gt; DeleteAsync(long id)</div><div class="ttdoc">Eliminación lógica de un producto por ID.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService_html_a9c7c89768a4f065e918c2588731d3376"><div class="ttname"><a href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#a9c7c89768a4f065e918c2588731d3376">BackEncordados.Materials.Service.Common.IProductsService.UpdateAsync</a></div><div class="ttdeci">Task&lt; Result&lt; T, E &gt; &gt; UpdateAsync(long id, P request)</div><div class="ttdoc">Actualización de un producto existente por ID.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService_html_acd46ffb44c066cfb5d02bf6ecb017611"><div class="ttname"><a href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#acd46ffb44c066cfb5d02bf6ecb017611">BackEncordados.Materials.Service.Common.IProductsService.CreateAsync</a></div><div class="ttdeci">Task&lt; Result&lt; T, E &gt; &gt; CreateAsync(R request)</div><div class="ttdoc">Creación de un nuevo producto con datos del request.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService_html_ad8e734cb1b08fde86b42c0a75e2df537"><div class="ttname"><a href="interfaceBackEncordados_1_1Materials_1_1Service_1_1Common_1_1IProductsService.html#ad8e734cb1b08fde86b42c0a75e2df537">BackEncordados.Materials.Service.Common.IProductsService.FindByIdAsync</a></div><div class="ttdeci">Task&lt; Result&lt; T, E &gt; &gt; FindByIdAsync(long id)</div><div class="ttdoc">Búsqueda por ID numérico.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ExportManifestDto_8cs_source.html#l00001">ExportManifestDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Utils_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Utils.html">BackEncordados.Common.Utils</a></div><div class="ttdef"><b>Definition</b> <a href="TapAsync_8cs_source.html#l00003">TapAsync.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html">BackEncordados.Materials.Dto.Strings</a></div><div class="ttdef"><b>Definition</b> <a href="CuerdaFilterdto_8cs_source.html#l00001">CuerdaFilterdto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Service_1_1Common_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Service_1_1Common.html">BackEncordados.Materials.Service.Common</a></div><div class="ttdef"><b>Definition</b> <a href="IProductsService_8cs_source.html#l00006">IProductsService.cs:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_0048e789433b5fe1cb671302277b48d6.html">Materials</a></li><li class="navelem"><a class="el" href="dir_2c6169049bcf657a8eae4090fcb3df36.html">Service</a></li><li class="navelem"><a class="el" href="dir_f6af54d1bae4c0313f4d9e3ca2f070c1.html">Common</a></li><li class="navelem"><a class="el" href="IProductsService_8cs.html">IProductsService.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

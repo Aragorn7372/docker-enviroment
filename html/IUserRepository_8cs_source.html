@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Usuarios/Repository/IUserRepository.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('IUserRepository_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">IUserRepository.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="IUserRepository_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html">BackEncordados.Usuarios.Dto</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Usuarios_1_1Repository.html">    4</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Repository.html">BackEncordados.Usuarios.Repository</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html">   29</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html">IUserRepository</a></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#afa822ddcdb368ba2d3c9b9f390709139">   34</a></span>    Task&lt;User?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#afa822ddcdb368ba2d3c9b9f390709139">FindByIdAsync</a>(Ulid <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a8c224a4192214560682e9e7f7f540421">   39</a></span>    Task&lt;User?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a8c224a4192214560682e9e7f7f540421">FindByUsernameAsync</a>(<span class="keywordtype">string</span> username);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#ac26f6cd0d7eeec16de4c3617f7fe86e1">   44</a></span>    Task&lt;User?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#ac26f6cd0d7eeec16de4c3617f7fe86e1">FindByEmailAsync</a>(<span class="keywordtype">string</span> email);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#afd25eea5fac787c297823e6cd28e7d3c">   49</a></span>    Task&lt;(IEnumerable&lt;User&gt; Items, <span class="keywordtype">int</span> TotalCount)&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#afd25eea5fac787c297823e6cd28e7d3c">FindAllAsync</a>(<a class="code hl_typedef" href="UserRepositoryTests_8cs.html#a64c8b8f23168607276c08364d4bf008f">FilterUserDto</a> filter);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#ae48b35588c8e04d28c7bea931a5cbf29">   54</a></span>    Task&lt;User&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#ae48b35588c8e04d28c7bea931a5cbf29">SaveAsync</a>(<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a> user);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a597cff797394f3028773cc5496fc4d58">   60</a></span>    Task&lt;bool&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a597cff797394f3028773cc5496fc4d58">UserChageRoleAsync</a>(Ulid <span class="keywordtype">id</span>, <span class="keywordtype">string</span> role);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a3fe3de3d6ee2e58b3ba6df046e11c078">   65</a></span>    Task&lt;User&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a3fe3de3d6ee2e58b3ba6df046e11c078">UpdateAsync</a>(<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a> user);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a1789973d4ba4bc9af2b6dc71a7b12d7e">   69</a></span>    Task <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a1789973d4ba4bc9af2b6dc71a7b12d7e">DeleteAsync</a>(Ulid <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#aa3f873c57f0ae2c106ae8cca637e9362">   73</a></span>    Task&lt;IEnumerable&lt;User&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#aa3f873c57f0ae2c106ae8cca637e9362">GetActiveUsersAsync</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a17d8471aa1bf964c3a196500b075d0c7">   78</a></span>    Task&lt;IEnumerable&lt;User&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a17d8471aa1bf964c3a196500b075d0c7">FindByIdsAsync</a>(IEnumerable&lt;Ulid&gt; ids);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+</div>
+</div>
+<div class="ttc" id="aUserRepositoryTests_8cs_html_a64c8b8f23168607276c08364d4bf008f"><div class="ttname"><a href="UserRepositoryTests_8cs.html#a64c8b8f23168607276c08364d4bf008f">FilterUserDto</a></div><div class="ttdeci">BackEncordados.Usuarios.Dto.FilterUserDto FilterUserDto</div><div class="ttdef"><b>Definition</b> <a href="UserRepositoryTests_8cs_source.html#l00011">UserRepositoryTests.cs:11</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">BackEncordados.Usuarios.Model.User</a></div><div class="ttdoc">Entidad de dominio que representa un usuario. Autenticación con email/password hasheado con BCrypt....</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00011">User.cs:12</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html">BackEncordados.Usuarios.Repository.IUserRepository</a></div><div class="ttdoc">Contrato del repositorio de usuarios que define las operaciones de acceso a datos sobre la entidad Us...</div><div class="ttdef"><b>Definition</b> <a href="IUserRepository_8cs_source.html#l00029">IUserRepository.cs:30</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html_a1789973d4ba4bc9af2b6dc71a7b12d7e"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a1789973d4ba4bc9af2b6dc71a7b12d7e">BackEncordados.Usuarios.Repository.IUserRepository.DeleteAsync</a></div><div class="ttdeci">Task DeleteAsync(Ulid id)</div><div class="ttdoc">Elimina un usuario mediante soft delete (marca IsDeleted=true y reemplaza su username).</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html_a17d8471aa1bf964c3a196500b075d0c7"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a17d8471aa1bf964c3a196500b075d0c7">BackEncordados.Usuarios.Repository.IUserRepository.FindByIdsAsync</a></div><div class="ttdeci">Task&lt; IEnumerable&lt; User &gt; &gt; FindByIdsAsync(IEnumerable&lt; Ulid &gt; ids)</div><div class="ttdoc">Busca múltiples usuarios por su lista de ULIDs.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html_a3fe3de3d6ee2e58b3ba6df046e11c078"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a3fe3de3d6ee2e58b3ba6df046e11c078">BackEncordados.Usuarios.Repository.IUserRepository.UpdateAsync</a></div><div class="ttdeci">Task&lt; User &gt; UpdateAsync(User user)</div><div class="ttdoc">Actualiza un usuario existente en la base de datos.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html_a597cff797394f3028773cc5496fc4d58"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a597cff797394f3028773cc5496fc4d58">BackEncordados.Usuarios.Repository.IUserRepository.UserChageRoleAsync</a></div><div class="ttdeci">Task&lt; bool &gt; UserChageRoleAsync(Ulid id, string role)</div><div class="ttdoc">Cambia el rol de un usuario en la base de datos.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html_a8c224a4192214560682e9e7f7f540421"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#a8c224a4192214560682e9e7f7f540421">BackEncordados.Usuarios.Repository.IUserRepository.FindByUsernameAsync</a></div><div class="ttdeci">Task&lt; User?&gt; FindByUsernameAsync(string username)</div><div class="ttdoc">Busca un usuario por su nombre de usuario.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html_aa3f873c57f0ae2c106ae8cca637e9362"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#aa3f873c57f0ae2c106ae8cca637e9362">BackEncordados.Usuarios.Repository.IUserRepository.GetActiveUsersAsync</a></div><div class="ttdeci">Task&lt; IEnumerable&lt; User &gt; &gt; GetActiveUsersAsync()</div><div class="ttdoc">Obtiene todos los usuarios activos no eliminados, ordenados por email.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html_ac26f6cd0d7eeec16de4c3617f7fe86e1"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#ac26f6cd0d7eeec16de4c3617f7fe86e1">BackEncordados.Usuarios.Repository.IUserRepository.FindByEmailAsync</a></div><div class="ttdeci">Task&lt; User?&gt; FindByEmailAsync(string email)</div><div class="ttdoc">Busca un usuario por su dirección de email.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html_ae48b35588c8e04d28c7bea931a5cbf29"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#ae48b35588c8e04d28c7bea931a5cbf29">BackEncordados.Usuarios.Repository.IUserRepository.SaveAsync</a></div><div class="ttdeci">Task&lt; User &gt; SaveAsync(User user)</div><div class="ttdoc">Persiste un nuevo usuario en la base de datos.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html_afa822ddcdb368ba2d3c9b9f390709139"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#afa822ddcdb368ba2d3c9b9f390709139">BackEncordados.Usuarios.Repository.IUserRepository.FindByIdAsync</a></div><div class="ttdeci">Task&lt; User?&gt; FindByIdAsync(Ulid id)</div><div class="ttdoc">Busca un usuario por su identificador ULID.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository_html_afd25eea5fac787c297823e6cd28e7d3c"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html#afd25eea5fac787c297823e6cd28e7d3c">BackEncordados.Usuarios.Repository.IUserRepository.FindAllAsync</a></div><div class="ttdeci">Task&lt;(IEnumerable&lt; User &gt; Items, int TotalCount)&gt; FindAllAsync(FilterUserDto filter)</div><div class="ttdoc">Obtiene una colección paginada de usuarios aplicando filtros opcionales.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html">BackEncordados.Usuarios.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ChangePasswordRequestDto_8cs_source.html#l00003">ChangePasswordRequestDto.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a></div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00005">User.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Repository_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Repository.html">BackEncordados.Usuarios.Repository</a></div><div class="ttdef"><b>Definition</b> <a href="IUserRepository_8cs_source.html#l00004">IUserRepository.cs:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_fd3792cbbf285840670a23aad598bd09.html">Usuarios</a></li><li class="navelem"><a class="el" href="dir_4312026e930ebdca163df6cf7c18747a.html">Repository</a></li><li class="navelem"><a class="el" href="IUserRepository_8cs.html">IUserRepository.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

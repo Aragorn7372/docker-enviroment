@@ -1,0 +1,5 @@
+<map id="BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor" name="BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor">
+<area shape="rect" id="Node000001" title="Interfaz para extraer información de tokens JWT." alt="" coords="5,5,233,45"/>
+<area shape="rect" id="Node000002" href="$classBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1JwtTokenExtractor.html" title="Implementación de IJwtTokenExtractor para extraer información de tokens JWT sin validar la firma,..." alt="" coords="7,93,231,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,59,122,93,117,93,117,59"/>
+</map>

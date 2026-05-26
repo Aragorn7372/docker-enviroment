@@ -1,0 +1,5 @@
+<map id="BackEncordados.Purchased.Validator.StringSetupRequestValidator" name="BackEncordados.Purchased.Validator.StringSetupRequestValidator">
+<area shape="rect" id="Node000001" title="Validates a StringSetupDto for the creation (not patch) scenario." alt="" coords="5,93,275,133"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="67,5,213,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,59,143,93,137,93,137,59"/>
+</map>

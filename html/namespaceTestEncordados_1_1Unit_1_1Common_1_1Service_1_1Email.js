@@ -1,0 +1,8 @@
+var namespaceTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email =
+[
+    [ "EmailBackgroundServiceTests", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1EmailBackgroundServiceTests.html", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1EmailBackgroundServiceTests" ],
+    [ "EmailMessageTests", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1EmailMessageTests.html", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1EmailMessageTests" ],
+    [ "EmailTemplatesTests", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1EmailTemplatesTests.html", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1EmailTemplatesTests" ],
+    [ "MemoryEmailServiceTests", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1MemoryEmailServiceTests.html", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1MemoryEmailServiceTests" ],
+    [ "OrderItemEmailDtoTests", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1OrderItemEmailDtoTests.html", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1OrderItemEmailDtoTests" ]
+];

@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/TestEncordados/Unit/Services/AuthService/JwtTokenExtractorTests.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('JwtTokenExtractorTests_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">JwtTokenExtractorTests.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="JwtTokenExtractorTests_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>FluentAssertions;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>Microsoft.Extensions.Configuration;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Microsoft.Extensions.Logging;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>Moq;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="JwtTokenExtractorTests_8cs.html#ab0a50ea6bf87745f5d48d5809600bd3e">    6</a></span><span class="keyword">using </span><a class="code hl_typedef" href="JwtTokenExtractorTests_8cs.html#ab0a50ea6bf87745f5d48d5809600bd3e">IJwtTokenExtractorType</a> = <a class="code hl_namespace" href="namespaceBackEncordados.html">BackEncordados</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios.html">Usuarios</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service.html">Service</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth.html">Auth</a>.<a class="code hl_interface" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html">IJwtTokenExtractor</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="JwtTokenExtractorTests_8cs.html#acf7486b7d0d3fdfc14215ebff95532bd">    7</a></span><span class="keyword">using </span><a class="code hl_typedef" href="JwtTokenExtractorTests_8cs.html#acf7486b7d0d3fdfc14215ebff95532bd">JwtTokenExtractorType</a> = <a class="code hl_namespace" href="namespaceBackEncordados.html">BackEncordados</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios.html">Usuarios</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service.html">Service</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth.html">Auth</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1JwtTokenExtractor.html">JwtTokenExtractor</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="JwtTokenExtractorTests_8cs.html#a9d6275951ba3c98f4c439f02a1408da4">    8</a></span><span class="keyword">using </span><a class="code hl_typedef" href="JwtServiceTests_8cs.html#a9d6275951ba3c98f4c439f02a1408da4">JwtServiceType</a> = <a class="code hl_namespace" href="namespaceBackEncordados.html">BackEncordados</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios.html">Usuarios</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service.html">Service</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth.html">Auth</a>.JwtService;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceTestEncordados_1_1Unit_1_1Services_1_1AuthService.html">TestEncordados.Unit.Services.AuthService</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html">   12</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html">JwtTokenExtractorTests</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">private</span> readonly Mock&lt;ILogger&lt;JwtTokenExtractorType&gt;&gt; _mockLogger;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">private</span> readonly <a class="code hl_typedef" href="JwtTokenExtractorTests_8cs.html#acf7486b7d0d3fdfc14215ebff95532bd">JwtTokenExtractorType</a> _extractor;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">private</span> readonly IConfiguration _config;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">private</span> <span class="keywordtype">string</span> _validToken = <span class="keyword">null</span>!;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#ad6365c03ace88a53ad64a86955efedf1">   19</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#ad6365c03ace88a53ad64a86955efedf1">JwtTokenExtractorTests</a>()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        _mockLogger = <span class="keyword">new</span> Mock&lt;ILogger&lt;JwtTokenExtractorType&gt;&gt;();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        _extractor = <span class="keyword">new</span> <a class="code hl_typedef" href="JwtTokenExtractorTests_8cs.html#acf7486b7d0d3fdfc14215ebff95532bd">JwtTokenExtractorType</a>(_mockLogger.Object);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        var configData = <span class="keyword">new</span> Dictionary&lt;string, string?&gt;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            [<span class="stringliteral">&quot;Jwt:Key&quot;</span>] = <span class="stringliteral">&quot;esta_es_una_clave_secreta_muy_segura_para_jwt_que_debe_tener_al_menos_32_caracteres!&quot;</span>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            [<span class="stringliteral">&quot;Jwt:Issuer&quot;</span>] = <span class="stringliteral">&quot;TestIssuer&quot;</span>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            [<span class="stringliteral">&quot;Jwt:Audience&quot;</span>] = <span class="stringliteral">&quot;TestAudience&quot;</span>,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            [<span class="stringliteral">&quot;Jwt:ExpireMinutes&quot;</span>] = <span class="stringliteral">&quot;60&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        };</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        _config = <span class="keyword">new</span> ConfigurationBuilder()</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            .AddInMemoryCollection(configData)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            .Build();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> SetupValidToken(<span class="keywordtype">string</span> username, <span class="keywordtype">string</span> role, <span class="keywordtype">string</span> email, Ulid userId)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        var mockServiceLogger = <span class="keyword">new</span> Mock&lt;ILogger&lt;JwtServiceType&gt;&gt;();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        var jwtService = <span class="keyword">new</span> <a class="code hl_typedef" href="JwtServiceTests_8cs.html#a9d6275951ba3c98f4c439f02a1408da4">JwtServiceType</a>(_config, mockServiceLogger.Object);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        var user = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            Id = userId,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            Username = username,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            Email = email,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            PasswordHash = <span class="stringliteral">&quot;hash&quot;</span>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = role,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            IsDeleted = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            CreatedAt = DateTime.UtcNow</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        };</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        _validToken = jwtService.GenerateToken(user);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>[Test]</div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a8f85fcc33b605234f1ca356ed8ee796a">   57</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a8f85fcc33b605234f1ca356ed8ee796a">ExtractUserId_ValidToken_ReturnsNullForUlidFormat</a>()</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        var userId = Ulid.NewUlid();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        SetupValidToken(<span class="stringliteral">&quot;testuser&quot;</span>, <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a>, <span class="stringliteral">&quot;test@test.com&quot;</span>, userId);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        var result = _extractor.ExtractUserId(_validToken);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        result.Should().BeNull();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    [Test]</div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a306ae66ddb0b0e403ab7fe87727a9817">   68</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a306ae66ddb0b0e403ab7fe87727a9817">ExtractUserInfo_ValidToken_ReturnsNullForUlidFormat</a>()</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        SetupValidToken(<span class="stringliteral">&quot;testuser&quot;</span>, <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">ENCORDER</a>, <span class="stringliteral">&quot;test@test.com&quot;</span>, Ulid.NewUlid());</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        var (userId, isAdmin, role) = _extractor.ExtractUserInfo(_validToken);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        userId.Should().BeNull();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        role.Should().Be(<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">ENCORDER</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        isAdmin.Should().BeFalse();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    [Test]</div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a2da0f0f864406ef1a244e7b40b9ad5c8">   80</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a2da0f0f864406ef1a244e7b40b9ad5c8">ExtractUserId_InvalidToken_ReturnsNull</a>()</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        var result = _extractor.ExtractUserId(<span class="stringliteral">&quot;invalid.token&quot;</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        result.Should().BeNull();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    [Test]</div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#adf5a6e4a12e51ba149e2cc78798b3dde">   88</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#adf5a6e4a12e51ba149e2cc78798b3dde">ExtractUserId_EmptyToken_ReturnsNull</a>()</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        var result = _extractor.ExtractUserId(<span class="keywordtype">string</span>.Empty);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        result.Should().BeNull();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    [Test]</div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a6b4d42715230e5098ffb47ee02871585">   96</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a6b4d42715230e5098ffb47ee02871585">ExtractRole_ValidToken_ReturnsRole</a>()</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        SetupValidToken(<span class="stringliteral">&quot;testuser&quot;</span>, <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">ADMIN</a>, <span class="stringliteral">&quot;test@test.com&quot;</span>, Ulid.NewUlid());</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        var result = _extractor.ExtractRole(_validToken);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        result.Should().Be(<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">ADMIN</a>);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    [Test]</div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a0d59913471aa61c5a2ed8595f364f115">  106</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a0d59913471aa61c5a2ed8595f364f115">ExtractRole_InvalidToken_ReturnsNull</a>()</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        var result = _extractor.ExtractRole(<span class="stringliteral">&quot;invalid.token&quot;</span>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        result.Should().BeNull();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    [Test]</div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#af95df76e18d7afe943b5bd581c254cd5">  114</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#af95df76e18d7afe943b5bd581c254cd5">IsAdmin_AdminToken_ReturnsTrue</a>()</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        SetupValidToken(<span class="stringliteral">&quot;adminuser&quot;</span>, <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">ADMIN</a>, <span class="stringliteral">&quot;admin@test.com&quot;</span>, Ulid.NewUlid());</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        var result = _extractor.IsAdmin(_validToken);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        result.Should().BeTrue();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    [Test]</div>
+<div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a14222d76366dfab96dc85979a0db5002">  124</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a14222d76366dfab96dc85979a0db5002">IsAdmin_NonAdminToken_ReturnsFalse</a>()</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        SetupValidToken(<span class="stringliteral">&quot;normaluser&quot;</span>, <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a>, <span class="stringliteral">&quot;user@test.com&quot;</span>, Ulid.NewUlid());</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        var result = _extractor.IsAdmin(_validToken);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        result.Should().BeFalse();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    [Test]</div>
+<div class="foldopen" id="foldopen00134" data-start="{" data-end="}">
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#ae1be825db465bd674fcf2bedd356730d">  134</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#ae1be825db465bd674fcf2bedd356730d">IsAdmin_CaseInsensitive_ReturnsTrue</a>()</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        SetupValidToken(<span class="stringliteral">&quot;adminuser&quot;</span>, <span class="stringliteral">&quot;Admin&quot;</span>, <span class="stringliteral">&quot;admin@test.com&quot;</span>, Ulid.NewUlid());</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        var result = _extractor.IsAdmin(_validToken);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        result.Should().BeTrue();</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    [Test]</div>
+<div class="foldopen" id="foldopen00144" data-start="{" data-end="}">
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a32621063f1720f222f46ec11ad829b21">  144</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a32621063f1720f222f46ec11ad829b21">ExtractUserInfo_ValidToken_ReturnsTuple</a>()</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        SetupValidToken(<span class="stringliteral">&quot;testuser&quot;</span>, <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">ENCORDER</a>, <span class="stringliteral">&quot;test@test.com&quot;</span>, Ulid.NewUlid());</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        var (userId, isAdmin, role) = _extractor.ExtractUserInfo(_validToken);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        userId.Should().BeNull();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        role.Should().Be(<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">ENCORDER</a>);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        isAdmin.Should().BeFalse();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    [Test]</div>
+<div class="foldopen" id="foldopen00156" data-start="{" data-end="}">
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a9c3ff997b9232b29f4fa9b3f60ec8f11">  156</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a9c3ff997b9232b29f4fa9b3f60ec8f11">ExtractClaims_ValidToken_ReturnsClaimsPrincipal</a>()</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        SetupValidToken(<span class="stringliteral">&quot;testuser&quot;</span>, <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a>, <span class="stringliteral">&quot;test@test.com&quot;</span>, Ulid.NewUlid());</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        var result = _extractor.ExtractClaims(_validToken);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        result.Should().NotBeNull();</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        result!.Identity.Should().NotBeNull();</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    [Test]</div>
+<div class="foldopen" id="foldopen00167" data-start="{" data-end="}">
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a3c198f61846b333210ee162ab91e0d90">  167</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a3c198f61846b333210ee162ab91e0d90">ExtractClaims_InvalidToken_ReturnsNull</a>()</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        var result = _extractor.ExtractClaims(<span class="stringliteral">&quot;invalid.token&quot;</span>);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        result.Should().BeNull();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
+</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    [Test]</div>
+<div class="foldopen" id="foldopen00175" data-start="{" data-end="}">
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a64b01fd88d77274b3d171834b2ece403">  175</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a64b01fd88d77274b3d171834b2ece403">ExtractEmail_ValidToken_ReturnsEmail</a>()</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        SetupValidToken(<span class="stringliteral">&quot;testuser&quot;</span>, <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a>, <span class="stringliteral">&quot;unique@test.com&quot;</span>, Ulid.NewUlid());</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        var result = _extractor.ExtractEmail(_validToken);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        result.Should().Be(<span class="stringliteral">&quot;unique@test.com&quot;</span>);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    }</div>
+</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    [Test]</div>
+<div class="foldopen" id="foldopen00185" data-start="{" data-end="}">
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a688d5e44786e8250da07f356cd7aa8a7">  185</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a688d5e44786e8250da07f356cd7aa8a7">ExtractEmail_InvalidToken_ReturnsNull</a>()</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        var result = _extractor.ExtractEmail(<span class="stringliteral">&quot;invalid.token&quot;</span>);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        result.Should().BeNull();</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    }</div>
+</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    [Test]</div>
+<div class="foldopen" id="foldopen00193" data-start="{" data-end="}">
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a3bc970a9a37b7178d4a13f584e9224fb">  193</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a3bc970a9a37b7178d4a13f584e9224fb">IsValidTokenFormat_ValidToken_ReturnsTrue</a>()</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        SetupValidToken(<span class="stringliteral">&quot;testuser&quot;</span>, <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a>, <span class="stringliteral">&quot;test@test.com&quot;</span>, Ulid.NewUlid());</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        var result = _extractor.IsValidTokenFormat(_validToken);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        result.Should().BeTrue();</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    }</div>
+</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    [Test]</div>
+<div class="foldopen" id="foldopen00203" data-start="{" data-end="}">
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a7a923d680d3bd374cb4e967e14a47722">  203</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a7a923d680d3bd374cb4e967e14a47722">IsValidTokenFormat_EmptyString_ReturnsFalse</a>()</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    {</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        var result = _extractor.IsValidTokenFormat(<span class="keywordtype">string</span>.Empty);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        result.Should().BeFalse();</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
+</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    [Test]</div>
+<div class="foldopen" id="foldopen00211" data-start="{" data-end="}">
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a39589d125eb2c003b4937ff1b2ceb27a">  211</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a39589d125eb2c003b4937ff1b2ceb27a">IsValidTokenFormat_Whitespace_ReturnsFalse</a>()</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        var result = _extractor.IsValidTokenFormat(<span class="stringliteral">&quot;   &quot;</span>);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        result.Should().BeFalse();</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    }</div>
+</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    [Test]</div>
+<div class="foldopen" id="foldopen00219" data-start="{" data-end="}">
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#ab439db9a4ee427dc7504360d05abe0b3">  219</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#ab439db9a4ee427dc7504360d05abe0b3">IsValidTokenFormat_InvalidFormat_ReturnsFalse</a>()</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        var result = _extractor.IsValidTokenFormat(<span class="stringliteral">&quot;notavalidjwtformat&quot;</span>);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        result.Should().BeFalse();</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    }</div>
+</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    [Test]</div>
+<div class="foldopen" id="foldopen00227" data-start="{" data-end="}">
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a5a247bf5abdd2d475bf35b50a788729f">  227</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a5a247bf5abdd2d475bf35b50a788729f">IsValidTokenFormat_TooFewParts_ReturnsFalse</a>()</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        var result = _extractor.IsValidTokenFormat(<span class="stringliteral">&quot;part1.part2&quot;</span>);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        result.Should().BeFalse();</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    }</div>
+</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    [Test]</div>
+<div class="foldopen" id="foldopen00235" data-start="{" data-end="}">
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a335e06d2e912f950653210844fb6d4ac">  235</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a335e06d2e912f950653210844fb6d4ac">IsValidTokenFormat_MissingParts_ReturnsFalse</a>()</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        var result = _extractor.IsValidTokenFormat(<span class="stringliteral">&quot;part1..part3&quot;</span>);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        result.Should().BeFalse();</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    }</div>
+</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>}</div>
+</div>
+<div class="ttc" id="aJwtServiceTests_8cs_html_a9d6275951ba3c98f4c439f02a1408da4"><div class="ttname"><a href="JwtServiceTests_8cs.html#a9d6275951ba3c98f4c439f02a1408da4">JwtServiceType</a></div><div class="ttdeci">BackEncordados.Usuarios.Service.Auth.JwtService JwtServiceType</div><div class="ttdef"><b>Definition</b> <a href="JwtServiceTests_8cs_source.html#l00006">JwtServiceTests.cs:6</a></div></div>
+<div class="ttc" id="aJwtTokenExtractorTests_8cs_html_ab0a50ea6bf87745f5d48d5809600bd3e"><div class="ttname"><a href="JwtTokenExtractorTests_8cs.html#ab0a50ea6bf87745f5d48d5809600bd3e">IJwtTokenExtractorType</a></div><div class="ttdeci">BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor IJwtTokenExtractorType</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00006">JwtTokenExtractorTests.cs:6</a></div></div>
+<div class="ttc" id="aJwtTokenExtractorTests_8cs_html_acf7486b7d0d3fdfc14215ebff95532bd"><div class="ttname"><a href="JwtTokenExtractorTests_8cs.html#acf7486b7d0d3fdfc14215ebff95532bd">JwtTokenExtractorType</a></div><div class="ttdeci">BackEncordados.Usuarios.Service.Auth.JwtTokenExtractor JwtTokenExtractorType</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00007">JwtTokenExtractorTests.cs:7</a></div></div>
+<div class="ttc" id="aPurchasedController_8cs_html_a2cca664a5a4cb21c8352e11d88fa47ef"><div class="ttname"><a href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a></div><div class="ttdeci">BackEncordados.Usuarios.Model.User.UserRoles Role</div><div class="ttdef"><b>Definition</b> <a href="PurchasedController_8cs_source.html#l00014">PurchasedController.cs:14</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">BackEncordados.Usuarios.Model.User.UserRoles</a></div><div class="ttdoc">Constantes para los roles de usuario.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00049">User.cs:50</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a54373adaa756848426e2a7469dedffd7"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">BackEncordados.Usuarios.Model.User.UserRoles.USER</a></div><div class="ttdeci">const string USER</div><div class="ttdoc">Rol de usuario estándar con permisos básicos.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00055">User.cs:55</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a9a1dd51b12767c87dfafb4dd11fc1d8e"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">BackEncordados.Usuarios.Model.User.UserRoles.ENCORDER</a></div><div class="ttdeci">const string ENCORDER</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00059">User.cs:59</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_ad3cded80c57a57fac13e69200cfe1ea3"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">BackEncordados.Usuarios.Model.User.UserRoles.ADMIN</a></div><div class="ttdeci">const string ADMIN</div><div class="ttdoc">Rol de administrador con acceso total al sistema.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00052">User.cs:52</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">BackEncordados.Usuarios.Model.User</a></div><div class="ttdoc">Entidad de dominio que representa un usuario. Autenticación con email/password hasheado con BCrypt....</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00011">User.cs:12</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1JwtTokenExtractor_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1JwtTokenExtractor.html">BackEncordados.Usuarios.Service.Auth.JwtTokenExtractor</a></div><div class="ttdoc">Implementación de IJwtTokenExtractor para extraer información de tokens JWT sin validar la firma,...</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractor_8cs_source.html#l00050">JwtTokenExtractor.cs:51</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests</a></div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00012">JwtTokenExtractorTests.cs:13</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a0d59913471aa61c5a2ed8595f364f115"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a0d59913471aa61c5a2ed8595f364f115">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.ExtractRole_InvalidToken_ReturnsNull</a></div><div class="ttdeci">void ExtractRole_InvalidToken_ReturnsNull()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00106">JwtTokenExtractorTests.cs:106</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a14222d76366dfab96dc85979a0db5002"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a14222d76366dfab96dc85979a0db5002">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.IsAdmin_NonAdminToken_ReturnsFalse</a></div><div class="ttdeci">void IsAdmin_NonAdminToken_ReturnsFalse()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00124">JwtTokenExtractorTests.cs:124</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a2da0f0f864406ef1a244e7b40b9ad5c8"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a2da0f0f864406ef1a244e7b40b9ad5c8">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.ExtractUserId_InvalidToken_ReturnsNull</a></div><div class="ttdeci">void ExtractUserId_InvalidToken_ReturnsNull()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00080">JwtTokenExtractorTests.cs:80</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a306ae66ddb0b0e403ab7fe87727a9817"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a306ae66ddb0b0e403ab7fe87727a9817">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.ExtractUserInfo_ValidToken_ReturnsNullForUlidFormat</a></div><div class="ttdeci">void ExtractUserInfo_ValidToken_ReturnsNullForUlidFormat()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00068">JwtTokenExtractorTests.cs:68</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a32621063f1720f222f46ec11ad829b21"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a32621063f1720f222f46ec11ad829b21">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.ExtractUserInfo_ValidToken_ReturnsTuple</a></div><div class="ttdeci">void ExtractUserInfo_ValidToken_ReturnsTuple()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00144">JwtTokenExtractorTests.cs:144</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a335e06d2e912f950653210844fb6d4ac"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a335e06d2e912f950653210844fb6d4ac">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.IsValidTokenFormat_MissingParts_ReturnsFalse</a></div><div class="ttdeci">void IsValidTokenFormat_MissingParts_ReturnsFalse()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00235">JwtTokenExtractorTests.cs:235</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a39589d125eb2c003b4937ff1b2ceb27a"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a39589d125eb2c003b4937ff1b2ceb27a">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.IsValidTokenFormat_Whitespace_ReturnsFalse</a></div><div class="ttdeci">void IsValidTokenFormat_Whitespace_ReturnsFalse()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00211">JwtTokenExtractorTests.cs:211</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a3bc970a9a37b7178d4a13f584e9224fb"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a3bc970a9a37b7178d4a13f584e9224fb">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.IsValidTokenFormat_ValidToken_ReturnsTrue</a></div><div class="ttdeci">void IsValidTokenFormat_ValidToken_ReturnsTrue()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00193">JwtTokenExtractorTests.cs:193</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a3c198f61846b333210ee162ab91e0d90"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a3c198f61846b333210ee162ab91e0d90">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.ExtractClaims_InvalidToken_ReturnsNull</a></div><div class="ttdeci">void ExtractClaims_InvalidToken_ReturnsNull()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00167">JwtTokenExtractorTests.cs:167</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a5a247bf5abdd2d475bf35b50a788729f"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a5a247bf5abdd2d475bf35b50a788729f">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.IsValidTokenFormat_TooFewParts_ReturnsFalse</a></div><div class="ttdeci">void IsValidTokenFormat_TooFewParts_ReturnsFalse()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00227">JwtTokenExtractorTests.cs:227</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a64b01fd88d77274b3d171834b2ece403"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a64b01fd88d77274b3d171834b2ece403">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.ExtractEmail_ValidToken_ReturnsEmail</a></div><div class="ttdeci">void ExtractEmail_ValidToken_ReturnsEmail()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00175">JwtTokenExtractorTests.cs:175</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a688d5e44786e8250da07f356cd7aa8a7"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a688d5e44786e8250da07f356cd7aa8a7">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.ExtractEmail_InvalidToken_ReturnsNull</a></div><div class="ttdeci">void ExtractEmail_InvalidToken_ReturnsNull()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00185">JwtTokenExtractorTests.cs:185</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a6b4d42715230e5098ffb47ee02871585"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a6b4d42715230e5098ffb47ee02871585">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.ExtractRole_ValidToken_ReturnsRole</a></div><div class="ttdeci">void ExtractRole_ValidToken_ReturnsRole()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00096">JwtTokenExtractorTests.cs:96</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a7a923d680d3bd374cb4e967e14a47722"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a7a923d680d3bd374cb4e967e14a47722">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.IsValidTokenFormat_EmptyString_ReturnsFalse</a></div><div class="ttdeci">void IsValidTokenFormat_EmptyString_ReturnsFalse()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00203">JwtTokenExtractorTests.cs:203</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a8f85fcc33b605234f1ca356ed8ee796a"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a8f85fcc33b605234f1ca356ed8ee796a">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.ExtractUserId_ValidToken_ReturnsNullForUlidFormat</a></div><div class="ttdeci">void ExtractUserId_ValidToken_ReturnsNullForUlidFormat()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00057">JwtTokenExtractorTests.cs:57</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_a9c3ff997b9232b29f4fa9b3f60ec8f11"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#a9c3ff997b9232b29f4fa9b3f60ec8f11">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.ExtractClaims_ValidToken_ReturnsClaimsPrincipal</a></div><div class="ttdeci">void ExtractClaims_ValidToken_ReturnsClaimsPrincipal()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00156">JwtTokenExtractorTests.cs:156</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_ab439db9a4ee427dc7504360d05abe0b3"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#ab439db9a4ee427dc7504360d05abe0b3">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.IsValidTokenFormat_InvalidFormat_ReturnsFalse</a></div><div class="ttdeci">void IsValidTokenFormat_InvalidFormat_ReturnsFalse()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00219">JwtTokenExtractorTests.cs:219</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_ad6365c03ace88a53ad64a86955efedf1"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#ad6365c03ace88a53ad64a86955efedf1">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.JwtTokenExtractorTests</a></div><div class="ttdeci">JwtTokenExtractorTests()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00019">JwtTokenExtractorTests.cs:19</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_adf5a6e4a12e51ba149e2cc78798b3dde"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#adf5a6e4a12e51ba149e2cc78798b3dde">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.ExtractUserId_EmptyToken_ReturnsNull</a></div><div class="ttdeci">void ExtractUserId_EmptyToken_ReturnsNull()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00088">JwtTokenExtractorTests.cs:88</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_ae1be825db465bd674fcf2bedd356730d"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#ae1be825db465bd674fcf2bedd356730d">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.IsAdmin_CaseInsensitive_ReturnsTrue</a></div><div class="ttdeci">void IsAdmin_CaseInsensitive_ReturnsTrue()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00134">JwtTokenExtractorTests.cs:134</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests_html_af95df76e18d7afe943b5bd581c254cd5"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtTokenExtractorTests.html#af95df76e18d7afe943b5bd581c254cd5">TestEncordados.Unit.Services.AuthService.JwtTokenExtractorTests.IsAdmin_AdminToken_ReturnsTrue</a></div><div class="ttdeci">void IsAdmin_AdminToken_ReturnsTrue()</div><div class="ttdef"><b>Definition</b> <a href="JwtTokenExtractorTests_8cs_source.html#l00114">JwtTokenExtractorTests.cs:114</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html">BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor</a></div><div class="ttdoc">Interfaz para extraer información de tokens JWT.</div><div class="ttdef"><b>Definition</b> <a href="IJwtTokenExtractor_8cs_source.html#l00008">IJwtTokenExtractor.cs:9</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a></div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00005">User.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth.html">BackEncordados.Usuarios.Service.Auth</a></div><div class="ttdef"><b>Definition</b> <a href="AuthService_8cs_source.html#l00013">AuthService.cs:13</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Service_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Service.html">BackEncordados.Usuarios.Service</a></div><div class="ttdef"><b>Definition</b> <a href="AuthService_8cs_source.html#l00013">AuthService.cs:13</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios.html">BackEncordados.Usuarios</a></div><div class="ttdef"><b>Definition</b> <a href="AuthController_8cs_source.html#l00007">AuthController.cs:7</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_html"><div class="ttname"><a href="namespaceBackEncordados.html">BackEncordados</a></div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00005">MaterialsDbContext.cs:5</a></div></div>
+<div class="ttc" id="anamespaceTestEncordados_1_1Unit_1_1Services_1_1AuthService_html"><div class="ttname"><a href="namespaceTestEncordados_1_1Unit_1_1Services_1_1AuthService.html">TestEncordados.Unit.Services.AuthService</a></div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00014">AuthServiceTests.cs:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_780b0e0e1bd31577874252649f607c71.html">TestEncordados</a></li><li class="navelem"><a class="el" href="dir_48c6692f9b3c243174e0def3ed0bbfd9.html">Unit</a></li><li class="navelem"><a class="el" href="dir_dd163bb5a9487d04f3852660f12d7407.html">Services</a></li><li class="navelem"><a class="el" href="dir_d47fec0131fb3fe5940291af66c14606.html">AuthService</a></li><li class="navelem"><a class="el" href="JwtTokenExtractorTests_8cs.html">JwtTokenExtractorTests.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

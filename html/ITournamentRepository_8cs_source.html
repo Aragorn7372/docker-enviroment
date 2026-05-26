@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Talleres/Repository/ITournamentRepository.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('ITournamentRepository_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ITournamentRepository.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ITournamentRepository_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html">BackEncordados.Talleres.Dto</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Model.html">BackEncordados.Talleres.Model</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Repository.html">    4</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Repository.html">BackEncordados.Talleres.Repository</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html">   30</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html">ITournamentRepository</a></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a45e6566ac9077083431235c38e13061e">   35</a></span>    Task&lt;(IEnumerable&lt;Tournaments&gt; Items, <span class="keywordtype">int</span> TotalCount)&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a45e6566ac9077083431235c38e13061e">FindAllAsync</a>(<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a2555b1a1734527adc84331c092a9e5c6">FilterTournamentDto</a> filter);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a0948ab9e8f01aec88ca57ad0f27a2389">   39</a></span>    Task&lt;Tournaments?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a0948ab9e8f01aec88ca57ad0f27a2389">FindByIdAsync</a>(Ulid <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a3398e14cc7ad51f2462b0da9a2ee9557">   43</a></span>    Task&lt;Tournaments?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a3398e14cc7ad51f2462b0da9a2ee9557">FindByNameAsync</a>(<span class="keywordtype">string</span> name);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#aa3af0ab18e581fd51975873b4bc5f534">   47</a></span>    Task&lt;Tournaments&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#aa3af0ab18e581fd51975873b4bc5f534">SaveAsync</a>(<a class="code hl_variable" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#af6124b908c5cc5c83d9bac689e10e7a4">Tournaments</a> tournament);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a910fb929fe0162ded5028a24c8a5c84a">   52</a></span>    Task&lt;Tournaments?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a910fb929fe0162ded5028a24c8a5c84a">UpdateAsync</a>(Ulid <span class="keywordtype">id</span>, <a class="code hl_variable" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#af6124b908c5cc5c83d9bac689e10e7a4">Tournaments</a> tournament);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#acbdbb27e9f0bb083504aabf6e947567a">   56</a></span>    Task&lt;bool&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#acbdbb27e9f0bb083504aabf6e947567a">DeleteAsync</a>(Ulid <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#abb6b9223c412a5d44961f3b97f0e8681">   62</a></span>    Task&lt;Tournaments?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#abb6b9223c412a5d44961f3b97f0e8681">AsignWorker</a>(Ulid <span class="keywordtype">id</span>, Ulid workerId, <span class="keywordtype">string</span> machineName);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#ae80971158ec594f080c4706b0f4e7ebe">   67</a></span>    Task&lt;Tournaments?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#ae80971158ec594f080c4706b0f4e7ebe">RemoveWorker</a>(Ulid <span class="keywordtype">id</span>, Ulid workerId);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a1a9fb349c4df01720a7f51487ca0e370">   71</a></span>    Task&lt;IEnumerable&lt;WorkerMachineAssignment&gt;?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a1a9fb349c4df01720a7f51487ca0e370">GetAssignedWorkerMachinesAsync</a>(Ulid tournamentId);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#ad176e8b91766f90f7fc6d6cd1bef4682">   76</a></span>    Task&lt;Tournaments?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#ad176e8b91766f90f7fc6d6cd1bef4682">AsignSupervisor</a>(Ulid <span class="keywordtype">id</span>, Ulid supervisorId);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a7a4feef7620250bee6f8188f6699c133">   81</a></span>    Task&lt;Tournaments?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a7a4feef7620250bee6f8188f6699c133">RemoveSupervisor</a>(Ulid <span class="keywordtype">id</span>, Ulid supervisorId);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}</div>
+</div>
+</div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html">BackEncordados.Talleres.Repository.ITournamentRepository</a></div><div class="ttdoc">Contrato del repositorio de torneos que define las operaciones de acceso a datos sobre la entidad Tou...</div><div class="ttdef"><b>Definition</b> <a href="ITournamentRepository_8cs_source.html#l00030">ITournamentRepository.cs:31</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html_a0948ab9e8f01aec88ca57ad0f27a2389"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a0948ab9e8f01aec88ca57ad0f27a2389">BackEncordados.Talleres.Repository.ITournamentRepository.FindByIdAsync</a></div><div class="ttdeci">Task&lt; Tournaments?&gt; FindByIdAsync(Ulid id)</div><div class="ttdoc">Busca un torneo por ULID incluyendo las asignaciones trabajador-máquina.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html_a1a9fb349c4df01720a7f51487ca0e370"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a1a9fb349c4df01720a7f51487ca0e370">BackEncordados.Talleres.Repository.ITournamentRepository.GetAssignedWorkerMachinesAsync</a></div><div class="ttdeci">Task&lt; IEnumerable&lt; WorkerMachineAssignment &gt;?&gt; GetAssignedWorkerMachinesAsync(Ulid tournamentId)</div><div class="ttdoc">Obtiene todas las asignaciones trabajador-máquina de un torneo.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html_a3398e14cc7ad51f2462b0da9a2ee9557"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a3398e14cc7ad51f2462b0da9a2ee9557">BackEncordados.Talleres.Repository.ITournamentRepository.FindByNameAsync</a></div><div class="ttdeci">Task&lt; Tournaments?&gt; FindByNameAsync(string name)</div><div class="ttdoc">Busca un torneo por nombre exacto incluyendo las asignaciones trabajador-máquina.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html_a45e6566ac9077083431235c38e13061e"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a45e6566ac9077083431235c38e13061e">BackEncordados.Talleres.Repository.ITournamentRepository.FindAllAsync</a></div><div class="ttdeci">Task&lt;(IEnumerable&lt; Tournaments &gt; Items, int TotalCount)&gt; FindAllAsync(FilterTournamentDto filter)</div><div class="ttdoc">Obtiene torneos paginados con filtros por usuario y búsqueda textual.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html_a7a4feef7620250bee6f8188f6699c133"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a7a4feef7620250bee6f8188f6699c133">BackEncordados.Talleres.Repository.ITournamentRepository.RemoveSupervisor</a></div><div class="ttdeci">Task&lt; Tournaments?&gt; RemoveSupervisor(Ulid id, Ulid supervisorId)</div><div class="ttdoc">Desasigna un supervisor del torneo.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html_a910fb929fe0162ded5028a24c8a5c84a"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#a910fb929fe0162ded5028a24c8a5c84a">BackEncordados.Talleres.Repository.ITournamentRepository.UpdateAsync</a></div><div class="ttdeci">Task&lt; Tournaments?&gt; UpdateAsync(Ulid id, Tournaments tournament)</div><div class="ttdoc">Actualiza parcialmente un torneo existente (nombre, fechas, logotipo).</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html_aa3af0ab18e581fd51975873b4bc5f534"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#aa3af0ab18e581fd51975873b4bc5f534">BackEncordados.Talleres.Repository.ITournamentRepository.SaveAsync</a></div><div class="ttdeci">Task&lt; Tournaments &gt; SaveAsync(Tournaments tournament)</div><div class="ttdoc">Persiste un nuevo torneo en la base de datos.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html_abb6b9223c412a5d44961f3b97f0e8681"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#abb6b9223c412a5d44961f3b97f0e8681">BackEncordados.Talleres.Repository.ITournamentRepository.AsignWorker</a></div><div class="ttdeci">Task&lt; Tournaments?&gt; AsignWorker(Ulid id, Ulid workerId, string machineName)</div><div class="ttdoc">Asigna un trabajador a una máquina dentro del torneo.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html_acbdbb27e9f0bb083504aabf6e947567a"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#acbdbb27e9f0bb083504aabf6e947567a">BackEncordados.Talleres.Repository.ITournamentRepository.DeleteAsync</a></div><div class="ttdeci">Task&lt; bool &gt; DeleteAsync(Ulid id)</div><div class="ttdoc">Elimina un torneo mediante soft delete.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html_ad176e8b91766f90f7fc6d6cd1bef4682"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#ad176e8b91766f90f7fc6d6cd1bef4682">BackEncordados.Talleres.Repository.ITournamentRepository.AsignSupervisor</a></div><div class="ttdeci">Task&lt; Tournaments?&gt; AsignSupervisor(Ulid id, Ulid supervisorId)</div><div class="ttdoc">Asigna un supervisor al torneo.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository_html_ae80971158ec594f080c4706b0f4e7ebe"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html#ae80971158ec594f080c4706b0f4e7ebe">BackEncordados.Talleres.Repository.ITournamentRepository.RemoveWorker</a></div><div class="ttdeci">Task&lt; Tournaments?&gt; RemoveWorker(Ulid id, Ulid workerId)</div><div class="ttdoc">Desasigna un trabajador del torneo y elimina sus asignaciones de máquina.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Dto.html">BackEncordados.Talleres.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="FilterTournamentDto_8cs_source.html#l00001">FilterTournamentDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Dto_html_a2555b1a1734527adc84331c092a9e5c6"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a2555b1a1734527adc84331c092a9e5c6">BackEncordados.Talleres.Dto.FilterTournamentDto</a></div><div class="ttdeci">record FilterTournamentDto(string Search, Ulid? UserId, int Page=0, int Size=10, string SortBy=&quot;name&quot;, string Direction=&quot;asc&quot;)</div><div class="ttdoc">DTO de filtro y paginación para la consulta de torneos.</div><div class="ttdef"><b>Definition</b> <a href="FilterTournamentDto_8cs_source.html#l00019">FilterTournamentDto.cs:19</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html">BackEncordados.Talleres.Model</a></div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00004">Tournaments.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_af6124b908c5cc5c83d9bac689e10e7a4"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#af6124b908c5cc5c83d9bac689e10e7a4">BackEncordados.Talleres.Model.Tournaments</a></div><div class="ttdeci">record Tournaments</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00006">Tournaments.cs:8</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Repository_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Repository.html">BackEncordados.Talleres.Repository</a></div><div class="ttdef"><b>Definition</b> <a href="ITournamentRepository_8cs_source.html#l00004">ITournamentRepository.cs:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_28130524fe5c59a249a71dcd6e9a5488.html">Talleres</a></li><li class="navelem"><a class="el" href="dir_36e781d15950aa1b5f4b8dd5f8199221.html">Repository</a></li><li class="navelem"><a class="el" href="ITournamentRepository_8cs.html">ITournamentRepository.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

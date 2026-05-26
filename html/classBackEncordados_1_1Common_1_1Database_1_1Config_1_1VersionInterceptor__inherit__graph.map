@@ -1,0 +1,5 @@
+<map id="BackEncordados.Common.Database.Config.VersionInterceptor" name="BackEncordados.Common.Database.Config.VersionInterceptor">
+<area shape="rect" id="Node000001" title="Interceptor de EF Core que incrementa automáticamente el token de concurrencia Version de las entidad..." alt="" coords="5,79,268,119"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="46,5,227,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,44,139,79,134,79,134,44"/>
+</map>

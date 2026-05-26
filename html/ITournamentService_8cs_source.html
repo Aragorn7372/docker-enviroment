@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Talleres/Service/ITournamentService.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('ITournamentService_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ITournamentService.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ITournamentService_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Errors.html">BackEncordados.Common.Errors</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Utils.html">BackEncordados.Common.Utils</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html">BackEncordados.Talleres.Dto</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Error.html">BackEncordados.Talleres.Error</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>CSharpFunctionalExtensions;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Service.html">    8</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Service.html">BackEncordados.Talleres.Service</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html">   37</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html">ITournamentService</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#acd8865c27ef32c68629288e241698615">   42</a></span>    Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#acd8865c27ef32c68629288e241698615">GetTournament</a>(Ulid <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#af087e6268f9dda3ffe199a128d08127b">   46</a></span>    Task&lt;PageResponseDto&lt;TournamentResponseDto&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#af087e6268f9dda3ffe199a128d08127b">GetAllTournamentsAsync</a>(<a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a2555b1a1734527adc84331c092a9e5c6">FilterTournamentDto</a> filter);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a191252971b8efceab044c3b3540db29d">   50</a></span>    Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a191252971b8efceab044c3b3540db29d">CreateTournament</a>(<a class="code hl_class" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html">TournamentAdminRequestDto</a> adminRequest);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a538ef6f0709ebfa208c07371b1119012">   55</a></span>    Task&lt;Result&lt;TournamentResponseDto, TournamentsErrors&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a538ef6f0709ebfa208c07371b1119012">UpdateTournament</a>(Ulid <span class="keywordtype">id</span>, <a class="code hl_class" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html">TournamentPatchDto</a> request);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a0a298f8b86ac9e65a0e52bcc4a3a6fa8">   59</a></span>    Task&lt;Result&lt;Unit, TournamentsErrors&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a0a298f8b86ac9e65a0e52bcc4a3a6fa8">DeleteTournament</a>(Ulid <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#aa85deeb35aca9fa7634af02f8d769171">   64</a></span>    Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#aa85deeb35aca9fa7634af02f8d769171">AssignWorkerMachine</a>(Ulid tournamentId, <a class="code hl_class" href="classBackEncordados_1_1Talleres_1_1Dto_1_1WorkerMachineAssignmentRequestDto.html">WorkerMachineAssignmentRequestDto</a> request);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a54acd690b6696be0a4a1ca3d16a14658">   69</a></span>    Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a54acd690b6696be0a4a1ca3d16a14658">UnassignWorkerMachine</a>(Ulid tournamentId, <span class="keywordtype">string</span> request);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a8f8da4d89c32a139ae0136f2a8a394c1">   73</a></span>    Task&lt;Result&lt;IEnumerable&lt;WorkerMachineAssignmentResponseDto&gt;, TournamentsErrors&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a8f8da4d89c32a139ae0136f2a8a394c1">GetAssignedWorkerMachines</a>(Ulid tournamentId);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#ae3e89a2949b2b12aa266a7f0ac2a6f35">   77</a></span>    Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#ae3e89a2949b2b12aa266a7f0ac2a6f35">GetTournamentByName</a>(<span class="keywordtype">string</span> name);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a1d06fd525477bdcb5d454172231d7be6">   82</a></span>    Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a1d06fd525477bdcb5d454172231d7be6">OwnerCreateTournament</a>(<a class="code hl_class" href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentRequestDto.html">TournamentRequestDto</a> request, Ulid ownerId);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a325f921c6ff7bdd23166a9f376158f31">   86</a></span>    Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a325f921c6ff7bdd23166a9f376158f31">AssingSupervisor</a>(<a class="code hl_class" href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html">SupervisorAsignmentRequestDto</a> request);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a9dd380b07a3f70ebe330ffea0f91b186">   90</a></span>    Task&lt;Result&lt;TournamentResponseDetailsDto, DomainErrors&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a9dd380b07a3f70ebe330ffea0f91b186">AnassingSupervisor</a>(<a class="code hl_class" href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html">SupervisorAsignmentRequestDto</a> request);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+</div>
+</div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html">BackEncordados.Talleres.Dto.SupervisorAsignmentRequestDto</a></div><div class="ttdoc">DTO de solicitud para asignar un supervisor a un torneo.</div><div class="ttdef"><b>Definition</b> <a href="SupervisorAsignmentRequestDto_8cs_source.html#l00013">SupervisorAsignmentRequestDto.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html">BackEncordados.Talleres.Dto.TournamentAdminRequestDto</a></div><div class="ttdoc">DTO de solicitud para creación de torneo por administrador.</div><div class="ttdef"><b>Definition</b> <a href="TournamentAdminRequestDto_8cs_source.html#l00013">TournamentAdminRequestDto.cs:14</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto_html"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html">BackEncordados.Talleres.Dto.TournamentPatchDto</a></div><div class="ttdoc">DTO de solicitud para actualización parcial de un torneo.</div><div class="ttdef"><b>Definition</b> <a href="TournamentPatchDto_8cs_source.html#l00012">TournamentPatchDto.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1TournamentRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentRequestDto.html">BackEncordados.Talleres.Dto.TournamentRequestDto</a></div><div class="ttdoc">DTO de solicitud para creación de un torneo por parte de un supervisor o usuario estándar.</div><div class="ttdef"><b>Definition</b> <a href="TournamentRequestDto_8cs_source.html#l00013">TournamentRequestDto.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Talleres_1_1Dto_1_1WorkerMachineAssignmentRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Talleres_1_1Dto_1_1WorkerMachineAssignmentRequestDto.html">BackEncordados.Talleres.Dto.WorkerMachineAssignmentRequestDto</a></div><div class="ttdoc">DTO de solicitud para asignar un trabajador a una máquina en un torneo.</div><div class="ttdef"><b>Definition</b> <a href="WorkerMachineAssignmentRequestDto_8cs_source.html#l00013">WorkerMachineAssignmentRequestDto.cs:14</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html">BackEncordados.Talleres.Service.ITournamentService</a></div><div class="ttdoc">Interfaz del servicio de torneos que define las operaciones de negocio sobre la entidad Tournaments.</div><div class="ttdef"><b>Definition</b> <a href="ITournamentService_8cs_source.html#l00037">ITournamentService.cs:38</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService_html_a0a298f8b86ac9e65a0e52bcc4a3a6fa8"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a0a298f8b86ac9e65a0e52bcc4a3a6fa8">BackEncordados.Talleres.Service.ITournamentService.DeleteTournament</a></div><div class="ttdeci">Task&lt; Result&lt; Unit, TournamentsErrors &gt; &gt; DeleteTournament(Ulid id)</div><div class="ttdoc">Elimina un torneo (soft delete).</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService_html_a191252971b8efceab044c3b3540db29d"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a191252971b8efceab044c3b3540db29d">BackEncordados.Talleres.Service.ITournamentService.CreateTournament</a></div><div class="ttdeci">Task&lt; Result&lt; TournamentResponseDetailsDto, DomainErrors &gt; &gt; CreateTournament(TournamentAdminRequestDto adminRequest)</div><div class="ttdoc">Crea un nuevo torneo (solo administradores, especificando OwnerId).</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService_html_a1d06fd525477bdcb5d454172231d7be6"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a1d06fd525477bdcb5d454172231d7be6">BackEncordados.Talleres.Service.ITournamentService.OwnerCreateTournament</a></div><div class="ttdeci">Task&lt; Result&lt; TournamentResponseDetailsDto, DomainErrors &gt; &gt; OwnerCreateTournament(TournamentRequestDto request, Ulid ownerId)</div><div class="ttdoc">Crea un torneo desde el propietario autenticado (ownerId extraído del JWT).</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService_html_a325f921c6ff7bdd23166a9f376158f31"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a325f921c6ff7bdd23166a9f376158f31">BackEncordados.Talleres.Service.ITournamentService.AssingSupervisor</a></div><div class="ttdeci">Task&lt; Result&lt; TournamentResponseDetailsDto, DomainErrors &gt; &gt; AssingSupervisor(SupervisorAsignmentRequestDto request)</div><div class="ttdoc">Asigna un supervisor a un torneo.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService_html_a538ef6f0709ebfa208c07371b1119012"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a538ef6f0709ebfa208c07371b1119012">BackEncordados.Talleres.Service.ITournamentService.UpdateTournament</a></div><div class="ttdeci">Task&lt; Result&lt; TournamentResponseDto, TournamentsErrors &gt; &gt; UpdateTournament(Ulid id, TournamentPatchDto request)</div><div class="ttdoc">Actualiza parcialmente un torneo existente.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService_html_a54acd690b6696be0a4a1ca3d16a14658"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a54acd690b6696be0a4a1ca3d16a14658">BackEncordados.Talleres.Service.ITournamentService.UnassignWorkerMachine</a></div><div class="ttdeci">Task&lt; Result&lt; TournamentResponseDetailsDto, DomainErrors &gt; &gt; UnassignWorkerMachine(Ulid tournamentId, string request)</div><div class="ttdoc">Desasigna un trabajador del torneo y elimina sus asignaciones de máquina.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService_html_a8f8da4d89c32a139ae0136f2a8a394c1"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a8f8da4d89c32a139ae0136f2a8a394c1">BackEncordados.Talleres.Service.ITournamentService.GetAssignedWorkerMachines</a></div><div class="ttdeci">Task&lt; Result&lt; IEnumerable&lt; WorkerMachineAssignmentResponseDto &gt;, TournamentsErrors &gt; &gt; GetAssignedWorkerMachines(Ulid tournamentId)</div><div class="ttdoc">Obtiene todas las asignaciones trabajador-máquina de un torneo.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService_html_a9dd380b07a3f70ebe330ffea0f91b186"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#a9dd380b07a3f70ebe330ffea0f91b186">BackEncordados.Talleres.Service.ITournamentService.AnassingSupervisor</a></div><div class="ttdeci">Task&lt; Result&lt; TournamentResponseDetailsDto, DomainErrors &gt; &gt; AnassingSupervisor(SupervisorAsignmentRequestDto request)</div><div class="ttdoc">Desasigna un supervisor de un torneo.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService_html_aa85deeb35aca9fa7634af02f8d769171"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#aa85deeb35aca9fa7634af02f8d769171">BackEncordados.Talleres.Service.ITournamentService.AssignWorkerMachine</a></div><div class="ttdeci">Task&lt; Result&lt; TournamentResponseDetailsDto, DomainErrors &gt; &gt; AssignWorkerMachine(Ulid tournamentId, WorkerMachineAssignmentRequestDto request)</div><div class="ttdoc">Asigna un trabajador a una máquina dentro del torneo.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService_html_acd8865c27ef32c68629288e241698615"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#acd8865c27ef32c68629288e241698615">BackEncordados.Talleres.Service.ITournamentService.GetTournament</a></div><div class="ttdeci">Task&lt; Result&lt; TournamentResponseDetailsDto, DomainErrors &gt; &gt; GetTournament(Ulid id)</div><div class="ttdoc">Obtiene el detalle completo de un torneo por ULID, incluyendo usuarios, owner y supervisores.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService_html_ae3e89a2949b2b12aa266a7f0ac2a6f35"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#ae3e89a2949b2b12aa266a7f0ac2a6f35">BackEncordados.Talleres.Service.ITournamentService.GetTournamentByName</a></div><div class="ttdeci">Task&lt; Result&lt; TournamentResponseDetailsDto, DomainErrors &gt; &gt; GetTournamentByName(string name)</div><div class="ttdoc">Busca un torneo por su nombre exacto.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService_html_af087e6268f9dda3ffe199a128d08127b"><div class="ttname"><a href="interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html#af087e6268f9dda3ffe199a128d08127b">BackEncordados.Talleres.Service.ITournamentService.GetAllTournamentsAsync</a></div><div class="ttdeci">Task&lt; PageResponseDto&lt; TournamentResponseDto &gt; &gt; GetAllTournamentsAsync(FilterTournamentDto filter)</div><div class="ttdoc">Obtiene una lista paginada de torneos aplicando filtros.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ExportManifestDto_8cs_source.html#l00001">ExportManifestDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Errors_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Errors.html">BackEncordados.Common.Errors</a></div><div class="ttdef"><b>Definition</b> <a href="DomainErrors_8cs_source.html#l00001">DomainErrors.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Utils_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Utils.html">BackEncordados.Common.Utils</a></div><div class="ttdef"><b>Definition</b> <a href="TapAsync_8cs_source.html#l00003">TapAsync.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Dto.html">BackEncordados.Talleres.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="FilterTournamentDto_8cs_source.html#l00001">FilterTournamentDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Dto_html_a2555b1a1734527adc84331c092a9e5c6"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a2555b1a1734527adc84331c092a9e5c6">BackEncordados.Talleres.Dto.FilterTournamentDto</a></div><div class="ttdeci">record FilterTournamentDto(string Search, Ulid? UserId, int Page=0, int Size=10, string SortBy=&quot;name&quot;, string Direction=&quot;asc&quot;)</div><div class="ttdoc">DTO de filtro y paginación para la consulta de torneos.</div><div class="ttdef"><b>Definition</b> <a href="FilterTournamentDto_8cs_source.html#l00019">FilterTournamentDto.cs:19</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Error_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Error.html">BackEncordados.Talleres.Error</a></div><div class="ttdef"><b>Definition</b> <a href="TournamentsErrors_8cs_source.html#l00003">TournamentsErrors.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Service_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Service.html">BackEncordados.Talleres.Service</a></div><div class="ttdef"><b>Definition</b> <a href="ITournamentService_8cs_source.html#l00008">ITournamentService.cs:8</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_28130524fe5c59a249a71dcd6e9a5488.html">Talleres</a></li><li class="navelem"><a class="el" href="dir_faa437e218cb4b5dc8a1118fffc86298.html">Service</a></li><li class="navelem"><a class="el" href="ITournamentService_8cs.html">ITournamentService.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="BackEncordados.Common.Service.WhatsApp.WhatsAppService" name="BackEncordados.Common.Service.WhatsApp.WhatsAppService">
+<area shape="rect" id="Node000001" title="Implementación de IWhatsAppService que envía mensajes a través de la WhatsApp Cloud API (Meta Graph A..." alt="" coords="5,79,253,119"/>
+<area shape="rect" id="Node000002" href="$interfaceBackEncordados_1_1Common_1_1Service_1_1WhatsApp_1_1IWhatsAppService.html" title="Define el contrato para el envío de mensajes de WhatsApp a través de la WhatsApp Cloud API." alt="" coords="59,5,199,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,44,132,79,127,79,127,44"/>
+</map>

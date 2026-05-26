@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Infraestructure/CloudinaryConfig.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('CloudinaryConfig_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CloudinaryConfig.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="CloudinaryConfig_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Microsoft.Extensions.DependencyInjection.Extensions;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>Serilog;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Infraestructure.html">BackEncordados.Infraestructure</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>CloudinaryConfig {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">public</span> <span class="keyword">static</span> IServiceCollection <a class="code hl_function" href="Program_8cs.html#a827d0b1663752048623f7ac9380f077f">AddCloudinary</a>(<span class="keyword">this</span> IServiceCollection <a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>, IConfiguration <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        Log.Information(<span class="stringliteral">&quot;Configurando servicio Cloudinary...&quot;</span>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        var cloudinarySection = <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>.GetSection(<span class="stringliteral">&quot;Cloudinary&quot;</span>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">if</span> (!cloudinarySection.Exists())</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            Log.Warning(<span class="stringliteral">&quot;Sección &#39;Cloudinary&#39; no encontrada en configuración. Cloudinary puede no funcionar correctamente.&quot;</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        var cloudName = cloudinarySection[<span class="stringliteral">&quot;CloudName&quot;</span>];</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        var apiKey = cloudinarySection[<span class="stringliteral">&quot;ApiKey&quot;</span>];</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        var apiSecret = cloudinarySection[<span class="stringliteral">&quot;ApiSecret&quot;</span>];</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrWhiteSpace(cloudName) || <span class="keywordtype">string</span>.IsNullOrWhiteSpace(apiKey) || <span class="keywordtype">string</span>.IsNullOrWhiteSpace(apiSecret))</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException(</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                <span class="stringliteral">&quot;Credenciales de Cloudinary incompletas. &quot;</span> +</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                <span class="stringliteral">&quot;Asegúrate de configurar Cloudinary:CloudName, Cloudinary:ApiKey y Cloudinary:ApiSecret en appsettings.json&quot;</span>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        var options = <span class="keyword">new</span> CloudinaryOptions</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            CloudName = cloudName,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            ApiKey = apiKey,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            ApiSecret = apiSecret,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            Transformations = <span class="keyword">new</span> TransformationOptions</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                Width = <span class="keywordtype">int</span>.TryParse(cloudinarySection[<span class="stringliteral">&quot;Transformations:Width&quot;</span>], out var w) ? w : CloudinaryConstants.DEFAULT_WIDTH,</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                Height = <span class="keywordtype">int</span>.TryParse(cloudinarySection[<span class="stringliteral">&quot;Transformations:Height&quot;</span>], out var h) ? h : CloudinaryConstants.DEFAULT_HEIGHT,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                Crop = cloudinarySection[<span class="stringliteral">&quot;Transformations:Crop&quot;</span>] ?? CloudinaryConstants.DEFAULT_CROP,</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                Quality = cloudinarySection[<span class="stringliteral">&quot;Transformations:Quality&quot;</span>] ?? CloudinaryConstants.DEFAULT_QUALITY,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                Format = cloudinarySection[<span class="stringliteral">&quot;Transformations:Format&quot;</span>] ?? CloudinaryConstants.DEFAULT_FORMAT</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            },</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            DefaultImages = <span class="keyword">new</span> DefaultImageOptions</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                Usuarios = cloudinarySection[<span class="stringliteral">&quot;DefaultImages:Usuarios&quot;</span>] ?? CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                Talleres = cloudinarySection[<span class="stringliteral">&quot;DefaultImages:Talleres&quot;</span>] ?? CloudinaryConstants.DEFAULT_IMAGE_TALLERES,</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                Materies = cloudinarySection[<span class="stringliteral">&quot;DefaultImages:Materies&quot;</span>] ?? CloudinaryConstants.DEFAULT_IMAGE_MATERIALES</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        };</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        CloudinaryOptions.Current = options;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.TryAddScoped&lt;<a class="code hl_interface" href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html">ICloudinaryService</a>, CloudinaryService&gt;();</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        Log.Information(<span class="stringliteral">&quot;Servicio Cloudinary configurado exitosamente.&quot;</span>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        Log.Information(<span class="stringliteral">&quot;Cloud: {CloudName}, Transformaciones: {Width}x{Height} ({Crop})&quot;</span>,</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            options.CloudName, options.Transformations.Width, options.Transformations.Height, options.Transformations.Crop);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    }</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="ttc" id="aProgram_8cs_html_a1c05573df94c1c7e9a635ed02e41281e"><div class="ttname"><a href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a></div><div class="ttdeci">var configuration</div><div class="ttdef"><b>Definition</b> <a href="Program_8cs_source.html#l00013">Program.cs:13</a></div></div>
+<div class="ttc" id="aProgram_8cs_html_a827d0b1663752048623f7ac9380f077f"><div class="ttname"><a href="Program_8cs.html#a827d0b1663752048623f7ac9380f077f">AddCloudinary</a></div><div class="ttdeci">services. AddCloudinary(configuration)</div></div>
+<div class="ttc" id="aProgram_8cs_html_ad79fbc5835b5fb29068560ce0db216e8"><div class="ttname"><a href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a></div><div class="ttdeci">var services</div><div class="ttdef"><b>Definition</b> <a href="Program_8cs_source.html#l00012">Program.cs:12</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html">BackEncordados.Common.Service.Cloudinary.ICloudinaryService</a></div><div class="ttdoc">Define el contrato para el servicio de gestión de imágenes en Cloudinary.</div><div class="ttdef"><b>Definition</b> <a href="ICloudinaryService_8cs_source.html#l00049">ICloudinaryService.cs:50</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a></div><div class="ttdef"><b>Definition</b> <a href="CloudinaryConstants_8cs_source.html#l00001">CloudinaryConstants.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Infraestructure_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Infraestructure.html">BackEncordados.Infraestructure</a></div><div class="ttdef"><b>Definition</b> <a href="AppConfig_8cs_source.html#l00001">AppConfig.cs:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_fca39826044f67dd320ad6baeec845bf.html">Infraestructure</a></li><li class="navelem"><a class="el" href="CloudinaryConfig_8cs.html">CloudinaryConfig.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

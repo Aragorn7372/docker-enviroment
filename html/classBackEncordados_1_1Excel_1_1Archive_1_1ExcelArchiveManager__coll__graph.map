@@ -1,0 +1,5 @@
+<map id="BackEncordados.Excel.Archive.ExcelArchiveManager" name="BackEncordados.Excel.Archive.ExcelArchiveManager">
+<area shape="rect" id="Node000001" title="Implementación de IExcelArchiveManager que genera y lee archivos Excel utilizando la biblioteca Close..." alt="" coords="5,79,231,119"/>
+<area shape="rect" id="Node000002" href="$interfaceBackEncordados_1_1Excel_1_1Archive_1_1IExcelArchiveManager.html" title="Define el contrato para la generación y lectura de archivos Excel utilizando la biblioteca ClosedXML." alt="" coords="35,5,201,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,44,121,79,115,79,115,44"/>
+</map>

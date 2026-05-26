@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/TestEncordados/Unit/Services/AuthService/JwtServiceTests.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('JwtServiceTests_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">JwtServiceTests.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="JwtServiceTests_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>FluentAssertions;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>Microsoft.Extensions.Configuration;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Microsoft.Extensions.Logging;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>Moq;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="JwtServiceTests_8cs.html#a9d6275951ba3c98f4c439f02a1408da4">    6</a></span><span class="keyword">using </span><a class="code hl_typedef" href="JwtServiceTests_8cs.html#a9d6275951ba3c98f4c439f02a1408da4">JwtServiceType</a> = <a class="code hl_namespace" href="namespaceBackEncordados.html">BackEncordados</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios.html">Usuarios</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service.html">Service</a>.<a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth.html">Auth</a>.JwtService;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceTestEncordados_1_1Unit_1_1Services_1_1AuthService.html">TestEncordados.Unit.Services.AuthService</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html">   10</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html">JwtServiceTests</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">private</span> readonly IConfiguration _config;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">private</span> readonly Mock&lt;ILogger&lt;JwtServiceType&gt;&gt; _mockLogger;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">private</span> readonly <a class="code hl_typedef" href="JwtServiceTests_8cs.html#a9d6275951ba3c98f4c439f02a1408da4">JwtServiceType</a> _service;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#ac13065505f04489f9693499940543d9a">   16</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#ac13065505f04489f9693499940543d9a">JwtServiceTests</a>()</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        _mockLogger = <span class="keyword">new</span> Mock&lt;ILogger&lt;JwtServiceType&gt;&gt;();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        var configData = <span class="keyword">new</span> Dictionary&lt;string, string?&gt;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            [<span class="stringliteral">&quot;Jwt:Key&quot;</span>] = <span class="stringliteral">&quot;esta_es_una_clave_secreta_muy_segura_para_jwt_que_debe_tener_al_menos_32_caracteres!&quot;</span>,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            [<span class="stringliteral">&quot;Jwt:Issuer&quot;</span>] = <span class="stringliteral">&quot;TestIssuer&quot;</span>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            [<span class="stringliteral">&quot;Jwt:Audience&quot;</span>] = <span class="stringliteral">&quot;TestAudience&quot;</span>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            [<span class="stringliteral">&quot;Jwt:ExpireMinutes&quot;</span>] = <span class="stringliteral">&quot;60&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        };</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        _config = <span class="keyword">new</span> ConfigurationBuilder()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            .AddInMemoryCollection(configData)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            .Build();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        _service = <span class="keyword">new</span> <a class="code hl_typedef" href="JwtServiceTests_8cs.html#a9d6275951ba3c98f4c439f02a1408da4">JwtServiceType</a>(_config, _mockLogger.Object);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">private</span> <span class="keyword">static</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a> CreateUser(</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        Ulid? <span class="keywordtype">id</span> = <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">string</span> username = <span class="stringliteral">&quot;testuser&quot;</span>,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">string</span> email = <span class="stringliteral">&quot;test@example.com&quot;</span>,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">string</span> role = <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a>) =&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">new</span>()</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            Id = <span class="keywordtype">id</span> ?? Ulid.NewUlid(),</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            Username = username,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            Email = email,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            PasswordHash = <span class="stringliteral">&quot;hashedpassword&quot;</span>,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = role,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            IsDeleted = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            CreatedAt = DateTime.UtcNow</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        };</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    [Test]</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#a77fbb898f4ffad4925f7ffdded4f2d29">   52</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#a77fbb898f4ffad4925f7ffdded4f2d29">GenerateToken_ValidUser_ReturnsToken</a>()</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        var user = CreateUser();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        var token = _service.GenerateToken(user);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        token.Should().NotBeNullOrEmpty();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        token.Split(<span class="charliteral">&#39;.&#39;</span>).Should().HaveCount(3);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    [Test]</div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#ac08ea490575c7918c19ac3b709757f63">   63</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#ac08ea490575c7918c19ac3b709757f63">GenerateToken_ValidUser_TokenContainsCorrectClaims</a>()</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        var user = CreateUser(username: <span class="stringliteral">&quot;testuser&quot;</span>, email: <span class="stringliteral">&quot;test@test.com&quot;</span>, role: <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">ADMIN</a>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        var token = _service.GenerateToken(user);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        token.Should().NotBeNullOrEmpty();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    [Test]</div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#acb67392582b4d71156591c9da50ae961">   73</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#acb67392582b4d71156591c9da50ae961">GenerateToken_ThrowsWhenKeyMissing</a>()</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        var emptyConfig = <span class="keyword">new</span> Mock&lt;IConfiguration&gt;();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        var emptySection = <span class="keyword">new</span> Mock&lt;IConfigurationSection&gt;();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        emptySection.Setup(s =&gt; s[<span class="stringliteral">&quot;Key&quot;</span>]).Returns((<span class="keywordtype">string</span>?)<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        emptyConfig.Setup(c =&gt; c.GetSection(<span class="stringliteral">&quot;Jwt&quot;</span>)).Returns(emptySection.Object);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        var service = <span class="keyword">new</span> <a class="code hl_typedef" href="JwtServiceTests_8cs.html#a9d6275951ba3c98f4c439f02a1408da4">JwtServiceType</a>(emptyConfig.Object, _mockLogger.Object);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        var user = CreateUser();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        var action = () =&gt; service.GenerateToken(user);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        action.Should().Throw&lt;InvalidOperationException&gt;()</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            .WithMessage(<span class="stringliteral">&quot;*JWT Key*&quot;</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    [Test]</div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#a1c4b19841d874fb48cfba623d005e27d">   90</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#a1c4b19841d874fb48cfba623d005e27d">ValidateToken_ValidToken_ReturnsUsername</a>()</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        var user = CreateUser(username: <span class="stringliteral">&quot;validuser&quot;</span>, email: <span class="stringliteral">&quot;valid@test.com&quot;</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        var token = _service.GenerateToken(user);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        var username = _service.ValidateToken(token);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        username.Should().Be(<span class="stringliteral">&quot;validuser&quot;</span>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    [Test]</div>
+<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#a03c4efd44b008a2665672b8ce9c1dca8">  101</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#a03c4efd44b008a2665672b8ce9c1dca8">ValidateToken_InvalidToken_ReturnsNull</a>()</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        var invalidToken = <span class="stringliteral">&quot;invalid.token.here&quot;</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        var result = _service.ValidateToken(invalidToken);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        result.Should().BeNull();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    [Test]</div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#a9fd8318bf82eb98aa45f3a46a580dff5">  111</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#a9fd8318bf82eb98aa45f3a46a580dff5">ValidateToken_EmptyToken_ReturnsNull</a>()</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        var result = _service.ValidateToken(<span class="keywordtype">string</span>.Empty);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        result.Should().BeNull();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    [Test]</div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="}">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#ae863b90113eb18d3956e3f56fdfda2f4">  119</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#ae863b90113eb18d3956e3f56fdfda2f4">ValidateToken_TamperedToken_ReturnsNull</a>()</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        var user = CreateUser();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        var token = _service.GenerateToken(user);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        var tamperedToken = token + <span class="stringliteral">&quot;tampered&quot;</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        var result = _service.ValidateToken(tamperedToken);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        result.Should().BeNull();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
+</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}</div>
+</div>
+<div class="ttc" id="aJwtServiceTests_8cs_html_a9d6275951ba3c98f4c439f02a1408da4"><div class="ttname"><a href="JwtServiceTests_8cs.html#a9d6275951ba3c98f4c439f02a1408da4">JwtServiceType</a></div><div class="ttdeci">BackEncordados.Usuarios.Service.Auth.JwtService JwtServiceType</div><div class="ttdef"><b>Definition</b> <a href="JwtServiceTests_8cs_source.html#l00006">JwtServiceTests.cs:6</a></div></div>
+<div class="ttc" id="aPurchasedController_8cs_html_a2cca664a5a4cb21c8352e11d88fa47ef"><div class="ttname"><a href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a></div><div class="ttdeci">BackEncordados.Usuarios.Model.User.UserRoles Role</div><div class="ttdef"><b>Definition</b> <a href="PurchasedController_8cs_source.html#l00014">PurchasedController.cs:14</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">BackEncordados.Usuarios.Model.User.UserRoles</a></div><div class="ttdoc">Constantes para los roles de usuario.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00049">User.cs:50</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a54373adaa756848426e2a7469dedffd7"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">BackEncordados.Usuarios.Model.User.UserRoles.USER</a></div><div class="ttdeci">const string USER</div><div class="ttdoc">Rol de usuario estándar con permisos básicos.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00055">User.cs:55</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_ad3cded80c57a57fac13e69200cfe1ea3"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">BackEncordados.Usuarios.Model.User.UserRoles.ADMIN</a></div><div class="ttdeci">const string ADMIN</div><div class="ttdoc">Rol de administrador con acceso total al sistema.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00052">User.cs:52</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">BackEncordados.Usuarios.Model.User</a></div><div class="ttdoc">Entidad de dominio que representa un usuario. Autenticación con email/password hasheado con BCrypt....</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00011">User.cs:12</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests_html"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html">TestEncordados.Unit.Services.AuthService.JwtServiceTests</a></div><div class="ttdef"><b>Definition</b> <a href="JwtServiceTests_8cs_source.html#l00010">JwtServiceTests.cs:11</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests_html_a03c4efd44b008a2665672b8ce9c1dca8"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#a03c4efd44b008a2665672b8ce9c1dca8">TestEncordados.Unit.Services.AuthService.JwtServiceTests.ValidateToken_InvalidToken_ReturnsNull</a></div><div class="ttdeci">void ValidateToken_InvalidToken_ReturnsNull()</div><div class="ttdef"><b>Definition</b> <a href="JwtServiceTests_8cs_source.html#l00101">JwtServiceTests.cs:101</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests_html_a1c4b19841d874fb48cfba623d005e27d"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#a1c4b19841d874fb48cfba623d005e27d">TestEncordados.Unit.Services.AuthService.JwtServiceTests.ValidateToken_ValidToken_ReturnsUsername</a></div><div class="ttdeci">void ValidateToken_ValidToken_ReturnsUsername()</div><div class="ttdef"><b>Definition</b> <a href="JwtServiceTests_8cs_source.html#l00090">JwtServiceTests.cs:90</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests_html_a77fbb898f4ffad4925f7ffdded4f2d29"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#a77fbb898f4ffad4925f7ffdded4f2d29">TestEncordados.Unit.Services.AuthService.JwtServiceTests.GenerateToken_ValidUser_ReturnsToken</a></div><div class="ttdeci">void GenerateToken_ValidUser_ReturnsToken()</div><div class="ttdef"><b>Definition</b> <a href="JwtServiceTests_8cs_source.html#l00052">JwtServiceTests.cs:52</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests_html_a9fd8318bf82eb98aa45f3a46a580dff5"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#a9fd8318bf82eb98aa45f3a46a580dff5">TestEncordados.Unit.Services.AuthService.JwtServiceTests.ValidateToken_EmptyToken_ReturnsNull</a></div><div class="ttdeci">void ValidateToken_EmptyToken_ReturnsNull()</div><div class="ttdef"><b>Definition</b> <a href="JwtServiceTests_8cs_source.html#l00111">JwtServiceTests.cs:111</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests_html_ac08ea490575c7918c19ac3b709757f63"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#ac08ea490575c7918c19ac3b709757f63">TestEncordados.Unit.Services.AuthService.JwtServiceTests.GenerateToken_ValidUser_TokenContainsCorrectClaims</a></div><div class="ttdeci">void GenerateToken_ValidUser_TokenContainsCorrectClaims()</div><div class="ttdef"><b>Definition</b> <a href="JwtServiceTests_8cs_source.html#l00063">JwtServiceTests.cs:63</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests_html_ac13065505f04489f9693499940543d9a"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#ac13065505f04489f9693499940543d9a">TestEncordados.Unit.Services.AuthService.JwtServiceTests.JwtServiceTests</a></div><div class="ttdeci">JwtServiceTests()</div><div class="ttdef"><b>Definition</b> <a href="JwtServiceTests_8cs_source.html#l00016">JwtServiceTests.cs:16</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests_html_acb67392582b4d71156591c9da50ae961"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#acb67392582b4d71156591c9da50ae961">TestEncordados.Unit.Services.AuthService.JwtServiceTests.GenerateToken_ThrowsWhenKeyMissing</a></div><div class="ttdeci">void GenerateToken_ThrowsWhenKeyMissing()</div><div class="ttdef"><b>Definition</b> <a href="JwtServiceTests_8cs_source.html#l00073">JwtServiceTests.cs:73</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests_html_ae863b90113eb18d3956e3f56fdfda2f4"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Services_1_1AuthService_1_1JwtServiceTests.html#ae863b90113eb18d3956e3f56fdfda2f4">TestEncordados.Unit.Services.AuthService.JwtServiceTests.ValidateToken_TamperedToken_ReturnsNull</a></div><div class="ttdeci">void ValidateToken_TamperedToken_ReturnsNull()</div><div class="ttdef"><b>Definition</b> <a href="JwtServiceTests_8cs_source.html#l00119">JwtServiceTests.cs:119</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a></div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00005">User.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth.html">BackEncordados.Usuarios.Service.Auth</a></div><div class="ttdef"><b>Definition</b> <a href="AuthService_8cs_source.html#l00013">AuthService.cs:13</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Service_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Service.html">BackEncordados.Usuarios.Service</a></div><div class="ttdef"><b>Definition</b> <a href="AuthService_8cs_source.html#l00013">AuthService.cs:13</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios.html">BackEncordados.Usuarios</a></div><div class="ttdef"><b>Definition</b> <a href="AuthController_8cs_source.html#l00007">AuthController.cs:7</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_html"><div class="ttname"><a href="namespaceBackEncordados.html">BackEncordados</a></div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00005">MaterialsDbContext.cs:5</a></div></div>
+<div class="ttc" id="anamespaceTestEncordados_1_1Unit_1_1Services_1_1AuthService_html"><div class="ttname"><a href="namespaceTestEncordados_1_1Unit_1_1Services_1_1AuthService.html">TestEncordados.Unit.Services.AuthService</a></div><div class="ttdef"><b>Definition</b> <a href="AuthServiceTests_8cs_source.html#l00014">AuthServiceTests.cs:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_780b0e0e1bd31577874252649f607c71.html">TestEncordados</a></li><li class="navelem"><a class="el" href="dir_48c6692f9b3c243174e0def3ed0bbfd9.html">Unit</a></li><li class="navelem"><a class="el" href="dir_dd163bb5a9487d04f3852660f12d7407.html">Services</a></li><li class="navelem"><a class="el" href="dir_d47fec0131fb3fe5940291af66c14606.html">AuthService</a></li><li class="navelem"><a class="el" href="JwtServiceTests_8cs.html">JwtServiceTests.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

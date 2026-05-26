@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Program.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Program_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Program.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Program_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Text;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Infraestructure.html">BackEncordados.Infraestructure</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Middleware.html">BackEncordados.Middleware</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>FluentValidation;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>FluentValidation.AspNetCore;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>Serilog;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="Program_8cs.html#ac6872fb7b52db1c9221f7271a8b3f8c0">    8</a></span>Log.Logger= SerilogConfig.Configure().CreateLogger();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="Program_8cs.html#a349d39ecb8cf69b92f64f23775abc311">    9</a></span>Console.OutputEncoding = Encoding.UTF8;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">   10</a></span>var <a class="code hl_variable" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a> = WebApplication.CreateBuilder(args);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// creo variables para que sea mas facil de leer</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">   12</a></span>var <a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a> = <a class="code hl_variable" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a>.Services;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">   13</a></span>var <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a> = <a class="code hl_variable" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a>.Configuration;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="Program_8cs.html#a975de72f58dd594a81e392f4ae727359">   14</a></span>var <a class="code hl_variable" href="Program_8cs.html#a975de72f58dd594a81e392f4ae727359">environment</a> = <a class="code hl_variable" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a>.Environment;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// añado configuracion de serilog para que se habilite en todos los logger</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="Program_8cs.html#a581fb38d7c44cbe2c57d1a89e40f7a2f">   16</a></span><a class="code hl_variable" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a>.Host.UseSerilog();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// añado configuracion de controllers</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="Program_8cs.html#a17331db0fbfd57854b5611cd1d0a28f7">   18</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddMvcControllers();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// añado FluentValidation (sin auto-validacion para permitir validators async)</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="Program_8cs.html#abcfb48c584a59605588b791d36be01f6">   20</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddValidatorsFromAssemblyContaining&lt;Program&gt;();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// añado la base de datos</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="Program_8cs.html#ad2d586cf5ef136adabc8ef678d6f4d19">   22</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddDatabase(<a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// politicas de corps</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="Program_8cs.html#a637dbab9406d3965d17cf3d7ca3bbc1e">   24</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddCorsPolicy(<a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>,<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// limite de peticiones </span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="Program_8cs.html#a072d31a0c7a8c7ff8c6d71fdabd55127">   26</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddRateLimitingPolicy();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// añade autorizacion</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="Program_8cs.html#acbb326880f73371d34e41f8a221125fd">   28</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddAuthorization();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// añade autenticacion</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="Program_8cs.html#a6c1a6b366832f2b563f78e75130f84b9">   30</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddAuthentication(<a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// añado la cache</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="Program_8cs.html#a9594d81483b7de1f6b0a4378c41f351c">   32</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddCache(<a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// añado cloudinary</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="Program_8cs.html#a827d0b1663752048623f7ac9380f077f">   34</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddCloudinary(<a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// añado configuracion global</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="Program_8cs.html#ac7a027c3faee12ada2a665f3037d2016">   36</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddAppConfig(<a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">// añado WhatsApp HTTP client</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="Program_8cs.html#a787be94f573d56bf6393def98c012bb5">   38</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddWhatsAppHttpClient(<a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// añado repositorios</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="Program_8cs.html#ae55224fab6b022c68a1995e547fee92e">   40</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddRepositories();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// añado servicios</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="Program_8cs.html#a090612354508b689c9aa1681ac37852e">   42</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddServices();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">//añado email service</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="Program_8cs.html#aba527c03d4198fea81431cd80f3c7224">   44</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddEmail(<a class="code hl_variable" href="Program_8cs.html#a975de72f58dd594a81e392f4ae727359">environment</a>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// Registro de servicios de SignalR</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="Program_8cs.html#ac0dfdfae5beb8e49ecb8a76ab55d038b">   46</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddRealtimeSignalR();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// declaro app</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">   48</a></span>var <a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> = <a class="code hl_variable" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a>.Build(); </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// global exception handler</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="Program_8cs.html#a352d68b2c7d34cd0d574c53f302c7770">   50</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.UseGlobalExceptionHandler();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// politicas de corps (ANTES de routing para que las pre-flights pasen)</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="Program_8cs.html#a169ac37af3074306b50a4154ab634a2f">   52</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.UseCorsPolicy();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="Program_8cs.html#aa4d447fc3129a3aa301d736b8bd04ae9">   54</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.UseHttpsRedirection();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">// archivos estaticos ANTES de routing (blazor.server.js, etc.)</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="Program_8cs.html#a906a3ce545279a7a73941f1d7b64d7cf">   57</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.UseStaticFiles();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="Program_8cs.html#a94c810d266751293a2d511a720a5625f">   58</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.UseRouting();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">// lo que tiene relacion con usuarios</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="Program_8cs.html#a6435d8beeff4999dc0b0c6d60a86a4e2">   60</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.UseAuthentication();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="Program_8cs.html#af6f72d752b2e73aa0292f74bd13237ab">   61</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.UseAuthorization();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">// Rutas de los hubs de SignalR </span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="Program_8cs.html#ae46e95f0e5077e8a05934f5a757ab757">   63</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.MapSignalRHubs();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// mapeador de controllers</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="Program_8cs.html#a9e2ee3170aa6279b68eefd1651f7d96c">   65</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.MapControllers();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="Program_8cs.html#abfc9dceb352bd23039a85643feb142af">   67</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.MapGet(<span class="stringliteral">&quot;/health&quot;</span>, () =&gt; Results.Ok(<span class="keyword">new</span> { status = <span class="stringliteral">&quot;healthy&quot;</span>, timestamp = DateTime.UtcNow }));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">// init de datos</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="Program_8cs.html#afcc82f01924c2cf1838aba213e068061">   70</a></span>await <a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.InitializeDatabaseAsync();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// init del storage</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="Program_8cs.html#afa932ae5399d5672ec4eb2b0f8116172">   74</a></span>Log.Information(<span class="stringliteral">&quot;=== CONFIGURATION VALUES ===&quot;</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="Program_8cs.html#acb499de3c5028964b17a030325ca481e">   75</a></span>Log.Information(<span class="stringliteral">&quot;Storage: UploadPath={UploadPath}, MaxFileSize={MaxFileSize}, AllowedExtensions={AllowedExtensions}, AllowedContentTypes={AllowedContentTypes}&quot;</span>,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Storage:UploadPath&quot;</span>], <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Storage:MaxFileSize&quot;</span>], <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Storage:AllowedExtensions&quot;</span>], <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Storage:AllowedContentTypes&quot;</span>]);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>Log.Information(<span class="stringliteral">&quot;Server: Url={ServerUrl}&quot;</span>, <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Server:Url&quot;</span>]);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="Program_8cs.html#a6642420c3f916d2a7581f5f9f99cf4a8">   78</a></span>Log.Information(<span class="stringliteral">&quot;Development: {Development}&quot;</span>, <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Development&quot;</span>]);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="Program_8cs.html#a972b16a449f47a894ebc40c4ec4668a9">   79</a></span>Log.Information(<span class="stringliteral">&quot;Jwt: Key={JwtKey}, Issuer={JwtIssuer}, Audience={JwtAudience}&quot;</span>, </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Jwt:Key&quot;</span>], <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Jwt:Issuer&quot;</span>], <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Jwt:Audience&quot;</span>]);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="Program_8cs.html#ad8c94d6b869bc896564c912a12de07ea">   81</a></span>Log.Information(<span class="stringliteral">&quot;Smtp: Host={SmtpHost}, Port={SmtpPort}, Username={SmtpUsername}, AdminEmail={SmtpAdminEmail}&quot;</span>,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Smtp:Host&quot;</span>], <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Smtp:Port&quot;</span>], <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Smtp:Username&quot;</span>], <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Smtp:AdminEmail&quot;</span>]);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>Log.Information(<span class="stringliteral">&quot;ConnectionStrings: DefaultConnection={DefaultConnection}&quot;</span>, <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;ConnectionStrings:DefaultConnection&quot;</span>]);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="Program_8cs.html#a0997941268423cc9b3a3577d099513c2">   84</a></span>Log.Information(<span class="stringliteral">&quot;Redis: Host={RedisHost}, Password={RedisPassword}, Port={RedisPort}&quot;</span>,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Redis:Host&quot;</span>], <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Redis:Password&quot;</span>], <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Redis:Port&quot;</span>]);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="Program_8cs.html#a69d06149c3549749cde6e39d51144f14">   86</a></span>Log.Information(<span class="stringliteral">&quot;Cloudinary: CloudName={CloudName}, Transformations={Width}x{Height} ({Crop})&quot;</span>,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Cloudinary:CloudName&quot;</span>], <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Cloudinary:Transformations:Width&quot;</span>], </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Cloudinary:Transformations:Height&quot;</span>], <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Cloudinary:Transformations:Crop&quot;</span>]);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>Log.Information(<span class="stringliteral">&quot;=== END CONFIGURATION ===&quot;</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="Program_8cs.html#abe4cc9788f52e49485473dc699537388">   91</a></span><span class="keywordflow">try</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>{</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    Log.Information(<span class="stringliteral">&quot;Iniciando aplicación Dawazon2.0...&quot;</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="Program_8cs.html#aaa3dbf02e269c3ef7e8546d290c6b3dd">   94</a></span>    <a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.Run();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="Program_8cs.html#ab43e01d035a27754dae62444a59b3cab">   96</a></span><span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>{</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    Log.Fatal(ex, <span class="stringliteral">&quot;La aplicación falló al iniciar&quot;</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">throw</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="Program_8cs.html#add54dddec4f0266c6fab8d04bf7d9136">  101</a></span><span class="keywordflow">finally</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>{</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    Log.CloseAndFlush();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
+<div class="ttc" id="aProgram_8cs_html_a1c05573df94c1c7e9a635ed02e41281e"><div class="ttname"><a href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a></div><div class="ttdeci">var configuration</div><div class="ttdef"><b>Definition</b> <a href="Program_8cs_source.html#l00013">Program.cs:13</a></div></div>
+<div class="ttc" id="aProgram_8cs_html_a2f78352277081c620fd4cf92a5ce15e5"><div class="ttname"><a href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a></div><div class="ttdeci">var builder</div><div class="ttdef"><b>Definition</b> <a href="Program_8cs_source.html#l00010">Program.cs:10</a></div></div>
+<div class="ttc" id="aProgram_8cs_html_a7b225fcb720e4d5ed2bbf60e28a25e6d"><div class="ttname"><a href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a></div><div class="ttdeci">var app</div><div class="ttdef"><b>Definition</b> <a href="Program_8cs_source.html#l00048">Program.cs:48</a></div></div>
+<div class="ttc" id="aProgram_8cs_html_a975de72f58dd594a81e392f4ae727359"><div class="ttname"><a href="Program_8cs.html#a975de72f58dd594a81e392f4ae727359">environment</a></div><div class="ttdeci">var environment</div><div class="ttdef"><b>Definition</b> <a href="Program_8cs_source.html#l00014">Program.cs:14</a></div></div>
+<div class="ttc" id="aProgram_8cs_html_ad79fbc5835b5fb29068560ce0db216e8"><div class="ttname"><a href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a></div><div class="ttdeci">var services</div><div class="ttdef"><b>Definition</b> <a href="Program_8cs_source.html#l00012">Program.cs:12</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Infraestructure_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Infraestructure.html">BackEncordados.Infraestructure</a></div><div class="ttdef"><b>Definition</b> <a href="AppConfig_8cs_source.html#l00001">AppConfig.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Middleware_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Middleware.html">BackEncordados.Middleware</a></div><div class="ttdef"><b>Definition</b> <a href="GlobalExceptionHandler_8cs_source.html#l00006">GlobalExceptionHandler.cs:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="Program_8cs.html">Program.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

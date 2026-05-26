@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/TestEncordados/Integration/Fixtures/DatabaseFixtures.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('DatabaseFixtures_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DatabaseFixtures.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="DatabaseFixtures_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html">BackEncordados.Common.Database.Config</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Microsoft.EntityFrameworkCore;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>NUnit.Framework;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Testcontainers.PostgreSql;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="namespaceTestEncordados_1_1Integration_1_1Fixtures.html">    6</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceTestEncordados_1_1Integration_1_1Fixtures.html">TestEncordados.Integration.Fixtures</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html">    8</a></span><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html">PostgreSqlTestBase</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a97312bc0a9f849d8334353846979faa0">   10</a></span>    <span class="keyword">protected</span> PostgreSqlContainer? <a class="code hl_variable" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a97312bc0a9f849d8334353846979faa0">_postgres</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#aa599427a6328cbaa09bf7acb7e2ebc8e">   11</a></span>    <span class="keyword">protected</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#aa599427a6328cbaa09bf7acb7e2ebc8e">ConnectionString</a> = <span class="keyword">null</span>!;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    [OneTimeSetUp]</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a8f039869a5b201883c7cb13c8c286320">   14</a></span>    <span class="keyword">public</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a8f039869a5b201883c7cb13c8c286320">BaseOneTimeSetUp</a>()</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <a class="code hl_variable" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a97312bc0a9f849d8334353846979faa0">_postgres</a> = <span class="keyword">new</span> PostgreSqlBuilder()</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            .WithImage(<span class="stringliteral">&quot;postgres:16-alpine&quot;</span>)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            .WithDatabase(<a class="code hl_function" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#ae41f49f6d18d4383da29720cf465027d">GetDatabaseName</a>())</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            .Build();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        await <a class="code hl_variable" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a97312bc0a9f849d8334353846979faa0">_postgres</a>.StartAsync();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_variable" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#aa599427a6328cbaa09bf7acb7e2ebc8e">ConnectionString</a> = <a class="code hl_variable" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a97312bc0a9f849d8334353846979faa0">_postgres</a>.GetConnectionString();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        await <a class="code hl_function" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a0191a249746282c258dfae436bc96c2f">InitializeDatabaseAsync</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    [OneTimeTearDown]</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#ac88755472ce17ba5d6c0ec05497ea222">   28</a></span>    <span class="keyword">public</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#ac88755472ce17ba5d6c0ec05497ea222">BaseOneTimeTearDown</a>()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a97312bc0a9f849d8334353846979faa0">_postgres</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            await <a class="code hl_variable" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a97312bc0a9f849d8334353846979faa0">_postgres</a>.DisposeAsync();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#ae41f49f6d18d4383da29720cf465027d">   36</a></span>    <span class="keyword">protected</span> <span class="keyword">abstract</span> <span class="keywordtype">string</span> <a class="code hl_function" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#ae41f49f6d18d4383da29720cf465027d">GetDatabaseName</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a0191a249746282c258dfae436bc96c2f">   37</a></span>    <span class="keyword">protected</span> <span class="keyword">abstract</span> Task <a class="code hl_function" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a0191a249746282c258dfae436bc96c2f">InitializeDatabaseAsync</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture.html">   40</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture.html">UserDatabaseFixture</a> : <a class="code hl_class" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html">PostgreSqlTestBase</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture.html#af707419f6411a89b24ed488feac035fe">   42</a></span>    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code hl_function" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture.html#af707419f6411a89b24ed488feac035fe">GetDatabaseName</a>() =&gt; <span class="stringliteral">&quot;users_db&quot;</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture.html#a761a1e827c609da46207c430ec2ea505">   44</a></span>    <span class="keyword">protected</span> <span class="keyword">override</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture.html#a761a1e827c609da46207c430ec2ea505">InitializeDatabaseAsync</a>()</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        var options = <span class="keyword">new</span> DbContextOptionsBuilder&lt;UserDbContext&gt;()</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            .UseNpgsql(<a class="code hl_variable" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#aa599427a6328cbaa09bf7acb7e2ebc8e">ConnectionString</a>)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            .Options;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">using </span>var context = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a874b9c7897e5684ed9363273862c07ae">UserDbContext</a>(options);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        await context.Database.EnsureCreatedAsync();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture.html#a90dbd9ae6dfccd96484eb54f3ad0ed3f">   54</a></span>    <span class="keyword">public</span> DbContextOptions&lt;UserDbContext&gt; <a class="code hl_function" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture.html#a90dbd9ae6dfccd96484eb54f3ad0ed3f">GetOptions</a>() =&gt; </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">new</span> DbContextOptionsBuilder&lt;UserDbContext&gt;()</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            .UseNpgsql(<a class="code hl_variable" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#aa599427a6328cbaa09bf7acb7e2ebc8e">ConnectionString</a>)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            .Options;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="};">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html">   60</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html">MaterialsDatabaseFixture</a> : <a class="code hl_class" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html">PostgreSqlTestBase</a></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html#af9491a369cbb63f0d3cad8d11fc925ec">   62</a></span>    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code hl_function" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html#af9491a369cbb63f0d3cad8d11fc925ec">GetDatabaseName</a>() =&gt; <span class="stringliteral">&quot;materials_db&quot;</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html#a00e0bde13a21ddb297a2e37f0387e886">   64</a></span>    <span class="keyword">protected</span> <span class="keyword">override</span> async Task <a class="code hl_function" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html#a00e0bde13a21ddb297a2e37f0387e886">InitializeDatabaseAsync</a>()</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        var options = <span class="keyword">new</span> DbContextOptionsBuilder&lt;MaterialsDbContext&gt;()</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            .UseNpgsql(<a class="code hl_variable" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#aa599427a6328cbaa09bf7acb7e2ebc8e">ConnectionString</a>)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            .Options;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">using </span>var context = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a059e238e4bbb11feb9df70d8f0ed32df">MaterialsDbContext</a>(options);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        await context.Database.EnsureCreatedAsync();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html#ac5b08572f230ececee373b40e50d7279">   74</a></span>    <span class="keyword">public</span> DbContextOptions&lt;MaterialsDbContext&gt; <a class="code hl_function" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html#ac5b08572f230ececee373b40e50d7279">GetOptions</a>() =&gt;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keyword">new</span> DbContextOptionsBuilder&lt;MaterialsDbContext&gt;()</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            .UseNpgsql(<a class="code hl_variable" href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#aa599427a6328cbaa09bf7acb7e2ebc8e">ConnectionString</a>)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            .Options;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+</div>
+</div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture_html"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html">TestEncordados.Integration.Fixtures.MaterialsDatabaseFixture</a></div><div class="ttdef"><b>Definition</b> <a href="DatabaseFixtures_8cs_source.html#l00060">DatabaseFixtures.cs:61</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture_html_a00e0bde13a21ddb297a2e37f0387e886"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html#a00e0bde13a21ddb297a2e37f0387e886">TestEncordados.Integration.Fixtures.MaterialsDatabaseFixture.InitializeDatabaseAsync</a></div><div class="ttdeci">override async Task InitializeDatabaseAsync()</div><div class="ttdef"><b>Definition</b> <a href="DatabaseFixtures_8cs_source.html#l00064">DatabaseFixtures.cs:64</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture_html_ac5b08572f230ececee373b40e50d7279"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html#ac5b08572f230ececee373b40e50d7279">TestEncordados.Integration.Fixtures.MaterialsDatabaseFixture.GetOptions</a></div><div class="ttdeci">DbContextOptions&lt; MaterialsDbContext &gt; GetOptions()</div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture_html_af9491a369cbb63f0d3cad8d11fc925ec"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html#af9491a369cbb63f0d3cad8d11fc925ec">TestEncordados.Integration.Fixtures.MaterialsDatabaseFixture.GetDatabaseName</a></div><div class="ttdeci">override string GetDatabaseName()</div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase_html"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html">TestEncordados.Integration.Fixtures.PostgreSqlTestBase</a></div><div class="ttdef"><b>Definition</b> <a href="DatabaseFixtures_8cs_source.html#l00008">DatabaseFixtures.cs:9</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase_html_a0191a249746282c258dfae436bc96c2f"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a0191a249746282c258dfae436bc96c2f">TestEncordados.Integration.Fixtures.PostgreSqlTestBase.InitializeDatabaseAsync</a></div><div class="ttdeci">Task InitializeDatabaseAsync()</div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase_html_a8f039869a5b201883c7cb13c8c286320"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a8f039869a5b201883c7cb13c8c286320">TestEncordados.Integration.Fixtures.PostgreSqlTestBase.BaseOneTimeSetUp</a></div><div class="ttdeci">async Task BaseOneTimeSetUp()</div><div class="ttdef"><b>Definition</b> <a href="DatabaseFixtures_8cs_source.html#l00014">DatabaseFixtures.cs:14</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase_html_a97312bc0a9f849d8334353846979faa0"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#a97312bc0a9f849d8334353846979faa0">TestEncordados.Integration.Fixtures.PostgreSqlTestBase._postgres</a></div><div class="ttdeci">PostgreSqlContainer? _postgres</div><div class="ttdef"><b>Definition</b> <a href="DatabaseFixtures_8cs_source.html#l00010">DatabaseFixtures.cs:10</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase_html_aa599427a6328cbaa09bf7acb7e2ebc8e"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#aa599427a6328cbaa09bf7acb7e2ebc8e">TestEncordados.Integration.Fixtures.PostgreSqlTestBase.ConnectionString</a></div><div class="ttdeci">string ConnectionString</div><div class="ttdef"><b>Definition</b> <a href="DatabaseFixtures_8cs_source.html#l00011">DatabaseFixtures.cs:11</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase_html_ac88755472ce17ba5d6c0ec05497ea222"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#ac88755472ce17ba5d6c0ec05497ea222">TestEncordados.Integration.Fixtures.PostgreSqlTestBase.BaseOneTimeTearDown</a></div><div class="ttdeci">async Task BaseOneTimeTearDown()</div><div class="ttdef"><b>Definition</b> <a href="DatabaseFixtures_8cs_source.html#l00028">DatabaseFixtures.cs:28</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase_html_ae41f49f6d18d4383da29720cf465027d"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html#ae41f49f6d18d4383da29720cf465027d">TestEncordados.Integration.Fixtures.PostgreSqlTestBase.GetDatabaseName</a></div><div class="ttdeci">string GetDatabaseName()</div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture_html"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture.html">TestEncordados.Integration.Fixtures.UserDatabaseFixture</a></div><div class="ttdef"><b>Definition</b> <a href="DatabaseFixtures_8cs_source.html#l00040">DatabaseFixtures.cs:41</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture_html_a761a1e827c609da46207c430ec2ea505"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture.html#a761a1e827c609da46207c430ec2ea505">TestEncordados.Integration.Fixtures.UserDatabaseFixture.InitializeDatabaseAsync</a></div><div class="ttdeci">override async Task InitializeDatabaseAsync()</div><div class="ttdef"><b>Definition</b> <a href="DatabaseFixtures_8cs_source.html#l00044">DatabaseFixtures.cs:44</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture_html_a90dbd9ae6dfccd96484eb54f3ad0ed3f"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture.html#a90dbd9ae6dfccd96484eb54f3ad0ed3f">TestEncordados.Integration.Fixtures.UserDatabaseFixture.GetOptions</a></div><div class="ttdeci">DbContextOptions&lt; UserDbContext &gt; GetOptions()</div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture_html_af707419f6411a89b24ed488feac035fe"><div class="ttname"><a href="classTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture.html#af707419f6411a89b24ed488feac035fe">TestEncordados.Integration.Fixtures.UserDatabaseFixture.GetDatabaseName</a></div><div class="ttdeci">override string GetDatabaseName()</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html">BackEncordados.Common.Database.Config</a></div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00005">MaterialsDbContext.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_a059e238e4bbb11feb9df70d8f0ed32df"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a059e238e4bbb11feb9df70d8f0ed32df">BackEncordados.Common.Database.Config.MaterialsDbContext</a></div><div class="ttdeci">class MaterialsDbContext(DbContextOptions&lt; MaterialsDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión del catálogo de materiales e insumos de encordados....</div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00042">MaterialsDbContext.cs:42</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_a874b9c7897e5684ed9363273862c07ae"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a874b9c7897e5684ed9363273862c07ae">BackEncordados.Common.Database.Config.UserDbContext</a></div><div class="ttdeci">class UserDbContext(DbContextOptions&lt; UserDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión de usuarios del sistema. Administra la tabla users con autentica...</div><div class="ttdef"><b>Definition</b> <a href="UserDbContext_8cs_source.html#l00032">UserDbContext.cs:32</a></div></div>
+<div class="ttc" id="anamespaceTestEncordados_1_1Integration_1_1Fixtures_html"><div class="ttname"><a href="namespaceTestEncordados_1_1Integration_1_1Fixtures.html">TestEncordados.Integration.Fixtures</a></div><div class="ttdef"><b>Definition</b> <a href="DatabaseFixtures_8cs_source.html#l00006">DatabaseFixtures.cs:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_780b0e0e1bd31577874252649f607c71.html">TestEncordados</a></li><li class="navelem"><a class="el" href="dir_49a149124e0f25de7cd35dc586b670b0.html">Integration</a></li><li class="navelem"><a class="el" href="dir_f20aa30a68df4a02802521995f545d8c.html">Fixtures</a></li><li class="navelem"><a class="el" href="DatabaseFixtures_8cs.html">DatabaseFixtures.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

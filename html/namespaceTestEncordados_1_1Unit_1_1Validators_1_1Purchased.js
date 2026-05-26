@@ -1,0 +1,8 @@
+var namespaceTestEncordados_1_1Unit_1_1Validators_1_1Purchased =
+[
+    [ "PedidoLineaValidatorTests", "classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1PedidoLineaValidatorTests.html", "classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1PedidoLineaValidatorTests" ],
+    [ "PurchasedPatchValidatorTests", "classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1PurchasedPatchValidatorTests.html", "classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1PurchasedPatchValidatorTests" ],
+    [ "PurchasedRequestValidatorTests", "classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1PurchasedRequestValidatorTests.html", "classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1PurchasedRequestValidatorTests" ],
+    [ "StringSetupPatchValidatorTests", "classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1StringSetupPatchValidatorTests.html", "classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1StringSetupPatchValidatorTests" ],
+    [ "StringSetupRequestValidatorTests", "classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1StringSetupRequestValidatorTests.html", "classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1StringSetupRequestValidatorTests" ]
+];

@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Infraestructure/AuthenticationConfig.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('AuthenticationConfig_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AuthenticationConfig.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="AuthenticationConfig_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Text;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>Microsoft.AspNetCore.Authentication.JwtBearer;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Microsoft.IdentityModel.Tokens;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>Serilog;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Infraestructure.html">BackEncordados.Infraestructure</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>AuthenticationConfig</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keyword">public</span> <span class="keyword">static</span> IServiceCollection <a class="code hl_function" href="Program_8cs.html#a6c1a6b366832f2b563f78e75130f84b9">AddAuthentication</a>(<span class="keyword">this</span> IServiceCollection <a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>, IConfiguration <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        Log.Information(<span class="stringliteral">&quot;Configurando autenticación JWT...&quot;</span>);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="comment">// Lee primero las variables de entorno directas, luego las jerárquicas</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        var jwtKey = Environment.GetEnvironmentVariable(<span class="stringliteral">&quot;JWT_KEY&quot;</span>) </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            ?? <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Jwt:Key&quot;</span>]</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            ?? <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="stringliteral">&quot;JWT Key no configurada&quot;</span>);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        var jwtIssuer = Environment.GetEnvironmentVariable(<span class="stringliteral">&quot;JWT_ISSUER&quot;</span>) </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            ?? <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Jwt:Issuer&quot;</span>] </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            ?? <span class="stringliteral">&quot;TiendaApi&quot;</span>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        var jwtAudience = Environment.GetEnvironmentVariable(<span class="stringliteral">&quot;JWT_AUDIENCE&quot;</span>) </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            ?? <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[<span class="stringliteral">&quot;Jwt:Audience&quot;</span>] </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            ?? <span class="stringliteral">&quot;TiendaApi&quot;</span>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        Log.Debug(<span class="stringliteral">&quot;JWT Issuer: {Issuer}&quot;</span>, jwtIssuer);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        Log.Debug(<span class="stringliteral">&quot;JWT Audience: {Audience}&quot;</span>, jwtAudience);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        Log.Debug(<span class="stringliteral">&quot;JWT Key length: {Length} chars&quot;</span>, jwtKey.Length);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        .AddJwtBearer(options =&gt;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            options.TokenValidationParameters = <span class="keyword">new</span> TokenValidationParameters</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                ValidateIssuerSigningKey = <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                IssuerSigningKey = <span class="keyword">new</span> SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                ValidateIssuer = <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                ValidIssuer = jwtIssuer,</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                ValidateAudience = <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                ValidAudience = jwtAudience,</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                ValidateLifetime = <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                ClockSkew = TimeSpan.Zero,</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                NameClaimType = System.Security.Claims.ClaimTypes.NameIdentifier,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                RoleClaimType = System.Security.Claims.ClaimTypes.Role</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            };</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            options.MapInboundClaims = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <span class="comment">// SignalR WebSocket no puede mandar el header Authorization en el upgrade;</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <span class="comment">// el cliente pasa el token como query string `?access_token=...`.</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            options.Events = <span class="keyword">new</span> JwtBearerEvents</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                OnMessageReceived = context =&gt;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                    var accessToken = context.Request.Query[<span class="stringliteral">&quot;access_token&quot;</span>];</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                    var path = context.HttpContext.Request.Path;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                    <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(accessToken) &amp;&amp; path.StartsWithSegments(<span class="stringliteral">&quot;/hub&quot;</span>))</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                    {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                        context.Token = accessToken;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                    }</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                    <span class="keywordflow">return</span> Task.CompletedTask;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                }</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            };</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        });</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        Log.Information(<span class="stringliteral">&quot;Configurando políticas de autorización...&quot;</span>);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddAuthorizationBuilder()</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            .AddPolicy(<span class="stringliteral">&quot;RequireAdminRole&quot;</span>, policy =&gt; policy.RequireRole(<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">ADMIN</a>))</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            .AddPolicy(<span class="stringliteral">&quot;RequireOwnerRole&quot;</span>, policy =&gt; policy.RequireRole(<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">OWNER</a>,<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">ADMIN</a>))</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            .AddPolicy(<span class="stringliteral">&quot;RequireUserRole&quot;</span>, policy =&gt; policy.RequireRole(<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">USER</a>,<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">ADMIN</a>,<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">OWNER</a>,<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">ENCORDER</a>))</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            .AddPolicy(<span class="stringliteral">&quot;RequireEncorderRole&quot;</span>, policy =&gt;policy.RequireRole(<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">OWNER</a>,<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">ENCORDER</a>,<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">ADMIN</a>))</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            .AddPolicy(<span class="stringliteral">&quot;RequireSupervisorRole&quot;</span>, policy =&gt; policy.RequireRole(<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">OWNER</a>,<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">ADMIN</a>,<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a082ca66e612ccc70d8e002ec2d79dcac">SUPERVISOR</a>,<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a>.<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">UserRoles</a>.<a class="code hl_variable" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">ENCORDER</a>));</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>}</div>
+<div class="ttc" id="aProgram_8cs_html_a1c05573df94c1c7e9a635ed02e41281e"><div class="ttname"><a href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a></div><div class="ttdeci">var configuration</div><div class="ttdef"><b>Definition</b> <a href="Program_8cs_source.html#l00013">Program.cs:13</a></div></div>
+<div class="ttc" id="aProgram_8cs_html_a6c1a6b366832f2b563f78e75130f84b9"><div class="ttname"><a href="Program_8cs.html#a6c1a6b366832f2b563f78e75130f84b9">AddAuthentication</a></div><div class="ttdeci">services. AddAuthentication(configuration)</div></div>
+<div class="ttc" id="aProgram_8cs_html_ad79fbc5835b5fb29068560ce0db216e8"><div class="ttname"><a href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a></div><div class="ttdeci">var services</div><div class="ttdef"><b>Definition</b> <a href="Program_8cs_source.html#l00012">Program.cs:12</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html">BackEncordados.Usuarios.Model.User.UserRoles</a></div><div class="ttdoc">Constantes para los roles de usuario.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00049">User.cs:50</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a082ca66e612ccc70d8e002ec2d79dcac"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a082ca66e612ccc70d8e002ec2d79dcac">BackEncordados.Usuarios.Model.User.UserRoles.SUPERVISOR</a></div><div class="ttdeci">const string SUPERVISOR</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00060">User.cs:60</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a54373adaa756848426e2a7469dedffd7"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a54373adaa756848426e2a7469dedffd7">BackEncordados.Usuarios.Model.User.UserRoles.USER</a></div><div class="ttdeci">const string USER</div><div class="ttdoc">Rol de usuario estándar con permisos básicos.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00055">User.cs:55</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a6b308802168ec5c8cc62d74631698b6f"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a6b308802168ec5c8cc62d74631698b6f">BackEncordados.Usuarios.Model.User.UserRoles.OWNER</a></div><div class="ttdeci">const string OWNER</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00057">User.cs:57</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_a9a1dd51b12767c87dfafb4dd11fc1d8e"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#a9a1dd51b12767c87dfafb4dd11fc1d8e">BackEncordados.Usuarios.Model.User.UserRoles.ENCORDER</a></div><div class="ttdeci">const string ENCORDER</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00059">User.cs:59</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles_html_ad3cded80c57a57fac13e69200cfe1ea3"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User_1_1UserRoles.html#ad3cded80c57a57fac13e69200cfe1ea3">BackEncordados.Usuarios.Model.User.UserRoles.ADMIN</a></div><div class="ttdeci">const string ADMIN</div><div class="ttdoc">Rol de administrador con acceso total al sistema.</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00052">User.cs:52</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Model_1_1User_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">BackEncordados.Usuarios.Model.User</a></div><div class="ttdoc">Entidad de dominio que representa un usuario. Autenticación con email/password hasheado con BCrypt....</div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00011">User.cs:12</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Infraestructure_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Infraestructure.html">BackEncordados.Infraestructure</a></div><div class="ttdef"><b>Definition</b> <a href="AppConfig_8cs_source.html#l00001">AppConfig.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Model.html">BackEncordados.Usuarios.Model</a></div><div class="ttdef"><b>Definition</b> <a href="User_8cs_source.html#l00005">User.cs:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_fca39826044f67dd320ad6baeec845bf.html">Infraestructure</a></li><li class="navelem"><a class="el" href="AuthenticationConfig_8cs.html">AuthenticationConfig.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

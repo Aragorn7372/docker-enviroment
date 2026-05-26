@@ -1,0 +1,7 @@
+<map id="TestEncordados.Integration.Fixtures.PostgreSqlTestBase" name="TestEncordados.Integration.Fixtures.PostgreSqlTestBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,211,77"/>
+<area shape="rect" id="Node000002" href="$classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html" title=" " alt="" coords="259,5,505,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,41,258,37,259,42,225,46"/>
+<area shape="rect" id="Node000003" href="$classTestEncordados_1_1Integration_1_1Fixtures_1_1UserDatabaseFixture.html" title=" " alt="" coords="275,69,489,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="224,68,275,74,274,79,224,74"/>
+</map>

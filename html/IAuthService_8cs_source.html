@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Usuarios/Service/Auth/IAuthService.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('IAuthService_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">IAuthService.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="IAuthService_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Utils.html">BackEncordados.Common.Utils</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html">BackEncordados.Usuarios.Dto</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Errors.html">BackEncordados.Usuarios.Errors</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>CSharpFunctionalExtensions;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth.html">BackEncordados.Usuarios.Service.Auth</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html">   11</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html">IAuthService</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html#a8127620b3c6ac554429afc514beb68c3">   16</a></span>    Task&lt;Result&lt;AuthResponseDto, AuthError&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html#a8127620b3c6ac554429afc514beb68c3">SignUpAsync</a>(<a class="code hl_property" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a642b21b162d23b553b90cd097e0a6024">RegisterDto</a> dto);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html#a2d537cd0d7e5405ebdc92722efe881f6">   21</a></span>    Task&lt;Result&lt;AuthResponseDto, AuthError&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html#a2d537cd0d7e5405ebdc92722efe881f6">SignInAsync</a>(<a class="code hl_property" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a0108fa3b0511cdefd7d496d463f2af68">LoginDto</a> dto);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html#a02a1ceb984a3775a744b7738a181dfa7">   23</a></span>    Task&lt;Result&lt;Unit, AuthError&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html#a02a1ceb984a3775a744b7738a181dfa7">ChangePasswordAsync</a>(Guid guid,<a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ChangePasswordRequestDto.html">ChangePasswordRequestDto</a> dto);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html#a552d46d0a0b29370c4b711c686f3e026">   24</a></span>    Task&lt;Result&lt;Unit, AuthError&gt;&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html#a552d46d0a0b29370c4b711c686f3e026">GetEmailAsync</a>(<span class="keywordtype">string</span> userEmail);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
+</div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Dto_1_1ChangePasswordRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Dto_1_1ChangePasswordRequestDto.html">BackEncordados.Usuarios.Dto.ChangePasswordRequestDto</a></div><div class="ttdoc">DTO de solicitud para cambiar la contraseña de un usuario.</div><div class="ttdef"><b>Definition</b> <a href="ChangePasswordRequestDto_8cs_source.html#l00013">ChangePasswordRequestDto.cs:13</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html">BackEncordados.Usuarios.Service.Auth.IAuthService</a></div><div class="ttdoc">Contrato del servicio de autenticación.</div><div class="ttdef"><b>Definition</b> <a href="IAuthService_8cs_source.html#l00011">IAuthService.cs:12</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService_html_a02a1ceb984a3775a744b7738a181dfa7"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html#a02a1ceb984a3775a744b7738a181dfa7">BackEncordados.Usuarios.Service.Auth.IAuthService.ChangePasswordAsync</a></div><div class="ttdeci">Task&lt; Result&lt; Unit, AuthError &gt; &gt; ChangePasswordAsync(Guid guid, ChangePasswordRequestDto dto)</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService_html_a2d537cd0d7e5405ebdc92722efe881f6"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html#a2d537cd0d7e5405ebdc92722efe881f6">BackEncordados.Usuarios.Service.Auth.IAuthService.SignInAsync</a></div><div class="ttdeci">Task&lt; Result&lt; AuthResponseDto, AuthError &gt; &gt; SignInAsync(LoginDto dto)</div><div class="ttdoc">Inicia sesión con credenciales.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService_html_a552d46d0a0b29370c4b711c686f3e026"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html#a552d46d0a0b29370c4b711c686f3e026">BackEncordados.Usuarios.Service.Auth.IAuthService.GetEmailAsync</a></div><div class="ttdeci">Task&lt; Result&lt; Unit, AuthError &gt; &gt; GetEmailAsync(string userEmail)</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService_html_a8127620b3c6ac554429afc514beb68c3"><div class="ttname"><a href="interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IAuthService.html#a8127620b3c6ac554429afc514beb68c3">BackEncordados.Usuarios.Service.Auth.IAuthService.SignUpAsync</a></div><div class="ttdeci">Task&lt; Result&lt; AuthResponseDto, AuthError &gt; &gt; SignUpAsync(RegisterDto dto)</div><div class="ttdoc">Registra un nuevo usuario.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Utils_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Utils.html">BackEncordados.Common.Utils</a></div><div class="ttdef"><b>Definition</b> <a href="TapAsync_8cs_source.html#l00003">TapAsync.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html">BackEncordados.Usuarios.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ChangePasswordRequestDto_8cs_source.html#l00003">ChangePasswordRequestDto.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Dto_html_a0108fa3b0511cdefd7d496d463f2af68"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a0108fa3b0511cdefd7d496d463f2af68">BackEncordados.Usuarios.Dto.LoginDto</a></div><div class="ttdeci">record LoginDto</div><div class="ttdoc">DTO para el inicio de sesión de usuarios. Credenciales necesarias para obtener token JWT.</div><div class="ttdef"><b>Definition</b> <a href="UserDto_8cs_source.html#l00117">UserDto.cs:118</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Dto_html_a642b21b162d23b553b90cd097e0a6024"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a642b21b162d23b553b90cd097e0a6024">BackEncordados.Usuarios.Dto.RegisterDto</a></div><div class="ttdeci">record RegisterDto</div><div class="ttdoc">DTO para el registro de nuevos usuarios. Define los datos necesarios para crear una nueva cuenta.</div><div class="ttdef"><b>Definition</b> <a href="UserDto_8cs_source.html#l00073">UserDto.cs:74</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Errors_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Errors.html">BackEncordados.Usuarios.Errors</a></div><div class="ttdef"><b>Definition</b> <a href="AuthError_8cs_source.html#l00003">AuthError.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth.html">BackEncordados.Usuarios.Service.Auth</a></div><div class="ttdef"><b>Definition</b> <a href="AuthService_8cs_source.html#l00013">AuthService.cs:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_fd3792cbbf285840670a23aad598bd09.html">Usuarios</a></li><li class="navelem"><a class="el" href="dir_fd7cdfa12ff7437a1ec6865f33914fa7.html">Service</a></li><li class="navelem"><a class="el" href="dir_f96711cb102e610547dfaa3c9e637677.html">Auth</a></li><li class="navelem"><a class="el" href="IAuthService_8cs.html">IAuthService.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

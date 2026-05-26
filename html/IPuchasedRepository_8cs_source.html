@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Purchased/Repository/IPuchasedRepository.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('IPuchasedRepository_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">IPuchasedRepository.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="IPuchasedRepository_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Purchased_1_1Dto.html">BackEncordados.Purchased.Dto</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Purchased_1_1Model.html">BackEncordados.Purchased.Model</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Purchased_1_1Repository.html">    4</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Purchased_1_1Repository.html">BackEncordados.Purchased.Repository</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html">   51</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html">IPuchasedRepository</a></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#ad4b4d15f0bc74851632d12f5711ddc60">   72</a></span>    Task&lt;(IEnumerable&lt;Pedidos&gt; Items, <span class="keywordtype">int</span> TotalCount)&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#ad4b4d15f0bc74851632d12f5711ddc60">FindAllAsync</a>(<a class="code hl_typedef" href="PurchasedRepositoryTests_8cs.html#a2ce4b09e0ecead68f2b396911e443ad4">FilterPurchasedDto</a> filter);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a832a6fbd485e492413be3582b7f78eb2">   85</a></span>    Task&lt;Pedidos?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a832a6fbd485e492413be3582b7f78eb2">FindByIdAsync</a>(Ulid <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a7f12ff3e471ef64cacae2568e4b7b9f2">   98</a></span>    Task&lt;Pedidos&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a7f12ff3e471ef64cacae2568e4b7b9f2">CreatePurchasedAsync</a>(<a class="code hl_class" href="classBackEncordados_1_1Purchased_1_1Model_1_1Pedidos.html">Pedidos</a> pedidos);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a27bb15816790371ff111fd99b39805a3">  113</a></span>    Task&lt;Pedidos?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a27bb15816790371ff111fd99b39805a3">UpdatePurchasedAsync</a>(<a class="code hl_class" href="classBackEncordados_1_1Purchased_1_1Model_1_1Pedidos.html">Pedidos</a> pedidos, Ulid <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#ad94fdc2a9e1312a1e61ce44c764fda25">  128</a></span>    Task&lt;Pedidos?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#ad94fdc2a9e1312a1e61ce44c764fda25">CancelPurchasedAsync</a>(Ulid <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#af5cdec0ced28fefc20ba39272e7eac34">  142</a></span>    Task&lt;Pedidos?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#af5cdec0ced28fefc20ba39272e7eac34">ChangeStatusPurchasedAsync</a>(Ulid <span class="keywordtype">id</span>, <span class="keywordtype">string</span> payStatus);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a7839a96771f31a1d359deed844419999">  155</a></span>    Task&lt;PedidoLinea?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a7839a96771f31a1d359deed844419999">FindLineaByIdAsync</a>(Ulid lineaId);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a92a8b3169f815bcbed00dde550c278e2">  168</a></span>    Task&lt;PedidoLinea&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a92a8b3169f815bcbed00dde550c278e2">CreateLineaAsync</a>(<a class="code hl_class" href="classBackEncordados_1_1Purchased_1_1Model_1_1PedidoLinea.html">PedidoLinea</a> linea);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a1d8c94a815084538ec006895c176da21">  183</a></span>    Task&lt;PedidoLinea?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a1d8c94a815084538ec006895c176da21">UpdateLineaAsync</a>(<a class="code hl_class" href="classBackEncordados_1_1Purchased_1_1Model_1_1PedidoLinea.html">PedidoLinea</a> linea, Ulid lineaId);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a108924ed11b84bda3451aa641b1422cf">  197</a></span>    Task&lt;PedidoLinea?&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a108924ed11b84bda3451aa641b1422cf">ChangeLineaStatusAsync</a>(Ulid lineaId, <a class="code hl_enumeration" href="namespaceBackEncordados_1_1Purchased_1_1Model.html#ae46690249744a7cd379b6103ae0517ba">Status</a> status);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#ac2edb6e5054ea546dee347e4cc682261">  208</a></span>    Task <a class="code hl_function" href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#ac2edb6e5054ea546dee347e4cc682261">SaveChangesAsync</a>();</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>}</div>
+</div>
+</div>
+<div class="ttc" id="aPurchasedRepositoryTests_8cs_html_a2ce4b09e0ecead68f2b396911e443ad4"><div class="ttname"><a href="PurchasedRepositoryTests_8cs.html#a2ce4b09e0ecead68f2b396911e443ad4">FilterPurchasedDto</a></div><div class="ttdeci">BackEncordados.Purchased.Dto.FilterPurchasedDto FilterPurchasedDto</div><div class="ttdef"><b>Definition</b> <a href="PurchasedRepositoryTests_8cs_source.html#l00009">PurchasedRepositoryTests.cs:9</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Purchased_1_1Model_1_1PedidoLinea_html"><div class="ttname"><a href="classBackEncordados_1_1Purchased_1_1Model_1_1PedidoLinea.html">BackEncordados.Purchased.Model.PedidoLinea</a></div><div class="ttdoc">Entidad que representa una línea individual de pedido (una raqueta a encordar).</div><div class="ttdef"><b>Definition</b> <a href="PedidoLinea_8cs_source.html#l00015">PedidoLinea.cs:16</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Purchased_1_1Model_1_1Pedidos_html"><div class="ttname"><a href="classBackEncordados_1_1Purchased_1_1Model_1_1Pedidos.html">BackEncordados.Purchased.Model.Pedidos</a></div><div class="ttdoc">Entidad que representa un pedido de encordado agrupando una o más líneas (raquetas).</div><div class="ttdef"><b>Definition</b> <a href="Pedidos_8cs_source.html#l00015">Pedidos.cs:16</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html">BackEncordados.Purchased.Repository.IPuchasedRepository</a></div><div class="ttdoc">Defines data-access contracts for the Purchased (pedidos) aggregate, covering both top-level order op...</div><div class="ttdef"><b>Definition</b> <a href="IPuchasedRepository_8cs_source.html#l00051">IPuchasedRepository.cs:52</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository_html_a108924ed11b84bda3451aa641b1422cf"><div class="ttname"><a href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a108924ed11b84bda3451aa641b1422cf">BackEncordados.Purchased.Repository.IPuchasedRepository.ChangeLineaStatusAsync</a></div><div class="ttdeci">Task&lt; PedidoLinea?&gt; ChangeLineaStatusAsync(Ulid lineaId, Status status)</div><div class="ttdoc">Sets the Status of an existing PedidoLinea.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository_html_a1d8c94a815084538ec006895c176da21"><div class="ttname"><a href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a1d8c94a815084538ec006895c176da21">BackEncordados.Purchased.Repository.IPuchasedRepository.UpdateLineaAsync</a></div><div class="ttdeci">Task&lt; PedidoLinea?&gt; UpdateLineaAsync(PedidoLinea linea, Ulid lineaId)</div><div class="ttdoc">Replaces all mutable fields on an existing PedidoLinea and saves.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository_html_a27bb15816790371ff111fd99b39805a3"><div class="ttname"><a href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a27bb15816790371ff111fd99b39805a3">BackEncordados.Purchased.Repository.IPuchasedRepository.UpdatePurchasedAsync</a></div><div class="ttdeci">Task&lt; Pedidos?&gt; UpdatePurchasedAsync(Pedidos pedidos, Ulid id)</div><div class="ttdoc">Partially updates an existing order's mutable fields (Machine, Comments, PayStatus) by ID.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository_html_a7839a96771f31a1d359deed844419999"><div class="ttname"><a href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a7839a96771f31a1d359deed844419999">BackEncordados.Purchased.Repository.IPuchasedRepository.FindLineaByIdAsync</a></div><div class="ttdeci">Task&lt; PedidoLinea?&gt; FindLineaByIdAsync(Ulid lineaId)</div><div class="ttdoc">Retrieves a single PedidoLinea by its ID and eagerly loads its parent Pedidos.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository_html_a7f12ff3e471ef64cacae2568e4b7b9f2"><div class="ttname"><a href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a7f12ff3e471ef64cacae2568e4b7b9f2">BackEncordados.Purchased.Repository.IPuchasedRepository.CreatePurchasedAsync</a></div><div class="ttdeci">Task&lt; Pedidos &gt; CreatePurchasedAsync(Pedidos pedidos)</div><div class="ttdoc">Persists a new Pedidos aggregate (order header + all line items) and returns the saved entity.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository_html_a832a6fbd485e492413be3582b7f78eb2"><div class="ttname"><a href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a832a6fbd485e492413be3582b7f78eb2">BackEncordados.Purchased.Repository.IPuchasedRepository.FindByIdAsync</a></div><div class="ttdeci">Task&lt; Pedidos?&gt; FindByIdAsync(Ulid id)</div><div class="ttdoc">Retrieves a single Pedidos by its ID, including all associated PedidoLinea items.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository_html_a92a8b3169f815bcbed00dde550c278e2"><div class="ttname"><a href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#a92a8b3169f815bcbed00dde550c278e2">BackEncordados.Purchased.Repository.IPuchasedRepository.CreateLineaAsync</a></div><div class="ttdeci">Task&lt; PedidoLinea &gt; CreateLineaAsync(PedidoLinea linea)</div><div class="ttdoc">Persists a new PedidoLinea under an existing parent order.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository_html_ac2edb6e5054ea546dee347e4cc682261"><div class="ttname"><a href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#ac2edb6e5054ea546dee347e4cc682261">BackEncordados.Purchased.Repository.IPuchasedRepository.SaveChangesAsync</a></div><div class="ttdeci">Task SaveChangesAsync()</div><div class="ttdoc">Flushes any pending changes to the underlying data store.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository_html_ad4b4d15f0bc74851632d12f5711ddc60"><div class="ttname"><a href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#ad4b4d15f0bc74851632d12f5711ddc60">BackEncordados.Purchased.Repository.IPuchasedRepository.FindAllAsync</a></div><div class="ttdeci">Task&lt;(IEnumerable&lt; Pedidos &gt; Items, int TotalCount)&gt; FindAllAsync(FilterPurchasedDto filter)</div><div class="ttdoc">Returns a paginated, filtered, and sorted list of Pedidos together with the total count of matching r...</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository_html_ad94fdc2a9e1312a1e61ce44c764fda25"><div class="ttname"><a href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#ad94fdc2a9e1312a1e61ce44c764fda25">BackEncordados.Purchased.Repository.IPuchasedRepository.CancelPurchasedAsync</a></div><div class="ttdeci">Task&lt; Pedidos?&gt; CancelPurchasedAsync(Ulid id)</div><div class="ttdoc">Marks an existing order as PaymentStatus.CANCELED and sets every associated PedidoLinea to Status....</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository_html_af5cdec0ced28fefc20ba39272e7eac34"><div class="ttname"><a href="interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html#af5cdec0ced28fefc20ba39272e7eac34">BackEncordados.Purchased.Repository.IPuchasedRepository.ChangeStatusPurchasedAsync</a></div><div class="ttdeci">Task&lt; Pedidos?&gt; ChangeStatusPurchasedAsync(Ulid id, string payStatus)</div><div class="ttdoc">Changes only the payment status of an existing order to the provided string value.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Dto.html">BackEncordados.Purchased.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="FilterPurchasedDto_8cs_source.html#l00001">FilterPurchasedDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Model.html">BackEncordados.Purchased.Model</a></div><div class="ttdef"><b>Definition</b> <a href="PaymentStatus_8cs_source.html#l00001">PaymentStatus.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Model_html_ae46690249744a7cd379b6103ae0517ba"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Model.html#ae46690249744a7cd379b6103ae0517ba">BackEncordados.Purchased.Model.Status</a></div><div class="ttdeci">Status</div><div class="ttdoc">Enum que define los posibles estados de una línea de pedido (raqueta).</div><div class="ttdef"><b>Definition</b> <a href="Status_8cs_source.html#l00015">Status.cs:16</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Repository_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Repository.html">BackEncordados.Purchased.Repository</a></div><div class="ttdef"><b>Definition</b> <a href="IPuchasedRepository_8cs_source.html#l00004">IPuchasedRepository.cs:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_2f669d235345eea30705f4ca88b64b3a.html">Purchased</a></li><li class="navelem"><a class="el" href="dir_740919a0914552623a8f9dc263239bae.html">Repository</a></li><li class="navelem"><a class="el" href="IPuchasedRepository_8cs.html">IPuchasedRepository.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

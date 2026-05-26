@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Export/Controller/ExportController.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('ExportController_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ExportController.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ExportController_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html">BackEncordados.Common.Database.Config</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Utils.html">BackEncordados.Common.Utils</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Export_1_1Service.html">BackEncordados.Export.Service</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>Microsoft.AspNetCore.Authorization;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>Microsoft.AspNetCore.Mvc;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>Microsoft.EntityFrameworkCore;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Export_1_1Controller.html">    9</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Export_1_1Controller.html">BackEncordados.Export.Controller</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>[ApiController]</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>[Route(<span class="stringliteral">&quot;api/[controller]&quot;</span>)]</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>[Produces(<span class="stringliteral">&quot;application/json&quot;</span>)]</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">public</span> <span class="keyword">class </span>ExportController(</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    ILogger&lt;ExportController&gt; logger,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_interface" href="interfaceBackEncordados_1_1Export_1_1Service_1_1IExportService.html">IExportService</a> exportService</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>) : ControllerBase</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>{</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    [HttpGet]</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    [ProducesResponseType(typeof(FileContentResult), StatusCodes.Status200OK)]</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    [ProducesResponseType(StatusCodes.Status500InternalServerError)]</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    [Authorize(Policy = <span class="stringliteral">&quot;RequireAdminRole&quot;</span>)]</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">public</span> async Task&lt;IActionResult&gt; Export()</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        logger.LogInformation(<span class="stringliteral">&quot;Starting database export&quot;</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            var zipData = await exportService.ExportDatabaseAsync();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            var fileName = $<span class="stringliteral">&quot;database_export_{DateTime.UtcNow:yyyy-MM-dd}.zip&quot;</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <span class="keywordflow">return</span> File(zipData, <span class="stringliteral">&quot;application/zip&quot;</span>, fileName);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            logger.LogError(ex, <span class="stringliteral">&quot;Error during database export&quot;</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keywordflow">return</span> StatusCode(500, <span class="keyword">new</span> { message = <span class="stringliteral">&quot;Error exporting database&quot;</span>, error = ex.Message });</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    [HttpPost(<span class="stringliteral">&quot;import&quot;</span>)]</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    [ProducesResponseType(StatusCodes.Status200OK)]</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    [ProducesResponseType(StatusCodes.Status400BadRequest)]</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    [ProducesResponseType(StatusCodes.Status500InternalServerError)]</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    [Authorize(Policy = <span class="stringliteral">&quot;RequireAdminRole&quot;</span>)]</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    [Transactional(</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        typeof(<a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a874b9c7897e5684ed9363273862c07ae">UserDbContext</a>),</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        typeof(<a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a059e238e4bbb11feb9df70d8f0ed32df">MaterialsDbContext</a>),</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        typeof(<a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#ad88c9780837c9f6201cc1127856fe504">PedidosDbContext</a>),</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        typeof(<a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#ab77e5c2557105dfeff621db130666e4f">TalleresDbContext</a>)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    )]</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keyword">public</span> async Task&lt;IActionResult&gt; Import(IFormFile file)</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">if</span> (file == <span class="keyword">null</span> || file.Length == 0)</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keywordflow">return</span> BadRequest(<span class="keyword">new</span> { message = <span class="stringliteral">&quot;No file provided&quot;</span> });</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">if</span> (!file.FileName.EndsWith(<span class="stringliteral">&quot;.zip&quot;</span>, StringComparison.OrdinalIgnoreCase))</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="keywordflow">return</span> BadRequest(<span class="keyword">new</span> { message = <span class="stringliteral">&quot;File must be a .zip file&quot;</span> });</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        logger.LogInformation(<span class="stringliteral">&quot;Starting database import from file: {FileName}&quot;</span>, file.FileName);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keyword">using </span>var stream = file.OpenReadStream();</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            await exportService.ImportDatabaseAsync(stream);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <span class="keywordflow">return</span> Ok(<span class="keyword">new</span> { message = <span class="stringliteral">&quot;Database imported successfully&quot;</span> });</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordflow">catch</span> (DbUpdateException)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordflow">throw</span>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            logger.LogError(ex, <span class="stringliteral">&quot;Error during database import&quot;</span>);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <span class="keywordflow">return</span> StatusCode(500, <span class="keyword">new</span> { message = <span class="stringliteral">&quot;Error importing database&quot;</span>, error = ex.Message });</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    [HttpPost(<span class="stringliteral">&quot;manifest&quot;</span>)]</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    [ProducesResponseType(typeof(<a class="code hl_class" href="classBackEncordados_1_1Common_1_1Dto_1_1ExportManifestDto.html">ExportManifestDto</a>), StatusCodes.Status200OK)]</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    [ProducesResponseType(StatusCodes.Status400BadRequest)]</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    [ProducesResponseType(StatusCodes.Status500InternalServerError)]</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    [Authorize(Policy = <span class="stringliteral">&quot;RequireAdminRole&quot;</span>)]</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keyword">public</span> async Task&lt;IActionResult&gt; GetManifest(IFormFile file)</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    {</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keywordflow">if</span> (file == <span class="keyword">null</span> || file.Length == 0)</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            <span class="keywordflow">return</span> BadRequest(<span class="keyword">new</span> { message = <span class="stringliteral">&quot;No file provided&quot;</span> });</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            <span class="keyword">using </span>var stream = file.OpenReadStream();</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            <span class="keyword">using </span>var memoryStream = <span class="keyword">new</span> MemoryStream();</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            await stream.CopyToAsync(memoryStream);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            var manifest = await exportService.GetManifestAsync(memoryStream.ToArray());</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            <span class="keywordflow">return</span> Ok(manifest);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        }</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            logger.LogError(ex, <span class="stringliteral">&quot;Error reading manifest&quot;</span>);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordflow">return</span> StatusCode(500, <span class="keyword">new</span> { message = <span class="stringliteral">&quot;Error reading manifest&quot;</span>, error = ex.Message });</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    }</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>}</div>
+</div>
+<div class="ttc" id="aclassBackEncordados_1_1Common_1_1Dto_1_1ExportManifestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Common_1_1Dto_1_1ExportManifestDto.html">BackEncordados.Common.Dto.ExportManifestDto</a></div><div class="ttdoc">DTO que representa el manifiesto de un archivo de exportación. Contiene metadatos sobre la exportació...</div><div class="ttdef"><b>Definition</b> <a href="ExportManifestDto_8cs_source.html#l00019">ExportManifestDto.cs:20</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Export_1_1Service_1_1IExportService_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Export_1_1Service_1_1IExportService.html">BackEncordados.Export.Service.IExportService</a></div><div class="ttdoc">Contrato del servicio de lógica de negocio para la exportación e importación completa de la base de d...</div><div class="ttdef"><b>Definition</b> <a href="IExportService_8cs_source.html#l00049">IExportService.cs:50</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html">BackEncordados.Common.Database.Config</a></div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00005">MaterialsDbContext.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_a059e238e4bbb11feb9df70d8f0ed32df"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a059e238e4bbb11feb9df70d8f0ed32df">BackEncordados.Common.Database.Config.MaterialsDbContext</a></div><div class="ttdeci">class MaterialsDbContext(DbContextOptions&lt; MaterialsDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión del catálogo de materiales e insumos de encordados....</div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00042">MaterialsDbContext.cs:42</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_a874b9c7897e5684ed9363273862c07ae"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a874b9c7897e5684ed9363273862c07ae">BackEncordados.Common.Database.Config.UserDbContext</a></div><div class="ttdeci">class UserDbContext(DbContextOptions&lt; UserDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión de usuarios del sistema. Administra la tabla users con autentica...</div><div class="ttdef"><b>Definition</b> <a href="UserDbContext_8cs_source.html#l00032">UserDbContext.cs:32</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_ab77e5c2557105dfeff621db130666e4f"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#ab77e5c2557105dfeff621db130666e4f">BackEncordados.Common.Database.Config.TalleresDbContext</a></div><div class="ttdeci">class TalleresDbContext(DbContextOptions&lt; TalleresDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión de torneos y talleres de encordado. Administra la tabla Tourname...</div><div class="ttdef"><b>Definition</b> <a href="TalleresDbContext_8cs_source.html#l00035">TalleresDbContext.cs:35</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_ad88c9780837c9f6201cc1127856fe504"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#ad88c9780837c9f6201cc1127856fe504">BackEncordados.Common.Database.Config.PedidosDbContext</a></div><div class="ttdeci">class PedidosDbContext(DbContextOptions&lt; PedidosDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión de pedidos de encordados. Administra las tablas Pedidos (solicit...</div><div class="ttdef"><b>Definition</b> <a href="PedidosDbContext_8cs_source.html#l00033">PedidosDbContext.cs:33</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ExportManifestDto_8cs_source.html#l00001">ExportManifestDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Utils_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Utils.html">BackEncordados.Common.Utils</a></div><div class="ttdef"><b>Definition</b> <a href="TapAsync_8cs_source.html#l00003">TapAsync.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Export_1_1Controller_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Export_1_1Controller.html">BackEncordados.Export.Controller</a></div><div class="ttdef"><b>Definition</b> <a href="ExportController_8cs_source.html#l00009">ExportController.cs:9</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Export_1_1Service_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Export_1_1Service.html">BackEncordados.Export.Service</a></div><div class="ttdef"><b>Definition</b> <a href="ExportService_8cs_source.html#l00005">ExportService.cs:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_0d87cec8e0952342d29a37b4598628c5.html">Export</a></li><li class="navelem"><a class="el" href="dir_8dc55056e80ea4df8b35076408c1562d.html">Controller</a></li><li class="navelem"><a class="el" href="ExportController_8cs.html">ExportController.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Talleres/Model/Tournaments.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Tournaments_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Tournaments.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Tournaments_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Helpers.html">BackEncordados.Common.Database.Helpers</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html">    4</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Model.html">BackEncordados.Talleres.Model</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#af6124b908c5cc5c83d9bac689e10e7a4">    6</a></span><span class="keyword">public</span> record <a class="code hl_variable" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#af6124b908c5cc5c83d9bac689e10e7a4">Tournaments</a>: <a class="code hl_interface" href="interfaceBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1ITimestamped.html">ITimestamped</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ae5a918de9fb378db1bf31fc7a0adaf34">    8</a></span>    <span class="keyword">public</span> Ulid Id { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#af4f6a6b1bc1e47ab97de8c1491914c57">    9</a></span>    <span class="keyword">public</span> Ulid <a class="code hl_property" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#af4f6a6b1bc1e47ab97de8c1491914c57">Owner</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ad1a375261442a62415c09b5203df5ab0">   10</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ad1a375261442a62415c09b5203df5ab0">Title</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ab79bdccd40ad4d514902c3e057e38fee">   13</a></span>    <span class="keyword">public</span> DateTime <a class="code hl_property" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ab79bdccd40ad4d514902c3e057e38fee">CreatedAt</a> { <span class="keyword">get</span>; init; } = DateTime.UtcNow;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a03f5f56d8ca12d082aa832f94f53505e">   16</a></span>    <span class="keyword">public</span> DateTime <a class="code hl_property" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a03f5f56d8ca12d082aa832f94f53505e">UpdatedAt</a> { <span class="keyword">get</span>; init; } = DateTime.UtcNow;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a110d5106986ed2442f5171220a111744">   17</a></span>    <span class="keyword">public</span> DateTime <a class="code hl_property" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a110d5106986ed2442f5171220a111744">StartTournament</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }=DateTime.UtcNow;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ad453fcd29e440254dc42eb09d9697b4a">   18</a></span>    <span class="keyword">public</span> DateTime <a class="code hl_property" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ad453fcd29e440254dc42eb09d9697b4a">EndTournament</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }=DateTime.UtcNow;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a7c48ba3a52cce758f7d5d427be1b4ecf">   20</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a7c48ba3a52cce758f7d5d427be1b4ecf">Logotype</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = CloudinaryConstants.DEFAULT_IMAGE_TALLERES;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ac22487397adaebb816698fd462318c12">   22</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span>? <a class="code hl_property" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ac22487397adaebb816698fd462318c12">LogotypePublicId</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a348b29760a273405886e6db9eb43151e">   24</a></span>    <span class="keyword">public</span> List&lt;Ulid&gt; <a class="code hl_property" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a348b29760a273405886e6db9eb43151e">WorkersList</a> {<span class="keyword">get</span>; <span class="keyword">set</span>;} = <span class="keyword">new</span> ();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a3b948168ff72e57405e444ad21a309d8">   25</a></span>    <span class="keyword">public</span> List&lt;Ulid&gt; <a class="code hl_property" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a3b948168ff72e57405e444ad21a309d8">SupervisorList</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a482454b3d80b70dface3c122d7f0e7cb">   26</a></span>    <span class="keyword">public</span> List&lt;WorkerMachineAssignment&gt; <a class="code hl_property" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a482454b3d80b70dface3c122d7f0e7cb">WorkerMachineAssignments</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">new</span> ();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ac6ce204f26a1260cf223a8defb989985">   27</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ac6ce204f26a1260cf223a8defb989985">IsDeleted</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }=<span class="keyword">false</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+</div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1ITimestamped_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1ITimestamped.html">BackEncordados.Common.Database.Helpers.ITimestamped</a></div><div class="ttdoc">Interfaz que define las propiedades de timestamps para entidades que requieren auditoría temporal: Cr...</div><div class="ttdef"><b>Definition</b> <a href="ITimestamped_8cs_source.html#l00014">ITimestamped.cs:15</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Helpers_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Helpers.html">BackEncordados.Common.Database.Helpers</a></div><div class="ttdef"><b>Definition</b> <a href="ITimestamped_8cs_source.html#l00001">ITimestamped.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a></div><div class="ttdef"><b>Definition</b> <a href="CloudinaryConstants_8cs_source.html#l00001">CloudinaryConstants.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html">BackEncordados.Talleres.Model</a></div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00004">Tournaments.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_a03f5f56d8ca12d082aa832f94f53505e"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a03f5f56d8ca12d082aa832f94f53505e">BackEncordados.Talleres.Model.UpdatedAt</a></div><div class="ttdeci">DateTime UpdatedAt</div><div class="ttdoc">Fecha de última modificación en UTC.</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00016">Tournaments.cs:16</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_a110d5106986ed2442f5171220a111744"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a110d5106986ed2442f5171220a111744">BackEncordados.Talleres.Model.StartTournament</a></div><div class="ttdeci">DateTime StartTournament</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00017">Tournaments.cs:17</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_a348b29760a273405886e6db9eb43151e"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a348b29760a273405886e6db9eb43151e">BackEncordados.Talleres.Model.WorkersList</a></div><div class="ttdeci">List&lt; Ulid &gt; WorkersList</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00024">Tournaments.cs:24</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_a3b948168ff72e57405e444ad21a309d8"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a3b948168ff72e57405e444ad21a309d8">BackEncordados.Talleres.Model.SupervisorList</a></div><div class="ttdeci">List&lt; Ulid &gt; SupervisorList</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00025">Tournaments.cs:25</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_a482454b3d80b70dface3c122d7f0e7cb"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a482454b3d80b70dface3c122d7f0e7cb">BackEncordados.Talleres.Model.WorkerMachineAssignments</a></div><div class="ttdeci">List&lt; WorkerMachineAssignment &gt; WorkerMachineAssignments</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00026">Tournaments.cs:26</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_a7c48ba3a52cce758f7d5d427be1b4ecf"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#a7c48ba3a52cce758f7d5d427be1b4ecf">BackEncordados.Talleres.Model.Logotype</a></div><div class="ttdeci">string Logotype</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00020">Tournaments.cs:20</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_ab79bdccd40ad4d514902c3e057e38fee"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ab79bdccd40ad4d514902c3e057e38fee">BackEncordados.Talleres.Model.CreatedAt</a></div><div class="ttdeci">DateTime CreatedAt</div><div class="ttdoc">Fecha de creación en UTC.</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00013">Tournaments.cs:13</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_ac22487397adaebb816698fd462318c12"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ac22487397adaebb816698fd462318c12">BackEncordados.Talleres.Model.LogotypePublicId</a></div><div class="ttdeci">string? LogotypePublicId</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00022">Tournaments.cs:22</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_ac6ce204f26a1260cf223a8defb989985"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ac6ce204f26a1260cf223a8defb989985">BackEncordados.Talleres.Model.IsDeleted</a></div><div class="ttdeci">bool IsDeleted</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00027">Tournaments.cs:27</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_ad1a375261442a62415c09b5203df5ab0"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ad1a375261442a62415c09b5203df5ab0">BackEncordados.Talleres.Model.Title</a></div><div class="ttdeci">string Title</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00010">Tournaments.cs:10</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_ad453fcd29e440254dc42eb09d9697b4a"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#ad453fcd29e440254dc42eb09d9697b4a">BackEncordados.Talleres.Model.EndTournament</a></div><div class="ttdeci">DateTime EndTournament</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00018">Tournaments.cs:18</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_af4f6a6b1bc1e47ab97de8c1491914c57"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#af4f6a6b1bc1e47ab97de8c1491914c57">BackEncordados.Talleres.Model.Owner</a></div><div class="ttdeci">Ulid Owner</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00009">Tournaments.cs:9</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html_af6124b908c5cc5c83d9bac689e10e7a4"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html#af6124b908c5cc5c83d9bac689e10e7a4">BackEncordados.Talleres.Model.Tournaments</a></div><div class="ttdeci">record Tournaments</div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00006">Tournaments.cs:8</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_28130524fe5c59a249a71dcd6e9a5488.html">Talleres</a></li><li class="navelem"><a class="el" href="dir_abea2b23b01820c2fb1027acf8f35c24.html">Model</a></li><li class="navelem"><a class="el" href="Tournaments_8cs.html">Tournaments.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

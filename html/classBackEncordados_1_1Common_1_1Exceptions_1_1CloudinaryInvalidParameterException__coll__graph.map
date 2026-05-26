@@ -1,0 +1,7 @@
+<map id="BackEncordados.Common.Exceptions.CloudinaryInvalidParameterException" name="BackEncordados.Common.Exceptions.CloudinaryInvalidParameterException">
+<area shape="rect" id="Node000001" title="Excepción que se produce cuando se proporciona un parámetro inválido a una operación de Cloudinary." alt="" coords="5,152,276,192"/>
+<area shape="rect" id="Node000002" href="$classBackEncordados_1_1Common_1_1Exceptions_1_1CloudinaryException.html" title="Excepción base para todos los errores relacionados con Cloudinary. Proporciona constructores con mens..." alt="" coords="63,79,219,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,118,143,152,138,152,138,118"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="97,5,184,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="143,44,143,79,138,79,138,44"/>
+</map>

@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Materials/Mapper/MaterialMapper.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('MaterialMapper_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MaterialMapper.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MaterialMapper_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html">BackEncordados.Materials.Dto.Materials</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Model.html">BackEncordados.Materials.Model</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Mapper.html">BackEncordados.Materials.Mapper</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>MaterialMapper {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html#ae37d97053985bd1637c116c7c8f63980">MaterialResponseDto</a> ToDto(<span class="keyword">this</span> <a class="code hl_class" href="classBackEncordados_1_1Materials_1_1Model_1_1Material.html">Material</a> material, <a class="code hl_interface" href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html">ICloudinaryService</a> cloudinary) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html#ae37d97053985bd1637c116c7c8f63980">MaterialResponseDto</a>(</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            material.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Material.html#ab8b5d51970b36be92cd6c8e16f13f20d">Id</a>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            TournamentId: material.TournamentId,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            material.Marca,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            material.Modelo,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            material.Stock,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            material.Precio,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            material.Type.ToString(),</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            cloudinary.ResolveImageUrl(material.ImageUrl, CloudinaryConstants.FOLDER_MATERIES)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        );</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classBackEncordados_1_1Materials_1_1Model_1_1Material.html">Material</a> ToModel(<span class="keyword">this</span> <a class="code hl_class" href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html">MaterialRequestDto</a> material) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Materials_1_1Model_1_1Material.html">Material</a> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            Marca = material.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html#af0de1da0485474d2d6dc747d3f01e428">Marca</a>,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            TournamentId = material.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html#ad95271a1f9aa81b8a5c641d9234578a5">TournamentId</a>,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            Modelo = material.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html#a2546d8b2231e33c862b8e9996b6a6c8a">Modelo</a>,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            Stock = material.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html#afe58443f7949eb682a2da683763c1608">Stock</a>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            Precio = material.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html#abbf61a72afdea71a849c4d615f32afe1">Precio</a>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            Type = Enum.Parse&lt;<a class="code hl_enumeration" href="namespaceBackEncordados_1_1Materials_1_1Model.html#ade852f1457ec1861101f29f0d54e2df5">MaterialType</a>&gt;(material.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html#aef905df1e11309d28b2987e1dda6eb27">Type</a>, <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        };</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html">BackEncordados.Materials.Dto.Materials.MaterialRequestDto</a></div><div class="ttdoc">DTO de entrada para crear un material en el inventario.</div><div class="ttdef"><b>Definition</b> <a href="MaterialRequestDto_8cs_source.html#l00022">MaterialRequestDto.cs:23</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto_html_a2546d8b2231e33c862b8e9996b6a6c8a"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html#a2546d8b2231e33c862b8e9996b6a6c8a">BackEncordados.Materials.Dto.Materials.MaterialRequestDto.Modelo</a></div><div class="ttdeci">string Modelo</div><div class="ttdoc">Modelo o nombre del producto. Obligatorio, 1-100 caracteres.</div><div class="ttdef"><b>Definition</b> <a href="MaterialRequestDto_8cs_source.html#l00038">MaterialRequestDto.cs:38</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto_html_abbf61a72afdea71a849c4d615f32afe1"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html#abbf61a72afdea71a849c4d615f32afe1">BackEncordados.Materials.Dto.Materials.MaterialRequestDto.Precio</a></div><div class="ttdeci">double Precio</div><div class="ttdoc">Precio unitario en moneda local. Obligatorio, &gt;= 0.1.</div><div class="ttdef"><b>Definition</b> <a href="MaterialRequestDto_8cs_source.html#l00048">MaterialRequestDto.cs:48</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto_html_ad95271a1f9aa81b8a5c641d9234578a5"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html#ad95271a1f9aa81b8a5c641d9234578a5">BackEncordados.Materials.Dto.Materials.MaterialRequestDto.TournamentId</a></div><div class="ttdeci">Ulid TournamentId</div><div class="ttdoc">ID del torneo al que pertenece el material. Obligatorio.</div><div class="ttdef"><b>Definition</b> <a href="MaterialRequestDto_8cs_source.html#l00032">MaterialRequestDto.cs:32</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto_html_aef905df1e11309d28b2987e1dda6eb27"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html#aef905df1e11309d28b2987e1dda6eb27">BackEncordados.Materials.Dto.Materials.MaterialRequestDto.Type</a></div><div class="ttdeci">string Type</div><div class="ttdoc">Tipo de material como string (ej: &quot;Grip&quot;, &quot;Overgrip&quot;). Obligatorio, 1-100 caracteres.</div><div class="ttdef"><b>Definition</b> <a href="MaterialRequestDto_8cs_source.html#l00054">MaterialRequestDto.cs:54</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto_html_af0de1da0485474d2d6dc747d3f01e428"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html#af0de1da0485474d2d6dc747d3f01e428">BackEncordados.Materials.Dto.Materials.MaterialRequestDto.Marca</a></div><div class="ttdeci">string Marca</div><div class="ttdoc">Marca del material (ej: &quot;Wilson&quot;, &quot;Babolat&quot;). Obligatorio, 1-100 caracteres.</div><div class="ttdef"><b>Definition</b> <a href="MaterialRequestDto_8cs_source.html#l00028">MaterialRequestDto.cs:28</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto_html_afe58443f7949eb682a2da683763c1608"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html#afe58443f7949eb682a2da683763c1608">BackEncordados.Materials.Dto.Materials.MaterialRequestDto.Stock</a></div><div class="ttdeci">int Stock</div><div class="ttdoc">Cantidad disponible en inventario. Obligatorio, &gt;= 0.</div><div class="ttdef"><b>Definition</b> <a href="MaterialRequestDto_8cs_source.html#l00043">MaterialRequestDto.cs:43</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Material_html"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Material.html">BackEncordados.Materials.Model.Material</a></div><div class="ttdoc">Entidad que representa un material de encordado (grips, overgrips, amortiguadores,...</div><div class="ttdef"><b>Definition</b> <a href="Material_8cs_source.html#l00083">Material.cs:84</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Material_html_ab8b5d51970b36be92cd6c8e16f13f20d"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Material.html#ab8b5d51970b36be92cd6c8e16f13f20d">BackEncordados.Materials.Model.Material.Id</a></div><div class="ttdeci">long Id</div><div class="ttdoc">Identificador numérico autoincremental del material.</div><div class="ttdef"><b>Definition</b> <a href="Material_8cs_source.html#l00086">Material.cs:86</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html">BackEncordados.Common.Service.Cloudinary.ICloudinaryService</a></div><div class="ttdoc">Define el contrato para el servicio de gestión de imágenes en Cloudinary.</div><div class="ttdef"><b>Definition</b> <a href="ICloudinaryService_8cs_source.html#l00049">ICloudinaryService.cs:50</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a></div><div class="ttdef"><b>Definition</b> <a href="CloudinaryConstants_8cs_source.html#l00001">CloudinaryConstants.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html">BackEncordados.Materials.Dto.Materials</a></div><div class="ttdef"><b>Definition</b> <a href="MaterialFilterDto_8cs_source.html#l00001">MaterialFilterDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials_html_ae37d97053985bd1637c116c7c8f63980"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html#ae37d97053985bd1637c116c7c8f63980">BackEncordados.Materials.Dto.Materials.MaterialResponseDto</a></div><div class="ttdeci">record MaterialResponseDto(long Id, Ulid TournamentId, string Marca, string Modelo, int Stock, double Precio, string MaterialType, string ImageUrl)</div><div class="ttdoc">DTO de salida que representa un material del inventario para las respuestas de la API.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Mapper_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Mapper.html">BackEncordados.Materials.Mapper</a></div><div class="ttdef"><b>Definition</b> <a href="CuerdaMapper_8cs_source.html#l00005">CuerdaMapper.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Model.html">BackEncordados.Materials.Model</a></div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00004">Cuerdas.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Model_html_ade852f1457ec1861101f29f0d54e2df5"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Model.html#ade852f1457ec1861101f29f0d54e2df5">BackEncordados.Materials.Model.MaterialType</a></div><div class="ttdeci">MaterialType</div><div class="ttdoc">Enum que clasifica los tipos de materiales de encordado disponibles en el inventario.</div><div class="ttdef"><b>Definition</b> <a href="MaterialType_8cs_source.html#l00019">MaterialType.cs:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_0048e789433b5fe1cb671302277b48d6.html">Materials</a></li><li class="navelem"><a class="el" href="dir_c115e98d875bcf8801b46fb04feb4dfd.html">Mapper</a></li><li class="navelem"><a class="el" href="MaterialMapper_8cs.html">MaterialMapper.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/TestEncordados/Unit/Common/Dto/DtoResponseTests.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('DtoResponseTests_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DtoResponseTests.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="DtoResponseTests_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.ComponentModel.DataAnnotations;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Excel_1_1Dto.html">BackEncordados.Excel.Dto</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html">BackEncordados.Materials.Dto.Strings</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Purchased_1_1Dto.html">BackEncordados.Purchased.Dto</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Purchased_1_1Model.html">BackEncordados.Purchased.Model</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html">BackEncordados.Talleres.Dto</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html">BackEncordados.Usuarios.Dto</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>FluentAssertions;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceTestEncordados_1_1Unit_1_1Common_1_1Dto.html">TestEncordados.Unit.Common.Dto</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html">   12</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html">ExcelAdvancedRequestDtoTests</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    [Test]</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html#a9f0308f28dc0486aaaad520733a0e1cd">   15</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html#a9f0308f28dc0486aaaad520733a0e1cd">DefaultConstructor_SetsDefaultTypes</a>()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        var dto = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto.html">ExcelAdvancedRequestDto</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        dto.Types.Should().BeEquivalentTo(<span class="keyword">new</span> List&lt;string&gt; { <span class="stringliteral">&quot;users&quot;</span>, <span class="stringliteral">&quot;materials&quot;</span>, <span class="stringliteral">&quot;cuerdas&quot;</span>, <span class="stringliteral">&quot;tournament&quot;</span>, <span class="stringliteral">&quot;pedidos&quot;</span> });</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        dto.Fields.Should().BeNull();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    [Test]</div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html#aafa2099511c3da90d3ff29fde3ca9f1f">   24</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html#aafa2099511c3da90d3ff29fde3ca9f1f">TournamentId_CanBeSet</a>()</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        var <span class="keywordtype">id</span> = Ulid.NewUlid();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        var dto = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto.html">ExcelAdvancedRequestDto</a> { TournamentId = <span class="keywordtype">id</span> };</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        dto.<a class="code hl_property" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto.html#ae8bdb0285ac9bcdae9642350792bd226">TournamentId</a>.Should().Be(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    [Test]</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html#a08d0aebe3430802285a739082bba2963">   33</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html#a08d0aebe3430802285a739082bba2963">Types_CanBeReplaced</a>()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        var dto = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto.html">ExcelAdvancedRequestDto</a></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            Types = <span class="keyword">new</span> List&lt;string&gt; { <span class="stringliteral">&quot;custom&quot;</span> }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        };</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        dto.<a class="code hl_property" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto.html#af2a4aeb01fbcc73f284bb8aecdae3353">Types</a>.Should().BeEquivalentTo(<span class="keyword">new</span> List&lt;string&gt; { <span class="stringliteral">&quot;custom&quot;</span> });</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    [Test]</div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html#a0474a427bc330b0c70fb4883b860d11a">   44</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html#a0474a427bc330b0c70fb4883b860d11a">Fields_CanBeSet</a>()</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        var dto = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto.html">ExcelAdvancedRequestDto</a></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            Fields = <span class="keyword">new</span> Dictionary&lt;string, List&lt;string&gt;&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                [<span class="stringliteral">&quot;users&quot;</span>] = <span class="keyword">new</span>() { <span class="stringliteral">&quot;name&quot;</span>, <span class="stringliteral">&quot;email&quot;</span> }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        };</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        dto.<a class="code hl_property" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto.html#a83eea6509d4376e3a3fec403c50fc6de">Fields</a>.Should().ContainKey(<span class="stringliteral">&quot;users&quot;</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        dto.Fields[<span class="stringliteral">&quot;users&quot;</span>].Should().BeEquivalentTo(<span class="keyword">new</span> List&lt;string&gt; { <span class="stringliteral">&quot;name&quot;</span>, <span class="stringliteral">&quot;email&quot;</span> });</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="};">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html">   59</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html">CuerdaResponseDtoTests</a></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    [Test]</div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html#a957780e9c57ff79ae694278a0842ac0e">   62</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html#a957780e9c57ff79ae694278a0842ac0e">Constructor_SetsProperties</a>()</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        var <span class="keywordtype">id</span> = 42L;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        var tournamentId = Ulid.NewUlid();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        var dto = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html#aa1e8736ef0f7a31f62cc03e4151871f5">CuerdaResponseDto</a>(<span class="keywordtype">id</span>, tournamentId, <span class="stringliteral">&quot;Babolat&quot;</span>, <span class="stringliteral">&quot;Pure Drive&quot;</span>, 10, 199.99, <span class="stringliteral">&quot;16x19&quot;</span>, <span class="stringliteral">&quot;Polyester&quot;</span>, 1.25, <span class="stringliteral">&quot;test.jpg&quot;</span>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        dto.Id.Should().Be(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        dto.TournamentId.Should().Be(tournamentId);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        dto.Marca.Should().Be(<span class="stringliteral">&quot;Babolat&quot;</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        dto.Modelo.Should().Be(<span class="stringliteral">&quot;Pure Drive&quot;</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        dto.Stock.Should().Be(10);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        dto.Precio.Should().Be(199.99);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        dto.StringFormat.Should().Be(<span class="stringliteral">&quot;16x19&quot;</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        dto.StringsType.Should().Be(<span class="stringliteral">&quot;Polyester&quot;</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        dto.Calibre.Should().Be(1.25);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        dto.ImageUrl.Should().Be(<span class="stringliteral">&quot;test.jpg&quot;</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    [Test]</div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html#a9c07ff0bf0edf1f6b846c0fd30e8410f">   82</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html#a9c07ff0bf0edf1f6b846c0fd30e8410f">Equality_SameValues_AreEqual</a>()</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        var tournamentId = Ulid.NewUlid();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        var dto1 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html#aa1e8736ef0f7a31f62cc03e4151871f5">CuerdaResponseDto</a>(1, tournamentId, <span class="stringliteral">&quot;Marca&quot;</span>, <span class="stringliteral">&quot;Modelo&quot;</span>, 5, 99.99, <span class="stringliteral">&quot;16x19&quot;</span>, <span class="stringliteral">&quot;Nylon&quot;</span>, 1.25, <span class="stringliteral">&quot;test.jpg&quot;</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        var dto2 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html#aa1e8736ef0f7a31f62cc03e4151871f5">CuerdaResponseDto</a>(1, tournamentId, <span class="stringliteral">&quot;Marca&quot;</span>, <span class="stringliteral">&quot;Modelo&quot;</span>, 5, 99.99, <span class="stringliteral">&quot;16x19&quot;</span>, <span class="stringliteral">&quot;Nylon&quot;</span>, 1.25, <span class="stringliteral">&quot;test.jpg&quot;</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        dto1.Should().Be(dto2);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        (dto1 == dto2).Should().BeTrue();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    [Test]</div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html#a99e7639af14b791dba6b97b676137139">   93</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html#a99e7639af14b791dba6b97b676137139">Equality_DifferentValues_AreNotEqual</a>()</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        var tournamentId = Ulid.NewUlid();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        var dto1 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html#aa1e8736ef0f7a31f62cc03e4151871f5">CuerdaResponseDto</a>(1, tournamentId, <span class="stringliteral">&quot;Marca&quot;</span>, <span class="stringliteral">&quot;Modelo&quot;</span>, 5, 99.99, <span class="stringliteral">&quot;16x19&quot;</span>, <span class="stringliteral">&quot;Nylon&quot;</span>, 1.25, <span class="stringliteral">&quot;test.jpg&quot;</span>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        var dto2 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html#aa1e8736ef0f7a31f62cc03e4151871f5">CuerdaResponseDto</a>(2, tournamentId, <span class="stringliteral">&quot;Marca&quot;</span>, <span class="stringliteral">&quot;Modelo&quot;</span>, 5, 99.99, <span class="stringliteral">&quot;16x19&quot;</span>, <span class="stringliteral">&quot;Nylon&quot;</span>, 1.25, <span class="stringliteral">&quot;test.jpg&quot;</span>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        dto1.Should().NotBe(dto2);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        (dto1 == dto2).Should().BeFalse();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    [Test]</div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html#acead132c90b67a9e04f3dfe2f8459bb9">  104</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html#acead132c90b67a9e04f3dfe2f8459bb9">Deconstruct_ReturnsValuesInOrder</a>()</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        var tournamentId = Ulid.NewUlid();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        var dto = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html#aa1e8736ef0f7a31f62cc03e4151871f5">CuerdaResponseDto</a>(42, tournamentId, <span class="stringliteral">&quot;Wilson&quot;</span>, <span class="stringliteral">&quot;Blade&quot;</span>, 3, 159.50, <span class="stringliteral">&quot;18x20&quot;</span>, <span class="stringliteral">&quot;Multi&quot;</span>, 1.25, <span class="stringliteral">&quot;test.jpg&quot;</span>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        var (<span class="keywordtype">id</span>, tid, marca, modelo, stock, precio, format, type, calibre, imageUrl) = dto;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordtype">id</span>.Should().Be(42);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        tid.Should().Be(tournamentId);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        marca.Should().Be(<span class="stringliteral">&quot;Wilson&quot;</span>);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        modelo.Should().Be(<span class="stringliteral">&quot;Blade&quot;</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        stock.Should().Be(3);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        precio.Should().Be(159.50);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        format.Should().Be(<span class="stringliteral">&quot;18x20&quot;</span>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        type.Should().Be(<span class="stringliteral">&quot;Multi&quot;</span>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        calibre.Should().Be(1.25);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        imageUrl.Should().Be(<span class="stringliteral">&quot;test.jpg&quot;</span>);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="foldopen" id="foldopen00124" data-start="{" data-end="};">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests.html">  124</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests.html">PedidoLineaResponseDtoTests</a></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>{</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    [Test]</div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests.html#a1f05e2574d5f54b7858a36cc6f7cd8af">  127</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests.html#a1f05e2574d5f54b7858a36cc6f7cd8af">Constructor_SetsProperties</a>()</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        var <span class="keywordtype">id</span> = Ulid.NewUlid();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        var date = <span class="keyword">new</span> DateTime(2025, 6, 15, 10, 30, 0, DateTimeKind.Utc);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        var dto = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Purchased_1_1Dto.html#a92652ef4b2fbb0c78e97ea1eaa5b47bd">PedidoLineaResponseDto</a>(<span class="keywordtype">id</span>, <span class="stringliteral">&quot;AeroPro&quot;</span>, 2, date, <span class="keyword">true</span>, <span class="stringliteral">&quot;Black&quot;</span>, <a class="code hl_enumeration" href="namespaceBackEncordados_1_1Purchased_1_1Model.html#ae46690249744a7cd379b6103ae0517ba">Status</a>.PENDING, <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Purchased_1_1Model_1_1StringSetup.html">StringSetup</a>());</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        dto.Id.Should().Be(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        dto.RaquetModel.Should().Be(<span class="stringliteral">&quot;AeroPro&quot;</span>);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        dto.Nudos.Should().Be(2);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        dto.DateString.Should().Be(date);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        dto.Logotype.Should().BeTrue();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        dto.Color.Should().Be(<span class="stringliteral">&quot;Black&quot;</span>);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        dto.Status.Should().Be(<a class="code hl_enumeration" href="namespaceBackEncordados_1_1Purchased_1_1Model.html#ae46690249744a7cd379b6103ae0517ba">Status</a>.PENDING);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        dto.StringSetup.Should().NotBeNull();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
+</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    [Test]</div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests.html#a6d4be61182ff115b85003035acbf15aa">  145</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests.html#a6d4be61182ff115b85003035acbf15aa">Equality_SameValues_AreEqual</a>()</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        var <span class="keywordtype">id</span> = Ulid.NewUlid();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        var date = DateTime.UtcNow;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        var setup = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Purchased_1_1Model_1_1StringSetup.html">StringSetup</a> { StringV = <span class="stringliteral">&quot;VS Gut&quot;</span>, TensionV = 25 };</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        var dto1 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Purchased_1_1Dto.html#a92652ef4b2fbb0c78e97ea1eaa5b47bd">PedidoLineaResponseDto</a>(<span class="keywordtype">id</span>, <span class="stringliteral">&quot;Blade&quot;</span>, 2, date, <span class="keyword">false</span>, <span class="stringliteral">&quot;White&quot;</span>, <a class="code hl_enumeration" href="namespaceBackEncordados_1_1Purchased_1_1Model.html#ae46690249744a7cd379b6103ae0517ba">Status</a>.IN_PROGRESS, setup);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        var dto2 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Purchased_1_1Dto.html#a92652ef4b2fbb0c78e97ea1eaa5b47bd">PedidoLineaResponseDto</a>(<span class="keywordtype">id</span>, <span class="stringliteral">&quot;Blade&quot;</span>, 2, date, <span class="keyword">false</span>, <span class="stringliteral">&quot;White&quot;</span>, <a class="code hl_enumeration" href="namespaceBackEncordados_1_1Purchased_1_1Model.html#ae46690249744a7cd379b6103ae0517ba">Status</a>.IN_PROGRESS, setup);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        dto1.Should().Be(dto2);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    }</div>
+</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    [Test]</div>
+<div class="foldopen" id="foldopen00157" data-start="{" data-end="}">
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests.html#ab1bb30396d71801b06bd430f0f32dd66">  157</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests.html#ab1bb30396d71801b06bd430f0f32dd66">Equality_DifferentValues_AreNotEqual</a>()</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        var <span class="keywordtype">id</span> = Ulid.NewUlid();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        var date = DateTime.UtcNow;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        var dto1 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Purchased_1_1Dto.html#a92652ef4b2fbb0c78e97ea1eaa5b47bd">PedidoLineaResponseDto</a>(<span class="keywordtype">id</span>, <span class="stringliteral">&quot;Blade&quot;</span>, 2, date, <span class="keyword">false</span>, <span class="stringliteral">&quot;White&quot;</span>, <a class="code hl_enumeration" href="namespaceBackEncordados_1_1Purchased_1_1Model.html#ae46690249744a7cd379b6103ae0517ba">Status</a>.IN_PROGRESS, <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Purchased_1_1Model_1_1StringSetup.html">StringSetup</a>());</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        var dto2 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Purchased_1_1Dto.html#a92652ef4b2fbb0c78e97ea1eaa5b47bd">PedidoLineaResponseDto</a>(<span class="keywordtype">id</span>, <span class="stringliteral">&quot;Speed&quot;</span>, 2, date, <span class="keyword">false</span>, <span class="stringliteral">&quot;White&quot;</span>, <a class="code hl_enumeration" href="namespaceBackEncordados_1_1Purchased_1_1Model.html#ae46690249744a7cd379b6103ae0517ba">Status</a>.IN_PROGRESS, <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Purchased_1_1Model_1_1StringSetup.html">StringSetup</a>());</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        dto1.Should().NotBe(dto2);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    }</div>
+</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>}</div>
+</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="foldopen" id="foldopen00168" data-start="{" data-end="};">
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests.html">  168</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests.html">PurchasedResponseDtoTests</a></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>{</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    [Test]</div>
+<div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests.html#ab3c2297078183da230422a3604b306fc">  171</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests.html#ab3c2297078183da230422a3604b306fc">Constructor_SetsProperties</a>()</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        var <span class="keywordtype">id</span> = Ulid.NewUlid();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        var tournamentId = Ulid.NewUlid();</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        var player = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">UserResponseDto</a>(<span class="stringliteral">&quot;player1&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;Player&quot;</span>, 0);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        var encorder = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">UserResponseDto</a>(<span class="stringliteral">&quot;encorder1&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;Encorder&quot;</span>, 0);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        var createdAt = <span class="keyword">new</span> DateTime(2025, 1, 1, 0, 0, 0, DateTimeKind.Utc);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        var updatedAt = <span class="keyword">new</span> DateTime(2025, 1, 2, 0, 0, 0, DateTimeKind.Utc);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        var lineas = <span class="keyword">new</span> List&lt;PedidoLineaResponseDto&gt;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            <span class="keyword">new</span>(Ulid.NewUlid(), <span class="stringliteral">&quot;Pro Staff&quot;</span>, 2, DateTime.UtcNow, <span class="keyword">true</span>, <span class="stringliteral">&quot;Black&quot;</span>, <a class="code hl_enumeration" href="namespaceBackEncordados_1_1Purchased_1_1Model.html#ae46690249744a7cd379b6103ae0517ba">Status</a>.COMPLETED, <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Purchased_1_1Model_1_1StringSetup.html">StringSetup</a>())</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        };</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        var dto = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Purchased_1_1Dto.html#ad5395b62f8f2a1a2977fb93ebdb1a134">PurchasedResponseDto</a>(<span class="keywordtype">id</span>, tournamentId, player, encorder, <span class="stringliteral">&quot;Machine1&quot;</span>, <span class="stringliteral">&quot;Comments&quot;</span>,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            <span class="stringliteral">&quot;paid&quot;</span>, createdAt, updatedAt, 199.99, lineas);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        dto.Id.Should().Be(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        dto.TournamentId.Should().Be(tournamentId);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        dto.Player.Should().Be(player);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        dto.Encorder.Should().Be(encorder);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        dto.Machine.Should().Be(<span class="stringliteral">&quot;Machine1&quot;</span>);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        dto.Comments.Should().Be(<span class="stringliteral">&quot;Comments&quot;</span>);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        dto.PayStatus.Should().Be(<span class="stringliteral">&quot;paid&quot;</span>);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        dto.CreatedAt.Should().Be(createdAt);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        dto.UpdatedAt.Should().Be(updatedAt);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        dto.Price.Should().Be(199.99);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        dto.Lineas.Should().BeSameAs(lineas);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    }</div>
+</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    [Test]</div>
+<div class="foldopen" id="foldopen00201" data-start="{" data-end="}">
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests.html#aabc1ea8e3e1abda50e6d5040a3dc065b">  201</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests.html#aabc1ea8e3e1abda50e6d5040a3dc065b">Equality_SameValues_AreEqual</a>()</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        var <span class="keywordtype">id</span> = Ulid.NewUlid();</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        var tid = Ulid.NewUlid();</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        var player = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">UserResponseDto</a>(<span class="stringliteral">&quot;p&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 0);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        var encorder = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">UserResponseDto</a>(<span class="stringliteral">&quot;e&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 0);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        var now = DateTime.UtcNow;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        var lineas = <span class="keyword">new</span> List&lt;PedidoLineaResponseDto&gt;();</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        var dto1 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Purchased_1_1Dto.html#ad5395b62f8f2a1a2977fb93ebdb1a134">PurchasedResponseDto</a>(<span class="keywordtype">id</span>, tid, player, encorder, <span class="stringliteral">&quot;M&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, now, now, 0, lineas);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        var dto2 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Purchased_1_1Dto.html#ad5395b62f8f2a1a2977fb93ebdb1a134">PurchasedResponseDto</a>(<span class="keywordtype">id</span>, tid, player, encorder, <span class="stringliteral">&quot;M&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, now, now, 0, lineas);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        dto1.Should().Be(dto2);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
+</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    [Test]</div>
+<div class="foldopen" id="foldopen00216" data-start="{" data-end="}">
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests.html#a5f3afafb14ac9227a4b2b188f88afd76">  216</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests.html#a5f3afafb14ac9227a4b2b188f88afd76">Equality_DifferentValues_AreNotEqual</a>()</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        var <span class="keywordtype">id</span> = Ulid.NewUlid();</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        var tid = Ulid.NewUlid();</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        var player = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">UserResponseDto</a>(<span class="stringliteral">&quot;p&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 0);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        var encorder = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">UserResponseDto</a>(<span class="stringliteral">&quot;e&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 0);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        var now = DateTime.UtcNow;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        var lineas = <span class="keyword">new</span> List&lt;PedidoLineaResponseDto&gt;();</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        var dto1 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Purchased_1_1Dto.html#ad5395b62f8f2a1a2977fb93ebdb1a134">PurchasedResponseDto</a>(<span class="keywordtype">id</span>, tid, player, encorder, <span class="stringliteral">&quot;M&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, now, now, 0, lineas);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        var dto2 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Purchased_1_1Dto.html#ad5395b62f8f2a1a2977fb93ebdb1a134">PurchasedResponseDto</a>(<span class="keywordtype">id</span>, tid, player, encorder, <span class="stringliteral">&quot;M2&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, now, now, 0, lineas);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        dto1.Should().NotBe(dto2);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    }</div>
+</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>}</div>
+</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="foldopen" id="foldopen00231" data-start="{" data-end="};">
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests.html">  231</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests.html">TournamentResponseDetailsDtoTests</a></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>{</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    [Test]</div>
+<div class="foldopen" id="foldopen00234" data-start="{" data-end="}">
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests.html#a993c62445b69e1a16edda23e562d5c30">  234</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests.html#a993c62445b69e1a16edda23e562d5c30">Constructor_SetsProperties</a>()</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        var <span class="keywordtype">id</span> = Ulid.NewUlid();</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        var owner = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">UserResponseDto</a>(<span class="stringliteral">&quot;owner&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;Owner&quot;</span>, 0);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        var users = <span class="keyword">new</span> List&lt;UserResponseDto&gt;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            <span class="keyword">new</span>(<span class="stringliteral">&quot;user1&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;User 1&quot;</span>, 0),</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            <span class="keyword">new</span>(<span class="stringliteral">&quot;user2&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;User 2&quot;</span>, 0)</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        };</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        var supervisors = <span class="keyword">new</span> List&lt;UserResponseDto&gt;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        {</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            <span class="keyword">new</span>(<span class="stringliteral">&quot;sup1&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;Supervisor 1&quot;</span>, 0)</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        };</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        var dto = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>(<span class="keywordtype">id</span>, <span class="stringliteral">&quot;Torneo Test&quot;</span>,</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <span class="keyword">new</span> DateTime(2025, 5, 1), <span class="keyword">new</span> DateTime(2025, 5, 5),</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            <span class="stringliteral">&quot;logo.png&quot;</span>, users, owner, supervisors);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        dto.Id.Should().Be(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        dto.Name.Should().Be(<span class="stringliteral">&quot;Torneo Test&quot;</span>);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        dto.StartDate.Should().Be(<span class="keyword">new</span> DateTime(2025, 5, 1));</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        dto.EndDate.Should().Be(<span class="keyword">new</span> DateTime(2025, 5, 5));</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        dto.Logotype.Should().Be(<span class="stringliteral">&quot;logo.png&quot;</span>);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        dto.User.Should().BeSameAs(users);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        dto.Owner.Should().Be(owner);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        dto.Supevisors.Should().BeSameAs(supervisors);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    }</div>
+</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    [Test]</div>
+<div class="foldopen" id="foldopen00263" data-start="{" data-end="}">
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests.html#afd86c2aabfb8f7c0b2d4f803f7ec9645">  263</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests.html#afd86c2aabfb8f7c0b2d4f803f7ec9645">Equality_SameValues_AreEqual</a>()</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    {</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        var <span class="keywordtype">id</span> = Ulid.NewUlid();</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        var owner = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">UserResponseDto</a>(<span class="stringliteral">&quot;o&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 0);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        var users = <span class="keyword">new</span> List&lt;UserResponseDto&gt;();</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        var supervisors = <span class="keyword">new</span> List&lt;UserResponseDto&gt;();</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        var start = <span class="keyword">new</span> DateTime(2025, 6, 1);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        var end = <span class="keyword">new</span> DateTime(2025, 6, 5);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        var dto1 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>(<span class="keywordtype">id</span>, <span class="stringliteral">&quot;Test&quot;</span>, start, end, <span class="stringliteral">&quot;logo.png&quot;</span>, users, owner, supervisors);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        var dto2 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>(<span class="keywordtype">id</span>, <span class="stringliteral">&quot;Test&quot;</span>, start, end, <span class="stringliteral">&quot;logo.png&quot;</span>, users, owner, supervisors);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        dto1.Should().Be(dto2);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    }</div>
+</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    [Test]</div>
+<div class="foldopen" id="foldopen00278" data-start="{" data-end="}">
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests.html#aabfbdd4c75b8fc4075a3388328d5ec0d">  278</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests.html#aabfbdd4c75b8fc4075a3388328d5ec0d">Equality_DifferentValues_AreNotEqual</a>()</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    {</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        var <span class="keywordtype">id</span> = Ulid.NewUlid();</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        var owner = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">UserResponseDto</a>(<span class="stringliteral">&quot;o&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 0);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        var users = <span class="keyword">new</span> List&lt;UserResponseDto&gt;();</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        var supervisors = <span class="keyword">new</span> List&lt;UserResponseDto&gt;();</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        var start = <span class="keyword">new</span> DateTime(2025, 6, 1);</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        var end = <span class="keyword">new</span> DateTime(2025, 6, 5);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        var dto1 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>(<span class="keywordtype">id</span>, <span class="stringliteral">&quot;Test&quot;</span>, start, end, <span class="stringliteral">&quot;logo.png&quot;</span>, users, owner, supervisors);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        var dto2 = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">TournamentResponseDetailsDto</a>(<span class="keywordtype">id</span>, <span class="stringliteral">&quot;Other&quot;</span>, start, end, <span class="stringliteral">&quot;logo.png&quot;</span>, users, owner, supervisors);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        dto1.Should().NotBe(dto2);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    }</div>
+</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>}</div>
+</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="foldopen" id="foldopen00293" data-start="{" data-end="};">
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests.html">  293</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests.html">CreateEncoderRequestDtoTests</a></div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>{</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    [Test]</div>
+<div class="foldopen" id="foldopen00296" data-start="{" data-end="}">
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests.html#a963991cd15442bb007bb528a5f9b8f62">  296</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests.html#a963991cd15442bb007bb528a5f9b8f62">UserId_CanBeSet</a>()</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    {</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        var <span class="keywordtype">id</span> = Ulid.NewUlid();</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        var dto = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Dto_1_1CreateEncoderRequestDto.html">CreateEncoderRequestDto</a> { UserId = <span class="keywordtype">id</span> };</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        dto.<a class="code hl_property" href="classBackEncordados_1_1Usuarios_1_1Dto_1_1CreateEncoderRequestDto.html#a506b85665a07fced23772fc68bf63e95">UserId</a>.Should().Be(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    }</div>
+</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    [Test]</div>
+<div class="foldopen" id="foldopen00305" data-start="{" data-end="}">
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests.html#a00f63646921bd53b0ce47718bfc1abc3">  305</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests.html#a00f63646921bd53b0ce47718bfc1abc3">DefaultUserId_IsEmpty</a>()</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    {</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        var dto = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Dto_1_1CreateEncoderRequestDto.html">CreateEncoderRequestDto</a>();</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        dto.UserId.Should().Be(Ulid.Empty);</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    }</div>
+</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    [Test]</div>
+<div class="foldopen" id="foldopen00313" data-start="{" data-end="}">
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno"><a class="line" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests.html#af4c1afefda7a591b9bcef2319e43728e">  313</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests.html#af4c1afefda7a591b9bcef2319e43728e">RequiredAttribute_WithUserId_IsValid</a>()</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    {</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        var dto = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Dto_1_1CreateEncoderRequestDto.html">CreateEncoderRequestDto</a> { UserId = Ulid.NewUlid() };</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        var context = <span class="keyword">new</span> ValidationContext(dto);</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        var results = <span class="keyword">new</span> List&lt;ValidationResult&gt;();</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        var isValid = Validator.TryValidateObject(dto, context, results, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        isValid.Should().BeTrue();</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        results.Should().BeEmpty();</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    }</div>
+</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>}</div>
+</div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto.html">BackEncordados.Excel.Dto.ExcelAdvancedRequestDto</a></div><div class="ttdoc">DTO de solicitud para la exportación avanzada de datos de un torneo a Excel.</div><div class="ttdef"><b>Definition</b> <a href="ExcelAdvancedRequestDto_8cs_source.html#l00019">ExcelAdvancedRequestDto.cs:20</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto_html_a83eea6509d4376e3a3fec403c50fc6de"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto.html#a83eea6509d4376e3a3fec403c50fc6de">BackEncordados.Excel.Dto.ExcelAdvancedRequestDto.Fields</a></div><div class="ttdeci">Dictionary&lt; string, List&lt; string &gt; &gt;? Fields</div><div class="ttdoc">Diccionario opcional para filtrar campos específicos por tipo de dato. La clave es el nombre del tipo...</div><div class="ttdef"><b>Definition</b> <a href="ExcelAdvancedRequestDto_8cs_source.html#l00030">ExcelAdvancedRequestDto.cs:30</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto_html_ae8bdb0285ac9bcdae9642350792bd226"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto.html#ae8bdb0285ac9bcdae9642350792bd226">BackEncordados.Excel.Dto.ExcelAdvancedRequestDto.TournamentId</a></div><div class="ttdeci">Ulid TournamentId</div><div class="ttdoc">ID del torneo a exportar.</div><div class="ttdef"><b>Definition</b> <a href="ExcelAdvancedRequestDto_8cs_source.html#l00022">ExcelAdvancedRequestDto.cs:22</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto_html_af2a4aeb01fbcc73f284bb8aecdae3353"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedRequestDto.html#af2a4aeb01fbcc73f284bb8aecdae3353">BackEncordados.Excel.Dto.ExcelAdvancedRequestDto.Types</a></div><div class="ttdeci">List&lt; string &gt; Types</div><div class="ttdoc">Lista de tipos de datos a incluir en la exportación. Valores posibles: &quot;users&quot;, &quot;materials&quot;,...</div><div class="ttdef"><b>Definition</b> <a href="ExcelAdvancedRequestDto_8cs_source.html#l00026">ExcelAdvancedRequestDto.cs:26</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Purchased_1_1Model_1_1StringSetup_html"><div class="ttname"><a href="classBackEncordados_1_1Purchased_1_1Model_1_1StringSetup.html">BackEncordados.Purchased.Model.StringSetup</a></div><div class="ttdoc">Entidad que almacena la configuración de cuerdas para una línea de pedido.</div><div class="ttdef"><b>Definition</b> <a href="StringSetup_8cs_source.html#l00011">StringSetup.cs:12</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Dto_1_1CreateEncoderRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Dto_1_1CreateEncoderRequestDto.html">BackEncordados.Usuarios.Dto.CreateEncoderRequestDto</a></div><div class="ttdoc">DTO de solicitud para promocionar un usuario existente al rol de Encordador (ENCORDER).</div><div class="ttdef"><b>Definition</b> <a href="CreateEncoderRequestDto_8cs_source.html#l00012">CreateEncoderRequestDto.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Dto_1_1CreateEncoderRequestDto_html_a506b85665a07fced23772fc68bf63e95"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Dto_1_1CreateEncoderRequestDto.html#a506b85665a07fced23772fc68bf63e95">BackEncordados.Usuarios.Dto.CreateEncoderRequestDto.UserId</a></div><div class="ttdeci">Ulid UserId</div><div class="ttdoc">Identificador ULID del usuario que será promocionado a Encordador.</div><div class="ttdef"><b>Definition</b> <a href="CreateEncoderRequestDto_8cs_source.html#l00016">CreateEncoderRequestDto.cs:16</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests_html"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests.html">TestEncordados.Unit.Common.Dto.CreateEncoderRequestDtoTests</a></div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00293">DtoResponseTests.cs:294</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests_html_a00f63646921bd53b0ce47718bfc1abc3"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests.html#a00f63646921bd53b0ce47718bfc1abc3">TestEncordados.Unit.Common.Dto.CreateEncoderRequestDtoTests.DefaultUserId_IsEmpty</a></div><div class="ttdeci">void DefaultUserId_IsEmpty()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00305">DtoResponseTests.cs:305</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests_html_a963991cd15442bb007bb528a5f9b8f62"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests.html#a963991cd15442bb007bb528a5f9b8f62">TestEncordados.Unit.Common.Dto.CreateEncoderRequestDtoTests.UserId_CanBeSet</a></div><div class="ttdeci">void UserId_CanBeSet()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00296">DtoResponseTests.cs:296</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests_html_af4c1afefda7a591b9bcef2319e43728e"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CreateEncoderRequestDtoTests.html#af4c1afefda7a591b9bcef2319e43728e">TestEncordados.Unit.Common.Dto.CreateEncoderRequestDtoTests.RequiredAttribute_WithUserId_IsValid</a></div><div class="ttdeci">void RequiredAttribute_WithUserId_IsValid()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00313">DtoResponseTests.cs:313</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests_html"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html">TestEncordados.Unit.Common.Dto.CuerdaResponseDtoTests</a></div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00059">DtoResponseTests.cs:60</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests_html_a957780e9c57ff79ae694278a0842ac0e"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html#a957780e9c57ff79ae694278a0842ac0e">TestEncordados.Unit.Common.Dto.CuerdaResponseDtoTests.Constructor_SetsProperties</a></div><div class="ttdeci">void Constructor_SetsProperties()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00062">DtoResponseTests.cs:62</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests_html_a99e7639af14b791dba6b97b676137139"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html#a99e7639af14b791dba6b97b676137139">TestEncordados.Unit.Common.Dto.CuerdaResponseDtoTests.Equality_DifferentValues_AreNotEqual</a></div><div class="ttdeci">void Equality_DifferentValues_AreNotEqual()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00093">DtoResponseTests.cs:93</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests_html_a9c07ff0bf0edf1f6b846c0fd30e8410f"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html#a9c07ff0bf0edf1f6b846c0fd30e8410f">TestEncordados.Unit.Common.Dto.CuerdaResponseDtoTests.Equality_SameValues_AreEqual</a></div><div class="ttdeci">void Equality_SameValues_AreEqual()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00082">DtoResponseTests.cs:82</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests_html_acead132c90b67a9e04f3dfe2f8459bb9"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1CuerdaResponseDtoTests.html#acead132c90b67a9e04f3dfe2f8459bb9">TestEncordados.Unit.Common.Dto.CuerdaResponseDtoTests.Deconstruct_ReturnsValuesInOrder</a></div><div class="ttdeci">void Deconstruct_ReturnsValuesInOrder()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00104">DtoResponseTests.cs:104</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests_html"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html">TestEncordados.Unit.Common.Dto.ExcelAdvancedRequestDtoTests</a></div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00012">DtoResponseTests.cs:13</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests_html_a0474a427bc330b0c70fb4883b860d11a"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html#a0474a427bc330b0c70fb4883b860d11a">TestEncordados.Unit.Common.Dto.ExcelAdvancedRequestDtoTests.Fields_CanBeSet</a></div><div class="ttdeci">void Fields_CanBeSet()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00044">DtoResponseTests.cs:44</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests_html_a08d0aebe3430802285a739082bba2963"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html#a08d0aebe3430802285a739082bba2963">TestEncordados.Unit.Common.Dto.ExcelAdvancedRequestDtoTests.Types_CanBeReplaced</a></div><div class="ttdeci">void Types_CanBeReplaced()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00033">DtoResponseTests.cs:33</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests_html_a9f0308f28dc0486aaaad520733a0e1cd"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html#a9f0308f28dc0486aaaad520733a0e1cd">TestEncordados.Unit.Common.Dto.ExcelAdvancedRequestDtoTests.DefaultConstructor_SetsDefaultTypes</a></div><div class="ttdeci">void DefaultConstructor_SetsDefaultTypes()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00015">DtoResponseTests.cs:15</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests_html_aafa2099511c3da90d3ff29fde3ca9f1f"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1ExcelAdvancedRequestDtoTests.html#aafa2099511c3da90d3ff29fde3ca9f1f">TestEncordados.Unit.Common.Dto.ExcelAdvancedRequestDtoTests.TournamentId_CanBeSet</a></div><div class="ttdeci">void TournamentId_CanBeSet()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00024">DtoResponseTests.cs:24</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests_html"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests.html">TestEncordados.Unit.Common.Dto.PedidoLineaResponseDtoTests</a></div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00124">DtoResponseTests.cs:125</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests_html_a1f05e2574d5f54b7858a36cc6f7cd8af"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests.html#a1f05e2574d5f54b7858a36cc6f7cd8af">TestEncordados.Unit.Common.Dto.PedidoLineaResponseDtoTests.Constructor_SetsProperties</a></div><div class="ttdeci">void Constructor_SetsProperties()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00127">DtoResponseTests.cs:127</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests_html_a6d4be61182ff115b85003035acbf15aa"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests.html#a6d4be61182ff115b85003035acbf15aa">TestEncordados.Unit.Common.Dto.PedidoLineaResponseDtoTests.Equality_SameValues_AreEqual</a></div><div class="ttdeci">void Equality_SameValues_AreEqual()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00145">DtoResponseTests.cs:145</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests_html_ab1bb30396d71801b06bd430f0f32dd66"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests.html#ab1bb30396d71801b06bd430f0f32dd66">TestEncordados.Unit.Common.Dto.PedidoLineaResponseDtoTests.Equality_DifferentValues_AreNotEqual</a></div><div class="ttdeci">void Equality_DifferentValues_AreNotEqual()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00157">DtoResponseTests.cs:157</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests_html"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests.html">TestEncordados.Unit.Common.Dto.PurchasedResponseDtoTests</a></div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00168">DtoResponseTests.cs:169</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests_html_a5f3afafb14ac9227a4b2b188f88afd76"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests.html#a5f3afafb14ac9227a4b2b188f88afd76">TestEncordados.Unit.Common.Dto.PurchasedResponseDtoTests.Equality_DifferentValues_AreNotEqual</a></div><div class="ttdeci">void Equality_DifferentValues_AreNotEqual()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00216">DtoResponseTests.cs:216</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests_html_aabc1ea8e3e1abda50e6d5040a3dc065b"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests.html#aabc1ea8e3e1abda50e6d5040a3dc065b">TestEncordados.Unit.Common.Dto.PurchasedResponseDtoTests.Equality_SameValues_AreEqual</a></div><div class="ttdeci">void Equality_SameValues_AreEqual()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00201">DtoResponseTests.cs:201</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests_html_ab3c2297078183da230422a3604b306fc"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests.html#ab3c2297078183da230422a3604b306fc">TestEncordados.Unit.Common.Dto.PurchasedResponseDtoTests.Constructor_SetsProperties</a></div><div class="ttdeci">void Constructor_SetsProperties()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00171">DtoResponseTests.cs:171</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests_html"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests.html">TestEncordados.Unit.Common.Dto.TournamentResponseDetailsDtoTests</a></div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00231">DtoResponseTests.cs:232</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests_html_a993c62445b69e1a16edda23e562d5c30"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests.html#a993c62445b69e1a16edda23e562d5c30">TestEncordados.Unit.Common.Dto.TournamentResponseDetailsDtoTests.Constructor_SetsProperties</a></div><div class="ttdeci">void Constructor_SetsProperties()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00234">DtoResponseTests.cs:234</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests_html_aabfbdd4c75b8fc4075a3388328d5ec0d"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests.html#aabfbdd4c75b8fc4075a3388328d5ec0d">TestEncordados.Unit.Common.Dto.TournamentResponseDetailsDtoTests.Equality_DifferentValues_AreNotEqual</a></div><div class="ttdeci">void Equality_DifferentValues_AreNotEqual()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00278">DtoResponseTests.cs:278</a></div></div>
+<div class="ttc" id="aclassTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests_html_afd86c2aabfb8f7c0b2d4f803f7ec9645"><div class="ttname"><a href="classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests.html#afd86c2aabfb8f7c0b2d4f803f7ec9645">TestEncordados.Unit.Common.Dto.TournamentResponseDetailsDtoTests.Equality_SameValues_AreEqual</a></div><div class="ttdeci">void Equality_SameValues_AreEqual()</div><div class="ttdef"><b>Definition</b> <a href="DtoResponseTests_8cs_source.html#l00263">DtoResponseTests.cs:263</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Excel_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Excel_1_1Dto.html">BackEncordados.Excel.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ExcelAdvancedDataDto_8cs_source.html#l00001">ExcelAdvancedDataDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html">BackEncordados.Materials.Dto.Strings</a></div><div class="ttdef"><b>Definition</b> <a href="CuerdaFilterdto_8cs_source.html#l00001">CuerdaFilterdto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings_html_aa1e8736ef0f7a31f62cc03e4151871f5"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html#aa1e8736ef0f7a31f62cc03e4151871f5">BackEncordados.Materials.Dto.Strings.CuerdaResponseDto</a></div><div class="ttdeci">record CuerdaResponseDto(long Id, Ulid TournamentId, string Marca, string Modelo, int Stock, double Precio, string StringFormat, string StringsType, double Calibre, string ImageUrl)</div><div class="ttdoc">DTO de salida que representa una cuerda del inventario para las respuestas de la API.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Dto.html">BackEncordados.Purchased.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="FilterPurchasedDto_8cs_source.html#l00001">FilterPurchasedDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Dto_html_a92652ef4b2fbb0c78e97ea1eaa5b47bd"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Dto.html#a92652ef4b2fbb0c78e97ea1eaa5b47bd">BackEncordados.Purchased.Dto.PedidoLineaResponseDto</a></div><div class="ttdeci">record PedidoLineaResponseDto(Ulid Id, string RaquetModel, byte Nudos, DateTime DateString, bool Logotype, string Color, Status Status, StringSetup StringSetup)</div><div class="ttdoc">DTO de respuesta con la información completa de una línea de pedido.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Dto_html_ad5395b62f8f2a1a2977fb93ebdb1a134"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Dto.html#ad5395b62f8f2a1a2977fb93ebdb1a134">BackEncordados.Purchased.Dto.PurchasedResponseDto</a></div><div class="ttdeci">record PurchasedResponseDto(Ulid Id, Ulid TournamentId, UserResponseDto Player, UserResponseDto Encorder, string Machine, string Comments, string PayStatus, DateTime CreatedAt, DateTime UpdatedAt, double Price, List&lt; PedidoLineaResponseDto &gt; Lineas)</div><div class="ttdoc">DTO de respuesta con la información completa de un pedido de encordado.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Model.html">BackEncordados.Purchased.Model</a></div><div class="ttdef"><b>Definition</b> <a href="PaymentStatus_8cs_source.html#l00001">PaymentStatus.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Model_html_ae46690249744a7cd379b6103ae0517ba"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Model.html#ae46690249744a7cd379b6103ae0517ba">BackEncordados.Purchased.Model.Status</a></div><div class="ttdeci">Status</div><div class="ttdoc">Enum que define los posibles estados de una línea de pedido (raqueta).</div><div class="ttdef"><b>Definition</b> <a href="Status_8cs_source.html#l00015">Status.cs:16</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Dto.html">BackEncordados.Talleres.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="FilterTournamentDto_8cs_source.html#l00001">FilterTournamentDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Dto_html_a7b9aa5319ccef52006cf2c896a59eba9"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Dto.html#a7b9aa5319ccef52006cf2c896a59eba9">BackEncordados.Talleres.Dto.TournamentResponseDetailsDto</a></div><div class="ttdeci">record TournamentResponseDetailsDto(Ulid Id, string Name, DateTime StartDate, DateTime EndDate, string Logotype, List&lt; UserResponseDto &gt; User, UserResponseDto Owner, List&lt; UserResponseDto &gt; Supevisors)</div><div class="ttdoc">DTO de respuesta con información detallada de un torneo, incluyendo usuarios, propietario y superviso...</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html">BackEncordados.Usuarios.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ChangePasswordRequestDto_8cs_source.html#l00003">ChangePasswordRequestDto.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Dto_html_a8eb3609d4002341b1cea9fdb4f7b221a"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">BackEncordados.Usuarios.Dto.UserResponseDto</a></div><div class="ttdeci">record UserResponseDto(string Username, string ImageUrl, string Name, double Bonos)</div><div class="ttdoc">DTO de respuesta con la información mínima de un usuario para vistas públicas o listados.</div></div>
+<div class="ttc" id="anamespaceTestEncordados_1_1Unit_1_1Common_1_1Dto_html"><div class="ttname"><a href="namespaceTestEncordados_1_1Unit_1_1Common_1_1Dto.html">TestEncordados.Unit.Common.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="CommonDtoTests_8cs_source.html#l00004">CommonDtoTests.cs:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_780b0e0e1bd31577874252649f607c71.html">TestEncordados</a></li><li class="navelem"><a class="el" href="dir_48c6692f9b3c243174e0def3ed0bbfd9.html">Unit</a></li><li class="navelem"><a class="el" href="dir_d0149b0905ea7766f029d2f80931110f.html">Common</a></li><li class="navelem"><a class="el" href="dir_efaeb2f1dedf2eb03c769e90f14cc412.html">Dto</a></li><li class="navelem"><a class="el" href="DtoResponseTests_8cs.html">DtoResponseTests.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

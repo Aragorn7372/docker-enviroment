@@ -1,0 +1,4 @@
+var ChangeRoleRequestDtoValidatorTests_8cs =
+[
+    [ "TestEncordados.Unit.Validators.Usuarios.ChangeRoleRequestDtoValidatorTests", "classTestEncordados_1_1Unit_1_1Validators_1_1Usuarios_1_1ChangeRoleRequestDtoValidatorTests.html", "classTestEncordados_1_1Unit_1_1Validators_1_1Usuarios_1_1ChangeRoleRequestDtoValidatorTests" ]
+];

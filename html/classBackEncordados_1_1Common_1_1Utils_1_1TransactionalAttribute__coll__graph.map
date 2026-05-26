@@ -1,0 +1,5 @@
+<map id="BackEncordados.Common.Utils.TransactionalAttribute" name="BackEncordados.Common.Utils.TransactionalAttribute">
+<area shape="rect" id="Node000001" title="Atributo de filtro de acción que coordina transacciones en múltiples DbContexts con detección híbrida..." alt="" coords="5,79,236,119"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="44,5,197,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,44,123,79,118,79,118,44"/>
+</map>

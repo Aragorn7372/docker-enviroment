@@ -1,0 +1,4 @@
+var namespaceTestEncordados_1_1Unit_1_1Controllers_1_1Purchased =
+[
+    [ "PurchasedControllerTests", "classTestEncordados_1_1Unit_1_1Controllers_1_1Purchased_1_1PurchasedControllerTests.html", "classTestEncordados_1_1Unit_1_1Controllers_1_1Purchased_1_1PurchasedControllerTests" ]
+];

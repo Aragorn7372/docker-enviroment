@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Materials/Mapper/CuerdaMapper.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('CuerdaMapper_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CuerdaMapper.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="CuerdaMapper_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html">BackEncordados.Materials.Dto.Strings</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Model.html">BackEncordados.Materials.Model</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Materials_1_1Mapper.html">    5</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Mapper.html">BackEncordados.Materials.Mapper</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>CuerdaMapper {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html#aa1e8736ef0f7a31f62cc03e4151871f5">CuerdaResponseDto</a> ToDto(<span class="keyword">this</span> <a class="code hl_class" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html">Cuerdas</a> cuerda, <a class="code hl_interface" href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html">ICloudinaryService</a> cloudinary) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html#aa1e8736ef0f7a31f62cc03e4151871f5">CuerdaResponseDto</a>(</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            Id: cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#ae7927fa29f34e1b28729b8e06b2a9cd1">Id</a>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            TournamentId: cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#adb447eee3b16beaa50601224eaa04dd6">TournamentId</a>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            Marca: cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a3ba3b4a57b923d351296fe35e9beef79">Marca</a>,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            Modelo: cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a6c0e733a891956616fab2553a591923d">Modelo</a>,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            Stock: cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#aa573c913f82cef836353be71d0d6be45">Stock</a>,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            Precio: cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a10090c4c766b0932cf00b5744d3a72f5">Precio</a>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_typedef" href="ExcelRepositoryTests_8cs.html#a3e3d5292efced67d4a8d028cfbd6274e">StringFormat</a>: cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a5544f011956d4d2e62665bbec1e1722e">StringFormat</a>.ToString(),</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_enumeration" href="namespaceBackEncordados_1_1Materials_1_1Model.html#abdb675af6253d1f00af73bef13aae7c0">StringsType</a>: cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#ade215249cc5dff2c9b831f2b13a0bcee">StringsType</a>.ToString(),</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            Calibre: cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a045383ba4eb0eff5ab7f7b0a04766373">Calibre</a>,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            ImageUrl: cloudinary.<a class="code hl_function" href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html#a4378431d4a1237be4c9643e6b936c769">ResolveImageUrl</a>(cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a16ab4b41b5be580acc31f4f0536963e4">ImageUrl</a>, CloudinaryConstants.FOLDER_MATERIES)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        );</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html">Cuerdas</a> ToModel(<span class="keyword">this</span> <a class="code hl_class" href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html">CuerdaRequestDto</a> cuerda) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html">Cuerdas</a> {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            Marca = cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#ac09967f08914d8f9bb916d978fbd9ec1">Marca</a>,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            TournamentId = cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#a2dadb143542f80d2a6e23cb11d6a4f98">TournamentId</a>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            Modelo = cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#a1acb9627469b8c5aa75d807b039fb168">Modelo</a>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            Stock = cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#a74aca5a2e60801551078e666924b987f">Stock</a>,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            Precio = cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#ab0fe1de86d7a7686d93c919b79ca4061">Precio</a>,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_typedef" href="ExcelRepositoryTests_8cs.html#a3e3d5292efced67d4a8d028cfbd6274e">StringFormat</a> = Enum.Parse&lt;<a class="code hl_enumeration" href="namespaceBackEncordados_1_1Materials_1_1Model.html#ae0983f493403fdfbe937023d6ccb9b4c">FormatoCuerda</a>&gt;(cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#abe1199d21b35d3825bf053569c8d05ef">StringFormat</a>, <span class="keyword">true</span>),</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_enumeration" href="namespaceBackEncordados_1_1Materials_1_1Model.html#abdb675af6253d1f00af73bef13aae7c0">StringsType</a> = Enum.Parse&lt;<a class="code hl_enumeration" href="namespaceBackEncordados_1_1Materials_1_1Model.html#abdb675af6253d1f00af73bef13aae7c0">StringsType</a>&gt;(cuerda.<a class="code hl_property" href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#a4e1d909d93931461f53813eed3a2dc5a">StringsType</a>, <span class="keyword">true</span>),</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            Calibre = cuerda.Calibre</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        };</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+</div>
+<div class="ttc" id="aExcelRepositoryTests_8cs_html_a3e3d5292efced67d4a8d028cfbd6274e"><div class="ttname"><a href="ExcelRepositoryTests_8cs.html#a3e3d5292efced67d4a8d028cfbd6274e">StringFormat</a></div><div class="ttdeci">BackEncordados.Materials.Model.FormatoCuerda StringFormat</div><div class="ttdef"><b>Definition</b> <a href="ExcelRepositoryTests_8cs_source.html#l00013">ExcelRepositoryTests.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html">BackEncordados.Materials.Dto.Strings.CuerdaRequestDto</a></div><div class="ttdoc">DTO de entrada para crear una cuerda en el inventario.</div><div class="ttdef"><b>Definition</b> <a href="CuerdaRequestDto_8cs_source.html#l00024">CuerdaRequestDto.cs:24</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto_html_a1acb9627469b8c5aa75d807b039fb168"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#a1acb9627469b8c5aa75d807b039fb168">BackEncordados.Materials.Dto.Strings.CuerdaRequestDto.Modelo</a></div><div class="ttdeci">string Modelo</div><div class="ttdoc">Modelo o nombre de la cuerda. Obligatorio, 1-100 caracteres.</div><div class="ttdef"><b>Definition</b> <a href="CuerdaRequestDto_8cs_source.html#l00039">CuerdaRequestDto.cs:39</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto_html_a2dadb143542f80d2a6e23cb11d6a4f98"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#a2dadb143542f80d2a6e23cb11d6a4f98">BackEncordados.Materials.Dto.Strings.CuerdaRequestDto.TournamentId</a></div><div class="ttdeci">Ulid TournamentId</div><div class="ttdoc">ID del torneo al que pertenece. Obligatorio.</div><div class="ttdef"><b>Definition</b> <a href="CuerdaRequestDto_8cs_source.html#l00033">CuerdaRequestDto.cs:33</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto_html_a4e1d909d93931461f53813eed3a2dc5a"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#a4e1d909d93931461f53813eed3a2dc5a">BackEncordados.Materials.Dto.Strings.CuerdaRequestDto.StringsType</a></div><div class="ttdeci">string StringsType</div><div class="ttdoc">Tipo de cuerda como string (&quot;Polyester&quot;, &quot;Multifilament&quot;, etc.). Obligatorio, 1-100 caracteres.</div><div class="ttdef"><b>Definition</b> <a href="CuerdaRequestDto_8cs_source.html#l00061">CuerdaRequestDto.cs:61</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto_html_a74aca5a2e60801551078e666924b987f"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#a74aca5a2e60801551078e666924b987f">BackEncordados.Materials.Dto.Strings.CuerdaRequestDto.Stock</a></div><div class="ttdeci">int Stock</div><div class="ttdoc">Cantidad disponible (default -1 = no medido). Obligatorio, &gt;= 0.</div><div class="ttdef"><b>Definition</b> <a href="CuerdaRequestDto_8cs_source.html#l00044">CuerdaRequestDto.cs:44</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto_html_ab0fe1de86d7a7686d93c919b79ca4061"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#ab0fe1de86d7a7686d93c919b79ca4061">BackEncordados.Materials.Dto.Strings.CuerdaRequestDto.Precio</a></div><div class="ttdeci">double Precio</div><div class="ttdoc">Precio unitario (default -1 = no definido). Obligatorio, &gt;= 0.1.</div><div class="ttdef"><b>Definition</b> <a href="CuerdaRequestDto_8cs_source.html#l00049">CuerdaRequestDto.cs:49</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto_html_abe1199d21b35d3825bf053569c8d05ef"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#abe1199d21b35d3825bf053569c8d05ef">BackEncordados.Materials.Dto.Strings.CuerdaRequestDto.StringFormat</a></div><div class="ttdeci">string StringFormat</div><div class="ttdoc">Formato de venta como string (&quot;Reel&quot; o &quot;Set&quot;). Obligatorio, 1-100 caracteres.</div><div class="ttdef"><b>Definition</b> <a href="CuerdaRequestDto_8cs_source.html#l00055">CuerdaRequestDto.cs:55</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto_html_ac09967f08914d8f9bb916d978fbd9ec1"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Strings_1_1CuerdaRequestDto.html#ac09967f08914d8f9bb916d978fbd9ec1">BackEncordados.Materials.Dto.Strings.CuerdaRequestDto.Marca</a></div><div class="ttdeci">string Marca</div><div class="ttdoc">Marca de la cuerda (ej: &quot;Luxilon&quot;, &quot;Babolat&quot;). Obligatorio, 1-100 caracteres.</div><div class="ttdef"><b>Definition</b> <a href="CuerdaRequestDto_8cs_source.html#l00029">CuerdaRequestDto.cs:29</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html">BackEncordados.Materials.Model.Cuerdas</a></div><div class="ttdoc">Entidad que representa una cuerda de encordado en el inventario del sistema.</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00092">Cuerdas.cs:93</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_a045383ba4eb0eff5ab7f7b0a04766373"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a045383ba4eb0eff5ab7f7b0a04766373">BackEncordados.Materials.Model.Cuerdas.Calibre</a></div><div class="ttdeci">double Calibre</div><div class="ttdoc">Calibre o grosor de la cuerda en milímetros (ej: 1.25, 1.30).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00119">Cuerdas.cs:119</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_a10090c4c766b0932cf00b5744d3a72f5"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a10090c4c766b0932cf00b5744d3a72f5">BackEncordados.Materials.Model.Cuerdas.Precio</a></div><div class="ttdeci">double Precio</div><div class="ttdoc">Precio unitario (default -1 = no definido).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00110">Cuerdas.cs:110</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_a16ab4b41b5be580acc31f4f0536963e4"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a16ab4b41b5be580acc31f4f0536963e4">BackEncordados.Materials.Model.Cuerdas.ImageUrl</a></div><div class="ttdeci">string ImageUrl</div><div class="ttdoc">URL de la imagen de la cuerda (Cloudinary o imagen por defecto).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00131">Cuerdas.cs:131</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_a3ba3b4a57b923d351296fe35e9beef79"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a3ba3b4a57b923d351296fe35e9beef79">BackEncordados.Materials.Model.Cuerdas.Marca</a></div><div class="ttdeci">string Marca</div><div class="ttdoc">Marca de la cuerda (ej: &quot;Luxilon&quot;, &quot;Babolat&quot;, &quot;Wilson&quot;).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00101">Cuerdas.cs:101</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_a5544f011956d4d2e62665bbec1e1722e"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a5544f011956d4d2e62665bbec1e1722e">BackEncordados.Materials.Model.Cuerdas.StringFormat</a></div><div class="ttdeci">FormatoCuerda StringFormat</div><div class="ttdoc">Formato de venta: Reel (bobina) o Set (juego individual).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00113">Cuerdas.cs:113</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_a6c0e733a891956616fab2553a591923d"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#a6c0e733a891956616fab2553a591923d">BackEncordados.Materials.Model.Cuerdas.Modelo</a></div><div class="ttdeci">string Modelo</div><div class="ttdoc">Modelo o nombre específico de la cuerda.</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00104">Cuerdas.cs:104</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_aa573c913f82cef836353be71d0d6be45"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#aa573c913f82cef836353be71d0d6be45">BackEncordados.Materials.Model.Cuerdas.Stock</a></div><div class="ttdeci">int Stock</div><div class="ttdoc">Cantidad disponible en inventario (default -1 = no medido).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00107">Cuerdas.cs:107</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_adb447eee3b16beaa50601224eaa04dd6"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#adb447eee3b16beaa50601224eaa04dd6">BackEncordados.Materials.Model.Cuerdas.TournamentId</a></div><div class="ttdeci">Ulid TournamentId</div><div class="ttdoc">ID del torneo al que pertenece la cuerda (FK).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00098">Cuerdas.cs:98</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_ade215249cc5dff2c9b831f2b13a0bcee"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#ade215249cc5dff2c9b831f2b13a0bcee">BackEncordados.Materials.Model.Cuerdas.StringsType</a></div><div class="ttdeci">StringsType StringsType</div><div class="ttdoc">Tipo de cuerda (Polyester, Multifilament, NaturalGut, SyntheticGut, Hybrid).</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00116">Cuerdas.cs:116</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Model_1_1Cuerdas_html_ae7927fa29f34e1b28729b8e06b2a9cd1"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html#ae7927fa29f34e1b28729b8e06b2a9cd1">BackEncordados.Materials.Model.Cuerdas.Id</a></div><div class="ttdeci">long Id</div><div class="ttdoc">Identificador numérico autoincremental de la cuerda.</div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00095">Cuerdas.cs:95</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html">BackEncordados.Common.Service.Cloudinary.ICloudinaryService</a></div><div class="ttdoc">Define el contrato para el servicio de gestión de imágenes en Cloudinary.</div><div class="ttdef"><b>Definition</b> <a href="ICloudinaryService_8cs_source.html#l00049">ICloudinaryService.cs:50</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService_html_a4378431d4a1237be4c9643e6b936c769"><div class="ttname"><a href="interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html#a4378431d4a1237be4c9643e6b936c769">BackEncordados.Common.Service.Cloudinary.ICloudinaryService.ResolveImageUrl</a></div><div class="ttdeci">string ResolveImageUrl(string storedValue, string folder)</div><div class="ttdoc">Resuelve el valor almacenado en base de datos a una URL completa de imagen.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary.html">BackEncordados.Common.Service.Cloudinary</a></div><div class="ttdef"><b>Definition</b> <a href="CloudinaryConstants_8cs_source.html#l00001">CloudinaryConstants.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html">BackEncordados.Materials.Dto.Strings</a></div><div class="ttdef"><b>Definition</b> <a href="CuerdaFilterdto_8cs_source.html#l00001">CuerdaFilterdto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings_html_aa1e8736ef0f7a31f62cc03e4151871f5"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Strings.html#aa1e8736ef0f7a31f62cc03e4151871f5">BackEncordados.Materials.Dto.Strings.CuerdaResponseDto</a></div><div class="ttdeci">record CuerdaResponseDto(long Id, Ulid TournamentId, string Marca, string Modelo, int Stock, double Precio, string StringFormat, string StringsType, double Calibre, string ImageUrl)</div><div class="ttdoc">DTO de salida que representa una cuerda del inventario para las respuestas de la API.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Mapper_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Mapper.html">BackEncordados.Materials.Mapper</a></div><div class="ttdef"><b>Definition</b> <a href="CuerdaMapper_8cs_source.html#l00005">CuerdaMapper.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Model.html">BackEncordados.Materials.Model</a></div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00004">Cuerdas.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Model_html_abdb675af6253d1f00af73bef13aae7c0"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Model.html#abdb675af6253d1f00af73bef13aae7c0">BackEncordados.Materials.Model.StringsType</a></div><div class="ttdeci">StringsType</div><div class="ttdoc">Enum que clasifica los tipos de cuerdas para raquetas según su material y construcción.</div><div class="ttdef"><b>Definition</b> <a href="StringsType_8cs_source.html#l00018">StringsType.cs:19</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Model_html_ae0983f493403fdfbe937023d6ccb9b4c"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Model.html#ae0983f493403fdfbe937023d6ccb9b4c">BackEncordados.Materials.Model.FormatoCuerda</a></div><div class="ttdeci">FormatoCuerda</div><div class="ttdoc">Enum que representa el formato o presentación de las cuerdas para la venta.</div><div class="ttdef"><b>Definition</b> <a href="FormatoCuerda_8cs_source.html#l00014">FormatoCuerda.cs:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_0048e789433b5fe1cb671302277b48d6.html">Materials</a></li><li class="navelem"><a class="el" href="dir_c115e98d875bcf8801b46fb04feb4dfd.html">Mapper</a></li><li class="navelem"><a class="el" href="CuerdaMapper_8cs.html">CuerdaMapper.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['testdbcontext_0',['TestDbContext',['../classTestEncordados_1_1Unit_1_1Filters_1_1TestDbContext.html',1,'TestEncordados::Unit::Filters']]],
+  ['timestampinterceptor_1',['TimestampInterceptor',['../classBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1TimestampInterceptor.html',1,'BackEncordados::Common::Database::Helpers']]],
+  ['timestampinterceptortests_2',['TimestampInterceptorTests',['../classTestEncordados_1_1Unit_1_1Common_1_1Database_1_1TimestampInterceptorTests.html',1,'TestEncordados::Unit::Common::Database']]],
+  ['timestamptestcontext_3',['TimestampTestContext',['../classTestEncordados_1_1Unit_1_1Common_1_1Database_1_1TimestampTestContext.html',1,'TestEncordados::Unit::Common::Database']]],
+  ['tournamentadminrequestdto_4',['TournamentAdminRequestDto',['../classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentAdminRequestDto.html',1,'BackEncordados::Talleres::Dto']]],
+  ['tournamentexcelrowdto_5',['TournamentExcelRowDto',['../classBackEncordados_1_1Excel_1_1Dto_1_1TournamentExcelRowDto.html',1,'BackEncordados::Excel::Dto']]],
+  ['tournamentpatchdto_6',['TournamentPatchDto',['../classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentPatchDto.html',1,'BackEncordados::Talleres::Dto']]],
+  ['tournamentrepositorytests_7',['TournamentRepositoryTests',['../classTestEncordados_1_1Integration_1_1Repositories_1_1TournamentRepositoryTests.html',1,'TestEncordados::Integration::Repositories']]],
+  ['tournamentrequestdto_8',['TournamentRequestDto',['../classBackEncordados_1_1Talleres_1_1Dto_1_1TournamentRequestDto.html',1,'BackEncordados::Talleres::Dto']]],
+  ['tournamentresponsedetailsdtotests_9',['TournamentResponseDetailsDtoTests',['../classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1TournamentResponseDetailsDtoTests.html',1,'TestEncordados::Unit::Common::Dto']]],
+  ['tournamentscontrollertests_10',['TournamentsControllerTests',['../classTestEncordados_1_1Unit_1_1Controllers_1_1Talleres_1_1TournamentsControllerTests.html',1,'TestEncordados::Unit::Controllers::Talleres']]],
+  ['tournamentserrorstests_11',['TournamentsErrorsTests',['../classTestEncordados_1_1Unit_1_1Errors_1_1TournamentsErrorsTests.html',1,'TestEncordados::Unit::Errors']]],
+  ['tournamentservicetests_12',['TournamentServiceTests',['../classTestEncordados_1_1Unit_1_1Services_1_1Talleres_1_1TournamentServiceTests.html',1,'TestEncordados::Unit::Services::Talleres']]],
+  ['tournamentsmappertests_13',['TournamentsMapperTests',['../classTestEncordados_1_1Unit_1_1Mappers_1_1TournamentsMapperTests.html',1,'TestEncordados::Unit::Mappers']]],
+  ['transactionalattribute_14',['TransactionalAttribute',['../classBackEncordados_1_1Common_1_1Utils_1_1TransactionalAttribute.html',1,'BackEncordados::Common::Utils']]],
+  ['transactionalattributetests_15',['TransactionalAttributeTests',['../classTestEncordados_1_1Unit_1_1Filters_1_1TransactionalAttributeTests.html',1,'TestEncordados::Unit::Filters']]]
+];

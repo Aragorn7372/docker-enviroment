@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Export/Archive/ExportArchiveManager.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('ExportArchiveManager_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ExportArchiveManager.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ExportArchiveManager_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.IO.Compression;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Text.Json;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Export_1_1Dto.html">BackEncordados.Export.Dto</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Model.html">BackEncordados.Materials.Model</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Talleres_1_1Model.html">BackEncordados.Talleres.Model</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>Newtonsoft.Json;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="ExportArchiveManager_8cs.html#a1d0f2c3994a9a2840b7e2892bcd6e998">    8</a></span><span class="keyword">using </span><a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a1d0f2c3994a9a2840b7e2892bcd6e998">JsonSerializer</a> = System.Text.Json.JsonSerializer;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">    9</a></span><span class="keyword">using </span><a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a> = System.IO.Path;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">   10</a></span><span class="keyword">using </span><a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a> = System.IO.File;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="ExportArchiveManager_8cs.html#add1fbdababb069f1fd51819c7dea543b">   11</a></span><span class="keyword">using </span><a class="code hl_typedef" href="ExportArchiveManager_8cs.html#add1fbdababb069f1fd51819c7dea543b">IODirectory</a> = System.IO.Directory;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Export.html">   13</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Export_1_1Archive.html">BackEncordados.Export.Archive</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">public</span> <span class="keyword">class </span>ExportArchiveManager(ILogger&lt;ExportArchiveManager&gt; logger) : IExportArchiveManager</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">private</span> readonly JsonSerializerOptions _jsonOptions = <span class="keyword">new</span>()</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        WriteIndented = <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        PropertyNamingPolicy = JsonNamingPolicy.CamelCase</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    };</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">private</span> <span class="keyword">static</span> readonly JsonSerializerSettings NewtonsoftSettings = <span class="keyword">new</span>()</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        ReferenceLoopHandling = ReferenceLoopHandling.Ignore</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    };</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">public</span> async Task&lt;byte[]&gt; CreateZipAsync(<a class="code hl_class" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html">ExportDataDto</a> data)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        logger.LogInformation(<span class="stringliteral">&quot;Creating ZIP archive&quot;</span>);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        var tempDir = <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.GetTempPath(), $<span class="stringliteral">&quot;archive_{Guid.NewGuid()}&quot;</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#add1fbdababb069f1fd51819c7dea543b">IODirectory</a>.CreateDirectory(tempDir);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            var manifest = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Common_1_1Dto_1_1ExportManifestDto.html">ExportManifestDto</a></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                ExportedAt = DateTime.UtcNow,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                Entities = <span class="keyword">new</span> List&lt;ExportEntityInfo&gt;()</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            };</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            var usersJson = JsonConvert.SerializeObject(data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a6a7ae30d0584c3b68bf3611ca0e37426">Users</a>, Formatting.Indented, NewtonsoftSettings);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            await <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.WriteAllTextAsync(<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(tempDir, <span class="stringliteral">&quot;users.json&quot;</span>), usersJson);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            manifest.<a class="code hl_property" href="classBackEncordados_1_1Common_1_1Dto_1_1ExportManifestDto.html#aca77c9c29a4651e6b360573807ade814">Entities</a>.Add(<span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Common_1_1Dto_1_1ExportEntityInfo.html">ExportEntityInfo</a> { Name = <span class="stringliteral">&quot;users&quot;</span>, RecordCount = data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a6a7ae30d0584c3b68bf3611ca0e37426">Users</a>.Count, FileName = <span class="stringliteral">&quot;users.json&quot;</span> });</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            logger.LogInformation(<span class="stringliteral">&quot;Added {Count} users to archive&quot;</span>, data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a6a7ae30d0584c3b68bf3611ca0e37426">Users</a>.Count);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            var tournamentsJson = JsonConvert.SerializeObject(data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a63de0129fa23b767146ea3392f5c57ac">Tournaments</a>, Formatting.Indented, NewtonsoftSettings);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            await <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.WriteAllTextAsync(<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(tempDir, <span class="stringliteral">&quot;tournaments.json&quot;</span>), tournamentsJson);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            manifest.Entities.Add(<span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Common_1_1Dto_1_1ExportEntityInfo.html">ExportEntityInfo</a> { Name = <span class="stringliteral">&quot;tournaments&quot;</span>, RecordCount = data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a63de0129fa23b767146ea3392f5c57ac">Tournaments</a>.Count, FileName = <span class="stringliteral">&quot;tournaments.json&quot;</span> });</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            logger.LogInformation(<span class="stringliteral">&quot;Added {Count} tournaments to archive&quot;</span>, data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a63de0129fa23b767146ea3392f5c57ac">Tournaments</a>.Count);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            var materialsJson = JsonConvert.SerializeObject(data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a9f9fa9711722daae9789c7f0bb83e7c5">Materials</a>, Formatting.Indented, NewtonsoftSettings);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            await <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.WriteAllTextAsync(<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(tempDir, <span class="stringliteral">&quot;materials.json&quot;</span>), materialsJson);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            manifest.Entities.Add(<span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Common_1_1Dto_1_1ExportEntityInfo.html">ExportEntityInfo</a> { Name = <span class="stringliteral">&quot;materials&quot;</span>, RecordCount = data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a9f9fa9711722daae9789c7f0bb83e7c5">Materials</a>.Count, FileName = <span class="stringliteral">&quot;materials.json&quot;</span> });</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            logger.LogInformation(<span class="stringliteral">&quot;Added {Count} materials to archive&quot;</span>, data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a9f9fa9711722daae9789c7f0bb83e7c5">Materials</a>.Count);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            var cuerdasJson = JsonConvert.SerializeObject(data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#ae8ef441f3ed19f2618855cdc46573d81">Cuerdas</a>, Formatting.Indented, NewtonsoftSettings);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            await <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.WriteAllTextAsync(<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(tempDir, <span class="stringliteral">&quot;cuerdas.json&quot;</span>), cuerdasJson);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            manifest.Entities.Add(<span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Common_1_1Dto_1_1ExportEntityInfo.html">ExportEntityInfo</a> { Name = <span class="stringliteral">&quot;cuerdas&quot;</span>, RecordCount = data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#ae8ef441f3ed19f2618855cdc46573d81">Cuerdas</a>.Count, FileName = <span class="stringliteral">&quot;cuerdas.json&quot;</span> });</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            logger.LogInformation(<span class="stringliteral">&quot;Added {Count} cuerdas to archive&quot;</span>, data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#ae8ef441f3ed19f2618855cdc46573d81">Cuerdas</a>.Count);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            var pedidosJson = JsonConvert.SerializeObject(data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a4faf4e75aa8c04bc9f63de789093142b">Pedidos</a>, Formatting.Indented, NewtonsoftSettings);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            await <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.WriteAllTextAsync(<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(tempDir, <span class="stringliteral">&quot;orders.json&quot;</span>), pedidosJson);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            manifest.Entities.Add(<span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Common_1_1Dto_1_1ExportEntityInfo.html">ExportEntityInfo</a> { Name = <span class="stringliteral">&quot;orders&quot;</span>, RecordCount = data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a4faf4e75aa8c04bc9f63de789093142b">Pedidos</a>.Count, FileName = <span class="stringliteral">&quot;orders.json&quot;</span> });</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            logger.LogInformation(<span class="stringliteral">&quot;Added {Count} pedidos to archive&quot;</span>, data.<a class="code hl_property" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a4faf4e75aa8c04bc9f63de789093142b">Pedidos</a>.Count);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            var manifestJson = <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a1d0f2c3994a9a2840b7e2892bcd6e998">JsonSerializer</a>.Serialize(manifest, _jsonOptions);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            await <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.WriteAllTextAsync(<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(tempDir, <span class="stringliteral">&quot;manifest.json&quot;</span>), manifestJson);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            var zipPath = <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.GetTempPath(), $<span class="stringliteral">&quot;export_{DateTime.UtcNow:yyyyMMdd_HHmmss}.zip&quot;</span>);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.Exists(zipPath))</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.Delete(zipPath);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            ZipFile.CreateFromDirectory(tempDir, zipPath);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            logger.LogInformation(<span class="stringliteral">&quot;ZIP created: {ZipPath}&quot;</span>, zipPath);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <span class="keywordflow">return</span> await <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.ReadAllBytesAsync(zipPath);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordflow">finally</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#add1fbdababb069f1fd51819c7dea543b">IODirectory</a>.Exists(tempDir))</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#add1fbdababb069f1fd51819c7dea543b">IODirectory</a>.Delete(tempDir, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keyword">public</span> async Task&lt;ExportDataDto&gt; ExtractZipAsync(Stream zipStream)</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        logger.LogInformation(<span class="stringliteral">&quot;Extracting ZIP archive&quot;</span>);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        var tempDir = <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.GetTempPath(), $<span class="stringliteral">&quot;extract_{Guid.NewGuid()}&quot;</span>);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#add1fbdababb069f1fd51819c7dea543b">IODirectory</a>.CreateDirectory(tempDir);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            var zipPath = <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(tempDir, <span class="stringliteral">&quot;data.zip&quot;</span>);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            await <span class="keyword">using</span> (var fileStream = <span class="keyword">new</span> FileStream(zipPath, FileMode.Create))</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                await zipStream.CopyToAsync(fileStream);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            }</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            ZipFile.ExtractToDirectory(zipPath, tempDir, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            var data = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html">ExportDataDto</a>();</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            var tournamentsPath = <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(tempDir, <span class="stringliteral">&quot;tournaments.json&quot;</span>);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.Exists(tournamentsPath))</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                var json = await <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.ReadAllTextAsync(tournamentsPath);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                data.Tournaments = JsonConvert.DeserializeObject&lt;List&lt;Tournaments&gt;&gt;(json) ?? <span class="keyword">new</span> List&lt;Tournaments&gt;();</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                logger.LogInformation(<span class="stringliteral">&quot;Extracted {Count} tournaments&quot;</span>, data.Tournaments.Count);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            }</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            var usersPath = <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(tempDir, <span class="stringliteral">&quot;users.json&quot;</span>);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.Exists(usersPath))</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                var json = await <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.ReadAllTextAsync(usersPath);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                data.Users = JsonConvert.DeserializeObject&lt;List&lt;Usuarios.Model.User&gt;&gt;(json) ?? <span class="keyword">new</span> List&lt;Usuarios.Model.User&gt;();</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                logger.LogInformation(<span class="stringliteral">&quot;Extracted {Count} users&quot;</span>, data.Users.Count);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            var materialsPath = <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(tempDir, <span class="stringliteral">&quot;materials.json&quot;</span>);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.Exists(materialsPath))</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            {</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                var json = await <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.ReadAllTextAsync(materialsPath);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                data.Materials = JsonConvert.DeserializeObject&lt;List&lt;Material&gt;&gt;(json) ?? <span class="keyword">new</span> List&lt;Material&gt;();</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                logger.LogInformation(<span class="stringliteral">&quot;Extracted {Count} materials&quot;</span>, data.Materials.Count);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            }</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            var cuerdasPath = <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(tempDir, <span class="stringliteral">&quot;cuerdas.json&quot;</span>);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.Exists(cuerdasPath))</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            {</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                var json = await <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.ReadAllTextAsync(cuerdasPath);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                data.Cuerdas = JsonConvert.DeserializeObject&lt;List&lt;Materials.Model.Cuerdas&gt;&gt;(json) ?? <span class="keyword">new</span> List&lt;Materials.Model.Cuerdas&gt;();</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                logger.LogInformation(<span class="stringliteral">&quot;Extracted {Count} cuerdas&quot;</span>, data.Cuerdas.Count);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            }</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            var ordersPath = <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(tempDir, <span class="stringliteral">&quot;orders.json&quot;</span>);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.Exists(ordersPath))</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                var json = await <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.ReadAllTextAsync(ordersPath);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                data.Pedidos = JsonConvert.DeserializeObject&lt;List&lt;Purchased.Model.Pedidos&gt;&gt;(json) ?? <span class="keyword">new</span> List&lt;Purchased.Model.Pedidos&gt;();</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                logger.LogInformation(<span class="stringliteral">&quot;Extracted {Count} pedidos&quot;</span>, data.Pedidos.Count);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            <span class="keywordflow">return</span> data;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        }</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <span class="keywordflow">finally</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        {</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#add1fbdababb069f1fd51819c7dea543b">IODirectory</a>.Exists(tempDir))</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#add1fbdababb069f1fd51819c7dea543b">IODirectory</a>.Delete(tempDir, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        }</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    }</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keyword">public</span> async Task&lt;ExportManifestDto&gt; GetManifestAsync(<span class="keywordtype">byte</span>[] zipData)</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    {</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        var tempFile = <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.Combine(<a class="code hl_typedef" href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a>.GetTempPath(), $<span class="stringliteral">&quot;manifest_{Guid.NewGuid()}.zip&quot;</span>);</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        await <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.WriteAllBytesAsync(tempFile, zipData);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        {</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            <span class="keyword">using </span>var archive = ZipFile.OpenRead(tempFile);</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            var manifestEntry = archive.GetEntry(<span class="stringliteral">&quot;manifest.json&quot;</span>);</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            <span class="keywordflow">if</span> (manifestEntry == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="stringliteral">&quot;Manifest not found in zip&quot;</span>);</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            await <span class="keyword">using </span>var stream = manifestEntry.Open();</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            <span class="keyword">using </span>var reader = <span class="keyword">new</span> StreamReader(stream);</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            var json = await reader.ReadToEndAsync();</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            <span class="keywordflow">return</span> <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a1d0f2c3994a9a2840b7e2892bcd6e998">JsonSerializer</a>.Deserialize&lt;<a class="code hl_class" href="classBackEncordados_1_1Common_1_1Dto_1_1ExportManifestDto.html">ExportManifestDto</a>&gt;(json, _jsonOptions) </div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                ?? <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="stringliteral">&quot;Failed to deserialize manifest&quot;</span>);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        }</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        <span class="keywordflow">finally</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        {</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            <a class="code hl_typedef" href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a>.Delete(tempFile);</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        }</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    }</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>}</div>
+</div>
+<div class="ttc" id="aExportArchiveManager_8cs_html_a1d0f2c3994a9a2840b7e2892bcd6e998"><div class="ttname"><a href="ExportArchiveManager_8cs.html#a1d0f2c3994a9a2840b7e2892bcd6e998">JsonSerializer</a></div><div class="ttdeci">System.Text.Json.JsonSerializer JsonSerializer</div><div class="ttdef"><b>Definition</b> <a href="ExportArchiveManager_8cs_source.html#l00008">ExportArchiveManager.cs:8</a></div></div>
+<div class="ttc" id="aExportArchiveManager_8cs_html_a63d321e0b794918e22abee56b49d34e7"><div class="ttname"><a href="ExportArchiveManager_8cs.html#a63d321e0b794918e22abee56b49d34e7">IOFile</a></div><div class="ttdeci">System.IO.File IOFile</div><div class="ttdef"><b>Definition</b> <a href="ExportArchiveManager_8cs_source.html#l00010">ExportArchiveManager.cs:10</a></div></div>
+<div class="ttc" id="aExportArchiveManager_8cs_html_add1fbdababb069f1fd51819c7dea543b"><div class="ttname"><a href="ExportArchiveManager_8cs.html#add1fbdababb069f1fd51819c7dea543b">IODirectory</a></div><div class="ttdeci">System.IO.Directory IODirectory</div><div class="ttdef"><b>Definition</b> <a href="ExportArchiveManager_8cs_source.html#l00011">ExportArchiveManager.cs:11</a></div></div>
+<div class="ttc" id="aExportArchiveManager_8cs_html_aea37c717babcb00b68901403adb1c906"><div class="ttname"><a href="ExportArchiveManager_8cs.html#aea37c717babcb00b68901403adb1c906">IOPath</a></div><div class="ttdeci">System.IO.Path IOPath</div><div class="ttdef"><b>Definition</b> <a href="ExportArchiveManager_8cs_source.html#l00009">ExportArchiveManager.cs:9</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Common_1_1Dto_1_1ExportEntityInfo_html"><div class="ttname"><a href="classBackEncordados_1_1Common_1_1Dto_1_1ExportEntityInfo.html">BackEncordados.Common.Dto.ExportEntityInfo</a></div><div class="ttdoc">DTO que representa la información de una entidad individual dentro de un manifiesto de exportación....</div><div class="ttdef"><b>Definition</b> <a href="ExportManifestDto_8cs_source.html#l00040">ExportManifestDto.cs:41</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Common_1_1Dto_1_1ExportManifestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Common_1_1Dto_1_1ExportManifestDto.html">BackEncordados.Common.Dto.ExportManifestDto</a></div><div class="ttdoc">DTO que representa el manifiesto de un archivo de exportación. Contiene metadatos sobre la exportació...</div><div class="ttdef"><b>Definition</b> <a href="ExportManifestDto_8cs_source.html#l00019">ExportManifestDto.cs:20</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Common_1_1Dto_1_1ExportManifestDto_html_aca77c9c29a4651e6b360573807ade814"><div class="ttname"><a href="classBackEncordados_1_1Common_1_1Dto_1_1ExportManifestDto.html#aca77c9c29a4651e6b360573807ade814">BackEncordados.Common.Dto.ExportManifestDto.Entities</a></div><div class="ttdeci">List&lt; ExportEntityInfo &gt; Entities</div><div class="ttdoc">Lista de entidades incluidas en la exportación, con nombre, cantidad de registros y nombre de archivo...</div><div class="ttdef"><b>Definition</b> <a href="ExportManifestDto_8cs_source.html#l00028">ExportManifestDto.cs:28</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto_html"><div class="ttname"><a href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html">BackEncordados.Export.Dto.ExportDataDto</a></div><div class="ttdoc">DTO contenedor que agrupa todas las entidades del sistema para exportación e importación completa de ...</div><div class="ttdef"><b>Definition</b> <a href="ExportDataDto_8cs_source.html#l00060">ExportDataDto.cs:61</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto_html_a4faf4e75aa8c04bc9f63de789093142b"><div class="ttname"><a href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a4faf4e75aa8c04bc9f63de789093142b">BackEncordados.Export.Dto.ExportDataDto.Pedidos</a></div><div class="ttdeci">List&lt; Pedidos &gt; Pedidos</div><div class="ttdoc">Lista de pedidos para exportación/importación. Serializada como orders.json. Incluye las líneas de pe...</div><div class="ttdef"><b>Definition</b> <a href="ExportDataDto_8cs_source.html#l00078">ExportDataDto.cs:78</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto_html_a63de0129fa23b767146ea3392f5c57ac"><div class="ttname"><a href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a63de0129fa23b767146ea3392f5c57ac">BackEncordados.Export.Dto.ExportDataDto.Tournaments</a></div><div class="ttdeci">List&lt; Tournaments &gt; Tournaments</div><div class="ttdoc">Lista de torneos para exportación/importación. Serializada como tournaments.json.</div><div class="ttdef"><b>Definition</b> <a href="ExportDataDto_8cs_source.html#l00066">ExportDataDto.cs:66</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto_html_a6a7ae30d0584c3b68bf3611ca0e37426"><div class="ttname"><a href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a6a7ae30d0584c3b68bf3611ca0e37426">BackEncordados.Export.Dto.ExportDataDto.Users</a></div><div class="ttdeci">List&lt; User &gt; Users</div><div class="ttdoc">Lista de usuarios del sistema para exportación/importación. Serializada como users....</div><div class="ttdef"><b>Definition</b> <a href="ExportDataDto_8cs_source.html#l00063">ExportDataDto.cs:63</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto_html_a9f9fa9711722daae9789c7f0bb83e7c5"><div class="ttname"><a href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#a9f9fa9711722daae9789c7f0bb83e7c5">BackEncordados.Export.Dto.ExportDataDto.Materials</a></div><div class="ttdeci">List&lt; Material &gt; Materials</div><div class="ttdoc">Lista de materiales de encordado para exportación/importación. Serializada como materials....</div><div class="ttdef"><b>Definition</b> <a href="ExportDataDto_8cs_source.html#l00069">ExportDataDto.cs:69</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto_html_ae8ef441f3ed19f2618855cdc46573d81"><div class="ttname"><a href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html#ae8ef441f3ed19f2618855cdc46573d81">BackEncordados.Export.Dto.ExportDataDto.Cuerdas</a></div><div class="ttdeci">List&lt; Cuerdas &gt; Cuerdas</div><div class="ttdoc">Lista de cuerdas para exportación/importación. Serializada como cuerdas.json.</div><div class="ttdef"><b>Definition</b> <a href="ExportDataDto_8cs_source.html#l00072">ExportDataDto.cs:72</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ExportManifestDto_8cs_source.html#l00001">ExportManifestDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Export_1_1Archive_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Export_1_1Archive.html">BackEncordados.Export.Archive</a></div><div class="ttdef"><b>Definition</b> <a href="ExportArchiveManager_8cs_source.html#l00013">ExportArchiveManager.cs:13</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Export_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Export_1_1Dto.html">BackEncordados.Export.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ExportDataDto_8cs_source.html#l00006">ExportDataDto.cs:6</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Model.html">BackEncordados.Materials.Model</a></div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00004">Cuerdas.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Talleres_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Talleres_1_1Model.html">BackEncordados.Talleres.Model</a></div><div class="ttdef"><b>Definition</b> <a href="Tournaments_8cs_source.html#l00004">Tournaments.cs:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_0d87cec8e0952342d29a37b4598628c5.html">Export</a></li><li class="navelem"><a class="el" href="dir_cdc0fcf8372400f8b0764a0d8ea3e0b2.html">Archive</a></li><li class="navelem"><a class="el" href="ExportArchiveManager_8cs.html">ExportArchiveManager.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

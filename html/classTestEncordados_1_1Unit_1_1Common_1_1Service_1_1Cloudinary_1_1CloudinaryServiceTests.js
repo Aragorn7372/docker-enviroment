@@ -1,0 +1,27 @@
+var classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests =
+[
+    [ "DeleteAsync_WhenPublicIdEmpty_Throws", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a8a157ba88da3208af37998e62ac0c405", null ],
+    [ "DeleteAsync_WhenPublicIdNull_Throws", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a74f306a730a738f627126670b4ff0b75", null ],
+    [ "GetDefaultImageUrl_WhenFolderInvalid_Throws", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a52525393644a0099bcbe34215bcc125e", null ],
+    [ "GetDefaultImageUrl_WhenFolderTalleres_ReturnsDefaultTaller", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a28424c8182124f7face8a37836bc0e0c", null ],
+    [ "GetDefaultImageUrl_WhenFolderUsuarios_ReturnsDefaultUsuario", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a0c1576d7bf020cfd3a6c5d72b66e66cb", null ],
+    [ "GetImageUrl_WhenFilenameEmpty_ReturnsDefault", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a47d60f2c9c19cee26d4e8878e159a2eb", null ],
+    [ "GetImageUrl_WhenFilenameNull_ReturnsDefault", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#ad8cdb2cb6140f2ba3828a4a0d538d367", null ],
+    [ "GetImageUrl_WhenFilenameValid_BuildsUrl", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a2361b4ac50dd3e3d8cb8d2a8a2668695", null ],
+    [ "GetImageUrlWithTransformations_WhenPublicIdEmpty_Throws", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a406d5432e6400d09f65c7a8dc796ca5c", null ],
+    [ "GetImageUrlWithTransformations_WhenValid_BuildsUrl", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#ac44cda294d4b356082528211a48c49c7", null ],
+    [ "GetImageUrlWithTransformations_WithCustomDimensions_BuildsUrl", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#af3a2fc1f4e2db177270a0a9bfa3a195b", null ],
+    [ "ResolveImageUrl_WhenEmpty_ReturnsDefault", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#afcc1c4b66c3e83fec313c1c4716bdf11", null ],
+    [ "ResolveImageUrl_WhenNull_ReturnsDefault", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a8dae30a7f855b12e4c9055394d8355ab", null ],
+    [ "ResolveImageUrl_WhenPublicId_ReturnsTransformedUrl", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#af3c551f16c91eb6596f9c155cc76d4b9", null ],
+    [ "ResolveImageUrl_WhenStartsWithHttp_ReturnsAsIs", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a1b646e2a7b358d38ed0ef9c19c3dbe8a", null ],
+    [ "SetUp", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#ac82fac6ac0327b727dee3f50c108fb6b", null ],
+    [ "TearDown", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a17d85699ccf8cfadadfa838ad4c363c6", null ],
+    [ "UploadAsync_WhenFileEmpty_Throws", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#ab562d78ee2075438b5ee8311c878897c", null ],
+    [ "UploadAsync_WhenFilenameEmpty_Throws", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#aa65847a8efb823ad64015ec2773c4178", null ],
+    [ "UploadAsync_WhenFileNull_Throws", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a22edab625fe6c4173950545dc7ad40cc", null ],
+    [ "UploadAsync_WhenFolderInvalid_Throws", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a2d5ac268a78aa4501cef652ae123001b", null ],
+    [ "UploadWithAutoNameAsync_WhenEntityIdEmpty_Throws", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a022b1169c4b95e3a7a7ffc55f9313576", null ],
+    [ "UploadWithAutoNameAsync_WhenFileNull_Throws", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#aaae916d9c3f41ef59652d6c09fe0ddcc", null ],
+    [ "UploadWithAutoNameAsync_WhenFolderInvalid_Throws", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cloudinary_1_1CloudinaryServiceTests.html#a8e54873630178f06e98133396dd010b4", null ]
+];

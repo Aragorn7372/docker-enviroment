@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Usuarios/Validator/ChangeRoleRequestDtoValidator.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('ChangeRoleRequestDtoValidator_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ChangeRoleRequestDtoValidator.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ChangeRoleRequestDtoValidator_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html">BackEncordados.Usuarios.Dto</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>FluentValidation;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Usuarios_1_1Validator.html">    4</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Usuarios_1_1Validator.html">BackEncordados.Usuarios.Validator</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Validator_1_1ChangeRoleRequestDtoValidator.html">   15</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classBackEncordados_1_1Usuarios_1_1Validator_1_1ChangeRoleRequestDtoValidator.html">ChangeRoleRequestDtoValidator</a> : AbstractValidator&lt;ChangeRoleRequestDto&gt;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">private</span> <span class="keyword">static</span> readonly <span class="keywordtype">string</span>[] ValidRoles = { <span class="stringliteral">&quot;ADMIN&quot;</span>, <span class="stringliteral">&quot;USER&quot;</span>, <span class="stringliteral">&quot;OWNER&quot;</span>, <span class="stringliteral">&quot;ENCORDER&quot;</span> };</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Usuarios_1_1Validator_1_1ChangeRoleRequestDtoValidator.html#a33f6e27f5d54b1f0aa28becc5476c2e4">   19</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classBackEncordados_1_1Usuarios_1_1Validator_1_1ChangeRoleRequestDtoValidator.html#a33f6e27f5d54b1f0aa28becc5476c2e4">ChangeRoleRequestDtoValidator</a>()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        RuleFor(x =&gt; x.UserId)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            .NotEmpty().WithMessage(<span class="stringliteral">&quot;El ID del usuario es obligatorio&quot;</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        RuleFor(x =&gt; x.RoleName)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            .NotEmpty().WithMessage(<span class="stringliteral">&quot;El nombre del rol es obligatorio&quot;</span>)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            .Must(BeValidRole).WithMessage($<span class="stringliteral">&quot;El rol debe ser uno de los siguientes: {string.Join(&quot;</span>, <span class="stringliteral">&quot;, ValidRoles)}&quot;</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> BeValidRole(<span class="keywordtype">string</span> roleName)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">return</span> ValidRoles.Contains(roleName?.ToUpperInvariant());</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+</div>
+</div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Validator_1_1ChangeRoleRequestDtoValidator_html"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Validator_1_1ChangeRoleRequestDtoValidator.html">BackEncordados.Usuarios.Validator.ChangeRoleRequestDtoValidator</a></div><div class="ttdoc">Validador FluentValidation para ChangeRoleRequestDto.</div><div class="ttdef"><b>Definition</b> <a href="ChangeRoleRequestDtoValidator_8cs_source.html#l00015">ChangeRoleRequestDtoValidator.cs:16</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Usuarios_1_1Validator_1_1ChangeRoleRequestDtoValidator_html_a33f6e27f5d54b1f0aa28becc5476c2e4"><div class="ttname"><a href="classBackEncordados_1_1Usuarios_1_1Validator_1_1ChangeRoleRequestDtoValidator.html#a33f6e27f5d54b1f0aa28becc5476c2e4">BackEncordados.Usuarios.Validator.ChangeRoleRequestDtoValidator.ChangeRoleRequestDtoValidator</a></div><div class="ttdeci">ChangeRoleRequestDtoValidator()</div><div class="ttdef"><b>Definition</b> <a href="ChangeRoleRequestDtoValidator_8cs_source.html#l00019">ChangeRoleRequestDtoValidator.cs:19</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html">BackEncordados.Usuarios.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ChangePasswordRequestDto_8cs_source.html#l00003">ChangePasswordRequestDto.cs:3</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Usuarios_1_1Validator_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Usuarios_1_1Validator.html">BackEncordados.Usuarios.Validator</a></div><div class="ttdef"><b>Definition</b> <a href="ChangeRoleRequestDtoValidator_8cs_source.html#l00004">ChangeRoleRequestDtoValidator.cs:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_fd3792cbbf285840670a23aad598bd09.html">Usuarios</a></li><li class="navelem"><a class="el" href="dir_2307733731e976f61e38b55d9dc5dbbb.html">Validator</a></li><li class="navelem"><a class="el" href="ChangeRoleRequestDtoValidator_8cs.html">ChangeRoleRequestDtoValidator.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

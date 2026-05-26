@@ -1,0 +1,5 @@
+<map id="BackEncordados.Materials.Model.Cuerdas" name="BackEncordados.Materials.Model.Cuerdas">
+<area shape="rect" id="Node000001" title="Entidad que representa una cuerda de encordado en el inventario del sistema." alt="" coords="5,79,204,119"/>
+<area shape="rect" id="Node000002" href="$interfaceBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1ITimestamped.html" title="Interfaz que define las propiedades de timestamps para entidades que requieren auditoría temporal: Cr..." alt="" coords="47,5,163,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,44,107,79,102,79,102,44"/>
+</map>

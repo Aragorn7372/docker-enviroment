@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Export/Archive/IExportArchiveManager.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('IExportArchiveManager_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">IExportArchiveManager.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="IExportArchiveManager_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Export_1_1Dto.html">BackEncordados.Export.Dto</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Export_1_1Archive.html">BackEncordados.Export.Archive</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="};">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager.html">   59</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="interfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager.html">IExportArchiveManager</a></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager.html#af56c23138c538e135db2f8d1894abd34">   80</a></span>    Task&lt;byte[]&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager.html#af56c23138c538e135db2f8d1894abd34">CreateZipAsync</a>(<a class="code hl_class" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html">ExportDataDto</a> data);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager.html#aa46d57691fc173ae1deb9a952a25dff4">  100</a></span>    Task&lt;ExportDataDto&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager.html#aa46d57691fc173ae1deb9a952a25dff4">ExtractZipAsync</a>(Stream zipStream);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="interfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager.html#a724975e1c574e4d7c36063259b70757c">  121</a></span>    Task&lt;ExportManifestDto&gt; <a class="code hl_function" href="interfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager.html#a724975e1c574e4d7c36063259b70757c">GetManifestAsync</a>(<span class="keywordtype">byte</span>[] zipData);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+</div>
+<div class="ttc" id="aclassBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto_html"><div class="ttname"><a href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html">BackEncordados.Export.Dto.ExportDataDto</a></div><div class="ttdoc">DTO contenedor que agrupa todas las entidades del sistema para exportación e importación completa de ...</div><div class="ttdef"><b>Definition</b> <a href="ExportDataDto_8cs_source.html#l00060">ExportDataDto.cs:61</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager.html">BackEncordados.Export.Archive.IExportArchiveManager</a></div><div class="ttdoc">Contrato del administrador de archivos ZIP para exportación e importación completa de la base de dato...</div><div class="ttdef"><b>Definition</b> <a href="IExportArchiveManager_8cs_source.html#l00059">IExportArchiveManager.cs:60</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager_html_a724975e1c574e4d7c36063259b70757c"><div class="ttname"><a href="interfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager.html#a724975e1c574e4d7c36063259b70757c">BackEncordados.Export.Archive.IExportArchiveManager.GetManifestAsync</a></div><div class="ttdeci">Task&lt; ExportManifestDto &gt; GetManifestAsync(byte[] zipData)</div><div class="ttdoc">Obtiene el manifest de un archivo ZIP sin extraer los datos completos.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager_html_aa46d57691fc173ae1deb9a952a25dff4"><div class="ttname"><a href="interfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager.html#aa46d57691fc173ae1deb9a952a25dff4">BackEncordados.Export.Archive.IExportArchiveManager.ExtractZipAsync</a></div><div class="ttdeci">Task&lt; ExportDataDto &gt; ExtractZipAsync(Stream zipStream)</div><div class="ttdoc">Extrae los datos de un archivo ZIP y los deserializa en un ExportDataDto.</div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager_html_af56c23138c538e135db2f8d1894abd34"><div class="ttname"><a href="interfaceBackEncordados_1_1Export_1_1Archive_1_1IExportArchiveManager.html#af56c23138c538e135db2f8d1894abd34">BackEncordados.Export.Archive.IExportArchiveManager.CreateZipAsync</a></div><div class="ttdeci">Task&lt; byte[]&gt; CreateZipAsync(ExportDataDto data)</div><div class="ttdoc">Crea un archivo ZIP con todos los datos de la base de datos en formato JSON.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ExportManifestDto_8cs_source.html#l00001">ExportManifestDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Export_1_1Archive_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Export_1_1Archive.html">BackEncordados.Export.Archive</a></div><div class="ttdef"><b>Definition</b> <a href="ExportArchiveManager_8cs_source.html#l00013">ExportArchiveManager.cs:13</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Export_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Export_1_1Dto.html">BackEncordados.Export.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ExportDataDto_8cs_source.html#l00006">ExportDataDto.cs:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_0d87cec8e0952342d29a37b4598628c5.html">Export</a></li><li class="navelem"><a class="el" href="dir_cdc0fcf8372400f8b0764a0d8ea3e0b2.html">Archive</a></li><li class="navelem"><a class="el" href="IExportArchiveManager_8cs.html">IExportArchiveManager.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

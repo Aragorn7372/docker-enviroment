@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Excel/Repository/ExcelRepository.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('ExcelRepository_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ExcelRepository.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ExcelRepository_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html">BackEncordados.Common.Database.Config</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Excel_1_1Dto.html">BackEncordados.Excel.Dto</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Model.html">BackEncordados.Materials.Model</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Purchased_1_1Model.html">BackEncordados.Purchased.Model</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>Microsoft.EntityFrameworkCore;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Excel_1_1Repository.html">    7</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Excel_1_1Repository.html">BackEncordados.Excel.Repository</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">public</span> <span class="keyword">class </span>ExcelRepository(</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#ad88c9780837c9f6201cc1127856fe504">PedidosDbContext</a> pedidosDbContext,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a874b9c7897e5684ed9363273862c07ae">UserDbContext</a> userDbContext,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#ab77e5c2557105dfeff621db130666e4f">TalleresDbContext</a> talleresDbContext,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_function" href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a059e238e4bbb11feb9df70d8f0ed32df">MaterialsDbContext</a> materialsDbContext</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>) : <a class="code hl_interface" href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html">IExcelRepository</a></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">public</span> async Task&lt;IEnumerable&lt;TournamentExcelRowDto&gt;&gt; GetTournamentDataAsync(Ulid tournamentId)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        var pedidos = await pedidosDbContext.Pedidos</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            .Where(p =&gt; p.TournamentId == tournamentId)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            .ToListAsync();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        var playerIds = pedidos.Select(p =&gt; p.PlayerId).Distinct().ToList();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        var users = await userDbContext.Users</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            .Where(u =&gt; playerIds.Contains(u.Id))</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            .ToDictionaryAsync(u =&gt; u.Id, u =&gt; <span class="keyword">new</span> { u.Username, u.Name });</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        var result = pedidos</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            .GroupBy(p =&gt; p.PlayerId)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            .Select(g =&gt;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                var user = users.GetValueOrDefault(g.Key);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Excel_1_1Dto_1_1TournamentExcelRowDto.html">TournamentExcelRowDto</a></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    Username = user?.<a class="code hl_property" href="classBackEncordados_1_1Excel_1_1Dto_1_1TournamentExcelRowDto.html#abe5fc5f6a18e1921098e924171d290cf">Username</a> ?? <span class="stringliteral">&quot;Unknown&quot;</span>,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                    Name = user?.Name ?? <span class="stringliteral">&quot;Unknown&quot;</span>,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                    RacketCount = g.Count(),</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                    TotalPrice = (decimal)g.Sum(p =&gt; p.Price)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                };</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            })</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            .OrderBy(r =&gt; r.Username)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            .ToList();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keyword">public</span> async Task&lt;bool&gt; IsUserSupervisorOfTournamentAsync(Ulid userId, Ulid tournamentId)</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        var tournament = await talleresDbContext.Partidos</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            .Where(t =&gt; t.Id == tournamentId)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            .FirstOrDefaultAsync();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">if</span> (tournament == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> tournament.SupervisorList.Contains(userId);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keyword">public</span> async Task&lt;bool&gt; IsUserOwnerOfTournamentAsync(Ulid userId, Ulid tournamentId)</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        var tournament = await talleresDbContext.Partidos</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            .Where(t =&gt; t.Id == tournamentId)</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            .FirstOrDefaultAsync();</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordflow">if</span> (tournament == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">return</span> tournament.Owner == userId;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keyword">public</span> async Task&lt;ExcelAdvancedDataDto&gt; GetAdvancedDataAsync(Ulid tournamentId, List&lt;string&gt; types)</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        var data = <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedDataDto.html">ExcelAdvancedDataDto</a>();</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keywordflow">if</span> (types.Contains(<span class="stringliteral">&quot;users&quot;</span>))</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        {</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            var users = await userDbContext.Users</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                .AsNoTracking()</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                .Where(u =&gt; u.TournamentId == tournamentId)</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                .ToListAsync();</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            data.Users = users.Select(u =&gt; <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelUsersDto.html">ExcelUsersDto</a></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                Id = u.<a class="code hl_property" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelUsersDto.html#ae5845df4d9241869b0f5620ba6d86b74">Id</a>.ToString(),</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                Username = u.Username,</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                Name = u.Name,</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                Email = u.Email,</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                Phone = u.Phone,</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                TournamentId = u.TournamentId?.ToString()</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            }).ToList();</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        }</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <span class="keywordflow">if</span> (types.Contains(<span class="stringliteral">&quot;materials&quot;</span>))</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            var materials = await materialsDbContext.Materiales</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                .AsNoTracking()</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                .Where(m =&gt; m.TournamentId == tournamentId)</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                .ToListAsync();</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            data.Materials = materials.Select(m =&gt; <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelMaterialsDto.html">ExcelMaterialsDto</a></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            {</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                Id = m.<a class="code hl_property" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelMaterialsDto.html#aa87c26147c239b49dabfd3fb9bdddf88">Id</a>,</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                TournamentId = m.TournamentId.ToString(),</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                Marca = m.Marca,</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                Modelo = m.Modelo,</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                Stock = m.Stock,</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                Precio = m.Precio,</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                Type = m.Type.ToString()</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            }).ToList();</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        }</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="keywordflow">if</span> (types.Contains(<span class="stringliteral">&quot;cuerdas&quot;</span>))</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        {</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            var cuerdas = await materialsDbContext.Cuerdas</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                .AsNoTracking()</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                .Where(c =&gt; c.TournamentId == tournamentId)</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                .ToListAsync();</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            data.Cuerdas = cuerdas.Select(c =&gt; <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelCuerdasDto.html">ExcelCuerdasDto</a></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            {</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                Id = c.<a class="code hl_property" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelCuerdasDto.html#a7e27c1342ba21d60b1c28b96f5184b9c">Id</a>,</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                TournamentId = c.TournamentId.ToString(),</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                Marca = c.Marca,</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                Modelo = c.Modelo,</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                Stock = c.Stock,</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                Precio = c.Precio,</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                Calibre = c.Calibre,</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                <a class="code hl_typedef" href="ExcelRepositoryTests_8cs.html#a3e3d5292efced67d4a8d028cfbd6274e">StringFormat</a> = c.StringFormat.ToString(),</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                <a class="code hl_enumeration" href="namespaceBackEncordados_1_1Materials_1_1Model.html#abdb675af6253d1f00af73bef13aae7c0">StringsType</a> = c.StringsType.ToString()</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            }).ToList();</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        }</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        <span class="keywordflow">if</span> (types.Contains(<span class="stringliteral">&quot;tournament&quot;</span>))</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        {</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            var tournament = await talleresDbContext.Partidos</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                .Where(t =&gt; t.Id == tournamentId)</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                .FirstOrDefaultAsync();</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            <span class="keywordflow">if</span> (tournament != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            {</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                data.Tournament.Add(<span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelTournamentDto.html">ExcelTournamentDto</a></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                {</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                    Id = tournament.<a class="code hl_property" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelTournamentDto.html#a985327275f780ed62d7a1569466a7137">Id</a>.ToString(),</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                    Owner = tournament.Owner.ToString(),</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                    Title = tournament.Title,</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                    StartTournament = tournament.StartTournament,</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                    EndTournament = tournament.EndTournament,</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                    Logotype = tournament.Logotype,</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                    WorkersList = <span class="keywordtype">string</span>.Join(<span class="stringliteral">&quot;;&quot;</span>, tournament.WorkersList),</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                    SupervisorList = <span class="keywordtype">string</span>.Join(<span class="stringliteral">&quot;;&quot;</span>, tournament.SupervisorList)</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                });</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            }</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        }</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        <span class="keywordflow">if</span> (types.Contains(<span class="stringliteral">&quot;pedidos&quot;</span>))</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        {</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            var pedidos = await pedidosDbContext.Pedidos</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                .Where(p =&gt; p.TournamentId == tournamentId)</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                .ToListAsync();</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>            data.Pedidos = pedidos.Select(p =&gt; <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelPedidosDto.html">ExcelPedidosDto</a></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            {</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                Id = p.<a class="code hl_property" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelPedidosDto.html#a2895698c3954991cb519c73c46256885">Id</a>.ToString(),</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                TournamentId = p.TournamentId.ToString(),</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                PlayerId = p.PlayerId.ToString(),</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                AssignedTo = p.AssignedTo.ToString(),</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                Machine = p.Machine,</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                Comments = p.Comments,</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                Price = p.Price,</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                PayStatus = p.PayStatus.ToString()</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>            }).ToList();</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>            var pedidoIds = pedidos.Select(p =&gt; p.Id).ToList();</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>            var lineas = await pedidosDbContext.PedidoLineas</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                .Where(l =&gt; pedidoIds.Contains(l.PedidoId))</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                .ToListAsync();</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span> </div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>            data.PedidoLineas = lineas.Select(l =&gt; <span class="keyword">new</span> <a class="code hl_class" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelPedidoLineasDto.html">ExcelPedidoLineasDto</a></div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>            {</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                Id = l.<a class="code hl_property" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelPedidoLineasDto.html#afbfaba5d94b533543f2d06f7aefb3103">Id</a>.ToString(),</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                PedidoId = l.PedidoId.ToString(),</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                RaquetModel = l.RaquetModel,</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                Nudos = l.Nudos,</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                DateString = l.DateString,</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>                Logotype = l.Logotype,</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>                Color = l.Color,</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                StringV = l.StringSetup?.StringV ?? <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>                TensionV = l.StringSetup?.TensionV ?? 0,</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                PreStetchV = l.StringSetup?.PreStetchV ?? 0,</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                StringH = l.StringSetup?.StringH ?? <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>                TensionH = l.StringSetup?.TensionH ?? 0,</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                PreStetchH = l.StringSetup?.PreStetchH ?? 0,</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>                <a class="code hl_enumeration" href="namespaceBackEncordados_1_1Purchased_1_1Model.html#ae46690249744a7cd379b6103ae0517ba">Status</a> = l.Status.ToString()</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>            }).ToList();</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>        }</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span> </div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>        <span class="keywordflow">return</span> data;</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    }</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>}</div>
+</div>
+<div class="ttc" id="aExcelRepositoryTests_8cs_html_a3e3d5292efced67d4a8d028cfbd6274e"><div class="ttname"><a href="ExcelRepositoryTests_8cs.html#a3e3d5292efced67d4a8d028cfbd6274e">StringFormat</a></div><div class="ttdeci">BackEncordados.Materials.Model.FormatoCuerda StringFormat</div><div class="ttdef"><b>Definition</b> <a href="ExcelRepositoryTests_8cs_source.html#l00013">ExcelRepositoryTests.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedDataDto_html"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedDataDto.html">BackEncordados.Excel.Dto.ExcelAdvancedDataDto</a></div><div class="ttdoc">DTO contenedor que agrupa todos los datos exportables de un torneo para la exportación avanzada a Exc...</div><div class="ttdef"><b>Definition</b> <a href="ExcelAdvancedDataDto_8cs_source.html#l00050">ExcelAdvancedDataDto.cs:51</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelCuerdasDto_html"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelCuerdasDto.html">BackEncordados.Excel.Dto.ExcelCuerdasDto</a></div><div class="ttdoc">DTO que representa una cuerda de encordado en la exportación a Excel.</div><div class="ttdef"><b>Definition</b> <a href="ExcelCuerdasDto_8cs_source.html#l00017">ExcelCuerdasDto.cs:18</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelCuerdasDto_html_a7e27c1342ba21d60b1c28b96f5184b9c"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelCuerdasDto.html#a7e27c1342ba21d60b1c28b96f5184b9c">BackEncordados.Excel.Dto.ExcelCuerdasDto.Id</a></div><div class="ttdeci">long Id</div><div class="ttdoc">Identificador numérico autoincremental de la cuerda.</div><div class="ttdef"><b>Definition</b> <a href="ExcelCuerdasDto_8cs_source.html#l00020">ExcelCuerdasDto.cs:20</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelMaterialsDto_html"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelMaterialsDto.html">BackEncordados.Excel.Dto.ExcelMaterialsDto</a></div><div class="ttdoc">DTO que representa un material de encordado en la exportación a Excel.</div><div class="ttdef"><b>Definition</b> <a href="ExcelMaterialsDto_8cs_source.html#l00013">ExcelMaterialsDto.cs:14</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelMaterialsDto_html_aa87c26147c239b49dabfd3fb9bdddf88"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelMaterialsDto.html#aa87c26147c239b49dabfd3fb9bdddf88">BackEncordados.Excel.Dto.ExcelMaterialsDto.Id</a></div><div class="ttdeci">long Id</div><div class="ttdoc">Identificador numérico autoincremental del material.</div><div class="ttdef"><b>Definition</b> <a href="ExcelMaterialsDto_8cs_source.html#l00016">ExcelMaterialsDto.cs:16</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelPedidoLineasDto_html"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelPedidoLineasDto.html">BackEncordados.Excel.Dto.ExcelPedidoLineasDto</a></div><div class="ttdoc">DTO que representa una línea de pedido (raqueta individual) en la exportación a Excel.</div><div class="ttdef"><b>Definition</b> <a href="ExcelPedidoLineasDto_8cs_source.html#l00018">ExcelPedidoLineasDto.cs:19</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelPedidoLineasDto_html_afbfaba5d94b533543f2d06f7aefb3103"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelPedidoLineasDto.html#afbfaba5d94b533543f2d06f7aefb3103">BackEncordados.Excel.Dto.ExcelPedidoLineasDto.Id</a></div><div class="ttdeci">string Id</div><div class="ttdoc">Identificador único de la línea de pedido (ULID en string).</div><div class="ttdef"><b>Definition</b> <a href="ExcelPedidoLineasDto_8cs_source.html#l00021">ExcelPedidoLineasDto.cs:21</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelPedidosDto_html"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelPedidosDto.html">BackEncordados.Excel.Dto.ExcelPedidosDto</a></div><div class="ttdoc">DTO que representa un pedido de encordado en la exportación a Excel.</div><div class="ttdef"><b>Definition</b> <a href="ExcelPedidosDto_8cs_source.html#l00013">ExcelPedidosDto.cs:14</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelPedidosDto_html_a2895698c3954991cb519c73c46256885"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelPedidosDto.html#a2895698c3954991cb519c73c46256885">BackEncordados.Excel.Dto.ExcelPedidosDto.Id</a></div><div class="ttdeci">string Id</div><div class="ttdoc">Identificador único del pedido (ULID en string).</div><div class="ttdef"><b>Definition</b> <a href="ExcelPedidosDto_8cs_source.html#l00016">ExcelPedidosDto.cs:16</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelTournamentDto_html"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelTournamentDto.html">BackEncordados.Excel.Dto.ExcelTournamentDto</a></div><div class="ttdoc">DTO que representa los datos generales de un torneo en la exportación a Excel.</div><div class="ttdef"><b>Definition</b> <a href="ExcelTournamentDto_8cs_source.html#l00014">ExcelTournamentDto.cs:15</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelTournamentDto_html_a985327275f780ed62d7a1569466a7137"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelTournamentDto.html#a985327275f780ed62d7a1569466a7137">BackEncordados.Excel.Dto.ExcelTournamentDto.Id</a></div><div class="ttdeci">string Id</div><div class="ttdoc">Identificador único del torneo (ULID en string).</div><div class="ttdef"><b>Definition</b> <a href="ExcelTournamentDto_8cs_source.html#l00017">ExcelTournamentDto.cs:17</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelUsersDto_html"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelUsersDto.html">BackEncordados.Excel.Dto.ExcelUsersDto</a></div><div class="ttdoc">DTO que representa un usuario en la exportación a Excel del módulo de usuarios.</div><div class="ttdef"><b>Definition</b> <a href="ExcelUsersDto_8cs_source.html#l00012">ExcelUsersDto.cs:13</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1ExcelUsersDto_html_ae5845df4d9241869b0f5620ba6d86b74"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelUsersDto.html#ae5845df4d9241869b0f5620ba6d86b74">BackEncordados.Excel.Dto.ExcelUsersDto.Id</a></div><div class="ttdeci">string Id</div><div class="ttdoc">Identificador único del usuario (ULID en string).</div><div class="ttdef"><b>Definition</b> <a href="ExcelUsersDto_8cs_source.html#l00015">ExcelUsersDto.cs:15</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1TournamentExcelRowDto_html"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1TournamentExcelRowDto.html">BackEncordados.Excel.Dto.TournamentExcelRowDto</a></div><div class="ttdoc">DTO que representa una fila del resumen simple de torneo en Excel.</div><div class="ttdef"><b>Definition</b> <a href="TournamentExcelRowDto_8cs_source.html#l00013">TournamentExcelRowDto.cs:14</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Excel_1_1Dto_1_1TournamentExcelRowDto_html_abe5fc5f6a18e1921098e924171d290cf"><div class="ttname"><a href="classBackEncordados_1_1Excel_1_1Dto_1_1TournamentExcelRowDto.html#abe5fc5f6a18e1921098e924171d290cf">BackEncordados.Excel.Dto.TournamentExcelRowDto.Username</a></div><div class="ttdeci">string Username</div><div class="ttdoc">Nombre de usuario del jugador.</div><div class="ttdef"><b>Definition</b> <a href="TournamentExcelRowDto_8cs_source.html#l00016">TournamentExcelRowDto.cs:16</a></div></div>
+<div class="ttc" id="ainterfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository_html"><div class="ttname"><a href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html">BackEncordados.Excel.Repository.IExcelRepository</a></div><div class="ttdoc">Contrato del repositorio para la obtención de datos de torneos con destino a exportación e importació...</div><div class="ttdef"><b>Definition</b> <a href="IExcelRepository_8cs_source.html#l00047">IExcelRepository.cs:48</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html">BackEncordados.Common.Database.Config</a></div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00005">MaterialsDbContext.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_a059e238e4bbb11feb9df70d8f0ed32df"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a059e238e4bbb11feb9df70d8f0ed32df">BackEncordados.Common.Database.Config.MaterialsDbContext</a></div><div class="ttdeci">class MaterialsDbContext(DbContextOptions&lt; MaterialsDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión del catálogo de materiales e insumos de encordados....</div><div class="ttdef"><b>Definition</b> <a href="MaterialsDbContext_8cs_source.html#l00042">MaterialsDbContext.cs:42</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_a874b9c7897e5684ed9363273862c07ae"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#a874b9c7897e5684ed9363273862c07ae">BackEncordados.Common.Database.Config.UserDbContext</a></div><div class="ttdeci">class UserDbContext(DbContextOptions&lt; UserDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión de usuarios del sistema. Administra la tabla users con autentica...</div><div class="ttdef"><b>Definition</b> <a href="UserDbContext_8cs_source.html#l00032">UserDbContext.cs:32</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_ab77e5c2557105dfeff621db130666e4f"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#ab77e5c2557105dfeff621db130666e4f">BackEncordados.Common.Database.Config.TalleresDbContext</a></div><div class="ttdeci">class TalleresDbContext(DbContextOptions&lt; TalleresDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión de torneos y talleres de encordado. Administra la tabla Tourname...</div><div class="ttdef"><b>Definition</b> <a href="TalleresDbContext_8cs_source.html#l00035">TalleresDbContext.cs:35</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Database_1_1Config_html_ad88c9780837c9f6201cc1127856fe504"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Database_1_1Config.html#ad88c9780837c9f6201cc1127856fe504">BackEncordados.Common.Database.Config.PedidosDbContext</a></div><div class="ttdeci">class PedidosDbContext(DbContextOptions&lt; PedidosDbContext &gt; options)</div><div class="ttdoc">DbContext de EF Core para la gestión de pedidos de encordados. Administra las tablas Pedidos (solicit...</div><div class="ttdef"><b>Definition</b> <a href="PedidosDbContext_8cs_source.html#l00033">PedidosDbContext.cs:33</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Excel_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Excel_1_1Dto.html">BackEncordados.Excel.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ExcelAdvancedDataDto_8cs_source.html#l00001">ExcelAdvancedDataDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Excel_1_1Repository_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Excel_1_1Repository.html">BackEncordados.Excel.Repository</a></div><div class="ttdef"><b>Definition</b> <a href="ExcelRepository_8cs_source.html#l00007">ExcelRepository.cs:7</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Model.html">BackEncordados.Materials.Model</a></div><div class="ttdef"><b>Definition</b> <a href="Cuerdas_8cs_source.html#l00004">Cuerdas.cs:4</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Model_html_abdb675af6253d1f00af73bef13aae7c0"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Model.html#abdb675af6253d1f00af73bef13aae7c0">BackEncordados.Materials.Model.StringsType</a></div><div class="ttdeci">StringsType</div><div class="ttdoc">Enum que clasifica los tipos de cuerdas para raquetas según su material y construcción.</div><div class="ttdef"><b>Definition</b> <a href="StringsType_8cs_source.html#l00018">StringsType.cs:19</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Model_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Model.html">BackEncordados.Purchased.Model</a></div><div class="ttdef"><b>Definition</b> <a href="PaymentStatus_8cs_source.html#l00001">PaymentStatus.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Purchased_1_1Model_html_ae46690249744a7cd379b6103ae0517ba"><div class="ttname"><a href="namespaceBackEncordados_1_1Purchased_1_1Model.html#ae46690249744a7cd379b6103ae0517ba">BackEncordados.Purchased.Model.Status</a></div><div class="ttdeci">Status</div><div class="ttdoc">Enum que define los posibles estados de una línea de pedido (raqueta).</div><div class="ttdef"><b>Definition</b> <a href="Status_8cs_source.html#l00015">Status.cs:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_bd913c863fbd3d8d266a14a025a92110.html">Excel</a></li><li class="navelem"><a class="el" href="dir_551786049ba1c289673cbfe0d45ce757.html">Repository</a></li><li class="navelem"><a class="el" href="ExcelRepository_8cs.html">ExcelRepository.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

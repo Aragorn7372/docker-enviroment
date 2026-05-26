@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Materials/Controller/MaterialsController.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('MaterialsController_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MaterialsController.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MaterialsController_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html">BackEncordados.Materials.Dto.Materials</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Errors.html">BackEncordados.Materials.Errors</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Service_1_1Materials.html">BackEncordados.Materials.Service.Materials</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Validator_1_1Materials.html">BackEncordados.Materials.Validator.Materials</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>FluentValidation;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>Microsoft.AspNetCore.Authorization;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>Microsoft.AspNetCore.Mvc;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using </span>CSharpFunctionalExtensions;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Materials_1_1Controller.html">BackEncordados.Materials.Controller</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>[ApiController]</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>[Route(<span class="stringliteral">&quot;api/[controller]&quot;</span>)]</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>[Produces(<span class="stringliteral">&quot;application/json&quot;</span>)]</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">public</span> <span class="keyword">class </span>MaterialsController(</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    ILogger&lt;MaterialsController&gt; logger, </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    IMaterialsService service,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    IValidator&lt;<a class="code hl_class" href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html">MaterialRequestDto</a>&gt; validator) : ControllerBase{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    [HttpGet]</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    [ProducesResponseType(typeof(PageResponseDto&lt;MaterialResponseDto&gt;),StatusCodes.Status200OK)]</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    [ProducesResponseType(StatusCodes.Status500InternalServerError)]</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    [ProducesResponseType(StatusCodes.Status400BadRequest)]</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    [ProducesResponseType(StatusCodes.Status401Unauthorized)]</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    [ProducesResponseType(StatusCodes.Status403Forbidden)]</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    [Authorize(policy: <span class="stringliteral">&quot;RequireEncorderRole&quot;</span>)]</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    public async Task&lt;IActionResult&gt; GetAll(</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        [FromQuery] Ulid? tournamentId,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        [FromQuery] string sortBy = <span class="stringliteral">&quot;id&quot;</span>,</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        [FromQuery] int page = 0,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        [FromQuery] int size = 10,</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        [FromQuery] string direction = <span class="stringliteral">&quot;asc&quot;</span>,</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        [FromQuery] string search = <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        logger.LogInformation(<span class="stringliteral">&quot;Get all materials with search {Search}, sortBy {SortBy}, page {Page}, size {Size} and direction {Direction}&quot;</span>,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            search, sortBy, page, size, direction);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        var filter = <span class="keyword">new</span> <a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html#a158489cbb3fde89975606cd480929717">MaterialFilterDto</a>(</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            TournamentId: tournamentId,</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            Search: search,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            SortBy: sortBy,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            Page: page,</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            Size: size,</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            Direction: direction);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">return</span> Ok(await service.FindAllAsync(filter));</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    [HttpGet(<span class="stringliteral">&quot;{id:long}&quot;</span>)]</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    [ProducesResponseType(typeof(<a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html#ae37d97053985bd1637c116c7c8f63980">MaterialResponseDto</a>), StatusCodes.Status200OK)]</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    [ProducesResponseType(StatusCodes.Status404NotFound)]</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    [ProducesResponseType(StatusCodes.Status500InternalServerError)]</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    [Authorize(policy: <span class="stringliteral">&quot;RequireOwnerRole&quot;</span>)]</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    public async Task&lt;IActionResult&gt; GetById(long id) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        logger.LogInformation(<span class="stringliteral">&quot;Get material by id {Id}&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">return</span> await service.FindByIdAsync(<span class="keywordtype">id</span>).Match(</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            material =&gt; Ok(material),</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            error =&gt; error <span class="keywordflow">switch</span> {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                MaterialNotFoundError =&gt; NotFound(<span class="keyword">new</span> { message = error.Error }),</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                _ =&gt; StatusCode(500, <span class="keyword">new</span> { message = error.Error })</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        );</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    [HttpGet(<span class="stringliteral">&quot;name/{name}&quot;</span>)]</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    [ProducesResponseType(typeof(<a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html#ae37d97053985bd1637c116c7c8f63980">MaterialResponseDto</a>), StatusCodes.Status200OK)]</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    [ProducesResponseType(StatusCodes.Status404NotFound)]</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    [ProducesResponseType(StatusCodes.Status500InternalServerError)]</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    [Authorize(policy: <span class="stringliteral">&quot;RequireOwnerRole&quot;</span>)]</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    public async Task&lt;IActionResult&gt; GetByName(string name) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        logger.LogInformation(<span class="stringliteral">&quot;Get material by name {Name}&quot;</span>, name);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keywordflow">return</span> await service.FindByNameAsync(name).Match(</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            material =&gt; Ok(material),</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            error =&gt; error <span class="keywordflow">switch</span> {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                MaterialNotFoundError =&gt; NotFound(<span class="keyword">new</span> { message = error.Error }),</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                _ =&gt; StatusCode(500, <span class="keyword">new</span> { message = error.Error })</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        );</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    [HttpPost]</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    [ProducesResponseType(typeof(<a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html#ae37d97053985bd1637c116c7c8f63980">MaterialResponseDto</a>), StatusCodes.Status201Created)]</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    [ProducesResponseType(StatusCodes.Status409Conflict)]</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    [ProducesResponseType(StatusCodes.Status500InternalServerError)]</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    [Authorize(policy: <span class="stringliteral">&quot;RequireOwnerRole&quot;</span>)]</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    public async Task&lt;IActionResult&gt; Create([FromForm] <a class="code hl_class" href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html">MaterialRequestDto</a> request) {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        logger.LogInformation(<span class="stringliteral">&quot;Create material with name {Name}&quot;</span>, request.Modelo);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        var validationResult = await validator.ValidateAsync(request);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <span class="keywordflow">if</span> (!validationResult.IsValid)</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            <span class="keywordflow">return</span> BadRequest(validationResult.Errors.Select(e =&gt; <span class="keyword">new</span> { e.PropertyName, e.ErrorMessage }));</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <span class="keywordflow">return</span> await service.CreateAsync(request).Match(</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            onSuccess: material =&gt; CreatedAtAction(nameof(GetById), new { id = material.Id }, material),</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            onFailure: error =&gt; error switch {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                MaterialConflictError =&gt; Conflict(new { message = error.Error }),</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                _ =&gt; StatusCode(500, new { message = error.Error })</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        );</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    }</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    [HttpPut(<span class="stringliteral">&quot;{id:long}&quot;</span>)]</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    [ProducesResponseType(typeof(<a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html#ae37d97053985bd1637c116c7c8f63980">MaterialResponseDto</a>), StatusCodes.Status200OK)]</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    [ProducesResponseType(StatusCodes.Status404NotFound)]</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    [ProducesResponseType(StatusCodes.Status409Conflict)]</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    [ProducesResponseType(StatusCodes.Status500InternalServerError)]</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    [Authorize(policy: <span class="stringliteral">&quot;RequireOwnerRole&quot;</span>)]</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    public async Task&lt;IActionResult&gt; Update(long id, [FromForm] <a class="code hl_class" href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialPatchDto.html">MaterialPatchDto</a> request) {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        logger.LogInformation(<span class="stringliteral">&quot;Update material with id {Id}&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <span class="keywordflow">return</span> await service.UpdateAsync(<span class="keywordtype">id</span>, request).Match(</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            onSuccess: material =&gt; Ok(material),</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            onFailure: error =&gt; error switch {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                MaterialNotFoundError =&gt; NotFound(new { message = error.Error }),</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                MaterialConflictError =&gt; Conflict(new { message = error.Error }),</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                _ =&gt; StatusCode(500, new { message = error.Error })</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        );</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    }</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    [HttpDelete(<span class="stringliteral">&quot;{id:long}&quot;</span>)]</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    [ProducesResponseType(typeof(<a class="code hl_function" href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html#ae37d97053985bd1637c116c7c8f63980">MaterialResponseDto</a>), StatusCodes.Status200OK)]</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    [ProducesResponseType(StatusCodes.Status404NotFound)]</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    [ProducesResponseType(StatusCodes.Status500InternalServerError)]</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    [Authorize(policy: <span class="stringliteral">&quot;RequireOwnerRole&quot;</span>)]</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    public async Task&lt;IActionResult&gt; Delete(long id) {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        logger.LogInformation(<span class="stringliteral">&quot;Delete material with id {Id}&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        <span class="keywordflow">return</span> await service.DeleteAsync(<span class="keywordtype">id</span>).Match(</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>            onSuccess: _ =&gt; Ok(new { message = <span class="stringliteral">&quot;Material deleted successfully&quot;</span> }),</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            onFailure: error =&gt; error switch {</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                MaterialNotFoundError =&gt; NotFound(new { message = error.Error }),</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                _ =&gt; StatusCode(500, new { message = error.Error })</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            }</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        );</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>}</div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialPatchDto_html"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialPatchDto.html">BackEncordados.Materials.Dto.Materials.MaterialPatchDto</a></div><div class="ttdoc">DTO de entrada para actualización completa (PUT) de un material.</div><div class="ttdef"><b>Definition</b> <a href="MaterialPatchDto_8cs_source.html#l00022">MaterialPatchDto.cs:23</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto_html"><div class="ttname"><a href="classBackEncordados_1_1Materials_1_1Dto_1_1Materials_1_1MaterialRequestDto.html">BackEncordados.Materials.Dto.Materials.MaterialRequestDto</a></div><div class="ttdoc">DTO de entrada para crear un material en el inventario.</div><div class="ttdef"><b>Definition</b> <a href="MaterialRequestDto_8cs_source.html#l00022">MaterialRequestDto.cs:23</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Common_1_1Dto_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Common_1_1Dto.html">BackEncordados.Common.Dto</a></div><div class="ttdef"><b>Definition</b> <a href="ExportManifestDto_8cs_source.html#l00001">ExportManifestDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Controller_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Controller.html">BackEncordados.Materials.Controller</a></div><div class="ttdef"><b>Definition</b> <a href="CuerdasController_8cs_source.html#l00011">CuerdasController.cs:11</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html">BackEncordados.Materials.Dto.Materials</a></div><div class="ttdef"><b>Definition</b> <a href="MaterialFilterDto_8cs_source.html#l00001">MaterialFilterDto.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials_html_a158489cbb3fde89975606cd480929717"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html#a158489cbb3fde89975606cd480929717">BackEncordados.Materials.Dto.Materials.MaterialFilterDto</a></div><div class="ttdeci">record MaterialFilterDto(Ulid? TournamentId, string Search, int Page=0, int Size=10, string SortBy=&quot;name&quot;, string Direction=&quot;asc&quot;)</div><div class="ttdoc">DTO de filtro para la búsqueda paginada de materiales.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials_html_ae37d97053985bd1637c116c7c8f63980"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Dto_1_1Materials.html#ae37d97053985bd1637c116c7c8f63980">BackEncordados.Materials.Dto.Materials.MaterialResponseDto</a></div><div class="ttdeci">record MaterialResponseDto(long Id, Ulid TournamentId, string Marca, string Modelo, int Stock, double Precio, string MaterialType, string ImageUrl)</div><div class="ttdoc">DTO de salida que representa un material del inventario para las respuestas de la API.</div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Errors_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Errors.html">BackEncordados.Materials.Errors</a></div><div class="ttdef"><b>Definition</b> <a href="CuerdaError_8cs_source.html#l00001">CuerdaError.cs:1</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Service_1_1Materials_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Service_1_1Materials.html">BackEncordados.Materials.Service.Materials</a></div><div class="ttdef"><b>Definition</b> <a href="IMaterialsService_8cs_source.html#l00005">IMaterialsService.cs:5</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Materials_1_1Validator_1_1Materials_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Materials_1_1Validator_1_1Materials.html">BackEncordados.Materials.Validator.Materials</a></div><div class="ttdef"><b>Definition</b> <a href="MaterialPatchValidator_8cs_source.html#l00005">MaterialPatchValidator.cs:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_0048e789433b5fe1cb671302277b48d6.html">Materials</a></li><li class="navelem"><a class="el" href="dir_2905ae252d49a000b3a86098e0d38479.html">Controller</a></li><li class="navelem"><a class="el" href="MaterialsController_8cs.html">MaterialsController.cs</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:23 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

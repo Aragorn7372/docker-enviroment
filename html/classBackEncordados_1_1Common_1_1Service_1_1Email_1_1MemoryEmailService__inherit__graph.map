@@ -1,0 +1,5 @@
+<map id="BackEncordados.Common.Service.Email.MemoryEmailService" name="BackEncordados.Common.Service.Email.MemoryEmailService">
+<area shape="rect" id="Node000001" title="Implementación de IEmailService que registra en log los correos electrónicos sin enviarlos realmente...." alt="" coords="5,79,253,119"/>
+<area shape="rect" id="Node000002" href="$interfaceBackEncordados_1_1Common_1_1Service_1_1Email_1_1IEmailService.html" title="Define el contrato para el envío de correos electrónicos, tanto directo como diferido mediante cola e..." alt="" coords="74,5,185,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,44,132,79,127,79,127,44"/>
+</map>

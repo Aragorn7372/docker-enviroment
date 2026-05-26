@@ -1,0 +1,5 @@
+<map id="Gráfico de jerarquía de clases" name="Gráfico de jerarquía de clases">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,13,107,38"/>
+<area shape="rect" id="Node000001" href="$classTestEncordados_1_1Unit_1_1Services_1_1Purchased_1_1NoOpClientProxy.html" title="Test double for IClientProxy that does nothing, allowing SendAsync to be called safely." alt="" coords="155,5,372,45"/>
+<area shape="poly" id="edge33_Node000000_Node000001" title=" " alt="" coords="120,23,155,23,155,28,120,28"/>
+</map>

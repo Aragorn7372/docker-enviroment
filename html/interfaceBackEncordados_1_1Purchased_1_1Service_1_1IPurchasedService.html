@@ -1,0 +1,609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Referencia de la interface BackEncordados.Purchased.Service.IPurchasedService</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la interface BackEncordados.Purchased.Service.IPurchasedService</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Defines the application-layer service contracts for the Purchased (pedidos) bounded context.  
+ <a href="interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService.html#details">Más...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a726596d326d9dcc7dafcff90fe1b8bb8" id="r_a726596d326d9dcc7dafcff90fe1b8bb8"><td class="memItemLeft" align="right" valign="top">Task&lt; PageResponseDto&lt; PurchasedResponseDto &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService.html#a726596d326d9dcc7dafcff90fe1b8bb8">FindAllAsync</a> (<a class="el" href="PurchasedRepositoryTests_8cs.html#a2ce4b09e0ecead68f2b396911e443ad4">FilterPurchasedDto</a> filter)</td></tr>
+<tr class="memdesc:a726596d326d9dcc7dafcff90fe1b8bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a paginated list of orders according to the supplied filter, with player and encorder user data resolved.  <br /></td></tr>
+<tr class="separator:a726596d326d9dcc7dafcff90fe1b8bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91029dbac78a7a2af43ecb73d382465b" id="r_a91029dbac78a7a2af43ecb73d382465b"><td class="memItemLeft" align="right" valign="top">Task&lt; Result&lt; PurchasedResponseDto, DomainErrors &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService.html#a91029dbac78a7a2af43ecb73d382465b">FindByIdAsync</a> (Ulid id)</td></tr>
+<tr class="memdesc:a91029dbac78a7a2af43ecb73d382465b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a single order by Ulid with a cache-first strategy.  <br /></td></tr>
+<tr class="separator:a91029dbac78a7a2af43ecb73d382465b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bb28671c806a1197c0ded0bb9862aa" id="r_a05bb28671c806a1197c0ded0bb9862aa"><td class="memItemLeft" align="right" valign="top">Task&lt; Result&lt; PurchasedResponseDto, DomainErrors &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService.html#a05bb28671c806a1197c0ded0bb9862aa">CreatePurchasedAsync</a> (<a class="el" href="classBackEncordados_1_1Purchased_1_1Dto_1_1PurchasedRequestDto.html">PurchasedRequestDto</a> request)</td></tr>
+<tr class="memdesc:a05bb28671c806a1197c0ded0bb9862aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new purchase order with automatic bonus payment logic.  <br /></td></tr>
+<tr class="separator:a05bb28671c806a1197c0ded0bb9862aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26eac21709e6c42ee4ffd09e4008f215" id="r_a26eac21709e6c42ee4ffd09e4008f215"><td class="memItemLeft" align="right" valign="top">Task&lt; Result&lt; PurchasedResponseDto, DomainErrors &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService.html#a26eac21709e6c42ee4ffd09e4008f215">UpdatePurchasedAsync</a> (Ulid id, PurchasedPatchDto request)</td></tr>
+<tr class="memdesc:a26eac21709e6c42ee4ffd09e4008f215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partially updates an existing order's Machine, Comments, and PayStatus fields.  <br /></td></tr>
+<tr class="separator:a26eac21709e6c42ee4ffd09e4008f215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab28f845cbfabe62ad8090840e9bfb37b" id="r_ab28f845cbfabe62ad8090840e9bfb37b"><td class="memItemLeft" align="right" valign="top">Task&lt; Result&lt; PurchasedResponseDto, DomainErrors &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService.html#ab28f845cbfabe62ad8090840e9bfb37b">CancelPurchasedAsync</a> (Ulid id, bool isUser, string? idUser)</td></tr>
+<tr class="memdesc:ab28f845cbfabe62ad8090840e9bfb37b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels an order (and all its line items) with role-based authorization.  <br /></td></tr>
+<tr class="separator:ab28f845cbfabe62ad8090840e9bfb37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a867de2974d7b6b327b92f6e09eb34778" id="r_a867de2974d7b6b327b92f6e09eb34778"><td class="memItemLeft" align="right" valign="top">Task&lt; Result&lt; PurchasedResponseDto, DomainErrors &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService.html#a867de2974d7b6b327b92f6e09eb34778">ChangePaymentStatusPurchasedAsync</a> (Ulid id, string payStatus)</td></tr>
+<tr class="memdesc:a867de2974d7b6b327b92f6e09eb34778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the payment status of an existing order.  <br /></td></tr>
+<tr class="separator:a867de2974d7b6b327b92f6e09eb34778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05707b1b5137c31ba1c4d2b27871cf82" id="r_a05707b1b5137c31ba1c4d2b27871cf82"><td class="memItemLeft" align="right" valign="top">Task&lt; Result&lt; PedidoLineaResponseDto, DomainErrors &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService.html#a05707b1b5137c31ba1c4d2b27871cf82">UpdateLineaAsync</a> (Ulid lineaId, <a class="el" href="classBackEncordados_1_1Purchased_1_1Dto_1_1PedidoLineaPatchDto.html">PedidoLineaPatchDto</a> request)</td></tr>
+<tr class="memdesc:a05707b1b5137c31ba1c4d2b27871cf82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a partial patch to a single PedidoLinea identified by its Ulid.  <br /></td></tr>
+<tr class="separator:a05707b1b5137c31ba1c4d2b27871cf82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da358420a5ea0bcbb5c69a3ce4ebcb5" id="r_a4da358420a5ea0bcbb5c69a3ce4ebcb5"><td class="memItemLeft" align="right" valign="top">Task&lt; Result&lt; PedidoLineaResponseDto, DomainErrors &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService.html#a4da358420a5ea0bcbb5c69a3ce4ebcb5">CancelLineaAsync</a> (Ulid lineaId, string? userId, string? userRole)</td></tr>
+<tr class="memdesc:a4da358420a5ea0bcbb5c69a3ce4ebcb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels a single line item with role-aware validation.  <br /></td></tr>
+<tr class="separator:a4da358420a5ea0bcbb5c69a3ce4ebcb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39276e79b5d9d21f41e6c5ffd0c222bd" id="r_a39276e79b5d9d21f41e6c5ffd0c222bd"><td class="memItemLeft" align="right" valign="top">Task&lt; Result&lt; PedidoLineaResponseDto, DomainErrors &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService.html#a39276e79b5d9d21f41e6c5ffd0c222bd">ChangeLineaStatusAsync</a> (Ulid lineaId, string status)</td></tr>
+<tr class="memdesc:a39276e79b5d9d21f41e6c5ffd0c222bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the status of a single PedidoLinea and sends appropriate notifications.  <br /></td></tr>
+<tr class="separator:a39276e79b5d9d21f41e6c5ffd0c222bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a278ab38ac2c48a6fbb62153e366aa751" id="r_a278ab38ac2c48a6fbb62153e366aa751"><td class="memItemLeft" align="right" valign="top">Task&lt; Result&lt; PurchasedResponseDto, DomainErrors &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService.html#a278ab38ac2c48a6fbb62153e366aa751">ChangeAllLineasStatusAsync</a> (Ulid purchasedId, string status)</td></tr>
+<tr class="memdesc:a278ab38ac2c48a6fbb62153e366aa751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the status of every non-conflicting line item in an order to the given value.  <br /></td></tr>
+<tr class="separator:a278ab38ac2c48a6fbb62153e366aa751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Defines the application-layer service contracts for the Purchased (pedidos) bounded context. </p>
+<p><code>IPurchasedService</code> orchestrates the full lifecycle of purchase orders and their line items. It co operates across multiple infrastructure concerns: </p>
+<table class="doxtable">
+<tr>
+<th>Concern </th><th>Service(s)  </th></tr>
+<tr>
+<td>Persistence </td><td>Repository.IPuchasedRepository, Usuarios.Repository.IUserRepository  </td></tr>
+<tr>
+<td>Caching </td><td>Common.Service.Cache.ICacheService (L1 + L2 hybrid, user data and purchased DTOs)  </td></tr>
+<tr>
+<td>Image resolution </td><td>Common.Service.Cloudinary.ICloudinaryService for user avatar URLs  </td></tr>
+<tr>
+<td>Notifications </td><td>Common.Service.Email.IEmailService, Common.Service.WhatsApp.IWhatsAppService, SignalR hub  </td></tr>
+</table>
+<p>All write operations return Result&lt;T,E&gt; with <a class="el" href="namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293" title="Record base para todos los errores de dominio de la aplicación. Implementa el patrón Result mediante ...">DomainErrors</a> on failure. Read-only queries return DTOs directly (non-Result) — they throw on infrastructure errors. Error types used include: PurchasedNotFoundError, Usuarios.Errors.UserNotFoundError, InvalidStatusError, Usuarios.Errors.UnauthorizedError, Usuarios.Errors.ConcurrencyError. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="IPurchasedService_8cs_source.html#l00049">49</a> del archivo <a class="el" href="IPurchasedService_8cs_source.html">IPurchasedService.cs</a>.</p>
+</div><h2 class="groupheader">Documentación de funciones miembro</h2>
+<a id="a4da358420a5ea0bcbb5c69a3ce4ebcb5" name="a4da358420a5ea0bcbb5c69a3ce4ebcb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4da358420a5ea0bcbb5c69a3ce4ebcb5">&#9670;&#160;</a></span>CancelLineaAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; Result&lt; PedidoLineaResponseDto, DomainErrors &gt; &gt; BackEncordados.Purchased.Service.IPurchasedService.CancelLineaAsync </td>
+          <td>(</td>
+          <td class="paramtype">Ulid&#160;</td>
+          <td class="paramname"><em>lineaId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string?&#160;</td>
+          <td class="paramname"><em>userId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string?&#160;</td>
+          <td class="paramname"><em>userRole</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cancels a single line item with role-aware validation. </p>
+<p>For <code>USER</code> callers, cancellation is blocked if the line status is already Status.COMPLETED or Status.DELIVERED_TOpLAYER. Sends a WhatsApp cancellation notification and a <code>ESTATUS_LINEA_PEDIDO_ACTUALIZADA</code> SignalR broadcast. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lineaId</td><td>The line Ulid.</td></tr>
+    <tr><td class="paramname">userId</td><td>The caller's user ID string (used for role-based checking only — not ownership).</td></tr>
+    <tr><td class="paramname">userRole</td><td>The caller's role string (e.g. "USER", "ENCORDER", "ADMIN").</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>The canceled line DTO or a domain error (InvalidStatusError if line is in a terminal state).</dd></dl>
+
+</div>
+</div>
+<a id="ab28f845cbfabe62ad8090840e9bfb37b" name="ab28f845cbfabe62ad8090840e9bfb37b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab28f845cbfabe62ad8090840e9bfb37b">&#9670;&#160;</a></span>CancelPurchasedAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; Result&lt; PurchasedResponseDto, DomainErrors &gt; &gt; BackEncordados.Purchased.Service.IPurchasedService.CancelPurchasedAsync </td>
+          <td>(</td>
+          <td class="paramtype">Ulid&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isUser</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string?&#160;</td>
+          <td class="paramname"><em>idUser</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cancels an order (and all its line items) with role-based authorization. </p>
+<p>Flow: </p>
+<ol>
+<li>
+Call <code>repository.CancelPurchasedAsync</code> — sets order to CANCELED and all lines to CANCELED. </li>
+<li>
+If the caller has <code>USER</code> role (<em>isUser</em>  = true), verify <code>PlayerId == idUser</code>; return Usuarios.Errors.UnauthorizedError on mismatch. </li>
+<li>
+Re-cache the updated DTO (5-minute TTL). </li>
+<li>
+Fire-and-forget: send cancellation email, WhatsApp notification, and SignalR broadcast (<code>PEDIDO_CANCELADO</code>). </li>
+</ol>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The order Ulid.</td></tr>
+    <tr><td class="paramname">isUser</td><td><code>true</code> if the caller has the <code>USER</code> role, triggering ownership verification.</td></tr>
+    <tr><td class="paramname">idUser</td><td>The caller's Ulid string, used for the ownership check when <em>isUser</em>  is <code>true</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>The canceled order DTO or a domain error.</dd></dl>
+
+</div>
+</div>
+<a id="a278ab38ac2c48a6fbb62153e366aa751" name="a278ab38ac2c48a6fbb62153e366aa751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a278ab38ac2c48a6fbb62153e366aa751">&#9670;&#160;</a></span>ChangeAllLineasStatusAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; Result&lt; PurchasedResponseDto, DomainErrors &gt; &gt; BackEncordados.Purchased.Service.IPurchasedService.ChangeAllLineasStatusAsync </td>
+          <td>(</td>
+          <td class="paramtype">Ulid&#160;</td>
+          <td class="paramname"><em>purchasedId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the status of every non-conflicting line item in an order to the given value. </p>
+<p>Conflict rules: </p>
+<ul>
+<li>
+When target is <code>CANCELED</code>: lines already <code>COMPLETED</code> or <code>DELIVERED_TOpLAYER</code> are skipped (cannot cancel completed work). </li>
+<li>
+When target is any non-canceled status: lines already <code>CANCELED</code> are skipped (cannot revive a canceled line). </li>
+</ul>
+<p>After updating all eligible lines, the parent order cache entry is invalidated.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">purchasedId</td><td>The order Ulid.</td></tr>
+    <tr><td class="paramname">status</td><td>The target status string for all eligible lines.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>The updated order DTO or a PurchasedNotFoundError / InvalidStatusError.</dd></dl>
+
+</div>
+</div>
+<a id="a39276e79b5d9d21f41e6c5ffd0c222bd" name="a39276e79b5d9d21f41e6c5ffd0c222bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39276e79b5d9d21f41e6c5ffd0c222bd">&#9670;&#160;</a></span>ChangeLineaStatusAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; Result&lt; PedidoLineaResponseDto, DomainErrors &gt; &gt; BackEncordados.Purchased.Service.IPurchasedService.ChangeLineaStatusAsync </td>
+          <td>(</td>
+          <td class="paramtype">Ulid&#160;</td>
+          <td class="paramname"><em>lineaId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the status of a single PedidoLinea and sends appropriate notifications. </p>
+<p>Flow: </p>
+<ol>
+<li>
+Parse and validate the status string against <a class="el" href="namespaceBackEncordados_1_1Purchased_1_1Model.html#ae46690249744a7cd379b6103ae0517ba" title="Enum que define los posibles estados de una línea de pedido (raqueta).">Status</a> enum. </li>
+<li>
+Load the existing line from the repository. </li>
+<li>
+Persist the status change. </li>
+<li>
+Invalidate the parent order cache. </li>
+<li>
+If new status is <code>COMPLETED</code>: send completion email + WhatsApp to the player. </li>
+<li>
+If new status is <code>DELIVERED_TOpLAYER</code>: send delivery email + WhatsApp to the player. </li>
+<li>
+If new status is <code>CANCELED</code>: send WhatsApp cancellation to the player. </li>
+<li>
+Send <code>ESTATUS_LINEA_PEDIDO_ACTUALIZADA</code> SignalR notification. </li>
+</ol>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lineaId</td><td>The line Ulid.</td></tr>
+    <tr><td class="paramname">status</td><td>The target status string (e.g. "PENDING", "IN_PROGRESS", "COMPLETED", "DELIVERED_TOpLAYER", "CANCELED"). Case-insensitive.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>The updated line DTO or a domain error.</dd></dl>
+
+</div>
+</div>
+<a id="a867de2974d7b6b327b92f6e09eb34778" name="a867de2974d7b6b327b92f6e09eb34778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a867de2974d7b6b327b92f6e09eb34778">&#9670;&#160;</a></span>ChangePaymentStatusPurchasedAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; Result&lt; PurchasedResponseDto, DomainErrors &gt; &gt; BackEncordados.Purchased.Service.IPurchasedService.ChangePaymentStatusPurchasedAsync </td>
+          <td>(</td>
+          <td class="paramtype">Ulid&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>payStatus</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the payment status of an existing order. </p>
+<p>Validates the status string against <a class="el" href="namespaceBackEncordados_1_1Purchased_1_1Model.html#a38c4ee19210abb9188ff415f6e8241bb" title="Enum que define los posibles estados de pago de un pedido.">PaymentStatus</a> enum values. If the new status is <code>PAID</code>, enqueues a payment confirmation email to the player. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The order Ulid.</td></tr>
+    <tr><td class="paramname">payStatus</td><td>The new payment status string (e.g. "PAID", "PENDING", "CANCELED"). Case-insensitive.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>The updated order DTO or a PurchasedNotFoundError / InvalidStatusError.</dd></dl>
+
+</div>
+</div>
+<a id="a05bb28671c806a1197c0ded0bb9862aa" name="a05bb28671c806a1197c0ded0bb9862aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05bb28671c806a1197c0ded0bb9862aa">&#9670;&#160;</a></span>CreatePurchasedAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; Result&lt; PurchasedResponseDto, DomainErrors &gt; &gt; BackEncordados.Purchased.Service.IPurchasedService.CreatePurchasedAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBackEncordados_1_1Purchased_1_1Dto_1_1PurchasedRequestDto.html">PurchasedRequestDto</a>&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new purchase order with automatic bonus payment logic. </p>
+<p>Creation flow:</p>
+<ol>
+<li>
+Lookup player and encorder by username (cache-first, then DB). </li>
+<li>
+Map the request DTO to a Pedidos entity via Mapper.PurchasedMapper.ToEntity(PurchasedRequestDto, Ulid, Ulid). </li>
+<li>
+If <code>player.Bonos &gt;= Price</code>: set <code>PayStatus = PAID</code>, deduct bonus, retry DB update up to 3 times (PurchasedService.UpdateUserWithRetryAsync). </li>
+<li>
+If <code>0 &lt; player.Bonos &lt; Price</code>: append a shortfall comment ("Falta por pagar: ..."). </li>
+<li>
+Persist the aggregate via the repository. </li>
+<li>
+Cache the resulting DTO (5-minute TTL). </li>
+<li>
+Fire-and-forget: send SignalR notification (<code>PEDIDO_CREADO</code> to tournament group + admin group). </li>
+<li>
+If auto-paid: enqueue a payment confirmation email to the player. </li>
+</ol>
+<p>Requires <code>[Transactional(typeof(PedidosDbContext), typeof(UserDbContext))]</code> at the controller level for distributed consistency.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>The order creation payload (tournament, player/encorder usernames, line items, price, payment status).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>The created order DTO or a Usuarios.Errors.UserNotFoundError if the player or encorder could not be found.</dd></dl>
+
+</div>
+</div>
+<a id="a726596d326d9dcc7dafcff90fe1b8bb8" name="a726596d326d9dcc7dafcff90fe1b8bb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a726596d326d9dcc7dafcff90fe1b8bb8">&#9670;&#160;</a></span>FindAllAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; PageResponseDto&lt; PurchasedResponseDto &gt; &gt; BackEncordados.Purchased.Service.IPurchasedService.FindAllAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="PurchasedRepositoryTests_8cs.html#a2ce4b09e0ecead68f2b396911e443ad4">FilterPurchasedDto</a>&#160;</td>
+          <td class="paramname"><em>filter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a paginated list of orders according to the supplied filter, with player and encorder user data resolved. </p>
+<p>Orchestration flow: </p>
+<ol>
+<li>
+Call repository <code>FindAllAsync</code> to get the page of order headers and total count. </li>
+<li>
+Collect all unique <code>PlayerId</code> and <code>AssignedTo</code> values from the result set. </li>
+<li>
+Attempt to resolve each user ID from the L1/L2 cache (key: <code>CacheKeys.UserDataKey + id</code>). </li>
+<li>
+For cache misses, batch-fetch from <code>IUserRepository.FindByIdsAsync</code>, cache each result (10-minute TTL). </li>
+<li>
+Map each order through Mapper.PurchasedMapper.ToDto(Pedidos, Usuarios.Dto.UserResponseDto, Usuarios.Dto.UserResponseDto). </li>
+<li>
+Skip orders whose player or encorder could not be resolved (logged as warning). </li>
+<li>
+Return a PageResponseDto&lt;PurchasedResponseDto&gt; with pagination metadata. </li>
+</ol>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>Pagination, sort, and search parameters from the query string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>A PageResponseDto&lt;PurchasedResponseDto&gt; with resolved user DTOs and pagination metadata.</dd></dl>
+
+</div>
+</div>
+<a id="a91029dbac78a7a2af43ecb73d382465b" name="a91029dbac78a7a2af43ecb73d382465b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91029dbac78a7a2af43ecb73d382465b">&#9670;&#160;</a></span>FindByIdAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; Result&lt; PurchasedResponseDto, DomainErrors &gt; &gt; BackEncordados.Purchased.Service.IPurchasedService.FindByIdAsync </td>
+          <td>(</td>
+          <td class="paramtype">Ulid&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves a single order by Ulid with a cache-first strategy. </p>
+<p>On cache miss, the order is loaded from the repository, its player and encorder are resolved via GetUserDtoCachedAsync (private helper), and the assembled response is cached for 5 minutes before returning. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The order Ulid.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>The order DTO on success, or a PurchasedNotFoundError / Usuarios.Errors.UserNotFoundError on failure.</dd></dl>
+
+</div>
+</div>
+<a id="a05707b1b5137c31ba1c4d2b27871cf82" name="a05707b1b5137c31ba1c4d2b27871cf82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05707b1b5137c31ba1c4d2b27871cf82">&#9670;&#160;</a></span>UpdateLineaAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; Result&lt; PedidoLineaResponseDto, DomainErrors &gt; &gt; BackEncordados.Purchased.Service.IPurchasedService.UpdateLineaAsync </td>
+          <td>(</td>
+          <td class="paramtype">Ulid&#160;</td>
+          <td class="paramname"><em>lineaId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classBackEncordados_1_1Purchased_1_1Dto_1_1PedidoLineaPatchDto.html">PedidoLineaPatchDto</a>&#160;</td>
+          <td class="paramname"><em>request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies a partial patch to a single PedidoLinea identified by its Ulid. </p>
+<p>Loads the existing line, applies the merge-patch, persists, and invalidates the parent order cache entry so the next read reflects the updated line data. Sends a <code>LINEA_PEDIDO_ACTUALIZADA</code> SignalR notification. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lineaId</td><td>The line Ulid.</td></tr>
+    <tr><td class="paramname">request</td><td>The patch payload with optional fields.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>The updated line DTO or a PurchasedNotFoundError.</dd></dl>
+
+</div>
+</div>
+<a id="a26eac21709e6c42ee4ffd09e4008f215" name="a26eac21709e6c42ee4ffd09e4008f215"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26eac21709e6c42ee4ffd09e4008f215">&#9670;&#160;</a></span>UpdatePurchasedAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; Result&lt; PurchasedResponseDto, DomainErrors &gt; &gt; BackEncordados.Purchased.Service.IPurchasedService.UpdatePurchasedAsync </td>
+          <td>(</td>
+          <td class="paramtype">Ulid&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PurchasedPatchDto&#160;</td>
+          <td class="paramname"><em>request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Partially updates an existing order's Machine, Comments, and PayStatus fields. </p>
+<p>Loads the existing order, applies the patch, persists, invalidates the old cache entry, and re-caches the updated DTO (5-minute TTL). Sends a <code>PEDIDO_ACTUALIZADO</code> SignalR notification. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The order Ulid.</td></tr>
+    <tr><td class="paramname">request</td><td>The patch payload with optional (nullable) fields.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>The updated order DTO or a PurchasedNotFoundError.</dd></dl>
+
+</div>
+</div>
+<hr/>La documentación de esta interface está generada del siguiente archivo:<ul>
+<li>/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Purchased/Service/<a class="el" href="IPurchasedService_8cs_source.html">IPurchasedService.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceBackEncordados.html">BackEncordados</a></li><li class="navelem"><a class="el" href="namespaceBackEncordados_1_1Purchased.html">Purchased</a></li><li class="navelem"><a class="el" href="namespaceBackEncordados_1_1Purchased_1_1Service.html">Service</a></li><li class="navelem"><a class="el" href="interfaceBackEncordados_1_1Purchased_1_1Service_1_1IPurchasedService.html">IPurchasedService</a></li>
+    <li class="footer">Generado el Martes, 26 de mayo de 2026 20:35:24 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

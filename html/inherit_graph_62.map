@@ -1,0 +1,13 @@
+<map id="Gráfico de jerarquía de clases" name="Gráfico de jerarquía de clases">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,109,92,134"/>
+<area shape="rect" id="Node000001" href="$classBackEncordados_1_1Common_1_1Exceptions_1_1CloudinaryException.html" title="Excepción base para todos los errores relacionados con Cloudinary. Proporciona constructores con mens..." alt="" coords="140,101,411,141"/>
+<area shape="poly" id="edge28_Node000000_Node000001" title=" " alt="" coords="106,119,140,119,140,124,106,124"/>
+<area shape="rect" id="Node000002" href="$classBackEncordados_1_1Common_1_1Exceptions_1_1CloudinaryConfigurationException.html" title="Excepción que se produce cuando hay un error en la configuración de Cloudinary." alt="" coords="459,5,729,45"/>
+<area shape="poly" id="edge29_Node000001_Node000002" title=" " alt="" coords="341,94,458,55,502,43,504,48,459,60,343,99"/>
+<area shape="rect" id="Node000003" href="$classBackEncordados_1_1Common_1_1Exceptions_1_1CloudinaryDeleteException.html" title="Excepción que se produce cuando falla la eliminación de una imagen en Cloudinary." alt="" coords="459,69,729,109"/>
+<area shape="poly" id="edge30_Node000001_Node000003" title=" " alt="" coords="424,104,458,100,459,106,424,109"/>
+<area shape="rect" id="Node000004" href="$classBackEncordados_1_1Common_1_1Exceptions_1_1CloudinaryInvalidParameterException.html" title="Excepción que se produce cuando se proporciona un parámetro inválido a una operación de Cloudinary." alt="" coords="459,133,729,173"/>
+<area shape="poly" id="edge31_Node000001_Node000004" title=" " alt="" coords="424,134,459,137,458,142,424,139"/>
+<area shape="rect" id="Node000005" href="$classBackEncordados_1_1Common_1_1Exceptions_1_1CloudinaryUploadException.html" title="Excepción que se produce cuando falla la subida de una imagen a Cloudinary." alt="" coords="459,197,729,237"/>
+<area shape="poly" id="edge32_Node000001_Node000005" title=" " alt="" coords="343,144,459,183,504,195,502,200,458,188,341,149"/>
+</map>
