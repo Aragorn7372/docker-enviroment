@@ -191,7 +191,7 @@ services:
     networks:
       - encordados_network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:80/health || exit 1"]
+      test: ["CMD-SHELL", "bash -c '(echo >/dev/tcp/localhost/80) 2>/dev/null && exit 0 || exit 1'"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -212,6 +212,12 @@ services:
       - encordados_network
     depends_on:
       - backend
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1/health || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
 
   # ============================================
   # Nginx - Reverse Proxy
@@ -231,7 +237,7 @@ services:
       - backend
       - frontend
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1/health"]
       interval: 30s
       timeout: 10s
       retries: 3
