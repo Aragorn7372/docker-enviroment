@@ -350,7 +350,7 @@ var assemblies = [
       { "name": "BackEncordados.Infraestructure.AppConfig", "rp": "BackEncordados_AppConfig.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 126, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.AppConfigExtensions", "rp": "BackEncordados_AppConfigExtensions.html", "cl": 21, "ucl": 2, "cal": 23, "tl": 163, "cb": 15, "tb": 18, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.AppOptions", "rp": "BackEncordados_AppOptions.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 126, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "BackEncordados.Infraestructure.AuthenticationConfig", "rp": "BackEncordados_AuthenticationConfig.html", "cl": 39, "ucl": 0, "cal": 39, "tl": 198, "cb": 12, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Infraestructure.AuthenticationConfig", "rp": "BackEncordados_AuthenticationConfig.html", "cl": 54, "ucl": 1, "cal": 55, "tl": 214, "cb": 14, "tb": 16, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.CacheConfig", "rp": "BackEncordados_CacheConfig.html", "cl": 5, "ucl": 9, "cal": 14, "tl": 49, "cb": 1, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.CloudinaryConfig", "rp": "BackEncordados_CloudinaryConfig.html", "cl": 37, "ucl": 0, "cal": 37, "tl": 180, "cb": 24, "tb": 24, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.Constraints.UlidRouteConstraint", "rp": "BackEncordados_UlidRouteConstraint.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 19, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -455,14 +455,14 @@ var assemblies = [
       { "name": "BackEncordados.Usuarios.Dto.UserDto", "rp": "BackEncordados_UserDto.html", "cl": 31, "ucl": 4, "cal": 35, "tl": 155, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Dto.UserRequestDto", "rp": "BackEncordados_UserRequestDto.html", "cl": 13, "ucl": 0, "cal": 13, "tl": 53, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Dto.UserResponseDto", "rp": "BackEncordados_UserResponseDto.html", "cl": 5, "ucl": 1, "cal": 6, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "BackEncordados.Usuarios.Dto.UserWithIdDto", "rp": "BackEncordados_UserWithIdDto.html", "cl": 5, "ucl": 1, "cal": 6, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Usuarios.Dto.UserWithIdDto", "rp": "BackEncordados_UserWithIdDto.html", "cl": 5, "ucl": 4, "cal": 9, "tl": 22, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Errors.AuthError", "rp": "BackEncordados_AuthError.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 50, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Errors.ConflictError", "rp": "BackEncordados_ConflictError.4.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 50, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Errors.PasswordChangeExpiredTimeout", "rp": "BackEncordados_PasswordChangeExpiredTimeout.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 50, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Errors.UnauthorizedError", "rp": "BackEncordados_UnauthorizedError.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 50, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Errors.UserNotFoundError", "rp": "BackEncordados_UserNotFoundError.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 50, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Errors.ValidationError", "rp": "BackEncordados_ValidationError.4.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 50, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "BackEncordados.Usuarios.Mapper.UserMapper", "rp": "BackEncordados_UserMapper.html", "cl": 21, "ucl": 0, "cal": 21, "tl": 91, "cb": 2, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Usuarios.Mapper.UserMapper", "rp": "BackEncordados_UserMapper.html", "cl": 24, "ucl": 0, "cal": 24, "tl": 94, "cb": 3, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Model.User", "rp": "BackEncordados_User.html", "cl": 15, "ucl": 0, "cal": 15, "tl": 62, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Repository.UserRepository", "rp": "BackEncordados_UserRepository.html", "cl": 77, "ucl": 1, "cal": 78, "tl": 185, "cb": 29, "tb": 36, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Service.Auth.AuthService", "rp": "BackEncordados_AuthService.html", "cl": 110, "ucl": 2, "cal": 112, "tl": 303, "cb": 18, "tb": 20, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -681,6 +681,12 @@ var riskHotspots = [
     ]},
   {
     "assembly": "BackEncordados", "class": "BackEncordados.Infraestructure.AppConfigExtensions", "reportPath": "BackEncordados_AppConfigExtensions.html", "methodName": "AddAppConfig(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)", "methodShortName": "AddAppConfig(...)", "fileIndex": 0, "line": 100,
+    "metrics": [
+      { "value": 16, "exceeded": false },
+      { "value": 16, "exceeded": true },
+    ]},
+  {
+    "assembly": "BackEncordados", "class": "BackEncordados.Infraestructure.AuthenticationConfig", "reportPath": "BackEncordados_AuthenticationConfig.html", "methodName": "AddAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)", "methodShortName": "AddAuthentication(...)", "fileIndex": 0, "line": 152,
     "metrics": [
       { "value": 16, "exceeded": false },
       { "value": 16, "exceeded": true },
