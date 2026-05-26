@@ -1,0 +1,171 @@
+name: CI – Dev Build & Test
+
+# Se activa cuando cualquiera de los dos submódulos hace push a dev
+on:
+  push:
+    branches:
+      - dev
+  repository_dispatch:
+    types: [submodule_updated]
+
+permissions:
+  contents: write
+
+jobs:
+
+  check-branch:
+    runs-on: ubuntu-latest
+    outputs:
+      is-dev: ${{ steps.check.outputs.is-dev }}
+    steps:
+      - name: Check if event is from dev branch
+        id: check
+        run: |
+          if [ "${{ github.event.client_payload.branch }}" = "dev" ]; then
+            echo "is-dev=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "is-dev=false" >> "$GITHUB_OUTPUT"
+          fi
+
+
+  build-front:
+    needs: check-branch
+    if: needs.check-branch.outputs.is-dev == 'true'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout monorepo (with submodules)
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          submodules: false
+        
+      - name: Checkout front-encordados submodule
+        run: git clone --branch dev https://x-access-token:${{ secrets.FRONTEND_REPO_PAT }}@github.com/JorgeMrj/front-encordados.git front-encordados
+     
+      - name: Debug directory
+        run: |
+           pwd
+           ls -la
+           ls -la back-encordados/
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: front-encordados/package-lock.json
+
+      - name: Install dependencies
+        working-directory: front-encordados
+        run: npm ci --legacy-peer-deps
+
+      - name: Build Angular (production)
+        working-directory: front-encordados
+        run: npm run build -- --configuration production
+
+
+  build-back:
+    needs: check-branch
+    if: needs.check-branch.outputs.is-dev == 'true'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout monorepo (with submodules)
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          submodules: false
+        
+      - name: Checkout back-encordados submodule
+        run: git clone --branch dev https://x-access-token:${{ secrets.BACKEND_REPO_PAT }}@github.com/Aragorn7372/back-encordados.git back-encordados
+      
+      - name: Debug directory
+        run: |
+           pwd
+           ls -la
+           ls -la back-encordados/
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Restore NuGet packages
+        working-directory: back-encordados
+        run: dotnet restore BackEncordados.slnx
+
+      - name: Build solution
+        working-directory: back-encordados
+        run: dotnet build BackEncordados.slnx --no-restore -c Release
+
+  test-back:
+    needs: build-back
+    runs-on: ubuntu-latest
+    env:
+      LANG: es_ES.UTF-8
+      LC_ALL: es_ES.UTF-8
+    steps:
+      - name: Install Spanish locale
+        run: |
+          sudo locale-gen es_ES.UTF-8
+          sudo update-locale LANG=es_ES.UTF-8 LC_ALL=es_ES.UTF-8
+      - name: Checkout monorepo (with submodules)
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          submodules: false
+        
+      - name: Checkout back-encordados submodule
+        run: git clone --branch dev https://x-access-token:${{ secrets.BACKEND_REPO_PAT }}@github.com/Aragorn7372/back-encordados.git back-encordados
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Restore NuGet packages
+        working-directory: back-encordados
+        run: dotnet restore BackEncordados.slnx
+
+      - name: Run unit tests with Coverlet (Cobertura)
+        working-directory: back-encordados
+        run: |
+          dotnet test TestEncordados/TestEncordados.csproj \
+            --no-restore \
+            --configuration Release \
+            --collect:"XPlat Code Coverage" \
+            --results-directory ./TestResults \
+            -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura
+
+      - name: Install ReportGenerator
+        run: dotnet tool install --global dotnet-reportgenerator-globaltool
+
+      - name: Generate HTML coverage report
+        working-directory: back-encordados
+        run: |
+          COVERAGE_FILE=$(find TestResults -name "coverage.cobertura.xml" | head -1)
+          echo "Coverage file: $COVERAGE_FILE"
+          reportgenerator \
+            "-reports:$COVERAGE_FILE" \
+            "-targetdir:coverage-report" \
+            "-reporttypes:Html;Badges;Cobertura"
+
+      - name: Upload coverage report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+            name: coverage-report
+            path: back-encordados/coverage-report
+
+      - name: Download coverage report
+        uses: actions/download-artifact@v4
+        with:
+            name: coverage-report
+            path: generated/coverage
+
+      - name: Deploy to dev-test branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+            folder: generated
+            branch: dev-test
+            token: ${{ secrets.GITHUB_TOKEN }}
