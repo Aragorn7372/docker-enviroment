@@ -1,0 +1,233 @@
+name: CI – Production Build, Docs & Deploy
+
+on:
+  push:
+    branches:
+      - main
+  repository_dispatch:
+    types: [submodule_updated]
+
+permissions:
+  contents: write
+
+jobs:
+
+  check-branch:
+    runs-on: ubuntu-latest
+    outputs:
+      is-main: ${{ steps.check.outputs.is-main }}
+    steps:
+      - name: Check if event is from main branch
+        id: check
+        run: |
+          if [ "${{ github.event.client_payload.branch }}" = "main" ]; then
+            echo "is-main=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "is-main=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  build-front:
+    needs: check-branch
+    if: needs.check-branch.outputs.is-main == 'true'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout monorepo (with submodules)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          submodules: false
+
+      - name: Checkout front-encordados submodule
+        run: git clone --branch main https://x-access-token:${{ secrets.FRONTEND_REPO_PAT }}@github.com/JorgeMrj/front-encordados.git front-encordados
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: front-encordados/package-lock.json
+
+      - name: Install dependencies
+        working-directory: front-encordados
+        run: npm ci --legacy-peer-deps
+
+      - name: Build Angular (production)
+        working-directory: front-encordados
+        run: npm run build -- --configuration production
+
+  build-back:
+    needs: check-branch
+    if: needs.check-branch.outputs.is-main == 'true'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout monorepo (with submodules)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          submodules: false
+
+      - name: Checkout back-encordados submodule
+        run: git clone --branch main https://x-access-token:${{ secrets.BACKEND_REPO_PAT }}@github.com/Aragorn7372/back-encordados.git back-encordados
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Restore NuGet packages
+        working-directory: back-encordados
+        run: dotnet restore BackEncordados.slnx
+
+      - name: Build solution
+        working-directory: back-encordados
+        run: dotnet build BackEncordados.slnx --no-restore -c Release
+
+  test-back:
+    needs: build-back
+    runs-on: ubuntu-latest
+    env:
+      LANG: es_ES.UTF-8
+      LC_ALL: es_ES.UTF-8
+    steps:
+      - name: Install Spanish locale
+        run: |
+          sudo locale-gen es_ES.UTF-8
+          sudo update-locale LANG=es_ES.UTF-8 LC_ALL=es_ES.UTF-8
+
+      - name: Checkout monorepo (with submodules)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          submodules: false
+
+      - name: Checkout back-encordados submodule
+        run: git clone --branch main https://x-access-token:${{ secrets.BACKEND_REPO_PAT }}@github.com/Aragorn7372/back-encordados.git back-encordados
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Restore NuGet packages
+        working-directory: back-encordados
+        run: dotnet restore BackEncordados.slnx
+
+      - name: Run unit tests with Coverlet (Cobertura)
+        working-directory: back-encordados
+        run: |
+          dotnet test TestEncordados/TestEncordados.csproj \
+            --no-restore \
+            --configuration Release \
+            --collect:"XPlat Code Coverage" \
+            --results-directory ./TestResults \
+            -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura
+
+      - name: Install ReportGenerator
+        run: dotnet tool install --global dotnet-reportgenerator-globaltool
+
+      - name: Generate HTML coverage report
+        working-directory: back-encordados
+        run: |
+          COVERAGE_FILE=$(find TestResults -name "coverage.cobertura.xml" | head -1)
+          echo "Coverage file: $COVERAGE_FILE"
+          reportgenerator \
+            "-reports:$COVERAGE_FILE" \
+            "-targetdir:coverage-report" \
+            "-reporttypes:Html;Badges;Cobertura"
+
+      - name: Upload coverage report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: back-encordados/coverage-report
+
+  docs:
+    needs: test-back
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          submodules: false
+
+      - name: Checkout back-encordados submodule
+        run: git clone --branch main https://x-access-token:${{ secrets.BACKEND_REPO_PAT }}@github.com/Aragorn7372/back-encordados.git back-encordados
+
+      - name: Checkout front-encordados submodule
+        run: git clone --branch main https://x-access-token:${{ secrets.FRONTEND_REPO_PAT }}@github.com/JorgeMrj/front-encordados.git front-encordados
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Restore & build (for Doxygen symbols)
+        working-directory: back-encordados
+        run: |
+          dotnet restore BackEncordados.slnx
+          dotnet build BackEncordados.slnx --no-restore -c Release
+
+      - name: Install Doxygen
+        run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
+
+      - name: Download coverage report
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-report
+          path: generated/coverage
+
+      - name: Generate Doxygen docs
+        working-directory: docs
+        run: doxygen Doxyfile
+
+      - name: Copy Doxygen output to generated
+        run: cp -r docs/html generated/
+
+      - name: Create index.html with docs and coverage
+        run: |
+          cat > generated/index.html << 'HTMLEOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>FunkoApi - Documentación & Cobertura</title>
+            <style>
+              body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+              h1 { color: #333; }
+              h2 { color: #555; }
+              .card { background: white; padding: 20px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+              a { color: #0066cc; text-decoration: none; }
+              a:hover { text-decoration: underline; }
+            </style>
+          </head>
+          <body>
+            <h1>FunkoApi - Documentación & Cobertura</h1>
+            <div class="card">
+              <h2>Documentación Doxygen</h2>
+              <p><a href="html/index.html">Browse API Documentation</a></p>
+            </div>
+            <div class="card">
+              <h2>Cobertura de Tests</h2>
+              <p><a href="coverage/index.html">Coverage Report</a></p>
+            </div>
+            <p><small>Generated: HTMLEOF
+          echo -n "$(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> generated/index.html
+          echo "</small></p></body></html>" >> generated/index.html
+
+      - name: Create .nojekyll
+        run: touch generated/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: generated
+          branch: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy-render:
+    needs: [build-front, build-back, test-back]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Render deploy via webhook
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
