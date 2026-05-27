@@ -126,9 +126,9 @@ Funciones</h2></td></tr>
 <tr class="memitem:a8eb3609d4002341b1cea9fdb4f7b221a" id="r_a8eb3609d4002341b1cea9fdb4f7b221a"><td class="memItemLeft" align="right" valign="top">record&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a">UserResponseDto</a> (string Username, string ImageUrl, string Name, double Bonos)</td></tr>
 <tr class="memdesc:a8eb3609d4002341b1cea9fdb4f7b221a"><td class="mdescLeft">&#160;</td><td class="mdescRight">DTO de respuesta con la información mínima de un usuario para vistas públicas o listados.  <br /></td></tr>
 <tr class="separator:a8eb3609d4002341b1cea9fdb4f7b221a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58afc8b24eedd10a753a89e40aabd21b" id="r_a58afc8b24eedd10a753a89e40aabd21b"><td class="memItemLeft" align="right" valign="top">record&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a58afc8b24eedd10a753a89e40aabd21b">UserWithIdDto</a> (string UserId, string Username, string ImageUrl, string Name, string Email, string <a class="el" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a>, string? TournamentId)</td></tr>
-<tr class="memdesc:a58afc8b24eedd10a753a89e40aabd21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">DTO de respuesta que incluye el identificador del usuario junto con sus datos básicos.  <br /></td></tr>
-<tr class="separator:a58afc8b24eedd10a753a89e40aabd21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a782a507a428246426187b39c8cc73b56" id="r_a782a507a428246426187b39c8cc73b56"><td class="memItemLeft" align="right" valign="top">record&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a782a507a428246426187b39c8cc73b56">UserWithIdDto</a> (string UserId, string Username, string ImageUrl, string Name, string Email, string <a class="el" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a>, string? TournamentId, double Bonos=0)</td></tr>
+<tr class="memdesc:a782a507a428246426187b39c8cc73b56"><td class="mdescLeft">&#160;</td><td class="mdescRight">DTO de respuesta que incluye el identificador del usuario junto con sus datos básicos.  <br /></td></tr>
+<tr class="separator:a782a507a428246426187b39c8cc73b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentación de funciones</h2>
 <a id="a1a97520420e718875bbf1cd00c85d058" name="a1a97520420e718875bbf1cd00c85d058"></a>
@@ -404,8 +404,8 @@ Funciones</h2></td></tr>
 
 </div>
 </div>
-<a id="a58afc8b24eedd10a753a89e40aabd21b" name="a58afc8b24eedd10a753a89e40aabd21b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58afc8b24eedd10a753a89e40aabd21b">&#9670;&#160;</a></span>UserWithIdDto()</h2>
+<a id="a782a507a428246426187b39c8cc73b56" name="a782a507a428246426187b39c8cc73b56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a782a507a428246426187b39c8cc73b56">&#9670;&#160;</a></span>UserWithIdDto()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -450,7 +450,13 @@ Funciones</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string?&#160;</td>
-          <td class="paramname"><em>TournamentId</em>&#160;</td>
+          <td class="paramname"><em>TournamentId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Bonos</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -480,7 +486,7 @@ Funciones</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceBackEncordados.html">BackEncordados</a></li><li class="navelem"><a class="el" href="namespaceBackEncordados_1_1Usuarios.html">Usuarios</a></li><li class="navelem"><a class="el" href="namespaceBackEncordados_1_1Usuarios_1_1Dto.html">Dto</a></li>
-    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 11:08:49 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 13:00:03 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

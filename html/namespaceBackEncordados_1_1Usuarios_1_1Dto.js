@@ -8,5 +8,5 @@ var namespaceBackEncordados_1_1Usuarios_1_1Dto =
     [ "FilterUserDto", "namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a71c19b6caa0c3fae3149ead7e52742e0", null ],
     [ "UserDto", "namespaceBackEncordados_1_1Usuarios_1_1Dto.html#af9e62f8b94be628483d09ba231e228ab", null ],
     [ "UserResponseDto", "namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a", null ],
-    [ "UserWithIdDto", "namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a58afc8b24eedd10a753a89e40aabd21b", null ]
+    [ "UserWithIdDto", "namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a782a507a428246426187b39c8cc73b56", null ]
 ];

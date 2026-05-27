@@ -327,44 +327,45 @@ $(document).ready(function(){initNavTree('purchased_8service_8ts_source.html',''
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>      machine: dto.machine,</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>      comments: dto.comments,</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>      typeString: firstLinea?.stringSetup?.stringV ?? &#39;&#39;,</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>      typeWork: &#39;ENCORDADO&#39;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>      typeWork: firstLinea?.stringSetup?.stringH === &#39;ORDEN_DE_TALLER&#39; ? &#39;ORDEN_DE_TALLER&#39; : &#39;ENCORDADO&#39;</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    };</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  }</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  private mapLinea(linea: PedidoLineaResponseDto, index: number): LineaPedido {</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    return {</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>      id: linea.id,</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>      raquetaId: linea.id,</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>      raquetaModelo: linea.raquetModel,</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>      tipo: &#39;ENCORDADO&#39;,</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      vertical: linea.stringSetup?.stringV ?? &#39;&#39;,</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      horizontal: linea.stringSetup?.stringH || &#39;-&#39;,</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      tensionV: `${linea.stringSetup?.tensionV ?? 0} kg`,</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      tensionH: `${linea.stringSetup?.tensionH ?? 0} kg`,</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      nudos: linea.nudos,</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      logo: linea.color || (linea.logotype ? &#39;Con logo&#39; : &#39;Sin logo&#39;),</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>      obs: &#39;&#39;,</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>      status: linea.status</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    };</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  }</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  private aggregateStatus(lineas: PedidoLineaResponseDto[] | undefined): string {</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    if (!lineas || lineas.length === 0) return &#39;PENDING&#39;;</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    const statuses = lineas.map((l) =&gt; (l.status || &#39;&#39;).toUpperCase());</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    if (statuses.every((s) =&gt; s === &#39;CANCELED&#39;)) return &#39;CANCELED&#39;;</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    if (statuses.every((s) =&gt; s === &#39;DELIVERED_TOPLAYER&#39;)) return &#39;DELIVERED_TOPLAYER&#39;;</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    if (statuses.every((s) =&gt; s === &#39;COMPLETED&#39; || s === &#39;DELIVERED_TOPLAYER&#39;)) return &#39;COMPLETED&#39;;</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    if (statuses.some((s) =&gt; s === &#39;IN_PROGRESS&#39;)) return &#39;IN_PROGRESS&#39;;</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    return statuses[0] || &#39;PENDING&#39;;</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>  }</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>}</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    const isTaller = linea.stringSetup?.stringH === &#39;ORDEN_DE_TALLER&#39;;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    return {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>      id: linea.id,</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>      raquetaId: linea.id,</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>      raquetaModelo: linea.raquetModel,</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      tipo: isTaller ? &#39;ORDEN_DE_TALLER&#39; : &#39;ENCORDADO&#39;,</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      vertical: linea.stringSetup?.stringV ?? &#39;&#39;,</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      horizontal: linea.stringSetup?.stringH || &#39;-&#39;,</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      tensionV: `${linea.stringSetup?.tensionV ?? 0} kg`,</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      tensionH: `${linea.stringSetup?.tensionH ?? 0} kg`,</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      nudos: isTaller ? 0 : linea.nudos,</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>      logo: isTaller ? (linea.color || &#39;&#39;) : (linea.color || (linea.logotype ? &#39;Con logo&#39; : &#39;Sin logo&#39;)),</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>      obs: &#39;&#39;,</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      status: linea.status</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    };</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  }</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  private aggregateStatus(lineas: PedidoLineaResponseDto[] | undefined): string {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    if (!lineas || lineas.length === 0) return &#39;PENDING&#39;;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    const statuses = lineas.map((l) =&gt; (l.status || &#39;&#39;).toUpperCase());</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    if (statuses.every((s) =&gt; s === &#39;CANCELED&#39;)) return &#39;CANCELED&#39;;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    if (statuses.every((s) =&gt; s === &#39;DELIVERED_TOPLAYER&#39;)) return &#39;DELIVERED_TOPLAYER&#39;;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    if (statuses.every((s) =&gt; s === &#39;COMPLETED&#39; || s === &#39;DELIVERED_TOPLAYER&#39;)) return &#39;COMPLETED&#39;;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    if (statuses.some((s) =&gt; s === &#39;IN_PROGRESS&#39;)) return &#39;IN_PROGRESS&#39;;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    return statuses[0] || &#39;PENDING&#39;;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  }</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_1e4c1e1ba784485a6f057d03bd8225e5.html">front-encordados</a></li><li class="navelem"><a class="el" href="dir_926dc43b74bd7bb2b391b76d673d57fb.html">src</a></li><li class="navelem"><a class="el" href="dir_bad3db17ab7eacd7fa6eff673f3b8e6b.html">app</a></li><li class="navelem"><a class="el" href="dir_746400c9d9ae26b5e8d697218db15a23.html">services</a></li><li class="navelem"><a class="el" href="purchased_8service_8ts.html">purchased.service.ts</a></li>
-    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 11:08:49 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 13:00:03 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

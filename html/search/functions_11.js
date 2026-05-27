@@ -111,7 +111,7 @@ var searchData=
   ['userrequestdtovalidator_108',['UserRequestDtoValidator',['../classBackEncordados_1_1Usuarios_1_1Validator_1_1UserRequestDtoValidator.html#a5aa56a1ebc785c6270de28897290dc54',1,'BackEncordados::Usuarios::Validator::UserRequestDtoValidator']]],
   ['userresponsedto_109',['UserResponseDto',['../namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a8eb3609d4002341b1cea9fdb4f7b221a',1,'BackEncordados::Usuarios::Dto']]],
   ['userservicetests_110',['UserServiceTests',['../classTestEncordados_1_1Unit_1_1Services_1_1Usuarios_1_1UserServiceTests.html#ab45f6ba04fb184e07b7750defcdbc2fe',1,'TestEncordados::Unit::Services::Usuarios::UserServiceTests']]],
-  ['userwithiddto_111',['UserWithIdDto',['../namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a58afc8b24eedd10a753a89e40aabd21b',1,'BackEncordados::Usuarios::Dto']]],
+  ['userwithiddto_111',['UserWithIdDto',['../namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a782a507a428246426187b39c8cc73b56',1,'BackEncordados::Usuarios::Dto']]],
   ['useserilog_112',['UseSerilog',['../Program_8cs.html#a581fb38d7c44cbe2c57d1a89e40f7a2f',1,'Program.cs']]],
   ['usestaticfiles_113',['UseStaticFiles',['../Program_8cs.html#a906a3ce545279a7a73941f1d7b64d7cf',1,'Program.cs']]]
 ];

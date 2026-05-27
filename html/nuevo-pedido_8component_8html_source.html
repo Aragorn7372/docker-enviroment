@@ -365,90 +365,101 @@ $(document).ready(function(){initNavTree('nuevo-pedido_8component_8html_source.h
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>          &lt;!-- Artículos --&gt;</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>          &lt;div class=&quot;space-y-3&quot;&gt;</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            &lt;div *ngFor=&quot;let art of tallerArticulos; let i = index&quot; class=&quot;atp-panel p-4&quot;&gt;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>              &lt;div class=&quot;grid md:grid-cols-[1fr_auto_auto] gap-3 mb-3 items-end&quot;&gt;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                &lt;!-- Artículo / Raqueta --&gt;</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                &lt;div&gt;</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                  &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Art&amp;iacute;culo / Raqueta *&lt;/label&gt;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                  &lt;input [(ngModel)]=&quot;art.articulo&quot; class=&quot;input input-bordered w-full&quot; placeholder=&quot;Ej: Grip, Sobregrip, Raqueta...&quot; /&gt;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                &lt;/div&gt;</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                &lt;!-- Cantidad --&gt;</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                &lt;div class=&quot;w-28&quot;&gt;</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                  &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Cantidad&lt;/label&gt;</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                  &lt;input type=&quot;number&quot; [(ngModel)]=&quot;art.cantidad&quot; class=&quot;input input-bordered w-full&quot; min=&quot;1&quot; /&gt;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>              &lt;!-- Selector de materiales del torneo --&gt;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                &lt;div *ngIf=&quot;tallerMateriales.length &gt; 0&quot; class=&quot;mb-3&quot;&gt;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                  &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Material del torneo&lt;/label&gt;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                  &lt;select (change)=&quot;onTallerMaterialSelect(art, $any($event.target).value)&quot; class=&quot;select select-bordered w-full&quot;&gt;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                    &lt;option value=&quot;&quot;&gt;-- Seleccionar material --&lt;/option&gt;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                    @for (mat of tallerMateriales; track mat.id) {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                      &lt;option [value]=&quot;mat.id&quot;&gt;{{ mat.brand }} {{ mat.model }} &amp;mdash; {{ mat.price }}&amp;euro;&lt;/option&gt;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                    }</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                    &lt;option value=&quot;manual&quot;&gt;✏️ Escribir manualmente...&lt;/option&gt;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                  &lt;/select&gt;</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                &lt;/div&gt;</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                &lt;!-- Precio --&gt;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                &lt;div class=&quot;w-28&quot;&gt;</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                  &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Precio (&amp;euro;)&lt;/label&gt;</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                  &lt;input type=&quot;number&quot; [(ngModel)]=&quot;art.precio&quot; class=&quot;input input-bordered w-full&quot; min=&quot;0&quot; step=&quot;0.01&quot; /&gt;</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                &lt;/div&gt;</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>              &lt;/div&gt;</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>              &lt;!-- Notas del artículo --&gt;</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>              &lt;div class=&quot;flex items-end gap-3&quot;&gt;</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                &lt;div class=&quot;flex-1&quot;&gt;</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                  &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Notas / Comentarios del Art&amp;iacute;culo&lt;/label&gt;</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                  &lt;textarea [(ngModel)]=&quot;art.notas&quot; class=&quot;textarea textarea-bordered w-full&quot; rows=&quot;2&quot; placeholder=&quot;Notas específicas de este artículo...&quot;&gt;&lt;/textarea&gt;</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                &lt;/div&gt;</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                &lt;button *ngIf=&quot;tallerArticulos.length &gt; 1&quot; (click)=&quot;removeTallerArticulo(i)&quot; class=&quot;btn btn-sm btn-error btn-outline rounded-xl mb-0.5&quot;&gt;</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                  &lt;svg class=&quot;w-4 h-4&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                    &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot; /&gt;</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                  &lt;/svg&gt;</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                &lt;/button&gt;</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>              &lt;/div&gt;</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>            &lt;/div&gt;</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>          &lt;!-- Añadir artículo --&gt;</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>          &lt;button (click)=&quot;addTallerArticulo()&quot; class=&quot;w-full btn btn-outline rounded-xl py-3 gap-2 border-dashed text-sm&quot;&gt;</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            &lt;svg class=&quot;w-5 h-5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>              &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M12 4v16m8-8H4&quot; /&gt;</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            &lt;/svg&gt;</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            A&amp;ntilde;adir otro art&amp;iacute;culo</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>          &lt;/button&gt;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>          &lt;!-- Requerida / Cuando / Comentarios generales --&gt;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>          &lt;div class=&quot;atp-panel p-5&quot;&gt;</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            &lt;div class=&quot;grid md:grid-cols-3 gap-4&quot;&gt;</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>              &lt;div&gt;</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Requerida&lt;/label&gt;</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                &lt;input type=&quot;date&quot; [(ngModel)]=&quot;tallerRequerida&quot; class=&quot;input input-bordered w-full&quot; /&gt;</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>              &lt;/div&gt;</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>              &lt;div&gt;</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Cuando&lt;/label&gt;</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                &lt;input [(ngModel)]=&quot;tallerCuando&quot; class=&quot;input input-bordered w-full&quot; placeholder=&quot;N/A&quot; /&gt;</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>              &lt;/div&gt;</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>              &lt;div&gt;</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Comentarios Generales&lt;/label&gt;</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                &lt;textarea [(ngModel)]=&quot;tallerComentarios&quot; class=&quot;textarea textarea-bordered w-full&quot; rows=&quot;2&quot; placeholder=&quot;Notas generales del pedido...&quot;&gt;&lt;/textarea&gt;</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>              &lt;/div&gt;</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            &lt;/div&gt;</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        &lt;/ng-container&gt;</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>      &lt;!-- Footer Actions --&gt;</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>      &lt;div class=&quot;sticky bottom-0 bg-white z-10 px-6 py-4 border-t border-slate-100 flex items-center justify-between gap-4&quot;&gt;</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        &lt;button (click)=&quot;onClose()&quot; class=&quot;btn btn-ghost&quot;&gt;Cancelar&lt;/button&gt;</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        &lt;div class=&quot;flex items-center gap-3&quot;&gt;</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>          &lt;span class=&quot;text-sm text-slate-500&quot; *ngIf=&quot;pedidoTipo === &#39;ENCORDADO&#39;&quot;&gt;{{ lineas.length }} raqueta(s) | Total: {{ total }}&amp;euro;&lt;/span&gt;</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>          &lt;span class=&quot;text-sm text-slate-500&quot; *ngIf=&quot;pedidoTipo === &#39;ORDEN_DE_TALLER&#39;&quot;&gt;{{ tallerArticulos.length }} art&amp;iacute;culo(s) | Total: {{ tallerTotal }}&amp;euro;&lt;/span&gt;</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>          &lt;button (click)=&quot;onSave()&quot; class=&quot;btn btn-primary rounded-xl gap-2&quot;&gt;</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            &lt;svg class=&quot;w-4 h-4&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>              &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M5 13l4 4L19 7&quot; /&gt;</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            &lt;/svg&gt;</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            Guardar Pedido</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>          &lt;/button&gt;</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>  &lt;/div&gt;</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>&lt;/div&gt;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                &lt;div class=&quot;grid md:grid-cols-[1fr_auto_auto] gap-3 items-end&quot;&gt;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                &lt;!-- Artículo / Raqueta --&gt;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                &lt;div&gt;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                  &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Art&amp;iacute;culo / Raqueta *&lt;/label&gt;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                  &lt;input [(ngModel)]=&quot;art.articulo&quot; class=&quot;input input-bordered w-full&quot; placeholder=&quot;Ej: Grip, Sobregrip, Raqueta...&quot; /&gt;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                &lt;/div&gt;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                &lt;!-- Cantidad --&gt;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                &lt;div class=&quot;w-28&quot;&gt;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                  &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Cantidad&lt;/label&gt;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                  &lt;input type=&quot;number&quot; [(ngModel)]=&quot;art.cantidad&quot; class=&quot;input input-bordered w-full&quot; min=&quot;1&quot; /&gt;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                &lt;/div&gt;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                &lt;!-- Precio --&gt;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                &lt;div class=&quot;w-28&quot;&gt;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                  &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Precio (&amp;euro;)&lt;/label&gt;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                  &lt;input type=&quot;number&quot; [(ngModel)]=&quot;art.precio&quot; class=&quot;input input-bordered w-full&quot; min=&quot;0&quot; step=&quot;0.01&quot; /&gt;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                &lt;/div&gt;</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>              &lt;!-- Notas del artículo --&gt;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>              &lt;div class=&quot;flex items-end gap-3&quot;&gt;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                &lt;div class=&quot;flex-1&quot;&gt;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                  &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Notas / Comentarios del Art&amp;iacute;culo&lt;/label&gt;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                  &lt;textarea [(ngModel)]=&quot;art.notas&quot; class=&quot;textarea textarea-bordered w-full&quot; rows=&quot;2&quot; placeholder=&quot;Notas específicas de este artículo...&quot;&gt;&lt;/textarea&gt;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                &lt;/div&gt;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                &lt;button *ngIf=&quot;tallerArticulos.length &gt; 1&quot; (click)=&quot;removeTallerArticulo(i)&quot; class=&quot;btn btn-sm btn-error btn-outline rounded-xl mb-0.5&quot;&gt;</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                  &lt;svg class=&quot;w-4 h-4&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                    &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot; /&gt;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                  &lt;/svg&gt;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                &lt;/button&gt;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>          &lt;!-- Añadir artículo --&gt;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>          &lt;button (click)=&quot;addTallerArticulo()&quot; class=&quot;w-full btn btn-outline rounded-xl py-3 gap-2 border-dashed text-sm&quot;&gt;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            &lt;svg class=&quot;w-5 h-5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>              &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M12 4v16m8-8H4&quot; /&gt;</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            &lt;/svg&gt;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            A&amp;ntilde;adir otro art&amp;iacute;culo</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>          &lt;/button&gt;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>          &lt;!-- Requerida / Cuando / Comentarios generales --&gt;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>          &lt;div class=&quot;atp-panel p-5&quot;&gt;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            &lt;div class=&quot;grid md:grid-cols-3 gap-4&quot;&gt;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>              &lt;div&gt;</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Requerida&lt;/label&gt;</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                &lt;input type=&quot;date&quot; [(ngModel)]=&quot;tallerRequerida&quot; class=&quot;input input-bordered w-full&quot; /&gt;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>              &lt;div&gt;</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Cuando&lt;/label&gt;</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                &lt;input [(ngModel)]=&quot;tallerCuando&quot; class=&quot;input input-bordered w-full&quot; placeholder=&quot;N/A&quot; /&gt;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>              &lt;div&gt;</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Comentarios Generales&lt;/label&gt;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                &lt;textarea [(ngModel)]=&quot;tallerComentarios&quot; class=&quot;textarea textarea-bordered w-full&quot; rows=&quot;2&quot; placeholder=&quot;Notas generales del pedido...&quot;&gt;&lt;/textarea&gt;</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        &lt;/ng-container&gt;</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      &lt;!-- Footer Actions --&gt;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      &lt;div class=&quot;sticky bottom-0 bg-white z-10 px-6 py-4 border-t border-slate-100 flex items-center justify-between gap-4&quot;&gt;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        &lt;button (click)=&quot;onClose()&quot; class=&quot;btn btn-ghost&quot;&gt;Cancelar&lt;/button&gt;</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        &lt;div class=&quot;flex items-center gap-3&quot;&gt;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>          &lt;span class=&quot;text-sm text-slate-500&quot; *ngIf=&quot;pedidoTipo === &#39;ENCORDADO&#39;&quot;&gt;{{ lineas.length }} raqueta(s) | Total: {{ total }}&amp;euro;&lt;/span&gt;</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>          &lt;span class=&quot;text-sm text-slate-500&quot; *ngIf=&quot;pedidoTipo === &#39;ORDEN_DE_TALLER&#39;&quot;&gt;{{ tallerArticulos.length }} art&amp;iacute;culo(s) | Total: {{ tallerTotal }}&amp;euro;&lt;/span&gt;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>          &lt;button (click)=&quot;onSave()&quot; class=&quot;btn btn-primary rounded-xl gap-2&quot;&gt;</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            &lt;svg class=&quot;w-4 h-4&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>              &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M5 13l4 4L19 7&quot; /&gt;</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            &lt;/svg&gt;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            Guardar Pedido</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>          &lt;/button&gt;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>  &lt;/div&gt;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>&lt;/div&gt;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_1e4c1e1ba784485a6f057d03bd8225e5.html">front-encordados</a></li><li class="navelem"><a class="el" href="dir_926dc43b74bd7bb2b391b76d673d57fb.html">src</a></li><li class="navelem"><a class="el" href="dir_bad3db17ab7eacd7fa6eff673f3b8e6b.html">app</a></li><li class="navelem"><a class="el" href="dir_60ec7de695a156217b1e2e1bd569057d.html">components</a></li><li class="navelem"><a class="el" href="dir_ffb37ed89f50e8ca2b3c0c11a505ffc0.html">nuevo-pedido</a></li><li class="navelem"><a class="el" href="nuevo-pedido_8component_8html.html">nuevo-pedido.component.html</a></li>
-    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 11:08:49 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 13:00:03 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -160,7 +160,7 @@ var searchData=
   ['userservicetests_2ecs_157',['UserServiceTests.cs',['../UserServiceTests_8cs.html',1,'']]],
   ['userservicetype_158',['UserServiceType',['../UserServiceTests_8cs.html#a216d335a10a5e331b1e4d5095a461ef9',1,'UserServiceTests.cs']]],
   ['usersupdated_159',['UsersUpdated',['../classBackEncordados_1_1Excel_1_1Dto_1_1ExcelImportResultDto.html#aa4570b3a5aead020fe58044294f7c26e',1,'BackEncordados::Excel::Dto::ExcelImportResultDto']]],
-  ['userwithiddto_160',['UserWithIdDto',['../namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a58afc8b24eedd10a753a89e40aabd21b',1,'BackEncordados::Usuarios::Dto']]],
+  ['userwithiddto_160',['UserWithIdDto',['../namespaceBackEncordados_1_1Usuarios_1_1Dto.html#a782a507a428246426187b39c8cc73b56',1,'BackEncordados::Usuarios::Dto']]],
   ['userwithiddto_2ecs_161',['UserWithIdDto.cs',['../UserWithIdDto_8cs.html',1,'']]],
   ['useserilog_162',['UseSerilog',['../Program_8cs.html#a581fb38d7c44cbe2c57d1a89e40f7a2f',1,'Program.cs']]],
   ['usestaticfiles_163',['UseStaticFiles',['../Program_8cs.html#a906a3ce545279a7a73941f1d7b64d7cf',1,'Program.cs']]],

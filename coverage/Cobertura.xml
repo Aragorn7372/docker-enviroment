@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.7516646115906288" branch-rate="0.7506659563132658" lines-covered="6096" lines-valid="8110" branches-covered="1409" branches-valid="1877" complexity="2412" version="0" timestamp="1779880039">
+<coverage line-rate="0.7516025641025641" branch-rate="0.7506659563132658" lines-covered="6097" lines-valid="8112" branches-covered="1409" branches-valid="1877" complexity="2413" version="0" timestamp="1779886722">
   <sources>
     <source>/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/</source>
   </sources>
   <packages>
-    <package name="BackEncordados" line-rate="0.7516646115906288" branch-rate="0.7506659563132658" complexity="2412">
+    <package name="BackEncordados" line-rate="0.7516025641025641" branch-rate="0.7506659563132658" complexity="2413">
       <classes>
         <class name="BackEncordados.Common.Database.Config.MaterialsDbContext" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Common/Database/Config/MaterialsDbContext.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
@@ -19039,7 +19039,7 @@
             <line number="19" hits="165" branch="false" />
           </lines>
         </class>
-        <class name="BackEncordados.Usuarios.Dto.UserWithIdDto" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Usuarios/Dto/UserWithIdDto.cs" line-rate="0.5555555555555556" branch-rate="1" complexity="8">
+        <class name="BackEncordados.Usuarios.Dto.UserWithIdDto" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Usuarios/Dto/UserWithIdDto.cs" line-rate="0.5" branch-rate="1" complexity="9">
           <methods>
             <method name="get_UserId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -19076,7 +19076,12 @@
                 <line number="21" hits="0" branch="false" />
               </lines>
             </method>
-            <method name=".ctor" signature="(System.String,System.String,System.String,System.String,System.String,System.String,System.String)" line-rate="0.5555555555555556" branch-rate="1" complexity="1">
+            <method name="get_Bonos" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Double)" line-rate="0.5" branch-rate="1" complexity="1">
               <lines>
                 <line number="14" hits="6" branch="false" />
                 <line number="15" hits="1" branch="false" />
@@ -19086,7 +19091,8 @@
                 <line number="19" hits="0" branch="false" />
                 <line number="20" hits="0" branch="false" />
                 <line number="21" hits="0" branch="false" />
-                <line number="22" hits="6" branch="false" />
+                <line number="22" hits="0" branch="false" />
+                <line number="23" hits="6" branch="false" />
               </lines>
             </method>
           </methods>
@@ -19099,7 +19105,8 @@
             <line number="19" hits="0" branch="false" />
             <line number="20" hits="0" branch="false" />
             <line number="21" hits="0" branch="false" />
-            <line number="22" hits="6" branch="false" />
+            <line number="22" hits="0" branch="false" />
+            <line number="23" hits="6" branch="false" />
           </lines>
         </class>
         <class name="BackEncordados.Usuarios.Errors.AuthError" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Usuarios/Errors/AuthError.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -19197,12 +19204,12 @@
                 <line number="68" hits="2" branch="false" />
                 <line number="69" hits="2" branch="false" />
                 <line number="70" hits="2" branch="false" />
+                <line number="71" hits="2" branch="false" />
               </lines>
             </method>
             <method name="ToModel" signature="(BackEncordados.Usuarios.Dto.ContactoPostRequestDto)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="83" hits="8" branch="true" condition-coverage="100% (2/2)" />
-                <line number="84" hits="8" branch="false" />
+                <line number="84" hits="8" branch="true" condition-coverage="100% (2/2)" />
                 <line number="85" hits="8" branch="false" />
                 <line number="86" hits="8" branch="false" />
                 <line number="87" hits="8" branch="false" />
@@ -19210,6 +19217,7 @@
                 <line number="89" hits="8" branch="false" />
                 <line number="90" hits="8" branch="false" />
                 <line number="91" hits="8" branch="false" />
+                <line number="92" hits="8" branch="false" />
               </lines>
             </method>
           </methods>
@@ -19229,8 +19237,8 @@
             <line number="68" hits="2" branch="false" />
             <line number="69" hits="2" branch="false" />
             <line number="70" hits="2" branch="false" />
-            <line number="83" hits="8" branch="true" condition-coverage="100% (2/2)" />
-            <line number="84" hits="8" branch="false" />
+            <line number="71" hits="2" branch="false" />
+            <line number="84" hits="8" branch="true" condition-coverage="100% (2/2)" />
             <line number="85" hits="8" branch="false" />
             <line number="86" hits="8" branch="false" />
             <line number="87" hits="8" branch="false" />
@@ -19238,6 +19246,7 @@
             <line number="89" hits="8" branch="false" />
             <line number="90" hits="8" branch="false" />
             <line number="91" hits="8" branch="false" />
+            <line number="92" hits="8" branch="false" />
           </lines>
         </class>
         <class name="BackEncordados.Usuarios.Model.User" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Usuarios/Model/User.cs" line-rate="1" branch-rate="1" complexity="15">
@@ -19299,7 +19308,7 @@
             </method>
             <method name="get_Bonos" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="36" hits="308" branch="false" />
+                <line number="36" hits="310" branch="false" />
               </lines>
             </method>
             <method name="get_Version" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -19330,7 +19339,7 @@
             <line number="30" hits="282" branch="false" />
             <line number="32" hits="443" branch="false" />
             <line number="34" hits="28" branch="false" />
-            <line number="36" hits="308" branch="false" />
+            <line number="36" hits="310" branch="false" />
             <line number="39" hits="51" branch="false" />
             <line number="41" hits="376" branch="false" />
             <line number="43" hits="346" branch="false" />
