@@ -9,5 +9,6 @@ var dir_60ec7de695a156217b1e2e1bd569057d =
     [ "pedido-codes", "dir_89136938a8657f4abdfc17e693994c87.html", "dir_89136938a8657f4abdfc17e693994c87" ],
     [ "scanner", "dir_b77bdb4fd540ac5d7f7895446a9ef58b.html", "dir_b77bdb4fd540ac5d7f7895446a9ef58b" ],
     [ "toast-notification", "dir_61dee48ae6b911485b8c94a050ff2b84.html", "dir_61dee48ae6b911485b8c94a050ff2b84" ],
+    [ "tournament-picker", "dir_8d38c07b7e1283c9ff944908daea923d.html", "dir_8d38c07b7e1283c9ff944908daea923d" ],
     [ "ui", "dir_2ce7b18a00d631c0a03d94a5664f31f7.html", "dir_2ce7b18a00d631c0a03d94a5664f31f7" ]
 ];

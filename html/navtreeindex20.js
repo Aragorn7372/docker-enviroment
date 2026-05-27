@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"materiales_8page_8html.html":[4,0,1,0,0,4,10],
 "materiales_8page_8html_source.html":[4,0,1,0,0,4,10],
 "materiales_8page_8ts.html":[4,0,1,0,0,4,11],
 "materiales_8page_8ts_source.html":[4,0,1,0,0,4,11],
@@ -245,9 +246,8 @@ var NAVTREEINDEX20 =
 "offline-sync_8service_8ts_source.html":[4,0,1,0,0,5,11],
 "offline_8interceptor_8ts.html":[4,0,1,0,0,5,12],
 "offline_8interceptor_8ts_source.html":[4,0,1,0,0,5,12],
-"page-hero_8component_8ts.html":[4,0,1,0,0,0,9,3],
-"page-hero_8component_8ts_source.html":[4,0,1,0,0,0,9,3],
+"page-hero_8component_8ts.html":[4,0,1,0,0,0,10,3],
+"page-hero_8component_8ts_source.html":[4,0,1,0,0,0,10,3],
 "pages.html":[],
-"pedido-codes_8component_8ts.html":[4,0,1,0,0,0,6,0],
-"pedido-codes_8component_8ts_source.html":[4,0,1,0,0,0,6,0]
+"pedido-codes_8component_8ts.html":[4,0,1,0,0,0,6,0]
 };
