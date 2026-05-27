@@ -55,7 +55,7 @@ var searchData=
   ['services_52',['services',['../Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8',1,'Program.cs']]],
   ['servicesconfig_2ecs_53',['ServicesConfig.cs',['../ServicesConfig_8cs.html',1,'']]],
   ['servicios_20docker_54',['Servicios Docker',['../index.html#servicios-docker',1,'']]],
-  ['set_55',['set',['../namespaceBackEncordados_1_1Talleres_1_1Model.html#ae5a918de9fb378db1bf31fc7a0adaf34',1,'BackEncordados.Talleres.Model.set'],['../namespaceBackEncordados_1_1Materials_1_1Model.html#ae0983f493403fdfbe937023d6ccb9b4ca5d5b78699e57104f2fa03bbdf7b9197b',1,'BackEncordados.Materials.Model.Set']]],
+  ['set_55',['set',['../namespaceBackEncordados_1_1Materials_1_1Model.html#ae0983f493403fdfbe937023d6ccb9b4ca5d5b78699e57104f2fa03bbdf7b9197b',1,'BackEncordados.Materials.Model.Set'],['../namespaceBackEncordados_1_1Talleres_1_1Model.html#ae5a918de9fb378db1bf31fc7a0adaf34',1,'BackEncordados.Talleres.Model.set']]],
   ['setasync_3c_20t_20_3e_56',['SetAsync&lt; T &gt;',['../interfaceBackEncordados_1_1Common_1_1Service_1_1Cache_1_1ICacheService.html#aa9ea66f3ee5af014fa42932273c6bb26',1,'BackEncordados::Common::Service::Cache::ICacheService']]],
   ['setasync_5fsetsvalueinbothl1andl2_57',['SetAsync_SetsValueInBothL1AndL2',['../classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cache_1_1HybridCacheServiceTests.html#aeade7ea4cb176397ed6d9358ab4ee454',1,'TestEncordados::Unit::Common::Service::Cache::HybridCacheServiceTests']]],
   ['setasync_5fstoresvalue_58',['SetAsync_StoresValue',['../classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cache_1_1MemoryCacheServiceTests.html#a26bd0b109bf9acfe7e3003078bf50e76',1,'TestEncordados::Unit::Common::Service::Cache::MemoryCacheServiceTests']]],

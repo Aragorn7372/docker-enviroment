@@ -95,7 +95,7 @@ var NAVTREEINDEX =
 [
 "20260526230741__InitialCreate_8Designer_8cs.html",
 "IEmailService_8cs_source.html",
-"PurchasedServiceTests_8cs.html#a70aa6a3a9ebb9c175c3d7b5fca55af2f",
+"PurchasedServiceTests_8cs.html#a0edebf83bce71e4039556585f74d887e",
 "classBackEncordados_1_1Common_1_1Database_1_1Config_1_1VersionInterceptor.html#afb92e9be2d4bfc473e6ced17302bc1af",
 "classBackEncordados_1_1Excel_1_1Dto_1_1ExcelPedidosDto.html#aee577c441856bd283a71b16023a55f81",
 "classBackEncordados_1_1Purchased_1_1Dto_1_1PedidoLineaPatchDto.html",
@@ -111,10 +111,10 @@ var NAVTREEINDEX =
 "classTestEncordados_1_1Unit_1_1Services_1_1Purchased_1_1PurchasedServiceTests.html#a89df0510495004195e20db0d9af58492",
 "classTestEncordados_1_1Unit_1_1Validators_1_1Materials_1_1CuerdaRequestValidatorTests.html",
 "classTestEncordados_1_1Unit_1_1Validators_1_1Usuarios_1_1ChangeRoleRequestDtoValidatorTests.html#ae882c8a829212ae9b6ad0448185604a4",
-"dir_96654ec9772fda0e996016c003717efc.html",
-"interfaceBackEncordados_1_1Excel_1_1Service_1_1IExcelService.html",
-"materials_8service_8ts.html",
-"pedidos_8page_8html_source.html"
+"dir_955219ee8a962f429cf459173620e477.html",
+"interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#ae5438c3765d0a36d4401c634e505f303",
+"materiales_8page_8ts_source.html",
+"pedidos_8page_8html.html"
 ];
 
 var SYNCONMSG = 'pulsar para deshabilitar sincronización';

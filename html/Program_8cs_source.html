@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('Program_8cs_source.html',''); initResi
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// añado la base de datos</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="Program_8cs.html#ad2d586cf5ef136adabc8ef678d6f4d19">   22</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddDatabase(<a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// politicas de corps</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="Program_8cs.html#a637dbab9406d3965d17cf3d7ca3bbc1e">   24</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddCorsPolicy(<a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>,<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="Program_8cs.html#a918ec19bfe453ebb7eac05880d256865">   24</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddCorsPolicy(<a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>,<a class="code hl_variable" href="Program_8cs.html#a975de72f58dd594a81e392f4ae727359">environment</a>.IsDevelopment());</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// limite de peticiones </span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="Program_8cs.html#a072d31a0c7a8c7ff8c6d71fdabd55127">   26</a></span><a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>.AddRateLimitingPolicy();</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// añade autorizacion</span></div>
@@ -150,10 +150,10 @@ $(document).ready(function(){initNavTree('Program_8cs_source.html',''); initResi
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="Program_8cs.html#a352d68b2c7d34cd0d574c53f302c7770">   50</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.UseGlobalExceptionHandler();</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// politicas de corps (ANTES de routing para que las pre-flights pasen)</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="Program_8cs.html#a169ac37af3074306b50a4154ab634a2f">   52</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.UseCorsPolicy();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="Program_8cs.html#aad9be5b90312a676584ba1834c7eb2d5">   53</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.UseRateLimiting();</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="Program_8cs.html#aa4d447fc3129a3aa301d736b8bd04ae9">   54</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.UseHttpsRedirection();</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">// archivos estaticos ANTES de routing (blazor.server.js, etc.)</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">// archivos estaticos ANTES de routing </span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="Program_8cs.html#a906a3ce545279a7a73941f1d7b64d7cf">   57</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.UseStaticFiles();</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="Program_8cs.html#a94c810d266751293a2d511a720a5625f">   58</a></span><a class="code hl_variable" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.UseRouting();</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">// lo que tiene relacion con usuarios</span></div>
@@ -217,7 +217,7 @@ $(document).ready(function(){initNavTree('Program_8cs_source.html',''); initResi
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="Program_8cs.html">Program.cs</a></li>
-    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 08:16:18 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 09:36:15 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

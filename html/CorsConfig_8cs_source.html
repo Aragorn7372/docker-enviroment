@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('CorsConfig_8cs_source.html',''); initR
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>CorsConfig</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">public</span> <span class="keyword">static</span> IServiceCollection <a class="code hl_function" href="Program_8cs.html#a637dbab9406d3965d17cf3d7ca3bbc1e">AddCorsPolicy</a>(<span class="keyword">this</span> IServiceCollection <a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>, IConfiguration <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>, <span class="keywordtype">bool</span> isDevelopment)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">public</span> <span class="keyword">static</span> IServiceCollection <a class="code hl_function" href="Program_8cs.html#a918ec19bfe453ebb7eac05880d256865">AddCorsPolicy</a>(<span class="keyword">this</span> IServiceCollection <a class="code hl_variable" href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a>, IConfiguration <a class="code hl_variable" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>, <span class="keywordtype">bool</span> isDevelopment)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        Log.Information(<span class="stringliteral">&quot;Configurando CORS para {Environment}...&quot;</span>, isDevelopment ? <span class="stringliteral">&quot;DESARROLLO&quot;</span> : <span class="stringliteral">&quot;PRODUCCIÓN&quot;</span>);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
@@ -138,7 +138,7 @@ $(document).ready(function(){initNavTree('CorsConfig_8cs_source.html',''); initR
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 <div class="ttc" id="aProgram_8cs_html_a1c05573df94c1c7e9a635ed02e41281e"><div class="ttname"><a href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a></div><div class="ttdeci">var configuration</div><div class="ttdef"><b>Definition</b> <a href="Program_8cs_source.html#l00013">Program.cs:13</a></div></div>
-<div class="ttc" id="aProgram_8cs_html_a637dbab9406d3965d17cf3d7ca3bbc1e"><div class="ttname"><a href="Program_8cs.html#a637dbab9406d3965d17cf3d7ca3bbc1e">AddCorsPolicy</a></div><div class="ttdeci">services. AddCorsPolicy(configuration, true)</div></div>
+<div class="ttc" id="aProgram_8cs_html_a918ec19bfe453ebb7eac05880d256865"><div class="ttname"><a href="Program_8cs.html#a918ec19bfe453ebb7eac05880d256865">AddCorsPolicy</a></div><div class="ttdeci">services. AddCorsPolicy(configuration, environment.IsDevelopment())</div></div>
 <div class="ttc" id="aProgram_8cs_html_ad79fbc5835b5fb29068560ce0db216e8"><div class="ttname"><a href="Program_8cs.html#ad79fbc5835b5fb29068560ce0db216e8">services</a></div><div class="ttdeci">var services</div><div class="ttdef"><b>Definition</b> <a href="Program_8cs_source.html#l00012">Program.cs:12</a></div></div>
 <div class="ttc" id="anamespaceBackEncordados_1_1Infraestructure_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Infraestructure.html">BackEncordados.Infraestructure</a></div><div class="ttdef"><b>Definition</b> <a href="AppConfig_8cs_source.html#l00001">AppConfig.cs:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -147,7 +147,7 @@ $(document).ready(function(){initNavTree('CorsConfig_8cs_source.html',''); initR
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_fca39826044f67dd320ad6baeec845bf.html">Infraestructure</a></li><li class="navelem"><a class="el" href="CorsConfig_8cs.html">CorsConfig.cs</a></li>
-    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 08:16:18 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 09:36:15 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
