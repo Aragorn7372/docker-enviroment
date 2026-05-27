@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "FunkoApi", "index.html", [
+  [ "ETR doc", "index.html", [
     [ "Encordados 🎾", "index.html", "index" ],
     [ "back-encordados 🔧", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2back-encordados_2README.html", [
       [ "Índice", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2back-encordados_2README.html#índice-1", null ],

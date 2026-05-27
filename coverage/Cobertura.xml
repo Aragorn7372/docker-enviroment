@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.7516025641025641" branch-rate="0.7506659563132658" lines-covered="6097" lines-valid="8112" branches-covered="1409" branches-valid="1877" complexity="2413" version="0" timestamp="1779909120">
+<coverage line-rate="0.751324707332101" branch-rate="0.7506659563132658" lines-covered="6097" lines-valid="8115" branches-covered="1409" branches-valid="1877" complexity="2413" version="0" timestamp="1779910308">
   <sources>
     <source>/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/</source>
   </sources>
   <packages>
-    <package name="BackEncordados" line-rate="0.7516025641025641" branch-rate="0.7506659563132658" complexity="2413">
+    <package name="BackEncordados" line-rate="0.751324707332101" branch-rate="0.7506659563132658" complexity="2413">
       <classes>
         <class name="BackEncordados.Common.Database.Config.MaterialsDbContext" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Common/Database/Config/MaterialsDbContext.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
@@ -6725,7 +6725,7 @@
             <line number="78" hits="52" branch="false" />
           </lines>
         </class>
-        <class name="BackEncordados.Export.Repository.ExportRepository" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Export/Repository/ExportRepository.cs" line-rate="0.6428571428571429" branch-rate="0.5454545454545454" complexity="25">
+        <class name="BackEncordados.Export.Repository.ExportRepository" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Export/Repository/ExportRepository.cs" line-rate="0.6260869565217392" branch-rate="0.5454545454545454" complexity="25">
           <methods>
             <method name=".ctor" signature="(BackEncordados.Common.Database.Config.UserDbContext,BackEncordados.Common.Database.Config.MaterialsDbContext,BackEncordados.Common.Database.Config.PedidosDbContext,BackEncordados.Common.Database.Config.TalleresDbContext,Microsoft.Extensions.Logging.ILogger`1&lt;BackEncordados.Export.Repository.ExportRepository&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -6784,14 +6784,17 @@
                 <line number="240" hits="0" branch="false" />
                 <line number="242" hits="0" branch="false" />
                 <line number="243" hits="0" branch="false" />
-                <line number="244" hits="0" branch="false" />
+                <line number="245" hits="0" branch="false" />
                 <line number="246" hits="0" branch="false" />
-                <line number="247" hits="0" branch="false" />
+                <line number="248" hits="0" branch="false" />
                 <line number="249" hits="0" branch="false" />
-                <line number="250" hits="0" branch="false" />
                 <line number="251" hits="0" branch="false" />
                 <line number="252" hits="0" branch="false" />
-                <line number="253" hits="0" branch="false" />
+                <line number="254" hits="0" branch="false" />
+                <line number="255" hits="0" branch="false" />
+                <line number="256" hits="0" branch="false" />
+                <line number="257" hits="0" branch="false" />
+                <line number="258" hits="0" branch="false" />
               </lines>
             </method>
             <method name="GetAllDataAsync" signature="()" line-rate="1" branch-rate="1" complexity="2">
@@ -6819,48 +6822,48 @@
             </method>
             <method name="ImportDataAsync" signature="()" line-rate="0.47619047619047616" branch-rate="0.5" complexity="18">
               <lines>
-                <line number="289" hits="3" branch="false" />
-                <line number="291" hits="3" branch="true" condition-coverage="50% (1/2)" />
-                <line number="293" hits="0" branch="false" />
-                <line number="295" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="297" hits="0" branch="false" />
+                <line number="294" hits="3" branch="false" />
+                <line number="296" hits="3" branch="true" condition-coverage="50% (1/2)" />
                 <line number="298" hits="0" branch="false" />
-                <line number="299" hits="0" branch="false" />
-                <line number="301" hits="0" branch="false" />
+                <line number="300" hits="0" branch="true" condition-coverage="0% (0/2)" />
                 <line number="302" hits="0" branch="false" />
+                <line number="303" hits="0" branch="false" />
                 <line number="304" hits="0" branch="false" />
-                <line number="305" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="306" hits="0" branch="false" />
                 <line number="307" hits="0" branch="false" />
-                <line number="308" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="309" hits="0" branch="false" />
                 <line number="310" hits="0" branch="true" condition-coverage="0% (0/2)" />
                 <line number="312" hits="0" branch="false" />
-                <line number="313" hits="0" branch="false" />
-                <line number="314" hits="0" branch="false" />
-                <line number="315" hits="0" branch="false" />
-                <line number="316" hits="0" branch="false" />
+                <line number="313" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="315" hits="0" branch="true" condition-coverage="0% (0/2)" />
                 <line number="317" hits="0" branch="false" />
+                <line number="318" hits="0" branch="false" />
+                <line number="319" hits="0" branch="false" />
                 <line number="320" hits="0" branch="false" />
                 <line number="321" hits="0" branch="false" />
                 <line number="322" hits="0" branch="false" />
-                <line number="323" hits="0" branch="false" />
-                <line number="325" hits="3" branch="true" condition-coverage="100% (2/2)" />
-                <line number="327" hits="1" branch="false" />
-                <line number="328" hits="1" branch="false" />
-                <line number="329" hits="1" branch="false" />
-                <line number="332" hits="3" branch="true" condition-coverage="100% (2/2)" />
+                <line number="325" hits="0" branch="false" />
+                <line number="326" hits="0" branch="false" />
+                <line number="327" hits="0" branch="false" />
+                <line number="328" hits="0" branch="false" />
+                <line number="330" hits="3" branch="true" condition-coverage="100% (2/2)" />
+                <line number="332" hits="1" branch="false" />
+                <line number="333" hits="1" branch="false" />
                 <line number="334" hits="1" branch="false" />
-                <line number="335" hits="1" branch="false" />
-                <line number="336" hits="1" branch="false" />
-                <line number="339" hits="3" branch="true" condition-coverage="100% (2/2)" />
+                <line number="337" hits="3" branch="true" condition-coverage="100% (2/2)" />
+                <line number="339" hits="1" branch="false" />
+                <line number="340" hits="1" branch="false" />
                 <line number="341" hits="1" branch="false" />
-                <line number="342" hits="1" branch="false" />
-                <line number="343" hits="1" branch="false" />
-                <line number="346" hits="3" branch="true" condition-coverage="100% (2/2)" />
+                <line number="344" hits="3" branch="true" condition-coverage="100% (2/2)" />
+                <line number="346" hits="1" branch="false" />
+                <line number="347" hits="1" branch="false" />
                 <line number="348" hits="1" branch="false" />
-                <line number="349" hits="1" branch="false" />
-                <line number="350" hits="1" branch="false" />
-                <line number="353" hits="3" branch="false" />
-                <line number="354" hits="3" branch="false" />
+                <line number="351" hits="3" branch="true" condition-coverage="100% (2/2)" />
+                <line number="353" hits="1" branch="false" />
+                <line number="354" hits="1" branch="false" />
+                <line number="355" hits="1" branch="false" />
+                <line number="358" hits="3" branch="false" />
+                <line number="359" hits="3" branch="false" />
               </lines>
             </method>
           </methods>
@@ -6927,56 +6930,59 @@
             <line number="240" hits="0" branch="false" />
             <line number="242" hits="0" branch="false" />
             <line number="243" hits="0" branch="false" />
-            <line number="244" hits="0" branch="false" />
+            <line number="245" hits="0" branch="false" />
             <line number="246" hits="0" branch="false" />
-            <line number="247" hits="0" branch="false" />
+            <line number="248" hits="0" branch="false" />
             <line number="249" hits="0" branch="false" />
-            <line number="250" hits="0" branch="false" />
             <line number="251" hits="0" branch="false" />
             <line number="252" hits="0" branch="false" />
-            <line number="253" hits="0" branch="false" />
-            <line number="289" hits="3" branch="false" />
-            <line number="291" hits="3" branch="true" condition-coverage="50% (1/2)" />
-            <line number="293" hits="0" branch="false" />
-            <line number="295" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="297" hits="0" branch="false" />
+            <line number="254" hits="0" branch="false" />
+            <line number="255" hits="0" branch="false" />
+            <line number="256" hits="0" branch="false" />
+            <line number="257" hits="0" branch="false" />
+            <line number="258" hits="0" branch="false" />
+            <line number="294" hits="3" branch="false" />
+            <line number="296" hits="3" branch="true" condition-coverage="50% (1/2)" />
             <line number="298" hits="0" branch="false" />
-            <line number="299" hits="0" branch="false" />
-            <line number="301" hits="0" branch="false" />
+            <line number="300" hits="0" branch="true" condition-coverage="0% (0/2)" />
             <line number="302" hits="0" branch="false" />
+            <line number="303" hits="0" branch="false" />
             <line number="304" hits="0" branch="false" />
-            <line number="305" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="306" hits="0" branch="false" />
             <line number="307" hits="0" branch="false" />
-            <line number="308" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="309" hits="0" branch="false" />
             <line number="310" hits="0" branch="true" condition-coverage="0% (0/2)" />
             <line number="312" hits="0" branch="false" />
-            <line number="313" hits="0" branch="false" />
-            <line number="314" hits="0" branch="false" />
-            <line number="315" hits="0" branch="false" />
-            <line number="316" hits="0" branch="false" />
+            <line number="313" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="315" hits="0" branch="true" condition-coverage="0% (0/2)" />
             <line number="317" hits="0" branch="false" />
+            <line number="318" hits="0" branch="false" />
+            <line number="319" hits="0" branch="false" />
             <line number="320" hits="0" branch="false" />
             <line number="321" hits="0" branch="false" />
             <line number="322" hits="0" branch="false" />
-            <line number="323" hits="0" branch="false" />
-            <line number="325" hits="3" branch="true" condition-coverage="100% (2/2)" />
-            <line number="327" hits="1" branch="false" />
-            <line number="328" hits="1" branch="false" />
-            <line number="329" hits="1" branch="false" />
-            <line number="332" hits="3" branch="true" condition-coverage="100% (2/2)" />
+            <line number="325" hits="0" branch="false" />
+            <line number="326" hits="0" branch="false" />
+            <line number="327" hits="0" branch="false" />
+            <line number="328" hits="0" branch="false" />
+            <line number="330" hits="3" branch="true" condition-coverage="100% (2/2)" />
+            <line number="332" hits="1" branch="false" />
+            <line number="333" hits="1" branch="false" />
             <line number="334" hits="1" branch="false" />
-            <line number="335" hits="1" branch="false" />
-            <line number="336" hits="1" branch="false" />
-            <line number="339" hits="3" branch="true" condition-coverage="100% (2/2)" />
+            <line number="337" hits="3" branch="true" condition-coverage="100% (2/2)" />
+            <line number="339" hits="1" branch="false" />
+            <line number="340" hits="1" branch="false" />
             <line number="341" hits="1" branch="false" />
-            <line number="342" hits="1" branch="false" />
-            <line number="343" hits="1" branch="false" />
-            <line number="346" hits="3" branch="true" condition-coverage="100% (2/2)" />
+            <line number="344" hits="3" branch="true" condition-coverage="100% (2/2)" />
+            <line number="346" hits="1" branch="false" />
+            <line number="347" hits="1" branch="false" />
             <line number="348" hits="1" branch="false" />
-            <line number="349" hits="1" branch="false" />
-            <line number="350" hits="1" branch="false" />
-            <line number="353" hits="3" branch="false" />
-            <line number="354" hits="3" branch="false" />
+            <line number="351" hits="3" branch="true" condition-coverage="100% (2/2)" />
+            <line number="353" hits="1" branch="false" />
+            <line number="354" hits="1" branch="false" />
+            <line number="355" hits="1" branch="false" />
+            <line number="358" hits="3" branch="false" />
+            <line number="359" hits="3" branch="false" />
           </lines>
         </class>
         <class name="BackEncordados.Export.Service.ExportService" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Export/Service/ExportService.cs" line-rate="1" branch-rate="1" complexity="4">
