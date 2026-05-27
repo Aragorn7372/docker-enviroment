@@ -349,118 +349,114 @@ $(document).ready(function(){initNavTree('offline-sync_8service_8ts_source.html'
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    const tempKey = String(tempId);</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    const realKey = String(realId);</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    await offlineDB.transaction(&#39;rw&#39;, tables.entity, tables.list, async () =&gt; {</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      await tables.entity.delete(tempKey);</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      await tables.entity.put({ key: realKey, data: real, updatedAt: Date.now() });</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      const lists = await tables.list.toArray();</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      for (const list of lists) {</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        const items = (list.items as any[]) ?? [];</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        const idx = items.findIndex((it) =&gt; String(it?.id ?? it?.Id) === tempKey);</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        if (idx &gt;= 0) {</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>          items[idx] = real;</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>          await tables.list.put({ ...list, items, updatedAt: Date.now() });</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        }</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      }</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    });</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    // Migrar localStorage meta de temp ID a real ID (materiales y cuerdas)</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    try {</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      if (resource === &#39;materials&#39;) {</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        const meta = localStorage.getItem(&#39;mat:meta:&#39; + tempKey);</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        if (meta) {</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>          localStorage.setItem(&#39;mat:meta:&#39; + realKey, meta);</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>          localStorage.removeItem(&#39;mat:meta:&#39; + tempKey);</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        }</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>      } else if (resource === &#39;cuerdas&#39;) {</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        const meta = localStorage.getItem(&#39;cuerda:meta:&#39; + tempKey);</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        if (meta) {</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>          localStorage.setItem(&#39;cuerda:meta:&#39; + realKey, meta);</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>          localStorage.removeItem(&#39;cuerda:meta:&#39; + tempKey);</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        }</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      }</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    } catch { /* noop */ }</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  }</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  /** Actualiza la cache local con la respuesta real del servidor tras un PUT/PATCH/DELETE exitoso. */</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>  private async applyCacheFromResponse(resource: SyncJob[&#39;resource&#39;], respBody: any): Promise&lt;void&gt; {</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    const tables = tablesForResource(resource);</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    if (!tables) return;</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    const now = Date.now();</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    const id = respBody?.id ?? respBody?.Id ?? null;</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    if (!id) return;</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    await offlineDB.transaction(&#39;rw&#39;, tables.entity, tables.list, async () =&gt; {</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      await tables.entity.put({ key: String(id), data: respBody, updatedAt: now });</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      const lists = await tables.list.toArray();</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>      for (const list of lists) {</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        const items = (list.items as any[]).map((it) =&gt;</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>          String(it?.id ?? it?.Id) === String(id) ? respBody : it</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        );</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        await tables.list.put({ ...list, items, updatedAt: now });</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>      }</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    });</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>  }</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  /** Forzar una sincronización manual. */</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  async syncNow(): Promise&lt;void&gt; {</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    await this.drainQueue();</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  }</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  /** Cambia manualmente el estado online/offline. Persiste en localStorage. */</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  setManualOffline(offline: boolean): void {</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    console.log(&#39;[OfflineSync] setManualOffline(&#39;, offline, &#39;) — before: manualOffline =&#39;, this._manualOffline(), &#39;| network =&#39;, this._network());</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    this._manualOffline.set(offline);</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    try {</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>      localStorage.setItem(MANUAL_OFFLINE_KEY, offline ? &#39;1&#39; : &#39;0&#39;);</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    } catch { /* noop */ }</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    console.log(&#39;[OfflineSync] setManualOffline done — online() =&#39;, this.online());</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    if (!offline &amp;&amp; this._network()) {</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>      void this.drainQueue();</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    }</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    await tables.entity.delete(tempKey);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    await tables.entity.put({ key: realKey, data: real, updatedAt: Date.now() });</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    const rplLists = await tables.list.toArray();</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    for (const list of rplLists) {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      const items = (list.items as any[]) ?? [];</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      const idx = items.findIndex((it) =&gt; String(it?.id ?? it?.Id) === tempKey);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      if (idx &gt;= 0) {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        items[idx] = real;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        await tables.list.put({ ...list, items, updatedAt: Date.now() });</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>      }</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    }</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    // Migrar localStorage meta de temp ID a real ID (materiales y cuerdas)</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    try {</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>      if (resource === &#39;materials&#39;) {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        const meta = localStorage.getItem(&#39;mat:meta:&#39; + tempKey);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        if (meta) {</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>          localStorage.setItem(&#39;mat:meta:&#39; + realKey, meta);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>          localStorage.removeItem(&#39;mat:meta:&#39; + tempKey);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      } else if (resource === &#39;cuerdas&#39;) {</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        const meta = localStorage.getItem(&#39;cuerda:meta:&#39; + tempKey);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        if (meta) {</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>          localStorage.setItem(&#39;cuerda:meta:&#39; + realKey, meta);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>          localStorage.removeItem(&#39;cuerda:meta:&#39; + tempKey);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        }</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>      }</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    } catch { /* noop */ }</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  }</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  /** Actualiza la cache local con la respuesta real del servidor tras un PUT/PATCH/DELETE exitoso. */</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  private async applyCacheFromResponse(resource: SyncJob[&#39;resource&#39;], respBody: any): Promise&lt;void&gt; {</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    const tables = tablesForResource(resource);</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    if (!tables) return;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    const now = Date.now();</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    const id = respBody?.id ?? respBody?.Id ?? null;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    if (!id) return;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    await tables.entity.put({ key: String(id), data: respBody, updatedAt: now });</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    const acrLists = await tables.list.toArray();</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    for (const list of acrLists) {</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      const items = (list.items as any[]).map((it) =&gt;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        String(it?.id ?? it?.Id) === String(id) ? respBody : it</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>      );</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>      await tables.list.put({ ...list, items, updatedAt: now });</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    }</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  }</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  /** Forzar una sincronización manual. */</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  async syncNow(): Promise&lt;void&gt; {</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    await this.drainQueue();</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>  }</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  /** Cambia manualmente el estado online/offline. Persiste en localStorage. */</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  setManualOffline(offline: boolean): void {</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    console.log(&#39;[OfflineSync] setManualOffline(&#39;, offline, &#39;) — before: manualOffline =&#39;, this._manualOffline(), &#39;| network =&#39;, this._network());</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    this._manualOffline.set(offline);</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    try {</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>      localStorage.setItem(MANUAL_OFFLINE_KEY, offline ? &#39;1&#39; : &#39;0&#39;);</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    } catch { /* noop */ }</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    console.log(&#39;[OfflineSync] setManualOffline done — online() =&#39;, this.online());</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    if (!offline &amp;&amp; this._network()) {</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>      void this.drainQueue();</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    }</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>  }</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>  private isFormDataBody(body: unknown): boolean {</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    return !!body &amp;&amp; typeof body === &#39;object&#39; &amp;&amp; (body as any).__formData === true;</div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  }</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  private isFormDataBody(body: unknown): boolean {</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    return !!body &amp;&amp; typeof body === &#39;object&#39; &amp;&amp; (body as any).__formData === true;</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  }</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  /** Convierte el body almacenado en cola al tipo correcto antes de enviarlo. */</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>  private rehydrateBody(body: unknown): any {</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    if (!this.isFormDataBody(body)) return body;</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    const fields = (body as any).fields as Record&lt;string, any&gt;;</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    const fd = new FormData();</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    for (const [k, v] of Object.entries(fields ?? {})) {</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>      if (v === undefined || v === null) continue;</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>      fd.append(k, typeof v === &#39;object&#39; ? JSON.stringify(v) : String(v));</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    }</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    return fd;</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  }</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>  /** Borra toda la caché offline y la cola. Útil al cerrar sesión. */</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>  async clearAll(): Promise&lt;void&gt; {</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    await Promise.all([</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      offlineDB.pedidos.clear(),</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      offlineDB.pedidosList.clear(),</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      offlineDB.materials.clear(),</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      offlineDB.materialsList.clear(),</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>      offlineDB.cuerdas.clear(),</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>      offlineDB.cuerdasList.clear(),</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>      offlineDB.tournaments.clear(),</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>      offlineDB.tournamentsList.clear(),</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      offlineDB.users.clear(),</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>      offlineDB.usersList.clear(),</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>      offlineDB.genericCache.clear(),</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>      offlineDB.syncQueue.clear(),</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>      offlineDB.meta.clear()</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    ]);</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>  }</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>}</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  /** Convierte el body almacenado en cola al tipo correcto antes de enviarlo. */</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  private rehydrateBody(body: unknown): any {</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    if (!this.isFormDataBody(body)) return body;</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    const fields = (body as any).fields as Record&lt;string, any&gt;;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    const fd = new FormData();</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    for (const [k, v] of Object.entries(fields ?? {})) {</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>      if (v === undefined || v === null) continue;</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>      fd.append(k, typeof v === &#39;object&#39; ? JSON.stringify(v) : String(v));</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    }</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    return fd;</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  }</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>  /** Borra toda la caché offline y la cola. Útil al cerrar sesión. */</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>  async clearAll(): Promise&lt;void&gt; {</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    await Promise.all([</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>      offlineDB.pedidos.clear(),</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>      offlineDB.pedidosList.clear(),</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      offlineDB.materials.clear(),</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      offlineDB.materialsList.clear(),</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      offlineDB.cuerdas.clear(),</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      offlineDB.cuerdasList.clear(),</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      offlineDB.tournaments.clear(),</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      offlineDB.tournamentsList.clear(),</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>      offlineDB.users.clear(),</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>      offlineDB.usersList.clear(),</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>      offlineDB.genericCache.clear(),</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>      offlineDB.syncQueue.clear(),</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      offlineDB.meta.clear()</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    ]);</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>  }</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_1e4c1e1ba784485a6f057d03bd8225e5.html">front-encordados</a></li><li class="navelem"><a class="el" href="dir_926dc43b74bd7bb2b391b76d673d57fb.html">src</a></li><li class="navelem"><a class="el" href="dir_bad3db17ab7eacd7fa6eff673f3b8e6b.html">app</a></li><li class="navelem"><a class="el" href="dir_746400c9d9ae26b5e8d697218db15a23.html">services</a></li><li class="navelem"><a class="el" href="offline-sync_8service_8ts.html">offline-sync.service.ts</a></li>
-    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 21:40:29 para ETR doc por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 22:26:08 para ETR doc por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

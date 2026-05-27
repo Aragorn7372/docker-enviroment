@@ -59,6 +59,47 @@ var NAVTREE =
       [ "Contribución", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2back-encordados_2README.html#contribución-1", null ],
       [ "Desarrolladores", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2back-encordados_2README.html#desarrolladores-1", null ]
     ] ],
+    [ "front-encordados 🎾", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html", [
+      [ "Índice", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#índice-2", null ],
+      [ "Stack", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#stack-1", null ],
+      [ "Estructura del proyecto", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#estructura-del-proyecto-1", null ],
+      [ "Inicio rápido", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#inicio-rápido-2", [
+        [ "Prerrequisitos", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#prerrequisitos-2", null ],
+        [ "Instalación", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#instalación", null ],
+        [ "Desarrollo", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#desarrollo", null ],
+        [ "Build de producción", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#build-de-producción", null ],
+        [ "Tests", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#tests-1", null ]
+      ] ],
+      [ "Docker", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#docker-1", [
+        [ "Inyección de variables en runtime", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#inyección-de-variables-en-runtime", null ],
+        [ "Nginx", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#nginx", null ]
+      ] ],
+      [ "Build pipeline", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#build-pipeline", null ],
+      [ "Configuración", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#configuración-1", [
+        [ "Variables de entorno", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#variables-de-entorno-3", null ]
+      ] ],
+      [ "Rutas y control de acceso", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#rutas-y-control-de-acceso", null ],
+      [ "Interceptores", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#interceptores", null ],
+      [ "Servicios", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#servicios", null ],
+      [ "Funcionalidades destacadas", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#funcionalidades-destacadas", [
+        [ "Tablero Kanban en tiempo real", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#tablero-kanban-en-tiempo-real", null ],
+        [ "Escáner QR", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#escáner-qr", null ],
+        [ "Generación de códigos", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#generación-de-códigos", null ],
+        [ "Informes y gráficas", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#informes-y-gráficas", null ],
+        [ "Búsqueda global", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#búsqueda-global", null ]
+      ] ],
+      [ "Estrategia offline y PWA", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#estrategia-offline-y-pwa", [
+        [ "Service Worker", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#service-worker", null ],
+        [ "IndexedDB (Dexie)", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#indexeddb-dexie", null ],
+        [ "Sincronización", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#sincronización", null ],
+        [ "Iconos PWA", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#iconos-pwa", null ]
+      ] ],
+      [ "Atajos de teclado", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#atajos-de-teclado", null ],
+      [ "Compatibilidad de navegadores", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#compatibilidad-de-navegadores", null ],
+      [ "Convenciones de código", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#convenciones-de-código", null ],
+      [ "Contribución", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#contribución-2", null ],
+      [ "Desarrolladores", "md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#desarrolladores-2", null ]
+    ] ],
     [ "Espacios de nombres", "namespaces.html", [
       [ "Lista de espacios de nombres", "namespaces.html", "namespaces_dup" ],
       [ "Miembros del espacio de nombres ", "namespacemembers.html", [
@@ -114,7 +155,7 @@ var NAVTREEINDEX =
 "dir_945bfff5f59af761eb6d05bf2183a732.html",
 "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#aac50e25eb73d15530d45466eb3828576",
 "materiales_8page_8html.html",
-"pedido-codes_8component_8ts_source.html"
+"namespaceTestEncordados_1_1Unit_1_1Middleware.html"
 ];
 
 var SYNCONMSG = 'pulsar para deshabilitar sincronización';

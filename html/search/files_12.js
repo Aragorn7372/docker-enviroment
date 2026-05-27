@@ -1,7 +1,7 @@
 var searchData=
 [
   ['ratelimitconfig_2ecs_0',['RateLimitConfig.cs',['../RateLimitConfig_8cs.html',1,'']]],
-  ['readme_2emd_1',['readme.md',['../back-encordados_2README_8md.html',1,'(Espacio de nombres global)'],['../README_8md.html',1,'(Espacio de nombres global)']]],
+  ['readme_2emd_1',['readme.md',['../back-encordados_2README_8md.html',1,'(Espacio de nombres global)'],['../front-encordados_2README_8md.html',1,'(Espacio de nombres global)'],['../README_8md.html',1,'(Espacio de nombres global)']]],
   ['register_2epage_2ehtml_2',['register.page.html',['../register_8page_8html.html',1,'']]],
   ['register_2epage_2ets_3',['register.page.ts',['../register_8page_8ts.html',1,'']]],
   ['repositoriesconfig_2ecs_4',['RepositoriesConfig.cs',['../RepositoriesConfig_8cs.html',1,'']]],

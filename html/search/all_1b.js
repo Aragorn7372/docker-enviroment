@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['índice_0',['índice',['../index.html#índice',1,'Índice'],['../md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2back-encordados_2README.html#índice-1',1,'Índice']]]
+  ['¿qué_20es_20esto_0',['¿Qué es esto?',['../index.html#qué-es-esto',1,'']]]
 ];
