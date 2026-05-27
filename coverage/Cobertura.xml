@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.7516025641025641" branch-rate="0.7506659563132658" lines-covered="6097" lines-valid="8112" branches-covered="1409" branches-valid="1877" complexity="2413" version="0" timestamp="1779886807">
+<coverage line-rate="0.7516025641025641" branch-rate="0.7506659563132658" lines-covered="6097" lines-valid="8112" branches-covered="1409" branches-valid="1877" complexity="2413" version="0" timestamp="1779888641">
   <sources>
     <source>/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/</source>
   </sources>
@@ -2182,7 +2182,7 @@
             </method>
             <method name="ConvertFromDb" signature="(System.String)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="38" hits="3250" branch="true" condition-coverage="100% (2/2)" />
+                <line number="38" hits="3246" branch="true" condition-coverage="100% (2/2)" />
               </lines>
             </method>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -2194,7 +2194,7 @@
           </methods>
           <lines>
             <line number="37" hits="3407" branch="false" />
-            <line number="38" hits="3250" branch="true" condition-coverage="100% (2/2)" />
+            <line number="38" hits="3246" branch="true" condition-coverage="100% (2/2)" />
             <line number="42" hits="26" branch="false" />
             <line number="44" hits="26" branch="false" />
           </lines>
@@ -9291,12 +9291,12 @@
             </method>
             <method name="get_Marca" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="92" hits="418" branch="false" />
+                <line number="92" hits="414" branch="false" />
               </lines>
             </method>
             <method name="get_Modelo" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="95" hits="406" branch="false" />
+                <line number="95" hits="402" branch="false" />
               </lines>
             </method>
             <method name="get_Stock" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -9316,17 +9316,17 @@
             </method>
             <method name="get_CreatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="107" hits="218" branch="false" />
+                <line number="107" hits="214" branch="false" />
               </lines>
             </method>
             <method name="get_UpdatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="110" hits="218" branch="false" />
+                <line number="110" hits="214" branch="false" />
               </lines>
             </method>
             <method name="get_ImageUrl" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="113" hits="239" branch="false" />
+                <line number="113" hits="235" branch="false" />
               </lines>
             </method>
             <method name="get_CloudinaryPublicId" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -9343,14 +9343,14 @@
           <lines>
             <line number="86" hits="85" branch="false" />
             <line number="89" hits="130" branch="false" />
-            <line number="92" hits="418" branch="false" />
-            <line number="95" hits="406" branch="false" />
+            <line number="92" hits="414" branch="false" />
+            <line number="95" hits="402" branch="false" />
             <line number="98" hits="173" branch="false" />
             <line number="101" hits="171" branch="false" />
             <line number="104" hits="161" branch="false" />
-            <line number="107" hits="218" branch="false" />
-            <line number="110" hits="218" branch="false" />
-            <line number="113" hits="239" branch="false" />
+            <line number="107" hits="214" branch="false" />
+            <line number="110" hits="214" branch="false" />
+            <line number="113" hits="235" branch="false" />
             <line number="116" hits="15" branch="false" />
             <line number="119" hits="113" branch="false" />
           </lines>
