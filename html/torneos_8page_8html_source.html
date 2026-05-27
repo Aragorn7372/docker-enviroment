@@ -99,164 +99,322 @@ $(document).ready(function(){initNavTree('torneos_8page_8html_source.html',''); 
 </div><!--header-->
 <div class="contents">
 <a href="torneos_8page_8html.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;section class=&quot;space-y-6&quot;&gt;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>  &lt;!-- Header --&gt;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>  &lt;div class=&quot;atp-panel animate-rise p-6&quot;&gt;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    &lt;div class=&quot;flex flex-col sm:flex-row sm:items-center justify-between gap-4&quot;&gt;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>      &lt;div&gt;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        &lt;h1 class=&quot;text-2xl font-bold text-atp-navy&quot;&gt;🏆 Gestión de Torneos&lt;/h1&gt;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        &lt;p class=&quot;text-slate-500 mt-1&quot;&gt;Administra los torneos de tu {{ isOrganizador ? &#39;organización&#39; : &#39;plataforma&#39; }}&lt;/p&gt;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>      &lt;div class=&quot;flex gap-3&quot;&gt;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        &lt;div class=&quot;relative flex-1 sm:flex-none&quot;&gt;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>          &lt;div class=&quot;absolute left-3 top-1/2 -translate-y-1/2 text-slate-400&quot;&gt;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            &lt;svg class=&quot;w-5 h-5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>              &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z&quot; /&gt;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            &lt;/svg&gt;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>          &lt;input [(ngModel)]=&quot;searchTerm&quot; class=&quot;input input-bordered w-full sm:w-64 pl-10&quot; placeholder=&quot;Buscar torneo...&quot; /&gt;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        &lt;button *ngIf=&quot;canCreate&quot; (click)=&quot;openCreateModal()&quot; class=&quot;btn btn-primary rounded-xl gap-2&quot;&gt;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>          &lt;svg class=&quot;w-5 h-5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M12 4v16m8-8H4&quot; /&gt;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>          &lt;/svg&gt;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>          Crear Torneo</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        &lt;/button&gt;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  &lt;/div&gt;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  &lt;!-- Stats --&gt;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  &lt;div class=&quot;grid grid-cols-2 md:grid-cols-4 gap-4&quot;&gt;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    &lt;div class=&quot;atp-panel p-4 text-center&quot;&gt;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      &lt;div class=&quot;text-2xl font-bold text-atp-blue&quot;&gt;{{ visibleTorneos.length }}&lt;/div&gt;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      &lt;div class=&quot;text-sm text-slate-500&quot;&gt;Total&lt;/div&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    &lt;div class=&quot;atp-panel p-4 text-center&quot;&gt;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      &lt;div class=&quot;text-2xl font-bold text-emerald-600&quot;&gt;{{ activeCount }}&lt;/div&gt;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      &lt;div class=&quot;text-sm text-slate-500&quot;&gt;Activos&lt;/div&gt;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    &lt;div class=&quot;atp-panel p-4 text-center&quot;&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      &lt;div class=&quot;text-2xl font-bold text-orange-500&quot;&gt;{{ visibleTorneos.filter(t =&gt; t.status === &#39;pendiente&#39;).length }}&lt;/div&gt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      &lt;div class=&quot;text-sm text-slate-500&quot;&gt;Pendientes&lt;/div&gt;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>  &lt;!-- Hero --&gt;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>  &lt;app-page-hero eyebrow=&quot;Torneos&quot; title=&quot;Gestión de Torneos&quot; [extraGlow]=&quot;true&quot;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    [subtitle]=&quot;&#39;Administra los torneos &#39; + (isOrganizador ? &#39;de tu organización&#39; : &#39;de la plataforma&#39;) + &#39; y gestiona supervisores, encordadores y asignaciones.&#39;&quot;&gt;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    &lt;div class=&quot;relative&quot;&gt;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>      &lt;div class=&quot;absolute left-3.5 top-1/2 -translate-y-1/2 text-white/50&quot;&gt;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        &lt;svg class=&quot;w-4 h-4&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>          &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z&quot; /&gt;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        &lt;/svg&gt;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>      &lt;input [(ngModel)]=&quot;searchTerm&quot; (ngModelChange)=&quot;onSearchChange()&quot;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>             class=&quot;h-11 pl-10 pr-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/15 text-white placeholder-white/50 focus:bg-white/15 focus:border-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all w-full sm:w-72&quot;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>             placeholder=&quot;Buscar torneo...&quot; /&gt;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    &lt;button *ngIf=&quot;canCreate&quot; (click)=&quot;openCreateModal()&quot; class=&quot;btn-hero btn-hero-primary&quot;&gt;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>      &lt;svg fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2.5&quot; d=&quot;M12 4v16m8-8H4&quot; /&gt;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      &lt;/svg&gt;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      Crear torneo</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    &lt;/button&gt;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  &lt;/app-page-hero&gt;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  &lt;!-- Stats --&gt;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  &lt;div class=&quot;grid grid-cols-2 md:grid-cols-4 gap-4&quot;&gt;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    &lt;app-stat-card label=&quot;Total&quot; [value]=&quot;visibleTorneos.length&quot; tone=&quot;blue&quot; icon=&quot;🏆&quot;&gt;&lt;/app-stat-card&gt;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    &lt;app-stat-card label=&quot;Activos&quot; [value]=&quot;activeCount&quot; tone=&quot;emerald&quot; icon=&quot;🟢&quot;&gt;&lt;/app-stat-card&gt;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    &lt;app-stat-card label=&quot;Pendientes&quot; [value]=&quot;visibleTorneos.filter(t =&gt; getStatus(t) === &#39;pendiente&#39;).length&quot; tone=&quot;amber&quot; icon=&quot;🟡&quot;&gt;&lt;/app-stat-card&gt;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    &lt;app-stat-card label=&quot;Cerrados&quot; [value]=&quot;visibleTorneos.filter(t =&gt; getStatus(t) === &#39;cerrado&#39;).length&quot; tone=&quot;slate&quot; icon=&quot;⚪&quot;&gt;&lt;/app-stat-card&gt;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  &lt;/div&gt;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  &lt;!-- Filtros --&gt;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  &lt;div class=&quot;atp-panel p-4 sm:p-5 filter-bar&quot;&gt;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    &lt;div class=&quot;field-block field-block-md&quot;&gt;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      &lt;span class=&quot;field-label&quot;&gt;Estado&lt;/span&gt;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      &lt;select class=&quot;select select-sm select-bordered&quot; [(ngModel)]=&quot;statusFilter&quot;&gt;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        &lt;option value=&quot;&quot;&gt;Todos&lt;/option&gt;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        &lt;option value=&quot;activo&quot;&gt;Activos&lt;/option&gt;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        &lt;option value=&quot;pendiente&quot;&gt;Pendientes&lt;/option&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        &lt;option value=&quot;cerrado&quot;&gt;Cerrados&lt;/option&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      &lt;/select&gt;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    &lt;div class=&quot;atp-panel p-4 text-center&quot;&gt;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      &lt;div class=&quot;text-2xl font-bold text-slate-400&quot;&gt;{{ visibleTorneos.filter(t =&gt; t.status === &#39;cerrado&#39;).length }}&lt;/div&gt;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      &lt;div class=&quot;text-sm text-slate-500&quot;&gt;Cerrados&lt;/div&gt;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  &lt;/div&gt;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  &lt;!-- Torneos List --&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  &lt;div class=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-6&quot;&gt;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    &lt;div *ngFor=&quot;let t of visibleTorneos&quot; class=&quot;atp-card p-6 hover-lift&quot;&gt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      &lt;div class=&quot;flex items-start justify-between mb-4&quot;&gt;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        &lt;div&gt;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>          &lt;div class=&quot;flex items-center gap-2 mb-1&quot;&gt;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            &lt;span class=&quot;w-2 h-2 rounded-full&quot; [class.bg-emerald-500]=&quot;t.status === &#39;activo&#39;&quot; [class.bg-amber-500]=&quot;t.status === &#39;pendiente&#39;&quot; [class.bg-slate-400]=&quot;t.status === &#39;cerrado&#39;&quot;&gt;&lt;/span&gt;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            &lt;span class=&quot;text-xs font-bold uppercase tracking-wider&quot; [class.text-emerald-600]=&quot;t.status === &#39;activo&#39;&quot; [class.text-amber-600]=&quot;t.status === &#39;pendiente&#39;&quot; [class.text-slate-500]=&quot;t.status === &#39;cerrado&#39;&quot;&gt;{{ t.status }}&lt;/span&gt;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>          &lt;h3 class=&quot;text-lg font-bold text-atp-navy&quot;&gt;{{ t.name }}&lt;/h3&gt;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>          &lt;p class=&quot;text-sm text-slate-500&quot;&gt;{{ t.category }}&lt;/p&gt;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        &lt;button class=&quot;btn btn-xs btn-ghost rounded-full&quot; *ngIf=&quot;canCreate&quot; (click)=&quot;openEditModal(t)&quot;&gt;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>          &lt;svg class=&quot;w-4 h-4&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z&quot; /&gt;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>          &lt;/svg&gt;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        &lt;/button&gt;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    &lt;div class=&quot;field-block field-block-md&quot;&gt;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      &lt;span class=&quot;field-label&quot;&gt;Ordenar por&lt;/span&gt;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      &lt;select class=&quot;select select-sm select-bordered&quot; [(ngModel)]=&quot;sortBy&quot; (ngModelChange)=&quot;onSortChange()&quot;&gt;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        &lt;option value=&quot;name&quot;&gt;Nombre&lt;/option&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        &lt;option value=&quot;startTournament&quot;&gt;Fecha inicio&lt;/option&gt;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        &lt;option value=&quot;endTournament&quot;&gt;Fecha fin&lt;/option&gt;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      &lt;/select&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    &lt;div class=&quot;field-block field-block-md&quot;&gt;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      &lt;span class=&quot;field-label&quot;&gt;Direcci&amp;oacute;n&lt;/span&gt;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      &lt;select class=&quot;select select-sm select-bordered&quot; [(ngModel)]=&quot;direction&quot; (ngModelChange)=&quot;onSortChange()&quot;&gt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        &lt;option value=&quot;asc&quot;&gt;Ascendente&lt;/option&gt;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        &lt;option value=&quot;desc&quot;&gt;Descendente&lt;/option&gt;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      &lt;/select&gt;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    &lt;button (click)=&quot;clearAllFilters()&quot; class=&quot;btn btn-sm btn-ghost rounded-lg self-end&quot;&gt;Limpiar&lt;/button&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  &lt;/div&gt;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  &lt;!-- Torneos grid --&gt;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  &lt;div *ngIf=&quot;visibleTorneos.length &gt; 0&quot; class=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-5&quot;&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    &lt;div *ngFor=&quot;let t of visibleTorneos; let i = index&quot;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>         class=&quot;atp-card p-5 hover-lift cursor-pointer group relative overflow-hidden animate-rise&quot;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>         [style.animation-delay.ms]=&quot;i * 40&quot;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>         (click)=&quot;goToDetail(t)&quot;&gt;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      &lt;div class=&quot;space-y-2 text-sm text-slate-600&quot;&gt;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        &lt;div class=&quot;flex items-center gap-2&quot;&gt;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>          &lt;svg class=&quot;w-4 h-4 text-slate-400&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.944-4.944M15 11a4 4 0 01-4 4m0 0a4 4 0 01-4-4m4 0a4 4 0 01-4-4m4 0v3m0-3h3&quot; /&gt;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>          &lt;/svg&gt;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>          {{ t.place }}</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        &lt;div class=&quot;flex items-center gap-2&quot;&gt;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>          &lt;svg class=&quot;w-4 h-4 text-slate-400&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z&quot; /&gt;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>          &lt;/svg&gt;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>          {{ t.startDate }} - {{ t.endDate }}</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        &lt;div class=&quot;flex items-center gap-2&quot;&gt;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>          &lt;svg class=&quot;w-4 h-4 text-slate-400&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M13 10V3L4 14h7v7l9-11h-7z&quot; /&gt;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>          &lt;/svg&gt;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>          {{ t.type }}</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      &lt;div class=&quot;flex items-center justify-between mt-4 pt-4 border-t border-slate-100&quot;&gt;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        &lt;span class=&quot;text-xs font-mono text-slate-400&quot;&gt;{{ t.id }}&lt;/span&gt;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        &lt;button *ngIf=&quot;canCreate&quot; (click)=&quot;deleteTorneo(t)&quot; class=&quot;text-xs text-red-500 hover:text-red-700 font-medium&quot;&gt;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>          Eliminar</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        &lt;/button&gt;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  &lt;/div&gt;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  &lt;!-- Create/Edit Modal --&gt;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  &lt;div *ngIf=&quot;showCreateModal || showEditModal&quot; class=&quot;fixed inset-0 z-50 flex items-center justify-center&quot;&gt;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    &lt;div class=&quot;absolute inset-0 bg-black/50 backdrop-blur-sm&quot; (click)=&quot;closeCreateModal(); closeEditModal()&quot;&gt;&lt;/div&gt;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    &lt;div class=&quot;relative bg-white rounded-2xl shadow-2xl max-w-lg w-full mx-4 p-6 animate-rise&quot;&gt;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      &lt;h3 class=&quot;text-xl font-bold text-atp-navy mb-6&quot;&gt;{{ showCreateModal ? &#39;Crear Torneo&#39; : &#39;Editar Torneo&#39; }}&lt;/h3&gt;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      &lt;form (submit)=&quot;$event.preventDefault(); showCreateModal ? createTorneo() : updateTorneo()&quot; class=&quot;space-y-4&quot;&gt;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        &lt;div&gt;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>          &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Nombre&lt;/label&gt;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>          &lt;input [(ngModel)]=&quot;form.name&quot; name=&quot;name&quot; class=&quot;input input-bordered w-full&quot; placeholder=&quot;Nombre del torneo&quot; required /&gt;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        &lt;div class=&quot;grid grid-cols-2 gap-4&quot;&gt;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>          &lt;div&gt;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Fecha Inicio&lt;/label&gt;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            &lt;input type=&quot;date&quot; [(ngModel)]=&quot;form.startDate&quot; name=&quot;startDate&quot; class=&quot;input input-bordered w-full&quot; required /&gt;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>          &lt;div&gt;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Fecha Fin&lt;/label&gt;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            &lt;input type=&quot;date&quot; [(ngModel)]=&quot;form.endDate&quot; name=&quot;endDate&quot; class=&quot;input input-bordered w-full&quot; required /&gt;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        &lt;div&gt;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>          &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Lugar&lt;/label&gt;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>          &lt;input [(ngModel)]=&quot;form.place&quot; name=&quot;place&quot; class=&quot;input input-bordered w-full&quot; placeholder=&quot;Ciudad / Club&quot; required /&gt;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        &lt;div class=&quot;grid grid-cols-2 gap-4&quot;&gt;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>          &lt;div&gt;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Categoría&lt;/label&gt;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            &lt;select [(ngModel)]=&quot;form.category&quot; name=&quot;category&quot; class=&quot;select select-bordered w-full&quot; required&gt;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>              &lt;option&gt;ATP 1000&lt;/option&gt;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>              &lt;option&gt;ATP 500&lt;/option&gt;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>              &lt;option&gt;ATP 250&lt;/option&gt;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>              &lt;option&gt;Challenger&lt;/option&gt;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>              &lt;option&gt;ITF&lt;/option&gt;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>              &lt;option&gt;Equipo&lt;/option&gt;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            &lt;/select&gt;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>          &lt;div&gt;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Tipo&lt;/label&gt;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            &lt;select [(ngModel)]=&quot;form.type&quot; name=&quot;type&quot; class=&quot;select select-bordered w-full&quot; required&gt;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>              &lt;option&gt;Individual&lt;/option&gt;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>              &lt;option&gt;Dobles&lt;/option&gt;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>              &lt;option&gt;Equipo&lt;/option&gt;</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>              &lt;option&gt;Misto&lt;/option&gt;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            &lt;/select&gt;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        &lt;div class=&quot;flex gap-3 justify-end pt-4&quot;&gt;</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>          &lt;button (click)=&quot;showCreateModal ? closeCreateModal() : closeEditModal()&quot; type=&quot;button&quot; class=&quot;btn btn-ghost&quot;&gt;Cancelar&lt;/button&gt;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>          &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;{{ showCreateModal ? &#39;Crear&#39; : &#39;Guardar&#39; }}&lt;/button&gt;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      &lt;/form&gt;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  &lt;/div&gt;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>&lt;/section&gt;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      &lt;!-- Top accent bar --&gt;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      &lt;div class=&quot;absolute top-0 left-0 right-0 h-1&quot;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>           [class.bg-gradient-to-r]=&quot;true&quot;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>           [class.from-emerald-400]=&quot;getStatus(t) === &#39;activo&#39;&quot;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>           [class.to-emerald-600]=&quot;getStatus(t) === &#39;activo&#39;&quot;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>           [class.from-amber-400]=&quot;getStatus(t) === &#39;pendiente&#39;&quot;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>           [class.to-amber-600]=&quot;getStatus(t) === &#39;pendiente&#39;&quot;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>           [class.from-slate-300]=&quot;getStatus(t) === &#39;cerrado&#39;&quot;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>           [class.to-slate-400]=&quot;getStatus(t) === &#39;cerrado&#39;&quot;&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      &lt;div class=&quot;flex items-start justify-between mb-4 pt-1&quot;&gt;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        &lt;div class=&quot;flex-1 min-w-0&quot;&gt;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>          &lt;div class=&quot;flex items-center gap-2 mb-1.5&quot;&gt;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            &lt;span class=&quot;status-dot&quot;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>              [class.success]=&quot;getStatus(t) === &#39;activo&#39;&quot;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>              [class.warning]=&quot;getStatus(t) === &#39;pendiente&#39;&quot;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>              [class.idle]=&quot;getStatus(t) === &#39;cerrado&#39;&quot;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>              [class.pulse]=&quot;getStatus(t) === &#39;activo&#39;&quot;&gt;&lt;/span&gt;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            &lt;span class=&quot;text-[10px] font-bold uppercase tracking-[0.14em]&quot;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>              [class.text-emerald-600]=&quot;getStatus(t) === &#39;activo&#39;&quot;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>              [class.text-amber-600]=&quot;getStatus(t) === &#39;pendiente&#39;&quot;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>              [class.text-slate-400]=&quot;getStatus(t) === &#39;cerrado&#39;&quot;&gt;{{ getStatus(t) }}&lt;/span&gt;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>          &lt;h3 class=&quot;text-lg font-bold text-atp-navy leading-tight tracking-tight truncate&quot;&gt;{{ t.name }}&lt;/h3&gt;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        &lt;button class=&quot;p-2 rounded-lg text-slate-300 hover:text-atp-blue hover:bg-atp-ice transition-all opacity-0 group-hover:opacity-100&quot;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                *ngIf=&quot;canCreate&quot; (click)=&quot;$event.stopPropagation(); openEditModal(t)&quot;&gt;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>          &lt;svg class=&quot;w-4 h-4&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z&quot; /&gt;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>          &lt;/svg&gt;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        &lt;/button&gt;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      &lt;div class=&quot;space-y-2.5 mb-4&quot;&gt;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        &lt;div class=&quot;flex items-center gap-2 text-[13px] text-slate-600&quot;&gt;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>          &lt;div class=&quot;w-7 h-7 rounded-lg bg-atp-ice flex items-center justify-center flex-shrink-0&quot;&gt;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            &lt;svg class=&quot;w-3.5 h-3.5 text-atp-blue&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>              &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z&quot; /&gt;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            &lt;/svg&gt;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>          &lt;span class=&quot;truncate&quot;&gt;{{ t.startTournament | date:&#39;dd MMM yyyy&#39; }} → {{ t.endTournament | date:&#39;dd MMM yyyy&#39; }}&lt;/span&gt;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      &lt;div class=&quot;flex items-center justify-between pt-3 border-t border-slate-100&quot;&gt;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        &lt;span class=&quot;text-[10px] font-mono text-slate-300 truncate max-w-[100px]&quot; title=&quot;{{ t.id }}&quot;&gt;{{ t.id }}&lt;/span&gt;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        &lt;div class=&quot;flex items-center gap-2&quot;&gt;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>          &lt;button *ngIf=&quot;canExportExcel&quot; (click)=&quot;exportFullTournament(t, $event)&quot;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                  title=&quot;Exportar todos los datos del torneo&quot;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                  class=&quot;text-[11px] font-semibold text-slate-400 hover:text-emerald-600 transition-colors&quot;&gt;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            📥 Datos</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>          &lt;/button&gt;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>          &lt;label *ngIf=&quot;canExportExcel&quot; (click)=&quot;$event.stopPropagation()&quot;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                 title=&quot;Importar datos al torneo&quot;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                 class=&quot;text-[11px] font-semibold text-slate-400 hover:text-atp-blue transition-colors cursor-pointer&quot;&gt;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            📤 Datos</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            &lt;input type=&quot;file&quot; accept=&quot;.xlsx&quot; class=&quot;hidden&quot; (change)=&quot;importFullTournament(t, $event)&quot; /&gt;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>          &lt;/label&gt;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>          &lt;button *ngIf=&quot;canCreate&quot; (click)=&quot;$event.stopPropagation(); deleteTorneo(t)&quot;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                  class=&quot;text-[11px] font-semibold text-slate-400 hover:text-red-600 transition-colors&quot;&gt;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            Eliminar</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>          &lt;/button&gt;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>          &lt;span class=&quot;text-[11px] font-bold text-atp-blue group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-0.5&quot;&gt;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            Ver</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            &lt;svg class=&quot;w-3 h-3&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>              &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2.5&quot; d=&quot;M9 5l7 7-7 7&quot;/&gt;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            &lt;/svg&gt;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>          &lt;/span&gt;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  &lt;/div&gt;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  &lt;!-- Empty state --&gt;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  &lt;app-empty-state *ngIf=&quot;visibleTorneos.length === 0&quot;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    icon=&quot;doc&quot;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    title=&quot;Sin torneos aún&quot;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    [message]=&quot;searchTerm ? &#39;No se encontraron torneos con ese criterio&#39; : &#39;Crea tu primer torneo para empezar a gestionar partidos y encordadores&#39;&quot;&gt;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    &lt;button *ngIf=&quot;canCreate &amp;&amp; !searchTerm&quot; (click)=&quot;openCreateModal()&quot; class=&quot;btn btn-primary&quot;&gt;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      &lt;svg class=&quot;w-4 h-4&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2.5&quot; d=&quot;M12 4v16m8-8H4&quot; /&gt;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      &lt;/svg&gt;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      Crear primer torneo</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    &lt;/button&gt;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  &lt;/app-empty-state&gt;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  &lt;!-- Create/Edit Modal --&gt;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  &lt;app-ui-modal *ngIf=&quot;showCreateModal || showEditModal&quot;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                [title]=&quot;showCreateModal ? &#39;Crear torneo&#39; : &#39;Editar torneo&#39;&quot;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                (closed)=&quot;showCreateModal ? closeCreateModal() : closeEditModal()&quot;&gt;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      &lt;form (submit)=&quot;$event.preventDefault(); showCreateModal ? createTorneo() : updateTorneo()&quot; class=&quot;space-y-5&quot;&gt;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        &lt;div&gt;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>          &lt;label class=&quot;block text-[12px] font-bold text-slate-700 mb-1.5 uppercase tracking-wider&quot;&gt;Nombre&lt;/label&gt;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>          &lt;input [(ngModel)]=&quot;form.name&quot; name=&quot;name&quot; class=&quot;input input-bordered w-full&quot; placeholder=&quot;Ej: Roland Garros 2026&quot; required /&gt;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        &lt;div class=&quot;grid grid-cols-2 gap-4&quot;&gt;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>          &lt;div&gt;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            &lt;label class=&quot;block text-[12px] font-bold text-slate-700 mb-1.5 uppercase tracking-wider&quot;&gt;Fecha inicio&lt;/label&gt;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            &lt;input type=&quot;date&quot; [(ngModel)]=&quot;form.startTournament&quot; name=&quot;startTournament&quot; class=&quot;input input-bordered w-full&quot; required /&gt;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>          &lt;div&gt;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            &lt;label class=&quot;block text-[12px] font-bold text-slate-700 mb-1.5 uppercase tracking-wider&quot;&gt;Fecha fin&lt;/label&gt;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            &lt;input type=&quot;date&quot; [(ngModel)]=&quot;form.endTournament&quot; name=&quot;endTournament&quot; class=&quot;input input-bordered w-full&quot; required /&gt;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        &lt;!-- Logo del torneo --&gt;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        &lt;div&gt;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>          &lt;label class=&quot;block text-[12px] font-bold text-slate-700 mb-1.5 uppercase tracking-wider&quot;&gt;Logo del torneo&lt;/label&gt;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>          &lt;div class=&quot;flex items-center gap-3&quot;&gt;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            &lt;div class=&quot;w-16 h-16 rounded-xl ring-2 ring-atp-line overflow-hidden bg-atp-ice flex items-center justify-center flex-shrink-0&quot;&gt;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>              &lt;img *ngIf=&quot;logoPreview&quot; [src]=&quot;logoPreview&quot; alt=&quot;preview&quot; class=&quot;w-full h-full object-cover&quot; /&gt;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>              &lt;img *ngIf=&quot;!logoPreview &amp;&amp; selectedTorneo?.logotype&quot; [src]=&quot;selectedTorneo?.logotype&quot; alt=&quot;logo&quot; class=&quot;w-full h-full object-cover&quot; /&gt;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>              &lt;span *ngIf=&quot;!logoPreview &amp;&amp; !selectedTorneo?.logotype&quot; class=&quot;text-2xl&quot;&gt;🏆&lt;/span&gt;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            &lt;label class=&quot;btn btn-sm btn-outline rounded-lg cursor-pointer gap-1.5 flex-1&quot;&gt;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>              &lt;svg class=&quot;w-3.5 h-3.5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 16v1a3 3 0 003 3h10a3 3 0 003-3v1m-4-8l-4-4m0 0L8 8m4-4v12&quot;/&gt;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>              &lt;/svg&gt;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>              {{ form.logotype ? &#39;Cambiar imagen&#39; : &#39;Subir imagen (opcional)&#39; }}</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>              &lt;input type=&quot;file&quot; accept=&quot;image/jpeg,image/png,image/webp&quot; class=&quot;hidden&quot; (change)=&quot;onLogotypeSelected($event)&quot; /&gt;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            &lt;/label&gt;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>          &lt;p class=&quot;mt-1 text-[11px] text-slate-400&quot;&gt;PNG/JPG, recomendado 200x200. Si no subes, se usa el logo por defecto.&lt;/p&gt;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        &lt;!-- Owner selector (admin can assign owner) --&gt;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        &lt;div *ngIf=&quot;isAdmin &amp;&amp; owners.length &gt; 0&quot;&gt;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>          &lt;label class=&quot;block text-[12px] font-bold text-slate-700 mb-1.5 uppercase tracking-wider&quot;&gt;Propietario&lt;/label&gt;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>          &lt;select [(ngModel)]=&quot;form.ownerId&quot; name=&quot;ownerId&quot; class=&quot;select select-bordered w-full&quot;&gt;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            &lt;option value=&quot;&quot;&gt;-- Seleccionar propietario --&lt;/option&gt;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            &lt;option *ngFor=&quot;let o of owners&quot; [value]=&quot;o.id&quot;&gt;{{ o.name || o.username }}&lt;/option&gt;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>          &lt;/select&gt;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        &lt;!-- Supervisor selector (only in create mode) --&gt;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        &lt;div *ngIf=&quot;showCreateModal&quot;&gt;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>          &lt;div class=&quot;flex items-center justify-between mb-1.5&quot;&gt;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            &lt;label class=&quot;block text-[12px] font-bold text-slate-700 uppercase tracking-wider&quot;&gt;Supervisores&lt;/label&gt;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            &lt;span *ngIf=&quot;selectedSupervisorIds.length &gt; 0&quot; class=&quot;badge badge-primary&quot;&gt;{{ selectedSupervisorIds.length }} seleccionados&lt;/span&gt;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>          &lt;div *ngIf=&quot;supervisorsLoading&quot; class=&quot;flex items-center gap-2 py-4 text-slate-400 text-[13px]&quot;&gt;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            &lt;span class=&quot;spinner spinner-sm&quot;&gt;&lt;/span&gt;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            Cargando supervisores...</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>          &lt;div *ngIf=&quot;!supervisorsLoading &amp;&amp; availableSupervisors.length === 0&quot;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>               class=&quot;text-[13px] text-slate-400 py-4 px-4 bg-slate-50 rounded-xl text-center border border-dashed border-slate-200&quot;&gt;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            No hay supervisores disponibles</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>          &lt;div *ngIf=&quot;!supervisorsLoading &amp;&amp; availableSupervisors.length &gt; 0&quot;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>               class=&quot;max-h-52 overflow-y-auto rounded-xl border border-slate-200 divide-y divide-slate-100 bg-white&quot;&gt;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            &lt;div *ngFor=&quot;let s of availableSupervisors&quot;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                 class=&quot;flex items-center gap-3 px-3.5 py-2.5 cursor-pointer hover:bg-atp-ice/40 transition-colors&quot;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                 [class.bg-atp-ice]=&quot;isSupervisorSelected(s.id || &#39;&#39;)&quot;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                 (click)=&quot;toggleSupervisor(s.id || &#39;&#39;)&quot;&gt;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>              &lt;div class=&quot;w-5 h-5 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-all&quot;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                   [class.bg-atp-blue]=&quot;isSupervisorSelected(s.id || &#39;&#39;)&quot;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                   [class.border-atp-blue]=&quot;isSupervisorSelected(s.id || &#39;&#39;)&quot;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                   [class.border-slate-300]=&quot;!isSupervisorSelected(s.id || &#39;&#39;)&quot;&gt;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                &lt;svg *ngIf=&quot;isSupervisorSelected(s.id || &#39;&#39;)&quot; class=&quot;w-3 h-3 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                  &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;3&quot; d=&quot;M5 13l4 4L19 7&quot;/&gt;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                &lt;/svg&gt;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>              &lt;div class=&quot;w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white text-[11px] font-bold flex-shrink-0&quot;&gt;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                {{ (s.name || s.username).charAt(0).toUpperCase() }}</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>              &lt;div class=&quot;min-w-0 flex-1&quot;&gt;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                &lt;p class=&quot;text-[13px] font-semibold text-atp-navy truncate&quot;&gt;{{ s.name || s.username }}&lt;/p&gt;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                &lt;p class=&quot;text-[11px] text-slate-400 truncate&quot;&gt;@{{ s.username }}&lt;/p&gt;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        &lt;div class=&quot;flex gap-3 justify-end pt-4 border-t border-slate-100&quot;&gt;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>          &lt;button (click)=&quot;showCreateModal ? closeCreateModal() : closeEditModal()&quot; type=&quot;button&quot; class=&quot;btn btn-ghost&quot;&gt;Cancelar&lt;/button&gt;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>          &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;{{ showCreateModal ? &#39;Crear torneo&#39; : &#39;Guardar cambios&#39; }}&lt;/button&gt;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      &lt;/form&gt;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  &lt;/app-ui-modal&gt;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  &lt;!-- Details Modal (workers + supervisors) --&gt;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  &lt;app-ui-modal *ngIf=&quot;showDetailsModal &amp;&amp; selectedDetails&quot; size=&quot;lg&quot; (closed)=&quot;closeDetails()&quot;&gt;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    &lt;div class=&quot;mb-4&quot;&gt;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      &lt;h3 class=&quot;text-xl font-bold text-atp-navy&quot;&gt;{{ selectedDetails.name }}&lt;/h3&gt;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      &lt;p class=&quot;text-sm text-slate-500&quot;&gt;{{ formatRange(selectedDetails) }}&lt;/p&gt;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    &lt;div class=&quot;grid md:grid-cols-2 gap-6&quot;&gt;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        &lt;!-- Workers --&gt;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        &lt;section class=&quot;space-y-3&quot;&gt;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>          &lt;h4 class=&quot;font-semibold text-atp-navy&quot;&gt;&amp;#128296; Trabajadores ({{ workers.length }})&lt;/h4&gt;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>          &lt;ul class=&quot;space-y-2 max-h-64 overflow-auto&quot;&gt;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            &lt;li *ngFor=&quot;let w of workers&quot; class=&quot;flex items-center justify-between gap-3 p-2 rounded-lg bg-slate-50&quot;&gt;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>              &lt;div class=&quot;text-sm&quot;&gt;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                &lt;div class=&quot;font-medium&quot;&gt;{{ w.user.name || w.user.username }}&lt;/div&gt;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                &lt;div class=&quot;text-xs text-slate-500&quot;&gt;M&amp;aacute;quina: {{ w.machineName }}&lt;/div&gt;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>              &lt;button *ngIf=&quot;canManage&quot; class=&quot;btn btn-xs btn-error rounded-full&quot; (click)=&quot;removeWorker(w.user.username)&quot;&gt;&amp;times;&lt;/button&gt;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            &lt;/li&gt;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            &lt;li *ngIf=&quot;workers.length === 0&quot; class=&quot;text-sm text-slate-500 text-center py-3&quot;&gt;Sin trabajadores asignados.&lt;/li&gt;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>          &lt;/ul&gt;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>          &lt;div *ngIf=&quot;canManage&quot; class=&quot;rounded-xl border border-slate-200 p-3 space-y-2&quot;&gt;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            &lt;p class=&quot;text-xs font-semibold text-slate-600&quot;&gt;Asignar encordador&lt;/p&gt;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            &lt;select [(ngModel)]=&quot;workerForm.userId&quot; class=&quot;select select-sm select-bordered w-full&quot;&gt;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>              &lt;option value=&quot;&quot; disabled&gt;-- Encordador --&lt;/option&gt;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>              &lt;option *ngFor=&quot;let e of availableEncorders&quot; [value]=&quot;e.id&quot;&gt;{{ e.name || e.username }}&lt;/option&gt;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            &lt;/select&gt;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            &lt;input [(ngModel)]=&quot;workerForm.machineName&quot; class=&quot;input input-sm input-bordered w-full&quot; placeholder=&quot;M&amp;aacute;quina (p.ej. Machine-1)&quot; /&gt;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            &lt;button class=&quot;btn btn-sm btn-primary w-full&quot; (click)=&quot;assignWorker()&quot;&gt;A&amp;ntilde;adir&lt;/button&gt;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        &lt;/section&gt;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        &lt;!-- Supervisors --&gt;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        &lt;section class=&quot;space-y-3&quot;&gt;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>          &lt;h4 class=&quot;font-semibold text-atp-navy&quot;&gt;&amp;#128065;&amp;#65039; Supervisores ({{ supervisors.length }})&lt;/h4&gt;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>          &lt;ul class=&quot;space-y-2 max-h-64 overflow-auto&quot;&gt;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            &lt;li *ngFor=&quot;let s of supervisors&quot; class=&quot;flex items-center justify-between gap-3 p-2 rounded-lg bg-slate-50&quot;&gt;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>              &lt;div class=&quot;text-sm&quot;&gt;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                &lt;div class=&quot;font-medium&quot;&gt;{{ s.name || s.username }}&lt;/div&gt;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                &lt;div class=&quot;text-xs text-slate-500&quot;&gt;@{{ s.username }}&lt;/div&gt;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>              &lt;button *ngIf=&quot;canManage&quot; class=&quot;btn btn-xs btn-error rounded-full&quot; (click)=&quot;removeSupervisorFromTournament(s)&quot;&gt;&amp;times;&lt;/button&gt;</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            &lt;/li&gt;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            &lt;li *ngIf=&quot;supervisors.length === 0&quot; class=&quot;text-sm text-slate-500 text-center py-3&quot;&gt;Sin supervisores asignados.&lt;/li&gt;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>          &lt;/ul&gt;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>          &lt;div *ngIf=&quot;canManage&quot; class=&quot;rounded-xl border border-slate-200 p-3 space-y-2&quot;&gt;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            &lt;p class=&quot;text-xs font-semibold text-slate-600&quot;&gt;Asignar supervisor&lt;/p&gt;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            &lt;select [(ngModel)]=&quot;supervisorForm.supervisorId&quot; class=&quot;select select-sm select-bordered w-full&quot;&gt;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>              &lt;option value=&quot;&quot; disabled&gt;-- Supervisor --&lt;/option&gt;</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>              &lt;option *ngFor=&quot;let s of availableSupervisors&quot; [value]=&quot;s.id&quot;&gt;{{ s.name || s.username }}&lt;/option&gt;</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            &lt;/select&gt;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            &lt;button class=&quot;btn btn-sm btn-primary w-full&quot; (click)=&quot;assignSupervisorToTournament()&quot;&gt;A&amp;ntilde;adir&lt;/button&gt;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        &lt;/section&gt;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  &lt;/app-ui-modal&gt;</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>&lt;/section&gt;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_1e4c1e1ba784485a6f057d03bd8225e5.html">front-encordados</a></li><li class="navelem"><a class="el" href="dir_926dc43b74bd7bb2b391b76d673d57fb.html">src</a></li><li class="navelem"><a class="el" href="dir_bad3db17ab7eacd7fa6eff673f3b8e6b.html">app</a></li><li class="navelem"><a class="el" href="dir_ddf1162eec2c998148e2015b50ce76f8.html">pages</a></li><li class="navelem"><a class="el" href="torneos_8page_8html.html">torneos.page.html</a></li>
-    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 06:59:49 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 07:54:57 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

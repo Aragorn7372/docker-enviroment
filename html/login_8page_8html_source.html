@@ -98,138 +98,280 @@ $(document).ready(function(){initNavTree('login_8page_8html_source.html',''); in
   <div class="headertitle"><div class="title">login.page.html</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="login_8page_8html.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;section class=&quot;min-h-screen flex items-center justify-center relative overflow-hidden&quot;&gt;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>  &lt;!-- Background Pattern --&gt;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>  &lt;div class=&quot;absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100&quot;&gt;&lt;/div&gt;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>  &lt;div class=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,75,138,0.08),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(14,165,164,0.06),transparent_50%)]&quot;&gt;&lt;/div&gt;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>  </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  &lt;div class=&quot;relative z-10 w-full max-w-5xl mx-auto px-4 py-8&quot;&gt;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    &lt;div class=&quot;grid lg:grid-cols-2 gap-8 items-center&quot;&gt;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>      </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>      &lt;!-- Left: Login Form --&gt;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>      &lt;div class=&quot;atp-panel p-8 lg:p-10 animate-rise&quot;&gt;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        &lt;!-- Logo --&gt;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        &lt;div class=&quot;flex items-center gap-3 mb-8&quot;&gt;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>          &lt;div class=&quot;w-12 h-12 rounded-xl bg-gradient-to-br from-atp-navy via-atp-blue to-atp-teal flex items-center justify-center shadow-lg shadow-atp-blue/25&quot;&gt;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            &lt;span class=&quot;text-white font-bold text-lg&quot;&gt;ETR&lt;/span&gt;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>          &lt;div&gt;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            &lt;h1 class=&quot;text-xl font-bold text-atp-navy&quot;&gt;Encorda Tus Raquetas&lt;/h1&gt;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            &lt;p class=&quot;text-sm text-slate-400&quot;&gt;ATP Stringing Desk&lt;/p&gt;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        &lt;h2 class=&quot;text-2xl font-bold text-atp-navy mb-2&quot;&gt;Iniciar Sesi&amp;oacute;n&lt;/h2&gt;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        &lt;p class=&quot;text-slate-500 mb-6&quot;&gt;Accede a tu dashboard seg&amp;uacute;n tu rol&lt;/p&gt;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        &lt;!-- Login Form --&gt;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        &lt;form (submit)=&quot;$event.preventDefault(); onLogin()&quot; class=&quot;space-y-4&quot;&gt;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>          &lt;div&gt;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Email&lt;/label&gt;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            &lt;div class=&quot;relative&quot;&gt;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>              &lt;div class=&quot;absolute left-4 top-1/2 -translate-y-1/2 text-slate-400&quot;&gt;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                &lt;svg class=&quot;w-5 h-5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                  &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207&quot; /&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                &lt;/svg&gt;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>              &lt;/div&gt;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>              &lt;input </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                type=&quot;email&quot; </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                [(ngModel)]=&quot;email&quot; </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                name=&quot;email&quot;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                class=&quot;input input-bordered w-full pl-12 pr-4 py-3 bg-white border-slate-200 focus:bg-white&quot;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                placeholder=&quot;tu@email.com&quot;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>              /&gt;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            &lt;/div&gt;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>          &lt;div&gt;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            &lt;label class=&quot;block text-sm font-medium text-slate-700 mb-1.5&quot;&gt;Contrase&amp;ntilde;a&lt;/label&gt;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            &lt;div class=&quot;relative&quot;&gt;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>              &lt;div class=&quot;absolute left-4 top-1/2 -translate-y-1/2 text-slate-400&quot;&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                &lt;svg class=&quot;w-5 h-5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                  &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z&quot; /&gt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                &lt;/svg&gt;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>              &lt;/div&gt;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>              &lt;input </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                [type]=&quot;showPassword ? &#39;text&#39; : &#39;password&#39;&quot; </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                [(ngModel)]=&quot;password&quot; </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                name=&quot;password&quot;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                class=&quot;input input-bordered w-full pl-12 pr-12 py-3 bg-white border-slate-200 focus:bg-white&quot;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                placeholder=&quot;&amp;bull;&amp;bull;&amp;bull;&amp;bull;&amp;bull;&amp;bull;&quot;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>              /&gt;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>              &lt;button </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                type=&quot;button&quot;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                (click)=&quot;showPassword = !showPassword&quot;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                class=&quot;absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-atp-blue transition-colors&quot;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>              &gt;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                &lt;svg *ngIf=&quot;!showPassword&quot; class=&quot;w-5 h-5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                  &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21&quot; /&gt;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                &lt;/svg&gt;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                &lt;svg *ngIf=&quot;showPassword&quot; class=&quot;w-5 h-5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                  &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M15 12a3 3 0 11-6 0 3 3 0 016 0z&quot; /&gt;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                  &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7z&quot; /&gt;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                &lt;/svg&gt;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>              &lt;/button&gt;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            &lt;/div&gt;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>          &lt;div class=&quot;flex items-center justify-between&quot;&gt;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            &lt;label class=&quot;flex items-center gap-2 cursor-pointer&quot;&gt;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>              &lt;input type=&quot;checkbox&quot; [(ngModel)]=&quot;rememberMe&quot; name=&quot;remember&quot; class=&quot;checkbox checkbox-sm&quot; /&gt;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>              &lt;span class=&quot;text-sm text-slate-600&quot;&gt;Recordarme&lt;/span&gt;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            &lt;/label&gt;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            &lt;a class=&quot;text-sm text-atp-blue hover:underline cursor-pointer&quot;&gt;&amp;iquest;Olvidaste la contrase&amp;ntilde;a?&lt;/a&gt;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>          &lt;button </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            type=&quot;submit&quot; </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            [disabled]=&quot;isLoading&quot;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            class=&quot;btn btn-primary w-full py-3.5 text-base font-semibold rounded-xl&quot;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>          &gt;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            &lt;span *ngIf=&quot;isLoading&quot; class=&quot;spinner spinner-sm mr-2&quot;&gt;&lt;/span&gt;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            {{ isLoading ? &#39;Entrando...&#39; : &#39;Entrar&#39; }}</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>          &lt;/button&gt;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        &lt;/form&gt;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      &lt;!-- Right: Demo Users --&gt;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      &lt;div class=&quot;space-y-6&quot;&gt;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        &lt;div class=&quot;text-center lg:text-left&quot;&gt;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>          &lt;h3 class=&quot;text-lg font-semibold text-atp-navy mb-1&quot;&gt;Usuarios de Demo&lt;/h3&gt;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>          &lt;p class=&quot;text-sm text-slate-500&quot;&gt;Haz clic para probar cada rol r&amp;aacute;pidamente&lt;/p&gt;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        &lt;div class=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3&quot;&gt;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>          &lt;button </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            *ngFor=&quot;let user of demoUsers&quot; </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            (click)=&quot;loginAsDemo(user)&quot;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            class=&quot;group flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-200 hover:border-atp-blue hover:shadow-lg hover:shadow-atp-blue/10 transition-all duration-300 text-left&quot;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>          &gt;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            &lt;div class=&quot;w-12 h-12 rounded-xl bg-gradient-to-br {{ user.color }} flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 transition-transform&quot;&gt;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>              {{ user.icon }}</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            &lt;/div&gt;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            &lt;div class=&quot;flex-1 min-w-0&quot;&gt;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>              &lt;div class=&quot;font-semibold text-slate-800 group-hover:text-atp-blue transition-colors&quot;&gt;{{ user.label }}&lt;/div&gt;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>              &lt;div class=&quot;text-xs text-slate-400 font-mono&quot;&gt;{{ user.email }}&lt;/div&gt;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            &lt;/div&gt;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            &lt;div class=&quot;opacity-0 group-hover:opacity-100 transition-opacity&quot;&gt;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>              &lt;svg class=&quot;w-5 h-5 text-atp-blue&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M13 7l5 5m0 0l-5 5m5-5H6&quot; /&gt;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>              &lt;/svg&gt;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            &lt;/div&gt;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>          &lt;/button&gt;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  &lt;/div&gt;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>&lt;/section&gt;</div>
+<a href="login_8page_8html.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;section class=&quot;min-h-screen flex items-center justify-center relative overflow-hidden bg-white&quot;&gt;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>  &lt;!-- Decorative background --&gt;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>  &lt;div class=&quot;absolute inset-0 -z-10&quot;&gt;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    &lt;div class=&quot;absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-atp-blue/12 via-atp-sky/8 to-transparent rounded-full blur-3xl -translate-x-1/4 -translate-y-1/4&quot;&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    &lt;div class=&quot;absolute bottom-0 right-0 w-[700px] h-[700px] bg-gradient-to-tl from-atp-navy/10 via-atp-blue/6 to-transparent rounded-full blur-3xl translate-x-1/4 translate-y-1/4&quot;&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    &lt;div class=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent,white)]&quot;&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  &lt;/div&gt;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  &lt;div class=&quot;relative z-10 w-full max-w-6xl mx-auto px-4 py-8 lg:py-12&quot;&gt;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    &lt;div class=&quot;grid lg:grid-cols-5 gap-6 lg:gap-10 items-stretch&quot;&gt;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>      &lt;!-- Left: Brand panel (hidden mobile) --&gt;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>      &lt;div class=&quot;hidden lg:flex lg:col-span-2 relative rounded-3xl overflow-hidden bg-gradient-to-br from-atp-navy via-atp-deep to-atp-blue animate-rise&quot;&gt;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        &lt;!-- Pattern decoration --&gt;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        &lt;div class=&quot;absolute inset-0 opacity-20&quot;&gt;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>          &lt;div class=&quot;absolute top-10 right-10 w-40 h-40 border-2 border-white/20 rounded-full&quot;&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>          &lt;div class=&quot;absolute top-20 right-20 w-24 h-24 border-2 border-white/15 rounded-full&quot;&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>          &lt;div class=&quot;absolute bottom-32 left-8 w-32 h-32 border-2 border-white/15 rounded-full&quot;&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>          &lt;div class=&quot;absolute -bottom-10 -right-10 w-72 h-72 bg-atp-sky/20 rounded-full blur-2xl&quot;&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        &lt;div class=&quot;relative flex flex-col justify-between p-10 z-10 w-full text-white&quot;&gt;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>          &lt;!-- Top: Logo --&gt;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>          &lt;div&gt;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            &lt;div class=&quot;flex items-center gap-3 mb-2&quot;&gt;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>              &lt;div class=&quot;w-12 h-12 rounded-xl bg-white/15 backdrop-blur-sm flex items-center justify-center ring-1 ring-white/20&quot;&gt;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                &lt;span class=&quot;text-white font-extrabold text-base tracking-tight&quot;&gt;ETR&lt;/span&gt;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>              &lt;div&gt;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                &lt;div class=&quot;text-[11px] font-bold uppercase tracking-[0.18em] text-white/60&quot;&gt;ATP Edition&lt;/div&gt;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            &lt;div class=&quot;mt-8&quot;&gt;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>              &lt;h1 class=&quot;text-3xl font-extrabold leading-tight tracking-tight&quot;&gt;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                Encorda tus&lt;br/&gt;raquetas como&lt;br/&gt;los pros.</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>              &lt;/h1&gt;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>              &lt;p class=&quot;mt-4 text-white/70 text-[14px] leading-relaxed max-w-xs&quot;&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                Plataforma profesional para gestionar pedidos, torneos, encordadores y materiales con precisión.</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>              &lt;/p&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>          &lt;!-- Bottom: Highlights --&gt;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>          &lt;div class=&quot;space-y-3 mt-10&quot;&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            &lt;div class=&quot;flex items-center gap-3 text-[13px] text-white/85&quot;&gt;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>              &lt;div class=&quot;w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center ring-1 ring-white/15&quot;&gt;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                &lt;svg class=&quot;w-4 h-4 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                  &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2.5&quot; d=&quot;M5 13l4 4L19 7&quot;/&gt;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                &lt;/svg&gt;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>              &lt;span&gt;Gestión multi-rol con permisos finos&lt;/span&gt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            &lt;div class=&quot;flex items-center gap-3 text-[13px] text-white/85&quot;&gt;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>              &lt;div class=&quot;w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center ring-1 ring-white/15&quot;&gt;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                &lt;svg class=&quot;w-4 h-4 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                  &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2.5&quot; d=&quot;M5 13l4 4L19 7&quot;/&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                &lt;/svg&gt;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>              &lt;span&gt;Torneos, asignaciones y reportes en vivo&lt;/span&gt;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            &lt;div class=&quot;flex items-center gap-3 text-[13px] text-white/85&quot;&gt;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>              &lt;div class=&quot;w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center ring-1 ring-white/15&quot;&gt;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                &lt;svg class=&quot;w-4 h-4 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                  &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2.5&quot; d=&quot;M5 13l4 4L19 7&quot;/&gt;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                &lt;/svg&gt;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>              &lt;span&gt;Modo offline para trabajo en cancha&lt;/span&gt;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      &lt;!-- Right: Login + Demos --&gt;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      &lt;div class=&quot;lg:col-span-3 flex flex-col gap-5 animate-rise&quot; style=&quot;animation-delay: 80ms&quot;&gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        &lt;!-- Login card --&gt;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        &lt;div class=&quot;bg-white rounded-3xl shadow-lg border border-slate-100 p-7 sm:p-9&quot;&gt;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>          &lt;!-- Mobile logo --&gt;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>          &lt;div class=&quot;flex items-center gap-3 mb-7 lg:hidden&quot;&gt;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            &lt;div class=&quot;w-11 h-11 rounded-xl bg-gradient-to-br from-atp-navy via-atp-blue to-atp-sky flex items-center justify-center shadow-md ring-1 ring-white/10&quot;&gt;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>              &lt;span class=&quot;text-white font-extrabold text-sm&quot;&gt;ETR&lt;/span&gt;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            &lt;div&gt;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>              &lt;h1 class=&quot;text-base font-bold text-atp-navy leading-tight&quot;&gt;Encorda Tus Raquetas&lt;/h1&gt;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>              &lt;p class=&quot;text-[11px] text-slate-400 uppercase tracking-wider font-semibold&quot;&gt;ATP Stringing Desk&lt;/p&gt;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>          &lt;div class=&quot;mb-7&quot;&gt;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            &lt;div class=&quot;text-[11px] font-bold uppercase tracking-[0.16em] text-atp-blue mb-1.5&quot;&gt;Bienvenido&lt;/div&gt;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            &lt;h2 class=&quot;text-3xl font-extrabold text-atp-navy tracking-tight&quot;&gt;Iniciar sesión&lt;/h2&gt;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            &lt;p class=&quot;text-slate-500 mt-1.5 text-[14px]&quot;&gt;Accede a tu panel según tu rol asignado&lt;/p&gt;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>          &lt;!-- Login Form --&gt;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>          &lt;form (submit)=&quot;$event.preventDefault(); onLogin()&quot; class=&quot;space-y-4&quot;&gt;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            &lt;div&gt;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>              &lt;label class=&quot;block text-[12px] font-semibold text-slate-700 mb-1.5 uppercase tracking-wider&quot;&gt;Usuario&lt;/label&gt;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>              &lt;div class=&quot;relative&quot;&gt;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                &lt;div class=&quot;absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none flex items-center&quot;&gt;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                  &lt;svg class=&quot;w-5 h-5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                    &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z&quot; /&gt;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                  &lt;/svg&gt;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                &lt;/div&gt;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                &lt;input</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                  type=&quot;text&quot;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                  [(ngModel)]=&quot;username&quot;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                  name=&quot;username&quot;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                  class=&quot;input input-bordered w-full pl-11 pr-4 h-12&quot;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                  placeholder=&quot;tu_usuario&quot;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                  autocomplete=&quot;username&quot;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                /&gt;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            &lt;div&gt;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>              &lt;div class=&quot;flex items-center justify-between mb-1.5&quot;&gt;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                &lt;label class=&quot;block text-[12px] font-semibold text-slate-700 uppercase tracking-wider&quot;&gt;Contraseña&lt;/label&gt;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                &lt;div class=&quot;flex items-center gap-2&quot;&gt;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                  &lt;a routerLink=&quot;/registro&quot; class=&quot;text-[12px] font-medium text-atp-blue hover:text-atp-navy transition-colors&quot;&gt;Crear cuenta&lt;/a&gt;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                  &lt;span class=&quot;text-[11px] text-slate-300&quot;&gt;·&lt;/span&gt;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                  &lt;a class=&quot;text-[12px] font-medium text-atp-blue hover:text-atp-navy cursor-pointer transition-colors&quot;&gt;¿Olvidaste?&lt;/a&gt;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                &lt;/div&gt;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>              &lt;div class=&quot;relative&quot;&gt;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                &lt;div class=&quot;absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none flex items-center&quot;&gt;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                  &lt;svg class=&quot;w-5 h-5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                    &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z&quot; /&gt;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                  &lt;/svg&gt;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                &lt;/div&gt;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                &lt;input</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                  [type]=&quot;showPassword ? &#39;text&#39; : &#39;password&#39;&quot;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                  [(ngModel)]=&quot;password&quot;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                  name=&quot;password&quot;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                  class=&quot;input input-bordered w-full pl-11 pr-12 h-12&quot;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                  placeholder=&quot;••••••••&quot;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                  autocomplete=&quot;current-password&quot;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                /&gt;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                &lt;button</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                  type=&quot;button&quot;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                  (click)=&quot;showPassword = !showPassword&quot;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                  class=&quot;absolute right-3 top-1/2 -translate-y-1/2 p-1.5 text-slate-400 hover:text-atp-blue rounded-md hover:bg-slate-50 transition-all&quot;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                  aria-label=&quot;Toggle password&quot;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                &gt;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                  &lt;svg *ngIf=&quot;!showPassword&quot; class=&quot;w-[18px] h-[18px]&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                    &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21&quot; /&gt;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                  &lt;/svg&gt;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                  &lt;svg *ngIf=&quot;showPassword&quot; class=&quot;w-[18px] h-[18px]&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                    &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M15 12a3 3 0 11-6 0 3 3 0 016 0z&quot; /&gt;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                    &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7z&quot; /&gt;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                  &lt;/svg&gt;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                &lt;/button&gt;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            &lt;label class=&quot;flex items-center gap-2.5 cursor-pointer select-none&quot;&gt;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>              &lt;input type=&quot;checkbox&quot; [(ngModel)]=&quot;rememberMe&quot; name=&quot;remember&quot; class=&quot;checkbox&quot; /&gt;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>              &lt;span class=&quot;text-[13px] text-slate-600 font-medium&quot;&gt;Recordarme en este dispositivo&lt;/span&gt;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            &lt;/label&gt;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            &lt;button</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>              type=&quot;submit&quot;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>              [disabled]=&quot;isLoading&quot;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>              class=&quot;btn btn-primary w-full h-12 text-[15px] font-bold rounded-xl mt-2&quot;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            &gt;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>              &lt;span *ngIf=&quot;isLoading&quot; class=&quot;spinner spinner-sm&quot;&gt;&lt;/span&gt;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>              {{ isLoading ? &#39;Entrando...&#39; : &#39;Entrar al panel&#39; }}</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>              &lt;svg *ngIf=&quot;!isLoading&quot; class=&quot;w-4 h-4&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2.5&quot; d=&quot;M13 7l5 5m0 0l-5 5m5-5H6&quot;/&gt;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>              &lt;/svg&gt;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            &lt;/button&gt;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>          &lt;/form&gt;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        &lt;!-- Demo users panel --&gt;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        &lt;div class=&quot;bg-white rounded-3xl shadow-lg border border-slate-100 p-6 sm:p-7&quot;&gt;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>          &lt;div class=&quot;flex items-center justify-between mb-4&quot;&gt;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            &lt;div&gt;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>              &lt;div class=&quot;text-[11px] font-bold uppercase tracking-[0.16em] text-atp-blue mb-1&quot;&gt;Acceso rápido&lt;/div&gt;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>              &lt;h3 class=&quot;text-base font-bold text-atp-navy&quot;&gt;Usuarios de demo&lt;/h3&gt;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            &lt;/div&gt;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            &lt;span class=&quot;badge badge-primary&quot;&gt;{{ demoUsers.length }} roles&lt;/span&gt;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>          &lt;div class=&quot;grid grid-cols-1 sm:grid-cols-2 gap-2.5&quot;&gt;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            &lt;button</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>              *ngFor=&quot;let user of demoUsers&quot;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>              (click)=&quot;loginAsDemo(user)&quot;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>              class=&quot;group flex items-center gap-3 p-3 rounded-xl bg-slate-50/80 border border-slate-100 hover:border-atp-blue/30 hover:bg-white hover:shadow-md transition-all duration-200 text-left&quot;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            &gt;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>              &lt;div class=&quot;w-10 h-10 rounded-lg bg-gradient-to-br {{ user.color }} flex items-center justify-center text-lg shadow-sm ring-1 ring-white/40 group-hover:scale-105 transition-transform&quot;&gt;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                {{ user.icon }}</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>              &lt;div class=&quot;flex-1 min-w-0&quot;&gt;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                &lt;div class=&quot;text-[13px] font-bold text-slate-800 group-hover:text-atp-blue transition-colors truncate&quot;&gt;{{ user.label }}&lt;/div&gt;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                &lt;div class=&quot;text-[11px] text-slate-400 font-mono truncate&quot;&gt;{{ user.username }}&lt;/div&gt;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>              &lt;/div&gt;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>              &lt;svg class=&quot;w-4 h-4 text-slate-300 group-hover:text-atp-blue group-hover:translate-x-0.5 transition-all&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2.5&quot; d=&quot;M9 5l7 7-7 7&quot;/&gt;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>              &lt;/svg&gt;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            &lt;/button&gt;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>          &lt;div class=&quot;mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400&quot;&gt;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            &lt;span class=&quot;flex items-center gap-1.5&quot;&gt;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>              &lt;span class=&quot;status-dot success pulse&quot;&gt;&lt;/span&gt;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>              Backend conectado</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            &lt;/span&gt;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            &lt;span&gt;© ETR · TFG&lt;/span&gt;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  &lt;/div&gt;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  &lt;!-- Modal: ¿Olvidaste la contraseña? --&gt;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  &lt;div *ngIf=&quot;forgotOpen&quot; class=&quot;fixed inset-0 z-50 flex items-center justify-center p-4&quot;&gt;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    &lt;div class=&quot;absolute inset-0 bg-black/50 backdrop-blur-sm&quot; (click)=&quot;forgotOpen = false&quot;&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    &lt;div class=&quot;relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 animate-rise&quot;&gt;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      &lt;h3 class=&quot;text-xl font-bold text-atp-navy mb-2&quot;&gt;Recuperar contraseña&lt;/h3&gt;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>      &lt;p class=&quot;text-sm text-slate-500 mb-4&quot;&gt;Te enviaremos un email con un enlace para restablecer tu contraseña.&lt;/p&gt;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>      &lt;form (submit)=&quot;$event.preventDefault(); submitForgot()&quot; class=&quot;space-y-4&quot;&gt;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        &lt;input type=&quot;email&quot; [(ngModel)]=&quot;forgotEmail&quot; name=&quot;forgotEmail&quot; class=&quot;input input-bordered w-full&quot; placeholder=&quot;tu@email.com&quot; required /&gt;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        &lt;div class=&quot;flex gap-3 justify-end&quot;&gt;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>          &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; (click)=&quot;forgotOpen = false&quot;&gt;Cancelar&lt;/button&gt;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>          &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot; [disabled]=&quot;forgotLoading&quot;&gt;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            &lt;span *ngIf=&quot;forgotLoading&quot; class=&quot;spinner spinner-sm mr-2&quot;&gt;&lt;/span&gt;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            &lt;span&gt;{{ forgotLoading ? &#39;Enviando…&#39; : &#39;Enviar email&#39; }}&lt;/span&gt;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>          &lt;/button&gt;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>      &lt;/form&gt;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  &lt;/div&gt;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  &lt;!-- Modal: Crear cuenta --&gt;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  &lt;div *ngIf=&quot;registerOpen&quot; class=&quot;fixed inset-0 z-50 flex items-center justify-center p-4&quot;&gt;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    &lt;div class=&quot;absolute inset-0 bg-black/50 backdrop-blur-sm&quot; (click)=&quot;registerOpen = false&quot;&gt;&lt;/div&gt;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    &lt;div class=&quot;relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 animate-rise&quot;&gt;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      &lt;h3 class=&quot;text-xl font-bold text-atp-navy mb-2&quot;&gt;Crear cuenta&lt;/h3&gt;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      &lt;p class=&quot;text-sm text-slate-500 mb-4&quot;&gt;Te registras como jugador. Tu rol podrá cambiarse después por un administrador.&lt;/p&gt;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      &lt;form (submit)=&quot;$event.preventDefault(); submitRegister()&quot; class=&quot;space-y-3&quot;&gt;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        &lt;div&gt;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>          &lt;label class=&quot;block text-xs font-medium text-slate-600 mb-1&quot;&gt;Usuario&lt;/label&gt;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>          &lt;input [(ngModel)]=&quot;regUsername&quot; name=&quot;regUsername&quot; class=&quot;input input-bordered w-full&quot; minlength=&quot;3&quot; required /&gt;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        &lt;div&gt;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>          &lt;label class=&quot;block text-xs font-medium text-slate-600 mb-1&quot;&gt;Email&lt;/label&gt;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>          &lt;input type=&quot;email&quot; [(ngModel)]=&quot;regEmail&quot; name=&quot;regEmail&quot; class=&quot;input input-bordered w-full&quot; required /&gt;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        &lt;div&gt;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>          &lt;label class=&quot;block text-xs font-medium text-slate-600 mb-1&quot;&gt;Contraseña&lt;/label&gt;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>          &lt;input type=&quot;password&quot; [(ngModel)]=&quot;regPassword&quot; name=&quot;regPassword&quot; class=&quot;input input-bordered w-full&quot; minlength=&quot;6&quot; required /&gt;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        &lt;div class=&quot;flex gap-3 justify-end pt-2&quot;&gt;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>          &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; (click)=&quot;registerOpen = false&quot;&gt;Cancelar&lt;/button&gt;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>          &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot; [disabled]=&quot;regLoading&quot;&gt;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            &lt;span *ngIf=&quot;regLoading&quot; class=&quot;spinner spinner-sm mr-2&quot;&gt;&lt;/span&gt;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            &lt;span&gt;{{ regLoading ? &#39;Creando…&#39; : &#39;Crear cuenta&#39; }}&lt;/span&gt;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>          &lt;/button&gt;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      &lt;/form&gt;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  &lt;/div&gt;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>&lt;/section&gt;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_1e4c1e1ba784485a6f057d03bd8225e5.html">front-encordados</a></li><li class="navelem"><a class="el" href="dir_926dc43b74bd7bb2b391b76d673d57fb.html">src</a></li><li class="navelem"><a class="el" href="dir_bad3db17ab7eacd7fa6eff673f3b8e6b.html">app</a></li><li class="navelem"><a class="el" href="dir_ddf1162eec2c998148e2015b50ce76f8.html">pages</a></li><li class="navelem"><a class="el" href="login_8page_8html.html">login.page.html</a></li>
-    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 06:59:49 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 07:54:57 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

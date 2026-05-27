@@ -1,5 +1,6 @@
 var dir_ddf1162eec2c998148e2015b50ce76f8 =
 [
+    [ "change-password.page.ts", "change-password_8page_8ts.html", null ],
     [ "contactos.page.html", "contactos_8page_8html.html", null ],
     [ "contactos.page.ts", "contactos_8page_8ts.html", null ],
     [ "cordajes.page.html", "cordajes_8page_8html.html", null ],
@@ -14,9 +15,17 @@ var dir_ddf1162eec2c998148e2015b50ce76f8 =
     [ "pedidos.page.ts", "pedidos_8page_8ts.html", null ],
     [ "perfil.page.html", "perfil_8page_8html.html", null ],
     [ "perfil.page.ts", "perfil_8page_8ts.html", null ],
+    [ "register.page.html", "register_8page_8html.html", null ],
+    [ "register.page.ts", "register_8page_8ts.html", null ],
+    [ "supervisor.page.html", "supervisor_8page_8html.html", null ],
+    [ "supervisor.page.ts", "supervisor_8page_8ts.html", null ],
     [ "terminados.page.html", "terminados_8page_8html.html", null ],
     [ "terminados.page.ts", "terminados_8page_8ts.html", null ],
+    [ "torneo-detail.page.html", "torneo-detail_8page_8html.html", null ],
+    [ "torneo-detail.page.ts", "torneo-detail_8page_8ts.html", null ],
     [ "torneos.page.html", "torneos_8page_8html.html", null ],
     [ "torneos.page.ts", "torneos_8page_8ts.html", null ],
-    [ "unauthorized.page.ts", "unauthorized_8page_8ts.html", null ]
+    [ "unauthorized.page.ts", "unauthorized_8page_8ts.html", null ],
+    [ "usuarios.page.html", "usuarios_8page_8html.html", null ],
+    [ "usuarios.page.ts", "usuarios_8page_8ts.html", null ]
 ];

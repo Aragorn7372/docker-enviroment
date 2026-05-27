@@ -99,156 +99,228 @@ $(document).ready(function(){initNavTree('informes_8page_8html_source.html','');
 </div><!--header-->
 <div class="contents">
 <a href="informes_8page_8html.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;section class=&quot;space-y-6&quot;&gt;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>  &lt;!-- Header --&gt;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>  &lt;div class=&quot;atp-panel animate-rise p-6&quot;&gt;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    &lt;div class=&quot;flex flex-wrap items-center justify-between gap-4&quot;&gt;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>      &lt;div&gt;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        &lt;h1 class=&quot;text-xl font-semibold text-gradient&quot;&gt;Informes Dinámicos&lt;/h1&gt;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        &lt;p class=&quot;text-sm text-slate-500&quot;&gt;Análisis y estadísticas de pedidos.&lt;/p&gt;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>      &lt;div class=&quot;flex flex-wrap gap-2&quot;&gt;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        &lt;button class=&quot;btn btn-sm rounded-full border-0 bg-slate-100 text-slate-600&quot; (click)=&quot;clearFilters()&quot;&gt;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>          &lt;svg width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9H0m15.356 2A8.001 8.001 0 0120.58 15H0&quot;/&gt;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>          &lt;/svg&gt;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>          Limpiar Filtros</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        &lt;/button&gt;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        &lt;button class=&quot;btn btn-sm btn-secondary rounded-full gap-2&quot; (click)=&quot;exportExcel()&quot;&gt;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>          &lt;svg width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 16v1a3 3 0 003 3h10a3 3 0 003-3v1m-4-4l-4 4m0 0l-4-4m4 4V4&quot;/&gt;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>          &lt;/svg&gt;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>          Exportar Excel</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        &lt;/button&gt;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>  &lt;!-- Hero --&gt;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>  &lt;app-page-hero eyebrow=&quot;Analytics&quot; title=&quot;Informes Dinámicos&quot; subtitle=&quot;Análisis y estadísticas en tiempo real de los pedidos&quot;&gt;&lt;/app-page-hero&gt;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>  &lt;!-- Filters panel --&gt;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  &lt;div class=&quot;atp-panel animate-rise p-5 sm:p-6&quot;&gt;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    &lt;div class=&quot;grid gap-4 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]&quot;&gt;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>      &lt;div class=&quot;field-block&quot;&gt;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        &lt;span class=&quot;field-label&quot;&gt;Torneo&lt;/span&gt;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        &lt;select class=&quot;select select-bordered&quot; [(ngModel)]=&quot;selectedTournamentId&quot; (ngModelChange)=&quot;onTournamentChange()&quot;&gt;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>          &lt;option [ngValue]=&quot;null&quot;&gt;— Todos los torneos —&lt;/option&gt;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>          &lt;option *ngFor=&quot;let t of torneos&quot; [ngValue]=&quot;t.id&quot;&gt;{{ t.name }}&lt;/option&gt;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        &lt;/select&gt;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>      &lt;div class=&quot;field-block&quot;&gt;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        &lt;span class=&quot;field-label&quot;&gt;Desde&lt;/span&gt;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        &lt;input type=&quot;date&quot; class=&quot;input input-bordered&quot; [(ngModel)]=&quot;fromDate&quot; (ngModelChange)=&quot;onDateFilterChange()&quot; /&gt;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      &lt;div class=&quot;field-block&quot;&gt;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        &lt;span class=&quot;field-label&quot;&gt;Hasta&lt;/span&gt;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        &lt;input type=&quot;date&quot; class=&quot;input input-bordered&quot; [(ngModel)]=&quot;toDate&quot; (ngModelChange)=&quot;onDateFilterChange()&quot; /&gt;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    &lt;!-- Filters --&gt;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    &lt;div class=&quot;mt-5 grid gap-4 lg:grid-cols-[1.1fr_1.1fr_1fr]&quot;&gt;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      &lt;label class=&quot;form-control&quot;&gt;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        &lt;div class=&quot;label&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;Seleccionar Informe&lt;/span&gt;&lt;/div&gt;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        &lt;select class=&quot;select select-bordered border-slate-200 bg-white&quot; [(ngModel)]=&quot;reportName&quot;&gt;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>          &lt;option&gt;Torneo Test 2026&lt;/option&gt;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>          &lt;option&gt;Open Indoor 2026&lt;/option&gt;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>          &lt;option&gt;Circuito Juvenil&lt;/option&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        &lt;/select&gt;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      &lt;/label&gt;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      &lt;div class=&quot;grid grid-cols-2 gap-3&quot;&gt;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        &lt;label class=&quot;form-control&quot;&gt;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>          &lt;div class=&quot;label&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;Desde&lt;/span&gt;&lt;/div&gt;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>          &lt;input class=&quot;input input-bordered border-slate-200 bg-white&quot; [(ngModel)]=&quot;fromDate&quot; /&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        &lt;/label&gt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        &lt;label class=&quot;form-control&quot;&gt;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>          &lt;div class=&quot;label&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;Hasta&lt;/span&gt;&lt;/div&gt;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>          &lt;input class=&quot;input input-bordered border-slate-200 bg-white&quot; [(ngModel)]=&quot;toDate&quot; /&gt;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        &lt;/label&gt;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      &lt;label class=&quot;form-control&quot;&gt;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        &lt;div class=&quot;label&quot;&gt;&lt;span class=&quot;label-text&quot;&gt;Buscar Jugador&lt;/span&gt;&lt;/div&gt;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        &lt;input class=&quot;input input-bordered border-slate-200 bg-white&quot; [(ngModel)]=&quot;playerFilter&quot; placeholder=&quot;Nombre o ID...&quot; /&gt;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      &lt;/label&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    &lt;!-- Status Filters --&gt;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    &lt;div class=&quot;mt-5&quot;&gt;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      &lt;p class=&quot;text-xs font-semibold uppercase tracking-wide text-slate-500&quot;&gt;Estado del pedido&lt;/p&gt;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      &lt;div class=&quot;mt-2 flex flex-wrap gap-2&quot;&gt;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        &lt;button class=&quot;btn btn-xs rounded-full&quot; [class.btn-primary]=&quot;statusFilters.proceso&quot; [class.btn-ghost]=&quot;!statusFilters.proceso&quot; (click)=&quot;toggleStatus(&#39;proceso&#39;)&quot;&gt;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>          En proceso</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        &lt;/button&gt;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        &lt;button class=&quot;btn btn-xs rounded-full&quot; [class.btn-secondary]=&quot;statusFilters.lista&quot; [class.btn-ghost]=&quot;!statusFilters.lista&quot; (click)=&quot;toggleStatus(&#39;lista&#39;)&quot;&gt;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>          Listas</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        &lt;/button&gt;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        &lt;button class=&quot;btn btn-xs rounded-full&quot; [class.btn-accent]=&quot;statusFilters.entregada&quot; [class.btn-ghost]=&quot;!statusFilters.entregada&quot; (click)=&quot;toggleStatus(&#39;entregada&#39;)&quot;&gt;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>          Entregadas</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        &lt;/button&gt;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        &lt;button class=&quot;btn btn-xs rounded-full&quot; [class.btn-error]=&quot;statusFilters.anulada&quot; [class.btn-ghost]=&quot;!statusFilters.anulada&quot; (click)=&quot;toggleStatus(&#39;anulada&#39;)&quot;&gt;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>          Anuladas</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        &lt;/button&gt;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  &lt;/div&gt;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  &lt;!-- Charts --&gt;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  &lt;div class=&quot;grid gap-6 lg:grid-cols-3&quot;&gt;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    &lt;div class=&quot;atp-panel p-5&quot;&gt;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      &lt;h3 class=&quot;mb-4 text-base font-semibold&quot;&gt;Pedidos por Estado&lt;/h3&gt;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      &lt;apx-chart [chart]=&quot;chartOptionsStatus!.chart&quot; [labels]=&quot;chartOptionsStatus!.labels&quot; [series]=&quot;seriesStatus&quot; [colors]=&quot;chartOptionsStatus!.colors&quot; [plotOptions]=&quot;chartOptionsStatus!.plotOptions&quot; [legend]=&quot;chartOptionsStatus!.legend&quot; [dataLabels]=&quot;chartOptionsStatus!.dataLabels&quot; [stroke]=&quot;chartOptionsStatus!.stroke&quot; [tooltip]=&quot;chartOptionsStatus!.tooltip&quot; [responsive]=&quot;chartOptionsStatus!.responsive&quot;&gt;&lt;/apx-chart&gt;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    &lt;div class=&quot;atp-panel p-5&quot;&gt;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      &lt;h3 class=&quot;mb-4 text-base font-semibold&quot;&gt;Evolución de Pedidos&lt;/h3&gt;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      &lt;apx-chart [chart]=&quot;chartOptionsType!.chart&quot; [series]=&quot;seriesType&quot; [xaxis]=&quot;chartOptionsType!.xaxis&quot; [yaxis]=&quot;chartOptionsType!.yaxis&quot; [colors]=&quot;chartOptionsType!.colors&quot; [dataLabels]=&quot;chartOptionsType!.dataLabels&quot; [stroke]=&quot;chartOptionsType!.stroke&quot; [plotOptions]=&quot;chartOptionsType!.plotOptions&quot; [legend]=&quot;chartOptionsType!.legend&quot; [fill]=&quot;chartOptionsType!.fill&quot; [tooltip]=&quot;chartOptionsType!.tooltip&quot; [grid]=&quot;chartOptionsType!.grid&quot;&gt;&lt;/apx-chart&gt;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    &lt;div class=&quot;atp-panel p-5&quot;&gt;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      &lt;h3 class=&quot;mb-4 text-base font-semibold&quot;&gt;Facturación (EUR)&lt;/h3&gt;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      &lt;apx-chart [chart]=&quot;chartOptionsRevenue!.chart&quot; [series]=&quot;seriesRevenue&quot; [xaxis]=&quot;chartOptionsRevenue!.xaxis&quot; [yaxis]=&quot;chartOptionsRevenue!.yaxis&quot; [colors]=&quot;chartOptionsRevenue!.colors&quot; [dataLabels]=&quot;chartOptionsRevenue!.dataLabels&quot; [stroke]=&quot;chartOptionsRevenue!.stroke&quot; [legend]=&quot;chartOptionsRevenue!.legend&quot; [fill]=&quot;chartOptionsRevenue!.fill&quot; [tooltip]=&quot;chartOptionsRevenue!.tooltip&quot; [grid]=&quot;chartOptionsRevenue!.grid&quot;&gt;&lt;/apx-chart&gt;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  &lt;/div&gt;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  &lt;!-- Results Table --&gt;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  &lt;section class=&quot;atp-panel space-y-5 p-6&quot;&gt;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    &lt;div class=&quot;flex flex-wrap items-center justify-between gap-4&quot;&gt;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      &lt;div&gt;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        &lt;h2 class=&quot;text-lg font-semibold&quot;&gt;Resultados del Informe&lt;/h2&gt;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        &lt;p class=&quot;text-xs text-slate-500&quot;&gt;Resumen filtrado del periodo seleccionado.&lt;/p&gt;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      &lt;span class=&quot;badge badge-outline&quot;&gt;{{ filteredOrders.length }} pedidos&lt;/span&gt;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    &lt;!-- Summary Cards --&gt;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    &lt;div class=&quot;grid gap-4 md:grid-cols-3&quot;&gt;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      &lt;div class=&quot;rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 p-4&quot;&gt;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        &lt;div class=&quot;text-xs text-slate-400&quot;&gt;Número de Pedidos&lt;/div&gt;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        &lt;div class=&quot;text-2xl font-semibold&quot;&gt;{{ summary.pedidos }}&lt;/div&gt;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      &lt;div class=&quot;rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 p-4&quot;&gt;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        &lt;div class=&quot;text-xs text-blue-400&quot;&gt;Artículos&lt;/div&gt;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        &lt;div class=&quot;text-2xl font-semibold text-atp-blue&quot;&gt;{{ summary.articulos }}&lt;/div&gt;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      &lt;div class=&quot;rounded-2xl bg-gradient-to-br from-teal-50 to-emerald-100 p-4&quot;&gt;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        &lt;div class=&quot;text-xs text-teal-400&quot;&gt;Total Facturado&lt;/div&gt;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        &lt;div class=&quot;text-2xl font-semibold text-atp-teal&quot;&gt;{{ summary.facturado }}€&lt;/div&gt;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    &lt;!-- Orders List --&gt;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    &lt;div class=&quot;space-y-3&quot;&gt;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      &lt;article *ngFor=&quot;let order of filteredOrders&quot; class=&quot;atp-card p-4 hover-lift&quot;&gt;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        &lt;div class=&quot;flex flex-wrap items-center justify-between gap-3&quot;&gt;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>          &lt;div&gt;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            &lt;div class=&quot;text-sm font-semibold&quot;&gt;{{ order.player }}&lt;/div&gt;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            &lt;div class=&quot;text-xs text-slate-400 font-mono&quot;&gt;{{ order.id }}&lt;/div&gt;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>          &lt;span class=&quot;badge&quot; [class.badge-primary]=&quot;order.status === &#39;proceso&#39;&quot; [class.badge-secondary]=&quot;order.status === &#39;lista&#39;&quot; [class.badge-success]=&quot;order.status === &#39;entregada&#39;&quot; [class.badge-error]=&quot;order.status === &#39;anulada&#39;&quot;&gt;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            {{ statusLabel(order.status) }}</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>          &lt;/span&gt;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        &lt;div class=&quot;mt-3 rounded-xl bg-slate-50 p-3 text-sm font-semibold&quot;&gt;{{ order.racket }}&lt;/div&gt;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        &lt;div class=&quot;mt-3 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-500&quot;&gt;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>          &lt;span&gt;Pedido: {{ order.pedidoDate }} | Req: {{ order.requeridaDate }}&lt;/span&gt;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>          &lt;div class=&quot;flex items-center gap-3&quot;&gt;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            &lt;span class=&quot;font-bold text-gradient&quot;&gt;{{ order.total }}€&lt;/span&gt;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            &lt;button class=&quot;btn btn-xs btn-ghost rounded-full&quot; (click)=&quot;viewOrderDetails(order)&quot;&gt;Ver&lt;/button&gt;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>          &lt;/div&gt;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        &lt;/div&gt;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      &lt;/article&gt;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      &lt;div *ngIf=&quot;filteredOrders.length === 0&quot; class=&quot;empty-state&quot;&gt;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        &lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>          &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;1.5&quot; d=&quot;M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        &lt;/svg&gt;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        &lt;p class=&quot;empty-state-title&quot;&gt;Sin resultados&lt;/p&gt;</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        &lt;p class=&quot;empty-state-description&quot;&gt;No hay pedidos para los filtros actuales.&lt;/p&gt;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      &lt;/div&gt;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    &lt;/div&gt;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  &lt;/section&gt;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>&lt;/section&gt;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      &lt;div class=&quot;field-block&quot;&gt;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        &lt;span class=&quot;field-label&quot;&gt;Buscar jugador / encordador&lt;/span&gt;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        &lt;input class=&quot;input input-bordered&quot; [(ngModel)]=&quot;playerFilter&quot; (ngModelChange)=&quot;onPlayerFilterChange()&quot; placeholder=&quot;Nombre, ID...&quot; /&gt;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    &lt;!-- Status toggle + actions --&gt;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    &lt;div class=&quot;mt-6 pt-5 border-t border-slate-100 flex flex-wrap items-end gap-3&quot;&gt;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      &lt;div class=&quot;flex-1 min-w-[260px]&quot;&gt;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        &lt;p class=&quot;text-[10px] font-bold uppercase tracking-[0.10em] text-slate-500&quot;&gt;Estado del pedido&lt;/p&gt;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        &lt;div class=&quot;mt-3 flex flex-wrap gap-2&quot;&gt;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>          &lt;button class=&quot;btn btn-xs rounded-full&quot; [class.btn-primary]=&quot;statusFilters.proceso&quot; [class.btn-ghost]=&quot;!statusFilters.proceso&quot; (click)=&quot;toggleStatus(&#39;proceso&#39;)&quot;&gt;En proceso&lt;/button&gt;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>          &lt;button class=&quot;btn btn-xs rounded-full&quot; [class.btn-secondary]=&quot;statusFilters.lista&quot; [class.btn-ghost]=&quot;!statusFilters.lista&quot; (click)=&quot;toggleStatus(&#39;lista&#39;)&quot;&gt;Listas&lt;/button&gt;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>          &lt;button class=&quot;btn btn-xs rounded-full&quot; [class.btn-success]=&quot;statusFilters.entregada&quot; [class.btn-ghost]=&quot;!statusFilters.entregada&quot; (click)=&quot;toggleStatus(&#39;entregada&#39;)&quot;&gt;Entregadas&lt;/button&gt;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>          &lt;button class=&quot;btn btn-xs rounded-full&quot; [class.btn-error]=&quot;statusFilters.anulada&quot; [class.btn-ghost]=&quot;!statusFilters.anulada&quot; (click)=&quot;toggleStatus(&#39;anulada&#39;)&quot;&gt;Anuladas&lt;/button&gt;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      &lt;div class=&quot;flex flex-wrap items-center gap-2&quot;&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        &lt;button (click)=&quot;clearFilters()&quot; class=&quot;btn btn-sm btn-ghost rounded-xl gap-1.5&quot;&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>          &lt;svg class=&quot;w-3.5 h-3.5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot;/&gt;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>          &lt;/svg&gt;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>          Limpiar</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        &lt;/button&gt;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        &lt;button (click)=&quot;exportExcel()&quot; class=&quot;btn btn-sm btn-success rounded-xl gap-1.5&quot;&gt;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>          &lt;svg class=&quot;w-3.5 h-3.5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 16v1a3 3 0 003 3h10a3 3 0 003-3v1m-4-4l-4 4m0 0l-4-4m4 4V4&quot;/&gt;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>          &lt;/svg&gt;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>          Exportar datos</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        &lt;/button&gt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        &lt;label *ngIf=&quot;canImport&quot; class=&quot;btn btn-sm btn-primary rounded-xl gap-1.5 cursor-pointer&quot;&gt;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>          &lt;svg class=&quot;w-3.5 h-3.5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 16v1a3 3 0 003 3h10a3 3 0 003-3v1M12 12V4m0 0l-4 4m4-4l4 4&quot;/&gt;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>          &lt;/svg&gt;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>          Importar datos</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>          &lt;input type=&quot;file&quot; accept=&quot;.xlsx,.xls,.csv&quot; class=&quot;hidden&quot; (change)=&quot;onImportExcel($event)&quot; /&gt;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        &lt;/label&gt;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  &lt;/div&gt;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  &lt;!-- KPI cards (summary) --&gt;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  &lt;div class=&quot;grid gap-4 md:grid-cols-4&quot;&gt;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    &lt;div class=&quot;atp-panel p-5&quot;&gt;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      &lt;div class=&quot;text-eyebrow&quot;&gt;Pedidos&lt;/div&gt;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      &lt;div class=&quot;text-3xl font-extrabold text-atp-navy mt-1 tabular-nums&quot;&gt;{{ summary.pedidos }}&lt;/div&gt;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      &lt;div class=&quot;mt-1 text-[12px] text-slate-500&quot;&gt;{{ summary.articulos }} líneas / artículos&lt;/div&gt;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    &lt;div class=&quot;atp-panel p-5&quot;&gt;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      &lt;div class=&quot;text-eyebrow&quot;&gt;Facturación&lt;/div&gt;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      &lt;div class=&quot;text-3xl font-extrabold text-gradient mt-1 tabular-nums&quot;&gt;{{ summary.facturado | number:&#39;1.2-2&#39; }}€&lt;/div&gt;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      &lt;div class=&quot;mt-1 text-[12px] text-slate-500&quot;&gt;Total bruto en el periodo&lt;/div&gt;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    &lt;div class=&quot;atp-panel p-5&quot;&gt;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      &lt;div class=&quot;text-eyebrow&quot;&gt;Activos&lt;/div&gt;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      &lt;div class=&quot;flex items-baseline gap-3 mt-1&quot;&gt;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        &lt;span class=&quot;text-3xl font-extrabold text-atp-blue tabular-nums&quot;&gt;{{ summary.procesando }}&lt;/span&gt;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        &lt;span class=&quot;text-[12px] text-slate-500&quot;&gt;en proceso&lt;/span&gt;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      &lt;div class=&quot;mt-1 text-[12px] text-slate-500&quot;&gt;{{ summary.listas }} listas para entrega&lt;/div&gt;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    &lt;div class=&quot;atp-panel p-5&quot;&gt;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      &lt;div class=&quot;text-eyebrow&quot;&gt;Cerrados&lt;/div&gt;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      &lt;div class=&quot;flex items-baseline gap-3 mt-1&quot;&gt;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        &lt;span class=&quot;text-3xl font-extrabold text-emerald-600 tabular-nums&quot;&gt;{{ summary.entregadas }}&lt;/span&gt;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        &lt;span class=&quot;text-[12px] text-slate-500&quot;&gt;entregadas&lt;/span&gt;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      &lt;div class=&quot;mt-1 text-[12px] text-slate-500&quot;&gt;{{ summary.anuladas }} anuladas&lt;/div&gt;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  &lt;/div&gt;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  &lt;!-- Charts grid --&gt;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  &lt;div class=&quot;grid gap-6 lg:grid-cols-2&quot;&gt;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    &lt;div class=&quot;atp-panel p-5&quot;&gt;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      &lt;h3 class=&quot;mb-2 text-base font-bold text-atp-navy&quot;&gt;Pedidos por estado&lt;/h3&gt;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      &lt;p class=&quot;text-[11px] text-slate-500 mb-2&quot;&gt;Distribución actual según el filtro aplicado&lt;/p&gt;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      &lt;apx-chart</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        [chart]=&quot;chartOptionsStatus!.chart&quot;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        [labels]=&quot;chartOptionsStatus!.labels&quot;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        [series]=&quot;seriesStatus&quot;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        [colors]=&quot;chartOptionsStatus!.colors&quot;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        [plotOptions]=&quot;chartOptionsStatus!.plotOptions&quot;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        [legend]=&quot;chartOptionsStatus!.legend&quot;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        [dataLabels]=&quot;chartOptionsStatus!.dataLabels&quot;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        [stroke]=&quot;chartOptionsStatus!.stroke&quot;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        [tooltip]=&quot;chartOptionsStatus!.tooltip&quot;&gt;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      &lt;/apx-chart&gt;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    &lt;div class=&quot;atp-panel p-5&quot;&gt;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      &lt;h3 class=&quot;mb-2 text-base font-bold text-atp-navy&quot;&gt;Evolución diaria por estado&lt;/h3&gt;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      &lt;p class=&quot;text-[11px] text-slate-500 mb-2&quot;&gt;Pedidos creados por día agrupados por estado&lt;/p&gt;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      &lt;apx-chart</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        [chart]=&quot;chartOptionsType!.chart&quot;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        [series]=&quot;seriesType&quot;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        [xaxis]=&quot;chartOptionsType!.xaxis&quot;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        [yaxis]=&quot;chartOptionsType!.yaxis&quot;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        [colors]=&quot;chartOptionsType!.colors&quot;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        [dataLabels]=&quot;chartOptionsType!.dataLabels&quot;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        [stroke]=&quot;chartOptionsType!.stroke&quot;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        [plotOptions]=&quot;chartOptionsType!.plotOptions&quot;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        [legend]=&quot;chartOptionsType!.legend&quot;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        [fill]=&quot;chartOptionsType!.fill&quot;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        [tooltip]=&quot;chartOptionsType!.tooltip&quot;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        [grid]=&quot;chartOptionsType!.grid&quot;&gt;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      &lt;/apx-chart&gt;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    &lt;div class=&quot;atp-panel p-5&quot;&gt;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      &lt;h3 class=&quot;mb-2 text-base font-bold text-atp-navy&quot;&gt;Facturación diaria&lt;/h3&gt;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      &lt;p class=&quot;text-[11px] text-slate-500 mb-2&quot;&gt;Importe pagado vs pendiente por día&lt;/p&gt;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      &lt;apx-chart</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        [chart]=&quot;chartOptionsRevenue!.chart&quot;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        [series]=&quot;seriesRevenue&quot;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        [xaxis]=&quot;chartOptionsRevenue!.xaxis&quot;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        [yaxis]=&quot;chartOptionsRevenue!.yaxis&quot;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        [colors]=&quot;chartOptionsRevenue!.colors&quot;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        [dataLabels]=&quot;chartOptionsRevenue!.dataLabels&quot;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        [stroke]=&quot;chartOptionsRevenue!.stroke&quot;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        [legend]=&quot;chartOptionsRevenue!.legend&quot;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        [fill]=&quot;chartOptionsRevenue!.fill&quot;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        [tooltip]=&quot;chartOptionsRevenue!.tooltip&quot;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        [grid]=&quot;chartOptionsRevenue!.grid&quot;&gt;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      &lt;/apx-chart&gt;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    &lt;div class=&quot;atp-panel p-5&quot;&gt;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      &lt;h3 class=&quot;mb-2 text-base font-bold text-atp-navy&quot;&gt;Top encordadores&lt;/h3&gt;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      &lt;p class=&quot;text-[11px] text-slate-500 mb-2&quot;&gt;Pedidos asignados por encordador (top 8)&lt;/p&gt;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      &lt;apx-chart</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        [chart]=&quot;chartOptionsEncorders!.chart&quot;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        [series]=&quot;seriesEncorders&quot;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        [xaxis]=&quot;chartOptionsEncorders!.xaxis&quot;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        [yaxis]=&quot;chartOptionsEncorders!.yaxis&quot;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        [colors]=&quot;chartOptionsEncorders!.colors&quot;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        [dataLabels]=&quot;chartOptionsEncorders!.dataLabels&quot;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        [stroke]=&quot;chartOptionsEncorders!.stroke&quot;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        [plotOptions]=&quot;chartOptionsEncorders!.plotOptions&quot;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        [legend]=&quot;chartOptionsEncorders!.legend&quot;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        [tooltip]=&quot;chartOptionsEncorders!.tooltip&quot;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        [grid]=&quot;chartOptionsEncorders!.grid&quot;&gt;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      &lt;/apx-chart&gt;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  &lt;/div&gt;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  &lt;!-- Results --&gt;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  &lt;section class=&quot;atp-panel space-y-5 p-6&quot;&gt;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    &lt;div class=&quot;flex flex-wrap items-center justify-between gap-4&quot;&gt;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      &lt;div&gt;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        &lt;h2 class=&quot;text-lg font-bold text-atp-navy tracking-tight&quot;&gt;Resultados del Informe&lt;/h2&gt;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        &lt;p class=&quot;text-xs text-slate-500&quot;&gt;Pedidos filtrados según los criterios aplicados.&lt;/p&gt;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      &lt;span class=&quot;badge badge-outline&quot;&gt;{{ filteredOrders.length }} pedidos&lt;/span&gt;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    &lt;div *ngIf=&quot;isLoading&quot; class=&quot;flex items-center justify-center py-12&quot;&gt;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      &lt;span class=&quot;spinner spinner-lg&quot;&gt;&lt;/span&gt;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    &lt;div *ngIf=&quot;!isLoading&quot; class=&quot;space-y-3&quot;&gt;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>      &lt;article *ngFor=&quot;let order of filteredOrders&quot; class=&quot;atp-card p-4 hover-lift&quot;&gt;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        &lt;div class=&quot;flex flex-wrap items-center justify-between gap-3&quot;&gt;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>          &lt;div class=&quot;min-w-0&quot;&gt;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            &lt;div class=&quot;text-sm font-bold text-atp-navy truncate&quot;&gt;{{ order.player }}&lt;/div&gt;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            &lt;div class=&quot;text-xs text-slate-400 font-mono truncate&quot;&gt;{{ order.id }}&lt;/div&gt;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>          &lt;span class=&quot;badge&quot;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                [class.badge-primary]=&quot;order.status === &#39;proceso&#39;&quot;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                [class.badge-secondary]=&quot;order.status === &#39;lista&#39;&quot;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                [class.badge-success]=&quot;order.status === &#39;entregada&#39;&quot;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                [class.badge-error]=&quot;order.status === &#39;anulada&#39;&quot;&gt;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            {{ statusLabel(order.status) }}</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>          &lt;/span&gt;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        &lt;div class=&quot;mt-3 rounded-xl bg-slate-50 p-3 text-sm font-semibold&quot;&gt;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>          🎾 {{ order.racket }} · {{ order.items }} línea(s)</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>          &lt;span *ngIf=&quot;order.machine&quot; class=&quot;ml-1 text-[12px] text-slate-500 font-normal&quot;&gt;· Máq. {{ order.machine }}&lt;/span&gt;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        &lt;div class=&quot;mt-3 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-500&quot;&gt;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>          &lt;span&gt;📅 Pedido: {{ order.pedidoDate }} · Requerido: {{ order.requeridaDate }}&lt;/span&gt;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>          &lt;div class=&quot;flex items-center gap-3&quot;&gt;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            &lt;span class=&quot;text-slate-400&quot;&gt;👤 {{ order.encorder }}&lt;/span&gt;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            &lt;span class=&quot;font-bold text-gradient&quot;&gt;{{ order.total | number:&#39;1.2-2&#39; }}€&lt;/span&gt;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            &lt;button class=&quot;btn btn-xs btn-ghost rounded-full&quot; (click)=&quot;viewOrderDetails(order)&quot;&gt;Ver&lt;/button&gt;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>          &lt;/div&gt;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>      &lt;/article&gt;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      &lt;app-empty-state *ngIf=&quot;filteredOrders.length === 0&quot; icon=&quot;search&quot;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        title=&quot;Sin resultados&quot;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        message=&quot;No hay pedidos para los filtros actuales.&quot;&gt;&lt;/app-empty-state&gt;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  &lt;/section&gt;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>&lt;/section&gt;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_1e4c1e1ba784485a6f057d03bd8225e5.html">front-encordados</a></li><li class="navelem"><a class="el" href="dir_926dc43b74bd7bb2b391b76d673d57fb.html">src</a></li><li class="navelem"><a class="el" href="dir_bad3db17ab7eacd7fa6eff673f3b8e6b.html">app</a></li><li class="navelem"><a class="el" href="dir_ddf1162eec2c998148e2015b50ce76f8.html">pages</a></li><li class="navelem"><a class="el" href="informes_8page_8html.html">informes.page.html</a></li>
-    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 06:59:49 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 07:54:57 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -112,70 +112,33 @@ $(document).ready(function(){initNavTree('material_8model_8ts_source.html',''); 
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  imageUrl?: string;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>export type MaterialCategory = </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  &#39;raqueta&#39; | </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  &#39;cordaje&#39; | </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  &#39;grip&#39; | </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  &#39;overgrip&#39; | </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  &#39;antivibrador&#39; | </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  &#39;bolsa&#39; | </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  &#39;calzado&#39; | </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  &#39;ropa&#39; | </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  &#39;pelotas&#39; | </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  &#39;accesorio&#39; | </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  &#39;herramienta&#39;;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>/**</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> * Tipos de material aceptados por el backend (enum MaterialType del DTO).</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> * El back rechaza con 400 cualquier otro valor.</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> * Las raquetas no son materiales (van en pedidos); los cordajes tienen su</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> * propio endpoint /api/Cuerdas con tipos específicos (Polyester, etc.).</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> */</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>export type MaterialCategory =</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  | &#39;Grip&#39;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  | &#39;Overgrip&#39;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  | &#39;LeadTape&#39;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  | &#39;Silicone&#39;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  | &#39;Otro&#39;;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>export const MATERIAL_CATEGORIES: { value: MaterialCategory; label: string; icon: string }[] = [</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  { value: &#39;raqueta&#39;, label: &#39;Raquetas&#39;, icon: &#39;🎾&#39; },</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  { value: &#39;cordaje&#39;, label: &#39;Cordajes&#39;, icon: &#39;🧵&#39; },</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  { value: &#39;grip&#39;, label: &#39;Grips&#39;, icon: &#39;🤚&#39; },</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  { value: &#39;overgrip&#39;, label: &#39;Overgrips&#39;, icon: &#39;🖐️&#39; },</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  { value: &#39;antivibrador&#39;, label: &#39;Antivibradores&#39;, icon: &#39;〰️&#39; },</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  { value: &#39;bolsa&#39;, label: &#39;Bolsas&#39;, icon: &#39;🎒&#39; },</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  { value: &#39;calzado&#39;, label: &#39;Calzado&#39;, icon: &#39;👟&#39; },</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  { value: &#39;ropa&#39;, label: &#39;Ropa&#39;, icon: &#39;👕&#39; },</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  { value: &#39;pelotas&#39;, label: &#39;Pelotas&#39;, icon: &#39;⚾&#39; },</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  { value: &#39;accesorio&#39;, label: &#39;Accesorios&#39;, icon: &#39;🔧&#39; },</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  { value: &#39;herramienta&#39;, label: &#39;Herramientas&#39;, icon: &#39;🛠️&#39; }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>];</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>export const INITIAL_MATERIALS: MaterialItem[] = [</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  // Raquetas</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  { id: &#39;MAT-001&#39;, category: &#39;raqueta&#39;, name: &#39;Wilson Pro Staff 97&#39;, brand: &#39;Wilson&#39;, model: &#39;Pro Staff&#39;, color: &#39;Negro/Mate&#39;, price: 249.99, stock: 12, minStock: 5, description: &#39;Raqueta profesional RF97 Autograph&#39; },</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  { id: &#39;MAT-002&#39;, category: &#39;raqueta&#39;, name: &#39;Babolat Pure Aero&#39;, brand: &#39;Babolat&#39;, model: &#39;Pure Aero&#39;, color: &#39;Amarillo/Negro&#39;, price: 219.99, stock: 8, minStock: 5, description: &#39;La raqueta de Rafa Nadal&#39; },</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  { id: &#39;MAT-003&#39;, category: &#39;raqueta&#39;, name: &#39;Head Speed Pro&#39;, brand: &#39;Head&#39;, model: &#39;Speed Pro&#39;, color: &#39;Negro/Blanco&#39;, price: 229.99, stock: 6, minStock: 5, description: &#39;Control y potencia&#39; },</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  { id: &#39;MAT-004&#39;, category: &#39;raqueta&#39;, name: &#39;Yonex Ezone 98&#39;, brand: &#39;Yonex&#39;, model: &#39;Ezone&#39;, color: &#39;Azul/Negro&#39;, price: 199.99, stock: 15, minStock: 5, description: &#39;Gran sweet spot&#39; },</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  // Cordajes</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  { id: &#39;MAT-005&#39;, category: &#39;cordaje&#39;, name: &#39;Babolat RPM Blast&#39;, brand: &#39;Babolat&#39;, model: &#39;RPM Blast&#39;, color: &#39;Negro&#39;, price: 18.50, stock: 50, minStock: 20, description: &#39;Monofilamento poliéster&#39; },</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  { id: &#39;MAT-006&#39;, category: &#39;cordaje&#39;, name: &#39;Luxilon Alu Power&#39;, brand: &#39;Luxilon&#39;, model: &#39;ALU Power&#39;, color: &#39;Plateado&#39;, price: 22.00, stock: 45, minStock: 20, description: &#39;Potencia y durabilidad&#39; },</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  { id: &#39;MAT-007&#39;, category: &#39;cordaje&#39;, name: &#39;Tecnifibre Black Code&#39;, brand: &#39;Tecnifibre&#39;, model: &#39;Black Code&#39;, color: &#39;Negro&#39;, price: 19.99, stock: 30, minStock: 15, description: &#39;Control y spin&#39; },</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  // Grips</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  { id: &#39;MAT-008&#39;, category: &#39;grip&#39;, name: &#39;Wilson Pro Overgrip&#39;, brand: &#39;Wilson&#39;, model: &#39;Pro Overgrip&#39;, color: &#39;Blanco&#39;, price: 2.99, stock: 200, minStock: 50, description: &#39;Overgrip absorbente&#39; },</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  { id: &#39;MAT-009&#39;, category: &#39;grip&#39;, name: &#39;Tourna Grip&#39;, brand: &#39;Tourna&#39;, model: &#39;Tac XL&#39;, color: &#39;Azul&#39;, price: 3.49, stock: 150, minStock: 40, description: &#39;Grip de toalla&#39; },</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  { id: &#39;MAT-010&#39;, category: &#39;grip&#39;, name: &#39;Babolat VS Grip&#39;, brand: &#39;Babolat&#39;, model: &#39;VS Original&#39;, color: &#39;Negro&#39;, price: 3.99, stock: 120, minStock: 30, description: &#39;Grip fino y cómodo&#39; },</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  // Antivibradores</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  { id: &#39;MAT-011&#39;, category: &#39;antivibrador&#39;, name: &#39;Wilson Shock Shield&#39;, brand: &#39;Wilson&#39;, model: &#39;Shock Shield&#39;, color: &#39;Negro&#39;, price: 4.99, stock: 80, minStock: 20, description: &#39;Reduce vibraciones&#39; },</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  { id: &#39;MAT-012&#39;, category: &#39;antivibrador&#39;, name: &#39;Babolat Custom Damp&#39;, brand: &#39;Babolat&#39;, model: &#39;Custom Damp&#39;, color: &#39;Negro/Rojo&#39;, price: 5.99, stock: 60, minStock: 15, description: &#39;Personalizable&#39; },</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  // Bolsas</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  { id: &#39;MAT-013&#39;, category: &#39;bolsa&#39;, name: &#39;Wilson Tour 6 Pack&#39;, brand: &#39;Wilson&#39;, model: &#39;Tour 6 Pack&#39;, color: &#39;Rojo/Negro&#39;, price: 79.99, stock: 10, minStock: 3, description: &#39;Cabina para 6 raquetas&#39; },</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  { id: &#39;MAT-014&#39;, category: &#39;bolsa&#39;, name: &#39;Babolat Pure Strike&#39;, brand: &#39;Babolat&#39;, model: &#39;Pure Strike&#39;, color: &#39;Blanco/Rojo&#39;, price: 69.99, stock: 8, minStock: 3, description: &#39;Diseño premium&#39; },</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  // Pelotas</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  { id: &#39;MAT-015&#39;, category: &#39;pelotas&#39;, name: &#39;Wilson US Open&#39;, brand: &#39;Wilson&#39;, model: &#39;US Open&#39;, color: &#39;Amarillo&#39;, price: 9.99, stock: 300, minStock: 100, description: &#39;Bote alto, durabilidad&#39; },</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  { id: &#39;MAT-016&#39;, category: &#39;pelotas&#39;, name: &#39;Head ATP&#39;, brand: &#39;Head&#39;, model: &#39;ATP&#39;, color: &#39;Amarillo&#39;, price: 8.99, stock: 250, minStock: 80, description: &#39;Control y consistencia&#39; },</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  // Accesorios</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  { id: &#39;MAT-017&#39;, category: &#39;accesorio&#39;, name: &#39;Plomos x3&#39;, brand: &#39;Varios&#39;, model: &#39;Balancedor&#39;, color: &#39;Plateado&#39;, price: 1.99, stock: 500, minStock: 100, description: &#39;Para balancear raquetas&#39; },</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  { id: &#39;MAT-018&#39;, category: &#39;accesorio&#39;, name: &#39;Protector de marco&#39;, brand: &#39;Tourna&#39;, model: &#39;Frame Guard&#39;, color: &#39;Transparente&#39;, price: 3.99, stock: 100, minStock: 25, description: &#39;Protege el marco&#39; },</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  // Herramientas</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  { id: &#39;MAT-019&#39;, category: &#39;herramienta&#39;, name: &#39;Alicate de pinza&#39;, brand: &#39;Gamma&#39;, model: &#39;Pro&#39;, color: &#39;Rojo&#39;, price: 14.99, stock: 15, minStock: 5, description: &#39;Para cordajes&#39; },</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  { id: &#39;MAT-020&#39;, category: &#39;herramienta&#39;, name: &#39;Medidor de tensión&#39;, brand: &#39;Tourna&#39;, model: &#39;Stringmeter&#39;, color: &#39;Negro&#39;, price: 24.99, stock: 10, minStock: 3, description: &#39;Digital, precisión 0.5kg&#39; }</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  { value: &#39;Grip&#39;,     label: &#39;Grips&#39;,           icon: &#39;🤚&#39; },</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  { value: &#39;Overgrip&#39;, label: &#39;Overgrips&#39;,       icon: &#39;🖐️&#39; },</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  { value: &#39;LeadTape&#39;, label: &#39;Plomo (LeadTape)&#39;, icon: &#39;⚖️&#39; },</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  { value: &#39;Silicone&#39;, label: &#39;Silicona&#39;,        icon: &#39;🧪&#39; },</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  { value: &#39;Otro&#39;,     label: &#39;Otro&#39;,            icon: &#39;📦&#39; }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>];</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_1e4c1e1ba784485a6f057d03bd8225e5.html">front-encordados</a></li><li class="navelem"><a class="el" href="dir_926dc43b74bd7bb2b391b76d673d57fb.html">src</a></li><li class="navelem"><a class="el" href="dir_bad3db17ab7eacd7fa6eff673f3b8e6b.html">app</a></li><li class="navelem"><a class="el" href="dir_6fb7b5edb837e809ba29238d3907b34a.html">models</a></li><li class="navelem"><a class="el" href="material_8model_8ts.html">material.model.ts</a></li>
-    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 06:59:49 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 07:54:57 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/front-encordados/src/app/components/ui/empty-state.component.ts</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('empty-state_8component_8ts_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">empty-state.component.ts</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="empty-state_8component_8ts.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>import { Component, Input } from &#39;@angular/core&#39;;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>import { CommonModule } from &#39;@angular/common&#39;;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>/**</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> * Empty-state estándar.</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> * Uso:</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> *   &lt;app-empty-state title=&quot;No hay resultados&quot; message=&quot;Prueba con otros filtros.&quot;&gt;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> *     &lt;button class=&quot;btn btn-primary&quot;&gt;Crear nuevo&lt;/button&gt;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> *   &lt;/app-empty-state&gt;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> */</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>@Component({</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  selector: &#39;app-empty-state&#39;,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  standalone: true,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  imports: [CommonModule],</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  template: `</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    &lt;div class=&quot;empty-state&quot;&gt;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      &lt;svg *ngIf=&quot;!hideIcon&quot; class=&quot;w-20 h-20&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        &lt;path *ngIf=&quot;icon === &#39;box&#39;&quot;    stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;1.5&quot; d=&quot;M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4&quot;/&gt;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        &lt;path *ngIf=&quot;icon === &#39;search&#39;&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;1.5&quot; d=&quot;M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z&quot;/&gt;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        &lt;path *ngIf=&quot;icon === &#39;users&#39;&quot;  stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;1.5&quot; d=&quot;M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5.13a4 4 0 11-8 0 4 4 0 018 0zm6 3a3 3 0 11-6 0 3 3 0 016 0z&quot;/&gt;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        &lt;path *ngIf=&quot;icon === &#39;doc&#39;&quot;    stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;1.5&quot; d=&quot;M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z&quot;/&gt;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        &lt;path *ngIf=&quot;icon === &#39;inbox&#39;&quot;  stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;1.5&quot; d=&quot;M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4&quot;/&gt;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      &lt;/svg&gt;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      &lt;p class=&quot;empty-state-title mt-3&quot;&gt;{{ title }}&lt;/p&gt;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      &lt;p *ngIf=&quot;message&quot; class=&quot;empty-state-description mt-1.5&quot;&gt;{{ message }}&lt;/p&gt;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      &lt;div class=&quot;mt-5&quot;&gt;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        &lt;ng-content&gt;&lt;/ng-content&gt;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      &lt;/div&gt;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    &lt;/div&gt;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  `</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>})</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>export class EmptyStateComponent {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  @Input() title = &#39;Sin resultados&#39;;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  @Input() message = &#39;&#39;;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  @Input() icon: &#39;box&#39; | &#39;search&#39; | &#39;users&#39; | &#39;doc&#39; | &#39;inbox&#39; = &#39;inbox&#39;;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  @Input() hideIcon = false;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_1e4c1e1ba784485a6f057d03bd8225e5.html">front-encordados</a></li><li class="navelem"><a class="el" href="dir_926dc43b74bd7bb2b391b76d673d57fb.html">src</a></li><li class="navelem"><a class="el" href="dir_bad3db17ab7eacd7fa6eff673f3b8e6b.html">app</a></li><li class="navelem"><a class="el" href="dir_60ec7de695a156217b1e2e1bd569057d.html">components</a></li><li class="navelem"><a class="el" href="dir_2ce7b18a00d631c0a03d94a5664f31f7.html">ui</a></li><li class="navelem"><a class="el" href="empty-state_8component_8ts.html">empty-state.component.ts</a></li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 07:54:57 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
