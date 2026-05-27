@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.7516025641025641" branch-rate="0.7506659563132658" lines-covered="6097" lines-valid="8112" branches-covered="1409" branches-valid="1877" complexity="2413" version="0" timestamp="1779913649">
+<coverage line-rate="0.7516025641025641" branch-rate="0.7506659563132658" lines-covered="6097" lines-valid="8112" branches-covered="1409" branches-valid="1877" complexity="2413" version="0" timestamp="1779914830">
   <sources>
     <source>/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/</source>
   </sources>
@@ -6421,7 +6421,7 @@
                 <line number="159" hits="4" branch="false" />
                 <line number="161" hits="4" branch="false" />
                 <line number="162" hits="4" branch="true" condition-coverage="100% (2/2)" />
-                <line number="163" hits="3" branch="false" />
+                <line number="163" hits="2" branch="false" />
                 <line number="165" hits="4" branch="false" />
                 <line number="166" hits="4" branch="false" />
                 <line number="168" hits="4" branch="false" />
@@ -6533,7 +6533,7 @@
             <line number="159" hits="4" branch="false" />
             <line number="161" hits="4" branch="false" />
             <line number="162" hits="4" branch="true" condition-coverage="100% (2/2)" />
-            <line number="163" hits="3" branch="false" />
+            <line number="163" hits="2" branch="false" />
             <line number="165" hits="4" branch="false" />
             <line number="166" hits="4" branch="false" />
             <line number="168" hits="4" branch="false" />
