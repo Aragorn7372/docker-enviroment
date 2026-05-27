@@ -90,6 +90,10 @@ var annotated_dup =
         [ "Constraints", "namespaceBackEncordados_1_1Infraestructure_1_1Constraints.html", [
           [ "UlidRouteConstraint", "classBackEncordados_1_1Infraestructure_1_1Constraints_1_1UlidRouteConstraint.html", "classBackEncordados_1_1Infraestructure_1_1Constraints_1_1UlidRouteConstraint" ]
         ] ],
+        [ "Migrations", "namespaceBackEncordados_1_1Infraestructure_1_1Migrations.html", [
+          [ "MaterialsDbContextFactory", "classBackEncordados_1_1Infraestructure_1_1Migrations_1_1MaterialsDbContextFactory.html", "classBackEncordados_1_1Infraestructure_1_1Migrations_1_1MaterialsDbContextFactory" ],
+          [ "UserDbContextFactory", "classBackEncordados_1_1Infraestructure_1_1Migrations_1_1UserDbContextFactory.html", "classBackEncordados_1_1Infraestructure_1_1Migrations_1_1UserDbContextFactory" ]
+        ] ],
         [ "AppOptions", "classBackEncordados_1_1Infraestructure_1_1AppOptions.html", "classBackEncordados_1_1Infraestructure_1_1AppOptions" ]
       ] ],
       [ "Materials", "namespaceBackEncordados_1_1Materials.html", [
@@ -127,6 +131,16 @@ var annotated_dup =
             [ "CuerdaPatchValidator", "classBackEncordados_1_1Materials_1_1Validator_1_1Strings_1_1CuerdaPatchValidator.html", "classBackEncordados_1_1Materials_1_1Validator_1_1Strings_1_1CuerdaPatchValidator" ],
             [ "CuerdaRequestValidator", "classBackEncordados_1_1Materials_1_1Validator_1_1Strings_1_1CuerdaRequestValidator.html", "classBackEncordados_1_1Materials_1_1Validator_1_1Strings_1_1CuerdaRequestValidator" ]
           ] ]
+        ] ]
+      ] ],
+      [ "Migrations", "namespaceBackEncordados_1_1Migrations.html", [
+        [ "Materials", "namespaceBackEncordados_1_1Migrations_1_1Materials.html", [
+          [ "InitialCreate", "classBackEncordados_1_1Migrations_1_1Materials_1_1InitialCreate.html", "classBackEncordados_1_1Migrations_1_1Materials_1_1InitialCreate" ],
+          [ "MaterialsDbContextModelSnapshot", "classBackEncordados_1_1Migrations_1_1Materials_1_1MaterialsDbContextModelSnapshot.html", "classBackEncordados_1_1Migrations_1_1Materials_1_1MaterialsDbContextModelSnapshot" ]
+        ] ],
+        [ "User", "namespaceBackEncordados_1_1Migrations_1_1User.html", [
+          [ "InitialCreate", "classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html", "classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate" ],
+          [ "UserDbContextModelSnapshot", "classBackEncordados_1_1Migrations_1_1User_1_1UserDbContextModelSnapshot.html", "classBackEncordados_1_1Migrations_1_1User_1_1UserDbContextModelSnapshot" ]
         ] ]
       ] ],
       [ "Purchased", "namespaceBackEncordados_1_1Purchased.html", [

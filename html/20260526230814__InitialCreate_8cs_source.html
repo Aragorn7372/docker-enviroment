@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FunkoApi: Archivo de código fuente /home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Migrations/User/20260526230814_InitialCreate.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FunkoApi<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Ejemplo de api de funkos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('20260526230814__InitialCreate_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">20260526230814_InitialCreate.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="20260526230814__InitialCreate_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Microsoft.EntityFrameworkCore.Migrations;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#nullable disable</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma warning disable CA1814 </span><span class="comment">// Prefer jagged arrays over multidimensional</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="namespaceBackEncordados_1_1Migrations_1_1User.html">    8</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBackEncordados_1_1Migrations_1_1User.html">BackEncordados.Migrations.User</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html">   11</a></span>    <span class="keyword">public</span> <span class="keyword">partial class </span><a class="code hl_class" href="classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html">InitialCreate</a> : Migration</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html#a1d03850a3cc4d454ed29c8bb9a92f6fe">   14</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html#a1d03850a3cc4d454ed29c8bb9a92f6fe">Up</a>(MigrationBuilder migrationBuilder)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            migrationBuilder.CreateTable(</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                name: <span class="stringliteral">&quot;users&quot;</span>,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                columns: table =&gt; <span class="keyword">new</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                    Id = table.Column&lt;<span class="keywordtype">string</span>&gt;(type: <span class="stringliteral">&quot;text&quot;</span>, nullable: <span class="keyword">false</span>),</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                    Username = table.Column&lt;<span class="keywordtype">string</span>&gt;(type: <span class="stringliteral">&quot;character varying(50)&quot;</span>, unicode: <span class="keyword">false</span>, maxLength: 50, nullable: <span class="keyword">false</span>),</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                    Name = table.Column&lt;<span class="keywordtype">string</span>&gt;(type: <span class="stringliteral">&quot;text&quot;</span>, nullable: <span class="keyword">false</span>),</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                    Email = table.Column&lt;<span class="keywordtype">string</span>&gt;(type: <span class="stringliteral">&quot;character varying(100)&quot;</span>, unicode: <span class="keyword">false</span>, maxLength: 100, nullable: <span class="keyword">false</span>),</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                    Phone = table.Column&lt;<span class="keywordtype">string</span>&gt;(type: <span class="stringliteral">&quot;character varying(20)&quot;</span>, maxLength: 20, nullable: <span class="keyword">true</span>),</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                    PasswordHash = table.Column&lt;<span class="keywordtype">string</span>&gt;(type: <span class="stringliteral">&quot;text&quot;</span>, nullable: <span class="keyword">false</span>),</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                    <a class="code hl_typedef" href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a> = table.Column&lt;<span class="keywordtype">string</span>&gt;(type: <span class="stringliteral">&quot;character varying(20)&quot;</span>, maxLength: 20, nullable: <span class="keyword">false</span>),</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                    TournamentId = table.Column&lt;<span class="keywordtype">string</span>&gt;(type: <span class="stringliteral">&quot;text&quot;</span>, nullable: <span class="keyword">true</span>),</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                    IsDeleted = table.Column&lt;<span class="keywordtype">bool</span>&gt;(type: <span class="stringliteral">&quot;boolean&quot;</span>, nullable: <span class="keyword">false</span>, defaultValue: <span class="keyword">false</span>),</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                    ImageUrl = table.Column&lt;<span class="keywordtype">string</span>&gt;(type: <span class="stringliteral">&quot;character varying(500)&quot;</span>, maxLength: 500, nullable: <span class="keyword">false</span>),</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                    CloudinaryPublicId = table.Column&lt;<span class="keywordtype">string</span>&gt;(type: <span class="stringliteral">&quot;character varying(300)&quot;</span>, maxLength: 300, nullable: <span class="keyword">true</span>),</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                    Bonos = table.Column&lt;<span class="keywordtype">double</span>&gt;(type: <span class="stringliteral">&quot;double precision&quot;</span>, nullable: <span class="keyword">false</span>, defaultValue: 0.0),</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                    Version = table.Column&lt;<span class="keywordtype">long</span>&gt;(type: <span class="stringliteral">&quot;bigint&quot;</span>, nullable: <span class="keyword">false</span>),</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                    CreatedAt = table.Column&lt;DateTime&gt;(type: <span class="stringliteral">&quot;timestamp with time zone&quot;</span>, nullable: <span class="keyword">false</span>, defaultValueSql: <span class="stringliteral">&quot;CURRENT_TIMESTAMP&quot;</span>),</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                    UpdatedAt = table.Column&lt;DateTime&gt;(type: <span class="stringliteral">&quot;timestamp with time zone&quot;</span>, nullable: <span class="keyword">false</span>, defaultValueSql: <span class="stringliteral">&quot;CURRENT_TIMESTAMP&quot;</span>)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                },</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                constraints: table =&gt;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                    table.PrimaryKey(<span class="stringliteral">&quot;PK_users&quot;</span>, x =&gt; x.Id);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                });</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            migrationBuilder.InsertData(</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                table: <span class="stringliteral">&quot;users&quot;</span>,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                columns: <span class="keyword">new</span>[] { <span class="stringliteral">&quot;Id&quot;</span>, <span class="stringliteral">&quot;Bonos&quot;</span>, <span class="stringliteral">&quot;CloudinaryPublicId&quot;</span>, <span class="stringliteral">&quot;CreatedAt&quot;</span>, <span class="stringliteral">&quot;Email&quot;</span>, <span class="stringliteral">&quot;ImageUrl&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;PasswordHash&quot;</span>, <span class="stringliteral">&quot;Phone&quot;</span>, <span class="stringliteral">&quot;Role&quot;</span>, <span class="stringliteral">&quot;TournamentId&quot;</span>, <span class="stringliteral">&quot;UpdatedAt&quot;</span>, <span class="stringliteral">&quot;Username&quot;</span>, <span class="stringliteral">&quot;Version&quot;</span> },</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                values: <span class="keyword">new</span> <span class="keywordtype">object</span>[] { <span class="stringliteral">&quot;01KS0Q28TD6SAPN0GN0XKRPK5D&quot;</span>, 100.0, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;juan@tenis.com&quot;</span>, <span class="stringliteral">&quot;avatar-photo-default-user-icon-600nw-2558759027_y1hcma&quot;</span>, <span class="stringliteral">&quot;Juan Martínez&quot;</span>, <span class="stringliteral">&quot;$2a$11$vm89IAT3Kz8i95DTqRg6nuXd8EsUIRdgdFhHvezM7TBvMoidExpt.&quot;</span>, <span class="stringliteral">&quot;956789012&quot;</span>, <span class="stringliteral">&quot;USER&quot;</span>, <span class="stringliteral">&quot;01KS0Q28TEJ0SYA6JJ5H4W4CMP&quot;</span>, <span class="keyword">new</span> DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;jugador_juan&quot;</span>, 0L });</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            migrationBuilder.InsertData(</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                table: <span class="stringliteral">&quot;users&quot;</span>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                columns: <span class="keyword">new</span>[] { <span class="stringliteral">&quot;Id&quot;</span>, <span class="stringliteral">&quot;CloudinaryPublicId&quot;</span>, <span class="stringliteral">&quot;CreatedAt&quot;</span>, <span class="stringliteral">&quot;Email&quot;</span>, <span class="stringliteral">&quot;ImageUrl&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;PasswordHash&quot;</span>, <span class="stringliteral">&quot;Phone&quot;</span>, <span class="stringliteral">&quot;Role&quot;</span>, <span class="stringliteral">&quot;TournamentId&quot;</span>, <span class="stringliteral">&quot;UpdatedAt&quot;</span>, <span class="stringliteral">&quot;Username&quot;</span>, <span class="stringliteral">&quot;Version&quot;</span> },</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                values: <span class="keyword">new</span> <span class="keywordtype">object</span>[] { <span class="stringliteral">&quot;01KS0Q28TE2EFVQTCW8EN0W0MF&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;owner@encordados.com&quot;</span>, <span class="stringliteral">&quot;avatar-photo-default-user-icon-600nw-2558759027_y1hcma&quot;</span>, <span class="stringliteral">&quot;Propietario&quot;</span>, <span class="stringliteral">&quot;$2a$11$8fZDZSSFPWUG7wP8PKVGpecehuSNofLupnr6o9eG.9rggszddiUEO&quot;</span>, <span class="stringliteral">&quot;923456789&quot;</span>, <span class="stringliteral">&quot;OWNER&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;owner_principal&quot;</span>, 0L });</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            migrationBuilder.InsertData(</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                table: <span class="stringliteral">&quot;users&quot;</span>,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                columns: <span class="keyword">new</span>[] { <span class="stringliteral">&quot;Id&quot;</span>, <span class="stringliteral">&quot;Bonos&quot;</span>, <span class="stringliteral">&quot;CloudinaryPublicId&quot;</span>, <span class="stringliteral">&quot;CreatedAt&quot;</span>, <span class="stringliteral">&quot;Email&quot;</span>, <span class="stringliteral">&quot;ImageUrl&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;PasswordHash&quot;</span>, <span class="stringliteral">&quot;Phone&quot;</span>, <span class="stringliteral">&quot;Role&quot;</span>, <span class="stringliteral">&quot;TournamentId&quot;</span>, <span class="stringliteral">&quot;UpdatedAt&quot;</span>, <span class="stringliteral">&quot;Username&quot;</span>, <span class="stringliteral">&quot;Version&quot;</span> },</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                values: <span class="keyword">new</span> <span class="keywordtype">object</span>[] { <span class="stringliteral">&quot;01KS0Q28TE3RJTW6W35NJRMTZ4&quot;</span>, 25.0, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;ana@tenis.com&quot;</span>, <span class="stringliteral">&quot;avatar-photo-default-user-icon-600nw-2558759027_y1hcma&quot;</span>, <span class="stringliteral">&quot;Ana Pérez&quot;</span>, <span class="stringliteral">&quot;$2a$11$vm89IAT3Kz8i95DTqRg6nuXd8EsUIRdgdFhHvezM7TBvMoidExpt.&quot;</span>, <span class="stringliteral">&quot;967890123&quot;</span>, <span class="stringliteral">&quot;USER&quot;</span>, <span class="stringliteral">&quot;01KS0Q28TEJ0SYA6JJ5H4W4CMP&quot;</span>, <span class="keyword">new</span> DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;jugador_ana&quot;</span>, 0L });</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            migrationBuilder.InsertData(</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                table: <span class="stringliteral">&quot;users&quot;</span>,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                columns: <span class="keyword">new</span>[] { <span class="stringliteral">&quot;Id&quot;</span>, <span class="stringliteral">&quot;CloudinaryPublicId&quot;</span>, <span class="stringliteral">&quot;CreatedAt&quot;</span>, <span class="stringliteral">&quot;Email&quot;</span>, <span class="stringliteral">&quot;ImageUrl&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;PasswordHash&quot;</span>, <span class="stringliteral">&quot;Phone&quot;</span>, <span class="stringliteral">&quot;Role&quot;</span>, <span class="stringliteral">&quot;TournamentId&quot;</span>, <span class="stringliteral">&quot;UpdatedAt&quot;</span>, <span class="stringliteral">&quot;Username&quot;</span>, <span class="stringliteral">&quot;Version&quot;</span> },</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                values: <span class="keyword">new</span> <span class="keywordtype">object</span>[,]</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    { <span class="stringliteral">&quot;01KS0Q28TE5BA449NS2EVCBTDQ&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 6, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;user@example.com&quot;</span>, <span class="stringliteral">&quot;avatar-photo-default-user-icon-600nw-2558759027_y1hcma&quot;</span>, <span class="stringliteral">&quot;User&quot;</span>, <span class="stringliteral">&quot;$2a$11$vm89IAT3Kz8i95DTqRg6nuXd8EsUIRdgdFhHvezM7TBvMoidExpt.&quot;</span>, <span class="stringliteral">&quot;999999000&quot;</span>, <span class="stringliteral">&quot;USER&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 6, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;user&quot;</span>, 0L },</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                    { <span class="stringliteral">&quot;01KS0Q28TE6CVB0NYYANTWEK7B&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 3, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;maria@encordados.com&quot;</span>, <span class="stringliteral">&quot;avatar-photo-default-user-icon-600nw-2558759027_y1hcma&quot;</span>, <span class="stringliteral">&quot;María López&quot;</span>, <span class="stringliteral">&quot;$2a$11$h4sq7OQFn9BItSjblbZwYe7O.aNbp40eM5A2tXZyLlXhK2WALoI7.&quot;</span>, <span class="stringliteral">&quot;945678901&quot;</span>, <span class="stringliteral">&quot;ENCORDER&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 3, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;maria_encordadora&quot;</span>, 0L },</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    { <span class="stringliteral">&quot;01KS0Q28TE7CMWS2D8RVDFA7YJ&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 2, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;carlos@encordados.com&quot;</span>, <span class="stringliteral">&quot;avatar-photo-default-user-icon-600nw-2558759027_y1hcma&quot;</span>, <span class="stringliteral">&quot;Carlos García&quot;</span>, <span class="stringliteral">&quot;$2a$11$h4sq7OQFn9BItSjblbZwYe7O.aNbp40eM5A2tXZyLlXhK2WALoI7.&quot;</span>, <span class="stringliteral">&quot;934567890&quot;</span>, <span class="stringliteral">&quot;ENCORDER&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 2, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;carlos_encordador&quot;</span>, 0L },</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                    { <span class="stringliteral">&quot;01KS0Q28TED4PWJPT7DMJ46WBN&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 6, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;pedro@tenis.com&quot;</span>, <span class="stringliteral">&quot;avatar-photo-default-user-icon-600nw-2558759027_y1hcma&quot;</span>, <span class="stringliteral">&quot;Pedro Rodríguez&quot;</span>, <span class="stringliteral">&quot;$2a$11$vm89IAT3Kz8i95DTqRg6nuXd8EsUIRdgdFhHvezM7TBvMoidExpt.&quot;</span>, <span class="stringliteral">&quot;978901234&quot;</span>, <span class="stringliteral">&quot;USER&quot;</span>, <span class="stringliteral">&quot;01KS0Q28TE9N7TG55K98TCB4X0&quot;</span>, <span class="keyword">new</span> DateTime(2025, 6, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;jugador_pedro&quot;</span>, 0L },</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    { <span class="stringliteral">&quot;01KS0Q28TEHA2KF5YM3J6QS5Z9&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 3, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;luis@encordados.com&quot;</span>, <span class="stringliteral">&quot;avatar-photo-default-user-icon-600nw-2558759027_y1hcma&quot;</span>, <span class="stringliteral">&quot;Luis Fernández&quot;</span>, <span class="stringliteral">&quot;$2a$11$xl2gKmt6XzEkFpdjbHVpEOHw2sbCo2kFZZhVG38lqst9PxxmR1Dda&quot;</span>, <span class="stringliteral">&quot;989012345&quot;</span>, <span class="stringliteral">&quot;SUPERVISOR&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 3, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;supervisor_luis&quot;</span>, 0L },</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    { <span class="stringliteral">&quot;01KS0Q28TESE956013XYJKP6ST&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2024, 12, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;admin@encordados.com&quot;</span>, <span class="stringliteral">&quot;avatar-photo-default-user-icon-600nw-2558759027_y1hcma&quot;</span>, <span class="stringliteral">&quot;Administrador&quot;</span>, <span class="stringliteral">&quot;$2a$11$qxEUeoXVUOqGr/HlrrDUZeRsMDcQwoiclUJZOsqEiGI/iCwx1TQDm&quot;</span>, <span class="stringliteral">&quot;912345678&quot;</span>, <span class="stringliteral">&quot;ADMIN&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2024, 12, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;admin_encordados&quot;</span>, 0L },</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    { <span class="stringliteral">&quot;01KS0Q28TEXTDY9TQNRAXKAJ81&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;pablo@encordados.com&quot;</span>, <span class="stringliteral">&quot;avatar-photo-default-user-icon-600nw-2558759027_y1hcma&quot;</span>, <span class="stringliteral">&quot;Pablo Sánchez&quot;</span>, <span class="stringliteral">&quot;$2a$11$xl2gKmt6XzEkFpdjbHVpEOHw2sbCo2kFZZhVG38lqst9PxxmR1Dda&quot;</span>, <span class="stringliteral">&quot;990123456&quot;</span>, <span class="stringliteral">&quot;SUPERVISOR&quot;</span>, <span class="keyword">null</span>, <span class="keyword">new</span> DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Utc), <span class="stringliteral">&quot;supervisor_pablo&quot;</span>, 0L }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                });</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            migrationBuilder.CreateIndex(</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                name: <span class="stringliteral">&quot;IX_users_email_unique&quot;</span>,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                table: <span class="stringliteral">&quot;users&quot;</span>,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                column: <span class="stringliteral">&quot;Email&quot;</span>,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                unique: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            migrationBuilder.CreateIndex(</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                name: <span class="stringliteral">&quot;IX_users_username_unique&quot;</span>,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                table: <span class="stringliteral">&quot;users&quot;</span>,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                column: <span class="stringliteral">&quot;Username&quot;</span>,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                unique: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html#a528af14ab24c0aad5810a92675cf2757">   84</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html#a528af14ab24c0aad5810a92675cf2757">Down</a>(MigrationBuilder migrationBuilder)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            migrationBuilder.DropTable(</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                name: <span class="stringliteral">&quot;users&quot;</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
+</div>
+<div class="ttc" id="aPurchasedController_8cs_html_a2cca664a5a4cb21c8352e11d88fa47ef"><div class="ttname"><a href="PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef">Role</a></div><div class="ttdeci">BackEncordados.Usuarios.Model.User.UserRoles Role</div><div class="ttdef"><b>Definition</b> <a href="PurchasedController_8cs_source.html#l00014">PurchasedController.cs:14</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Migrations_1_1User_1_1InitialCreate_html"><div class="ttname"><a href="classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html">BackEncordados.Migrations.User.InitialCreate</a></div><div class="ttdef"><b>Definition</b> <a href="20260526230814__InitialCreate_8cs_source.html#l00011">20260526230814_InitialCreate.cs:12</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Migrations_1_1User_1_1InitialCreate_html_a1d03850a3cc4d454ed29c8bb9a92f6fe"><div class="ttname"><a href="classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html#a1d03850a3cc4d454ed29c8bb9a92f6fe">BackEncordados.Migrations.User.InitialCreate.Up</a></div><div class="ttdeci">override void Up(MigrationBuilder migrationBuilder)</div><div class="ttdef"><b>Definition</b> <a href="20260526230814__InitialCreate_8cs_source.html#l00014">20260526230814_InitialCreate.cs:14</a></div></div>
+<div class="ttc" id="aclassBackEncordados_1_1Migrations_1_1User_1_1InitialCreate_html_a528af14ab24c0aad5810a92675cf2757"><div class="ttname"><a href="classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html#a528af14ab24c0aad5810a92675cf2757">BackEncordados.Migrations.User.InitialCreate.Down</a></div><div class="ttdeci">override void Down(MigrationBuilder migrationBuilder)</div><div class="ttdef"><b>Definition</b> <a href="20260526230814__InitialCreate_8cs_source.html#l00084">20260526230814_InitialCreate.cs:84</a></div></div>
+<div class="ttc" id="anamespaceBackEncordados_1_1Migrations_1_1User_html"><div class="ttname"><a href="namespaceBackEncordados_1_1Migrations_1_1User.html">BackEncordados.Migrations.User</a></div><div class="ttdef"><b>Definition</b> <a href="20260526230814__InitialCreate_8cs_source.html#l00008">20260526230814_InitialCreate.cs:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_7a0cabc512189133ae2e5906154abe1d.html">Migrations</a></li><li class="navelem"><a class="el" href="dir_14649b51e8947832e275f2f3cbe0619c.html">User</a></li><li class="navelem"><a class="el" href="20260526230814__InitialCreate_8cs.html">20260526230814_InitialCreate.cs</a></li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 06:59:48 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -96,6 +96,10 @@ var hierarchy =
       [ "TestEncordados.Unit.Services.Purchased.NoOpClientProxy", "classTestEncordados_1_1Unit_1_1Services_1_1Purchased_1_1NoOpClientProxy.html", null ]
     ] ],
     [ "BackEncordados.Common.Service.Cloudinary.ICloudinaryService", "interfaceBackEncordados_1_1Common_1_1Service_1_1Cloudinary_1_1ICloudinaryService.html", null ],
+    [ "IDesignTimeDbContextFactory", null, [
+      [ "BackEncordados.Infraestructure.Migrations.MaterialsDbContextFactory", "classBackEncordados_1_1Infraestructure_1_1Migrations_1_1MaterialsDbContextFactory.html", null ],
+      [ "BackEncordados.Infraestructure.Migrations.UserDbContextFactory", "classBackEncordados_1_1Infraestructure_1_1Migrations_1_1UserDbContextFactory.html", null ]
+    ] ],
     [ "BackEncordados.Common.Service.Email.IEmailService", "interfaceBackEncordados_1_1Common_1_1Service_1_1Email_1_1IEmailService.html", [
       [ "BackEncordados.Common.Service.Email.MemoryEmailService", "classBackEncordados_1_1Common_1_1Service_1_1Email_1_1MemoryEmailService.html", null ]
     ] ],
@@ -149,6 +153,14 @@ var hierarchy =
     [ "TestEncordados.Unit.Services.MaterialsService.MaterialsServiceTests", "classTestEncordados_1_1Unit_1_1Services_1_1MaterialsService_1_1MaterialsServiceTests.html", null ],
     [ "TestEncordados.Unit.Common.Service.Cache.MemoryCacheServiceTests", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cache_1_1MemoryCacheServiceTests.html", null ],
     [ "TestEncordados.Unit.Common.Service.Email.MemoryEmailServiceTests", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1MemoryEmailServiceTests.html", null ],
+    [ "Migration", null, [
+      [ "BackEncordados.Migrations.Materials.InitialCreate", "classBackEncordados_1_1Migrations_1_1Materials_1_1InitialCreate.html", null ],
+      [ "BackEncordados.Migrations.User.InitialCreate", "classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html", null ]
+    ] ],
+    [ "ModelSnapshot", null, [
+      [ "BackEncordados.Migrations.Materials.MaterialsDbContextModelSnapshot", "classBackEncordados_1_1Migrations_1_1Materials_1_1MaterialsDbContextModelSnapshot.html", null ],
+      [ "BackEncordados.Migrations.User.UserDbContextModelSnapshot", "classBackEncordados_1_1Migrations_1_1User_1_1UserDbContextModelSnapshot.html", null ]
+    ] ],
     [ "TestEncordados.Unit.Common.Database.NonTimestampedEntity", "classTestEncordados_1_1Unit_1_1Common_1_1Database_1_1NonTimestampedEntity.html", null ],
     [ "TestEncordados.Unit.Common.Service.Email.OrderItemEmailDtoTests", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1OrderItemEmailDtoTests.html", null ],
     [ "TestEncordados.Unit.Common.Dto.PageResponseDtoTests", "classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PageResponseDtoTests.html", null ],

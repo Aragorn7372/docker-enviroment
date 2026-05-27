@@ -6,6 +6,7 @@ var dir_bdfa4e90f7656a5f4e8ebf9defdecc81 =
     [ "Infraestructure", "dir_fca39826044f67dd320ad6baeec845bf.html", "dir_fca39826044f67dd320ad6baeec845bf" ],
     [ "Materials", "dir_0048e789433b5fe1cb671302277b48d6.html", "dir_0048e789433b5fe1cb671302277b48d6" ],
     [ "Middleware", "dir_192112ae3c06b158e081beb616d6c27d.html", "dir_192112ae3c06b158e081beb616d6c27d" ],
+    [ "Migrations", "dir_7a0cabc512189133ae2e5906154abe1d.html", "dir_7a0cabc512189133ae2e5906154abe1d" ],
     [ "obj", "dir_81ce03840292dda92ea67bc69da15ea3.html", "dir_81ce03840292dda92ea67bc69da15ea3" ],
     [ "Purchased", "dir_2f669d235345eea30705f4ca88b64b3a.html", "dir_2f669d235345eea30705f4ca88b64b3a" ],
     [ "Talleres", "dir_28130524fe5c59a249a71dcd6e9a5488.html", "dir_28130524fe5c59a249a71dcd6e9a5488" ],

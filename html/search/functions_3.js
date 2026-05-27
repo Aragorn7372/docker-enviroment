@@ -49,5 +49,6 @@ var searchData=
   ['deleteuserasync_5fexistinguser_5freturnssuccess_46',['DeleteUserAsync_ExistingUser_ReturnsSuccess',['../classTestEncordados_1_1Unit_1_1Services_1_1Usuarios_1_1UserServiceTests.html#a434a00e7707a99aa2226365e109bd20e',1,'TestEncordados::Unit::Services::Usuarios::UserServiceTests']]],
   ['deleteuserasync_5fnonexistinguser_5freturnsnotfounderror_47',['DeleteUserAsync_NonExistingUser_ReturnsNotFoundError',['../classTestEncordados_1_1Unit_1_1Services_1_1Usuarios_1_1UserServiceTests.html#ac6409786919f7457c57e6b40f2fbb9d3',1,'TestEncordados::Unit::Services::Usuarios::UserServiceTests']]],
   ['dispose_48',['Dispose',['../classTestEncordados_1_1Integration_1_1Api_1_1CustomWebApplicationFactory.html#af7418c7dfd653d0c467f945bad91a573',1,'TestEncordados::Integration::Api::CustomWebApplicationFactory']]],
-  ['domainerrors_49',['DomainErrors',['../namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293',1,'BackEncordados::Common::Errors']]]
+  ['domainerrors_49',['DomainErrors',['../namespaceBackEncordados_1_1Common_1_1Errors.html#ae3ae3461e756de34adfcb3f9bfda6293',1,'BackEncordados::Common::Errors']]],
+  ['down_50',['down',['../classBackEncordados_1_1Migrations_1_1Materials_1_1InitialCreate.html#ad2e5046cb223209e038e5ee28eca5254',1,'BackEncordados.Migrations.Materials.InitialCreate.Down()'],['../classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html#a528af14ab24c0aad5810a92675cf2757',1,'BackEncordados.Migrations.User.InitialCreate.Down()']]]
 ];

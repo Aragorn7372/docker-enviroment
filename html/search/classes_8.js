@@ -12,9 +12,11 @@ var searchData=
   ['materialrequestvalidatortests_9',['MaterialRequestValidatorTests',['../classTestEncordados_1_1Unit_1_1Validators_1_1Materials_1_1MaterialRequestValidatorTests.html',1,'TestEncordados::Unit::Validators::Materials']]],
   ['materialscontrollertests_10',['MaterialsControllerTests',['../classTestEncordados_1_1Unit_1_1Controllers_1_1Materials_1_1MaterialsControllerTests.html',1,'TestEncordados::Unit::Controllers::Materials']]],
   ['materialsdatabasefixture_11',['MaterialsDatabaseFixture',['../classTestEncordados_1_1Integration_1_1Fixtures_1_1MaterialsDatabaseFixture.html',1,'TestEncordados::Integration::Fixtures']]],
-  ['materialsrepositorytests_12',['MaterialsRepositoryTests',['../classTestEncordados_1_1Integration_1_1Repositories_1_1MaterialsRepositoryTests.html',1,'TestEncordados::Integration::Repositories']]],
-  ['materialsservicetests_13',['MaterialsServiceTests',['../classTestEncordados_1_1Unit_1_1Services_1_1MaterialsService_1_1MaterialsServiceTests.html',1,'TestEncordados::Unit::Services::MaterialsService']]],
-  ['memorycacheservicetests_14',['MemoryCacheServiceTests',['../classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cache_1_1MemoryCacheServiceTests.html',1,'TestEncordados::Unit::Common::Service::Cache']]],
-  ['memoryemailservice_15',['MemoryEmailService',['../classBackEncordados_1_1Common_1_1Service_1_1Email_1_1MemoryEmailService.html',1,'BackEncordados::Common::Service::Email']]],
-  ['memoryemailservicetests_16',['MemoryEmailServiceTests',['../classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1MemoryEmailServiceTests.html',1,'TestEncordados::Unit::Common::Service::Email']]]
+  ['materialsdbcontextfactory_12',['MaterialsDbContextFactory',['../classBackEncordados_1_1Infraestructure_1_1Migrations_1_1MaterialsDbContextFactory.html',1,'BackEncordados::Infraestructure::Migrations']]],
+  ['materialsdbcontextmodelsnapshot_13',['MaterialsDbContextModelSnapshot',['../classBackEncordados_1_1Migrations_1_1Materials_1_1MaterialsDbContextModelSnapshot.html',1,'BackEncordados::Migrations::Materials']]],
+  ['materialsrepositorytests_14',['MaterialsRepositoryTests',['../classTestEncordados_1_1Integration_1_1Repositories_1_1MaterialsRepositoryTests.html',1,'TestEncordados::Integration::Repositories']]],
+  ['materialsservicetests_15',['MaterialsServiceTests',['../classTestEncordados_1_1Unit_1_1Services_1_1MaterialsService_1_1MaterialsServiceTests.html',1,'TestEncordados::Unit::Services::MaterialsService']]],
+  ['memorycacheservicetests_16',['MemoryCacheServiceTests',['../classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cache_1_1MemoryCacheServiceTests.html',1,'TestEncordados::Unit::Common::Service::Cache']]],
+  ['memoryemailservice_17',['MemoryEmailService',['../classBackEncordados_1_1Common_1_1Service_1_1Email_1_1MemoryEmailService.html',1,'BackEncordados::Common::Service::Email']]],
+  ['memoryemailservicetests_18',['MemoryEmailServiceTests',['../classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1MemoryEmailServiceTests.html',1,'TestEncordados::Unit::Common::Service::Email']]]
 ];

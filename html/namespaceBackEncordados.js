@@ -8,6 +8,7 @@ var namespaceBackEncordados =
     [ "Middleware", "namespaceBackEncordados_1_1Middleware.html", [
       [ "GlobalExceptionHandler", "namespaceBackEncordados_1_1Middleware.html#aab3a5e3e853b284b313fe314d2db3e8d", null ]
     ] ],
+    [ "Migrations", "namespaceBackEncordados_1_1Migrations.html", "namespaceBackEncordados_1_1Migrations" ],
     [ "Purchased", "namespaceBackEncordados_1_1Purchased.html", "namespaceBackEncordados_1_1Purchased" ],
     [ "Talleres", "namespaceBackEncordados_1_1Talleres.html", "namespaceBackEncordados_1_1Talleres" ],
     [ "Usuarios", "namespaceBackEncordados_1_1Usuarios.html", "namespaceBackEncordados_1_1Usuarios" ]

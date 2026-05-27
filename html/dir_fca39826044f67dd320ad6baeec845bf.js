@@ -1,6 +1,7 @@
 var dir_fca39826044f67dd320ad6baeec845bf =
 [
     [ "Constraints", "dir_96654ec9772fda0e996016c003717efc.html", "dir_96654ec9772fda0e996016c003717efc" ],
+    [ "Migrations", "dir_62936add578d1eccda142444e57bfab2.html", "dir_62936add578d1eccda142444e57bfab2" ],
     [ "AppConfig.cs", "AppConfig_8cs.html", "AppConfig_8cs" ],
     [ "AppConfigExtensions.cs", "AppConfigExtensions_8cs.html", null ],
     [ "AuthenticationConfig.cs", "AuthenticationConfig_8cs.html", null ],

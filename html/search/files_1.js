@@ -1,20 +1,7 @@
 var searchData=
 [
-  ['api_2eservice_2ets_0',['api.service.ts',['../api_8service_8ts.html',1,'']]],
-  ['app_2econfig_2ets_1',['app.config.ts',['../app_8config_8ts.html',1,'']]],
-  ['app_2ehtml_2',['app.html',['../app_8html.html',1,'']]],
-  ['app_2eroutes_2ets_3',['app.routes.ts',['../app_8routes_8ts.html',1,'']]],
-  ['app_2espec_2ets_4',['app.spec.ts',['../app_8spec_8ts.html',1,'']]],
-  ['app_2ets_5',['app.ts',['../app_8ts.html',1,'']]],
-  ['appconfig_2ecs_6',['AppConfig.cs',['../AppConfig_8cs.html',1,'']]],
-  ['appconfigextensions_2ecs_7',['AppConfigExtensions.cs',['../AppConfigExtensions_8cs.html',1,'']]],
-  ['appstartuptests_2ecs_8',['AppStartupTests.cs',['../AppStartupTests_8cs.html',1,'']]],
-  ['auth_2eservice_2ets_9',['auth.service.ts',['../auth_8service_8ts.html',1,'']]],
-  ['authcontroller_2ecs_10',['AuthController.cs',['../AuthController_8cs.html',1,'']]],
-  ['authcontrollertests_2ecs_11',['AuthControllerTests.cs',['../AuthControllerTests_8cs.html',1,'']]],
-  ['authenticationconfig_2ecs_12',['AuthenticationConfig.cs',['../AuthenticationConfig_8cs.html',1,'']]],
-  ['autherror_2ecs_13',['AuthError.cs',['../AuthError_8cs.html',1,'']]],
-  ['autherrortests_2ecs_14',['AuthErrorTests.cs',['../AuthErrorTests_8cs.html',1,'']]],
-  ['authservice_2ecs_15',['AuthService.cs',['../AuthService_8cs.html',1,'']]],
-  ['authservicetests_2ecs_16',['AuthServiceTests.cs',['../AuthServiceTests_8cs.html',1,'']]]
+  ['20260526230741_5finitialcreate_2ecs_0',['20260526230741_InitialCreate.cs',['../20260526230741__InitialCreate_8cs.html',1,'']]],
+  ['20260526230741_5finitialcreate_2edesigner_2ecs_1',['20260526230741_InitialCreate.Designer.cs',['../20260526230741__InitialCreate_8Designer_8cs.html',1,'']]],
+  ['20260526230814_5finitialcreate_2ecs_2',['20260526230814_InitialCreate.cs',['../20260526230814__InitialCreate_8cs.html',1,'']]],
+  ['20260526230814_5finitialcreate_2edesigner_2ecs_3',['20260526230814_InitialCreate.Designer.cs',['../20260526230814__InitialCreate_8Designer_8cs.html',1,'']]]
 ];

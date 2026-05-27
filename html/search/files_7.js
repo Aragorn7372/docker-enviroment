@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['global_2dsearch_2ecomponent_2ets_0',['global-search.component.ts',['../global-search_8component_8ts.html',1,'']]],
-  ['globalexceptionhandler_2ecs_1',['GlobalExceptionHandler.cs',['../GlobalExceptionHandler_8cs.html',1,'']]],
-  ['globalexceptionhandlertests_2ecs_2',['globalexceptionhandlertests.cs',['../Infrastructure_2GlobalExceptionHandlerTests_8cs.html',1,'(Espacio de nombres global)'],['../Middleware_2GlobalExceptionHandlerTests_8cs.html',1,'(Espacio de nombres global)']]]
+  ['filterpurchaseddto_2ecs_0',['FilterPurchasedDto.cs',['../FilterPurchasedDto_8cs.html',1,'']]],
+  ['filtertournamentdto_2ecs_1',['FilterTournamentDto.cs',['../FilterTournamentDto_8cs.html',1,'']]],
+  ['filteruserdto_2ecs_2',['FilterUserDto.cs',['../FilterUserDto_8cs.html',1,'']]],
+  ['formatocuerda_2ecs_3',['FormatoCuerda.cs',['../FormatoCuerda_8cs.html',1,'']]]
 ];

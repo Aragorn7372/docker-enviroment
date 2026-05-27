@@ -1,6 +1,20 @@
 var searchData=
 [
-  ['backencordados_2eassemblyinfo_2ecs_0',['BackEncordados.AssemblyInfo.cs',['../BackEncordados_8AssemblyInfo_8cs.html',1,'']]],
-  ['backencordados_2eglobalusings_2eg_2ecs_1',['BackEncordados.GlobalUsings.g.cs',['../BackEncordados_8GlobalUsings_8g_8cs.html',1,'']]],
-  ['backencordados_2emvcapplicationpartsassemblyinfo_2ecs_2',['BackEncordados.MvcApplicationPartsAssemblyInfo.cs',['../BackEncordados_8MvcApplicationPartsAssemblyInfo_8cs.html',1,'']]]
+  ['api_2eservice_2ets_0',['api.service.ts',['../api_8service_8ts.html',1,'']]],
+  ['app_2econfig_2ets_1',['app.config.ts',['../app_8config_8ts.html',1,'']]],
+  ['app_2ehtml_2',['app.html',['../app_8html.html',1,'']]],
+  ['app_2eroutes_2ets_3',['app.routes.ts',['../app_8routes_8ts.html',1,'']]],
+  ['app_2espec_2ets_4',['app.spec.ts',['../app_8spec_8ts.html',1,'']]],
+  ['app_2ets_5',['app.ts',['../app_8ts.html',1,'']]],
+  ['appconfig_2ecs_6',['AppConfig.cs',['../AppConfig_8cs.html',1,'']]],
+  ['appconfigextensions_2ecs_7',['AppConfigExtensions.cs',['../AppConfigExtensions_8cs.html',1,'']]],
+  ['appstartuptests_2ecs_8',['AppStartupTests.cs',['../AppStartupTests_8cs.html',1,'']]],
+  ['auth_2eservice_2ets_9',['auth.service.ts',['../auth_8service_8ts.html',1,'']]],
+  ['authcontroller_2ecs_10',['AuthController.cs',['../AuthController_8cs.html',1,'']]],
+  ['authcontrollertests_2ecs_11',['AuthControllerTests.cs',['../AuthControllerTests_8cs.html',1,'']]],
+  ['authenticationconfig_2ecs_12',['AuthenticationConfig.cs',['../AuthenticationConfig_8cs.html',1,'']]],
+  ['autherror_2ecs_13',['AuthError.cs',['../AuthError_8cs.html',1,'']]],
+  ['autherrortests_2ecs_14',['AuthErrorTests.cs',['../AuthErrorTests_8cs.html',1,'']]],
+  ['authservice_2ecs_15',['AuthService.cs',['../AuthService_8cs.html',1,'']]],
+  ['authservicetests_2ecs_16',['AuthServiceTests.cs',['../AuthServiceTests_8cs.html',1,'']]]
 ];

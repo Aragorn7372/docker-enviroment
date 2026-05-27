@@ -143,12 +143,12 @@ $(document).ready(function(){initNavTree('UserDbContext_8cs_source.html',''); in
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> SeedData(ModelBuilder modelBuilder)</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    {</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="comment">// Generar hashes de contraseñas para los datos de prueba</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        var adminPasswordHash = BCrypt.Net.BCrypt.HashPassword(<span class="stringliteral">&quot;admin123&quot;</span>, workFactor: 11);</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        var userPasswordHash = BCrypt.Net.BCrypt.HashPassword(<span class="stringliteral">&quot;user123&quot;</span>, workFactor: 11);</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        var encorderPasswordHash = BCrypt.Net.BCrypt.HashPassword(<span class="stringliteral">&quot;encorder123&quot;</span>, workFactor: 11);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        var ownerPasswordHash = BCrypt.Net.BCrypt.HashPassword(<span class="stringliteral">&quot;owner123&quot;</span>, workFactor: 11);</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        var supervisorPasswordHash = BCrypt.Net.BCrypt.HashPassword(<span class="stringliteral">&quot;supervisor123&quot;</span>, workFactor: 11);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="comment">// Hashes estáticos pre-computados (coinciden con la migración)</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        var adminPasswordHash = <span class="stringliteral">&quot;$2a$11$qxEUeoXVUOqGr/HlrrDUZeRsMDcQwoiclUJZOsqEiGI/iCwx1TQDm&quot;</span>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        var userPasswordHash = <span class="stringliteral">&quot;$2a$11$vm89IAT3Kz8i95DTqRg6nuXd8EsUIRdgdFhHvezM7TBvMoidExpt.&quot;</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        var encorderPasswordHash = <span class="stringliteral">&quot;$2a$11$h4sq7OQFn9BItSjblbZwYe7O.aNbp40eM5A2tXZyLlXhK2WALoI7.&quot;</span>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        var ownerPasswordHash = <span class="stringliteral">&quot;$2a$11$8fZDZSSFPWUG7wP8PKVGpecehuSNofLupnr6o9eG.9rggszddiUEO&quot;</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        var supervisorPasswordHash = <span class="stringliteral">&quot;$2a$11$xl2gKmt6XzEkFpdjbHVpEOHw2sbCo2kFZZhVG38lqst9PxxmR1Dda&quot;</span>;</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        var juan = Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TD6SAPN0GN0XKRPK5D&quot;</span>);</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        var ana = Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TE3RJTW6W35NJRMTZ4&quot;</span>);</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        var pedro = Ulid.Parse(<span class="stringliteral">&quot;01KS0Q28TED4PWJPT7DMJ46WBN&quot;</span>);</div>
@@ -176,8 +176,8 @@ $(document).ready(function(){initNavTree('UserDbContext_8cs_source.html',''); in
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                IsDeleted = <span class="keyword">false</span>,</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                CreatedAt = DateTime.UtcNow.AddMonths(-6),</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-6),</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                CreatedAt = <span class="keyword">new</span> DateTime(2024, 12, 1, 0, 0, 0, DateTimeKind.Utc),</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                UpdatedAt = <span class="keyword">new</span> DateTime(2024, 12, 1, 0, 0, 0, DateTimeKind.Utc),</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                TournamentId = <span class="keyword">null</span>,</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                </div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            },</div>
@@ -194,8 +194,8 @@ $(document).ready(function(){initNavTree('UserDbContext_8cs_source.html',''); in
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                IsDeleted = <span class="keyword">false</span>,</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                CreatedAt = DateTime.UtcNow.AddMonths(-5),</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-5),</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                CreatedAt = <span class="keyword">new</span> DateTime(2025, 1, 1, 0, 0, 0, DateTimeKind.Utc),</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                UpdatedAt = <span class="keyword">new</span> DateTime(2025, 1, 1, 0, 0, 0, DateTimeKind.Utc),</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                TournamentId = <span class="keyword">null</span>,</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                </div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            },</div>
@@ -213,8 +213,8 @@ $(document).ready(function(){initNavTree('UserDbContext_8cs_source.html',''); in
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                IsDeleted = <span class="keyword">false</span>,</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                CreatedAt = DateTime.UtcNow.AddMonths(-4),</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-4),</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                CreatedAt = <span class="keyword">new</span> DateTime(2025, 2, 1, 0, 0, 0, DateTimeKind.Utc),</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                UpdatedAt = <span class="keyword">new</span> DateTime(2025, 2, 1, 0, 0, 0, DateTimeKind.Utc),</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                TournamentId = <span class="keyword">null</span>,</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                </div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            },</div>
@@ -231,8 +231,8 @@ $(document).ready(function(){initNavTree('UserDbContext_8cs_source.html',''); in
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                IsDeleted = <span class="keyword">false</span>,</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                CreatedAt = DateTime.UtcNow.AddMonths(-3),</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-3),</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                CreatedAt = <span class="keyword">new</span> DateTime(2025, 3, 1, 0, 0, 0, DateTimeKind.Utc),</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                UpdatedAt = <span class="keyword">new</span> DateTime(2025, 3, 1, 0, 0, 0, DateTimeKind.Utc),</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                TournamentId = <span class="keyword">null</span>,</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                </div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            },</div>
@@ -249,8 +249,8 @@ $(document).ready(function(){initNavTree('UserDbContext_8cs_source.html',''); in
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                IsDeleted = <span class="keyword">false</span>,</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                CreatedAt = DateTime.UtcNow.AddMonths(-2),</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-2),</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                CreatedAt = <span class="keyword">new</span> DateTime(2025, 4, 1, 0, 0, 0, DateTimeKind.Utc),</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                UpdatedAt = <span class="keyword">new</span> DateTime(2025, 4, 1, 0, 0, 0, DateTimeKind.Utc),</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                TournamentId = t1,</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                Bonos = 100.0,</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                </div>
@@ -268,8 +268,8 @@ $(document).ready(function(){initNavTree('UserDbContext_8cs_source.html',''); in
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                IsDeleted = <span class="keyword">false</span>,</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                CreatedAt = DateTime.UtcNow.AddMonths(-1),</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-1),</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                CreatedAt = <span class="keyword">new</span> DateTime(2025, 5, 1, 0, 0, 0, DateTimeKind.Utc),</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                UpdatedAt = <span class="keyword">new</span> DateTime(2025, 5, 1, 0, 0, 0, DateTimeKind.Utc),</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                TournamentId = t1,</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                Bonos = 25.0,</div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                </div>
@@ -287,8 +287,8 @@ $(document).ready(function(){initNavTree('UserDbContext_8cs_source.html',''); in
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                IsDeleted = <span class="keyword">false</span>,</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                CreatedAt = DateTime.UtcNow,</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                UpdatedAt = DateTime.UtcNow,</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                CreatedAt = <span class="keyword">new</span> DateTime(2025, 6, 1, 0, 0, 0, DateTimeKind.Utc),</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                UpdatedAt = <span class="keyword">new</span> DateTime(2025, 6, 1, 0, 0, 0, DateTimeKind.Utc),</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                TournamentId = t2,</div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                Bonos = 0,</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                </div>
@@ -306,8 +306,8 @@ $(document).ready(function(){initNavTree('UserDbContext_8cs_source.html',''); in
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                IsDeleted = <span class="keyword">false</span>,</div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                CreatedAt = DateTime.UtcNow.AddMonths(-3),</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-3),</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                CreatedAt = <span class="keyword">new</span> DateTime(2025, 3, 1, 0, 0, 0, DateTimeKind.Utc),</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                UpdatedAt = <span class="keyword">new</span> DateTime(2025, 3, 1, 0, 0, 0, DateTimeKind.Utc),</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                TournamentId = <span class="keyword">null</span>,</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                </div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            },</div>
@@ -324,8 +324,8 @@ $(document).ready(function(){initNavTree('UserDbContext_8cs_source.html',''); in
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                IsDeleted = <span class="keyword">false</span>,</div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                CreatedAt = DateTime.UtcNow.AddMonths(-2),</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                UpdatedAt = DateTime.UtcNow.AddMonths(-2),</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                CreatedAt = <span class="keyword">new</span> DateTime(2025, 4, 1, 0, 0, 0, DateTimeKind.Utc),</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                UpdatedAt = <span class="keyword">new</span> DateTime(2025, 4, 1, 0, 0, 0, DateTimeKind.Utc),</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                TournamentId = <span class="keyword">null</span>,</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                </div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            },</div>
@@ -340,8 +340,8 @@ $(document).ready(function(){initNavTree('UserDbContext_8cs_source.html',''); in
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                IsDeleted = <span class="keyword">false</span>,</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                ImageUrl = CloudinaryConstants.DEFAULT_IMAGE_USUARIOS,</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                CloudinaryPublicId = <span class="keyword">null</span>,</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                CreatedAt = DateTime.UtcNow,</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                UpdatedAt = DateTime.UtcNow,</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                CreatedAt = <span class="keyword">new</span> DateTime(2025, 6, 1, 0, 0, 0, DateTimeKind.Utc),</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                UpdatedAt = <span class="keyword">new</span> DateTime(2025, 6, 1, 0, 0, 0, DateTimeKind.Utc),</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                TournamentId = <span class="keyword">null</span>,</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>            }</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        };</div>
@@ -371,7 +371,7 @@ $(document).ready(function(){initNavTree('UserDbContext_8cs_source.html',''); in
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_506c6c83c0df150a6a1a940e5dd27b7e.html">back-encordados</a></li><li class="navelem"><a class="el" href="dir_bdfa4e90f7656a5f4e8ebf9defdecc81.html">BackEncordados</a></li><li class="navelem"><a class="el" href="dir_afba70cf93ee60e99301b0a379d3918b.html">Common</a></li><li class="navelem"><a class="el" href="dir_3a597ee37998100b154c75c1a58e724e.html">Database</a></li><li class="navelem"><a class="el" href="dir_29db0ba816201d8e632c76280be6d8ae.html">Config</a></li><li class="navelem"><a class="el" href="UserDbContext_8cs.html">UserDbContext.cs</a></li>
-    <li class="footer">Generado el Martes, 26 de mayo de 2026 22:13:59 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 06:59:48 para FunkoApi por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
