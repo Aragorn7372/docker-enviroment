@@ -231,3 +231,10 @@ jobs:
     steps:
       - name: Trigger Render deploy via webhook
         run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
+
+  deploy-netlify:
+    needs: [build-front, test-back]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify deploy via webhook
+        run: curl -X POST ${{ secrets.NETLIFY_DEPLOY_HOOK }}
