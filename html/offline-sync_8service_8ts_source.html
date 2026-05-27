@@ -243,212 +243,213 @@ $(document).ready(function(){initNavTree('offline-sync_8service_8ts_source.html'
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  }</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  async drainQueue(): Promise&lt;void&gt; {</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    if (this._syncing()) return;</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    if (!this.online()) return;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    this._syncing.set(true);</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    let processedAny = false;</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    try {</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      // Process jobs sequentially in creation order</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      // eslint-disable-next-line no-constant-condition</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      while (true) {</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        const jobs = await offlineDB.syncQueue.orderBy(&#39;createdAt&#39;).limit(1).toArray();</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        if (jobs.length === 0) break;</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        const job = jobs[0];</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        const ok = await this.runJob(job);</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        if (!ok) break;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        processedAny = true;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      }</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    } finally {</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      this._syncing.set(false);</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>      if (processedAny) {</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        this._refreshKey.update(v =&gt; v + 1);</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      }</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    }</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  }</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  private async runJob(job: SyncJob): Promise&lt;boolean&gt; {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    try {</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      const opts: any = { observe: &#39;body&#39; };</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      if (job.headers) {</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        const filtered: Record&lt;string, string&gt; = {};</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        for (const [k, v] of Object.entries(job.headers)) {</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>          // Removemos Content-Type cuando vamos a enviar FormData (el browser lo setea con boundary)</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>          if (k.toLowerCase() === &#39;content-type&#39; &amp;&amp; this.isFormDataBody(job.body)) continue;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>          filtered[k] = v;</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        }</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        opts.headers = filtered;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      }</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      // Reconstruimos FormData si el body fue serializado como tal en el offline interceptor</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>      const body = this.rehydrateBody(job.body);</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      let resp: any;</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>      switch (job.method) {</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        case &#39;POST&#39;:</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>          resp = await firstValueFrom(this.http.post(job.url, body, opts));</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>          break;</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        case &#39;PUT&#39;:</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>          resp = await firstValueFrom(this.http.put(job.url, body, opts));</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>          break;</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        case &#39;PATCH&#39;:</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>          resp = await firstValueFrom(this.http.patch(job.url, body, opts));</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>          break;</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        case &#39;DELETE&#39;:</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>          resp = await firstValueFrom(this.http.delete(job.url, opts));</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>          break;</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      }</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      // Update cache with real server response</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      if (resp &amp;&amp; typeof resp === &#39;object&#39;) {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        if (job.tempId) {</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>          await this.replaceTempInCache(job.resource, job.tempId, resp);</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        } else {</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>          await this.applyCacheFromResponse(job.resource, resp);</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        }</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>      }</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      await offlineDB.syncQueue.delete(job.id!);</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>      return true;</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    } catch (err: any) {</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>      const status: number | undefined = err?.status;</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      const isNetwork = !status || status === 0;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      const attempts = (job.attempts ?? 0) + 1;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>      if (isNetwork) {</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        this._network.set(navigator.onLine);</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        await offlineDB.syncQueue.update(job.id!, { attempts, lastError: &#39;network&#39; });</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        return false;</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>      }</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      // Server rejected the change. Skip the job so the queue does not block.</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      await offlineDB.syncQueue.update(job.id!, { attempts, lastError: `HTTP ${status ?? &#39;?&#39;}` });</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      if (attempts &gt;= 5) {</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        await offlineDB.syncQueue.delete(job.id!);</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        console.warn(&#39;[OfflineSync] Job dropped after 5 attempts&#39;, job);</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>      }</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>      return true;</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    }</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  }</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  private async replaceTempInCache(resource: SyncJob[&#39;resource&#39;], tempId: string, real: any): Promise&lt;void&gt; {</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    const realId = real?.id ?? real?.Id ?? null;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    if (!realId) return;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    const tables = tablesForResource(resource);</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    if (!tables) return;</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    const tempKey = String(tempId);</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    const realKey = String(realId);</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    await offlineDB.transaction(&#39;rw&#39;, tables.entity, tables.list, async () =&gt; {</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      await tables.entity.delete(tempKey);</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      await tables.entity.put({ key: realKey, data: real, updatedAt: Date.now() });</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      const lists = await tables.list.toArray();</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      for (const list of lists) {</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        const items = (list.items as any[]) ?? [];</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        const idx = items.findIndex((it) =&gt; String(it?.id ?? it?.Id) === tempKey);</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        if (idx &gt;= 0) {</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>          items[idx] = real;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>          await tables.list.put({ ...list, items, updatedAt: Date.now() });</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        }</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      }</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    });</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    // Migrar localStorage meta de temp ID a real ID (materiales y cuerdas)</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    try {</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      if (resource === &#39;materials&#39;) {</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        const meta = localStorage.getItem(&#39;mat:meta:&#39; + tempKey);</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        if (meta) {</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>          localStorage.setItem(&#39;mat:meta:&#39; + realKey, meta);</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>          localStorage.removeItem(&#39;mat:meta:&#39; + tempKey);</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        }</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      } else if (resource === &#39;cuerdas&#39;) {</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        const meta = localStorage.getItem(&#39;cuerda:meta:&#39; + tempKey);</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        if (meta) {</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>          localStorage.setItem(&#39;cuerda:meta:&#39; + realKey, meta);</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>          localStorage.removeItem(&#39;cuerda:meta:&#39; + tempKey);</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        }</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      }</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    } catch { /* noop */ }</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  }</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>  /** Actualiza la cache local con la respuesta real del servidor tras un PUT/PATCH/DELETE exitoso. */</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  private async applyCacheFromResponse(resource: SyncJob[&#39;resource&#39;], respBody: any): Promise&lt;void&gt; {</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    const tables = tablesForResource(resource);</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    if (!tables) return;</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    const now = Date.now();</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    const id = respBody?.id ?? respBody?.Id ?? null;</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    if (!id) return;</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    await offlineDB.transaction(&#39;rw&#39;, tables.entity, tables.list, async () =&gt; {</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      await tables.entity.put({ key: String(id), data: respBody, updatedAt: now });</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>      const lists = await tables.list.toArray();</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>      for (const list of lists) {</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        const items = (list.items as any[]).map((it) =&gt;</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>          String(it?.id ?? it?.Id) === String(id) ? respBody : it</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        );</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        await tables.list.put({ ...list, items, updatedAt: now });</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>      }</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    });</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  }</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  /** Forzar una sincronización manual. */</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  async syncNow(): Promise&lt;void&gt; {</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    await this.drainQueue();</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  }</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  /** Cambia manualmente el estado online/offline. Persiste en localStorage. */</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  setManualOffline(offline: boolean): void {</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    console.log(&#39;[OfflineSync] setManualOffline(&#39;, offline, &#39;) — before: manualOffline =&#39;, this._manualOffline(), &#39;| network =&#39;, this._network());</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    this._manualOffline.set(offline);</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    try {</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>      localStorage.setItem(MANUAL_OFFLINE_KEY, offline ? &#39;1&#39; : &#39;0&#39;);</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    } catch { /* noop */ }</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    console.log(&#39;[OfflineSync] setManualOffline done — online() =&#39;, this.online());</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    if (!offline &amp;&amp; this._network()) {</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>      void this.drainQueue();</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    }</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  }</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  private isFormDataBody(body: unknown): boolean {</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    return !!body &amp;&amp; typeof body === &#39;object&#39; &amp;&amp; (body as any).__formData === true;</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  }</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  /** Convierte el body almacenado en cola al tipo correcto antes de enviarlo. */</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>  private rehydrateBody(body: unknown): any {</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    if (!this.isFormDataBody(body)) return body;</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    const fields = (body as any).fields as Record&lt;string, any&gt;;</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    const fd = new FormData();</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    for (const [k, v] of Object.entries(fields ?? {})) {</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>      if (v === undefined || v === null) continue;</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>      fd.append(k, typeof v === &#39;object&#39; ? JSON.stringify(v) : String(v));</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    }</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    return fd;</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  }</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  /** Borra toda la caché offline y la cola. Útil al cerrar sesión. */</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>  async clearAll(): Promise&lt;void&gt; {</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    await Promise.all([</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>      offlineDB.pedidos.clear(),</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>      offlineDB.pedidosList.clear(),</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>      offlineDB.materials.clear(),</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>      offlineDB.materialsList.clear(),</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>      offlineDB.cuerdas.clear(),</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>      offlineDB.cuerdasList.clear(),</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>      offlineDB.tournaments.clear(),</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>      offlineDB.tournamentsList.clear(),</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>      offlineDB.users.clear(),</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>      offlineDB.usersList.clear(),</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      offlineDB.genericCache.clear(),</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      offlineDB.syncQueue.clear(),</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      offlineDB.meta.clear()</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    ]);</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>  }</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>}</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    if (this._syncing()) { console.log(&#39;[OfflineSync] drainQueue — skipping, already syncing&#39;); return; }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    if (!this.online()) { console.log(&#39;[OfflineSync] drainQueue — skipping, offline (online=&#39;, this.online(), &#39;| _network=&#39;, this._network(), &#39;| _manualOffline=&#39;, this._manualOffline(), &#39;)&#39;); return; }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    console.log(&#39;[OfflineSync] drainQueue — starting, pending jobs:&#39;, await offlineDB.syncQueue.count());</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    this._syncing.set(true);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    let processedAny = false;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    try {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      // Process jobs sequentially in creation order</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      // eslint-disable-next-line no-constant-condition</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      while (true) {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        const jobs = await offlineDB.syncQueue.orderBy(&#39;createdAt&#39;).limit(1).toArray();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        if (jobs.length === 0) break;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        const job = jobs[0];</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        const ok = await this.runJob(job);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        if (!ok) break;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        processedAny = true;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>      }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    } finally {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>      this._syncing.set(false);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      if (processedAny) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        this._refreshKey.update(v =&gt; v + 1);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>      }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  private async runJob(job: SyncJob): Promise&lt;boolean&gt; {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    try {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      const opts: any = { observe: &#39;body&#39; };</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      if (job.headers) {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        const filtered: Record&lt;string, string&gt; = {};</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        for (const [k, v] of Object.entries(job.headers)) {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>          // Removemos Content-Type cuando vamos a enviar FormData (el browser lo setea con boundary)</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>          if (k.toLowerCase() === &#39;content-type&#39; &amp;&amp; this.isFormDataBody(job.body)) continue;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>          filtered[k] = v;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        opts.headers = filtered;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>      // Reconstruimos FormData si el body fue serializado como tal en el offline interceptor</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      const body = this.rehydrateBody(job.body);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>      let resp: any;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>      switch (job.method) {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        case &#39;POST&#39;:</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>          resp = await firstValueFrom(this.http.post(job.url, body, opts));</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>          break;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        case &#39;PUT&#39;:</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>          resp = await firstValueFrom(this.http.put(job.url, body, opts));</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>          break;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        case &#39;PATCH&#39;:</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>          resp = await firstValueFrom(this.http.patch(job.url, body, opts));</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>          break;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        case &#39;DELETE&#39;:</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>          resp = await firstValueFrom(this.http.delete(job.url, opts));</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>          break;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>      }</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      // Update cache with real server response</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      if (resp &amp;&amp; typeof resp === &#39;object&#39;) {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        if (job.tempId) {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>          await this.replaceTempInCache(job.resource, job.tempId, resp);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        } else {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>          await this.applyCacheFromResponse(job.resource, resp);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>      }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>      await offlineDB.syncQueue.delete(job.id!);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>      return true;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    } catch (err: any) {</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      const status: number | undefined = err?.status;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      const isNetwork = !status || status === 0;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>      const attempts = (job.attempts ?? 0) + 1;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      if (isNetwork) {</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        this._network.set(navigator.onLine);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        await offlineDB.syncQueue.update(job.id!, { attempts, lastError: &#39;network&#39; });</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        return false;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      }</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      // Server rejected the change. Skip the job so the queue does not block.</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      await offlineDB.syncQueue.update(job.id!, { attempts, lastError: `HTTP ${status ?? &#39;?&#39;}` });</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      if (attempts &gt;= 5) {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        await offlineDB.syncQueue.delete(job.id!);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        console.warn(&#39;[OfflineSync] Job dropped after 5 attempts&#39;, job);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>      }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>      return true;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    }</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  }</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  private async replaceTempInCache(resource: SyncJob[&#39;resource&#39;], tempId: string, real: any): Promise&lt;void&gt; {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    const realId = real?.id ?? real?.Id ?? null;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    if (!realId) return;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    const tables = tablesForResource(resource);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    if (!tables) return;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    const tempKey = String(tempId);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    const realKey = String(realId);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    await offlineDB.transaction(&#39;rw&#39;, tables.entity, tables.list, async () =&gt; {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      await tables.entity.delete(tempKey);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      await tables.entity.put({ key: realKey, data: real, updatedAt: Date.now() });</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      const lists = await tables.list.toArray();</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      for (const list of lists) {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        const items = (list.items as any[]) ?? [];</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        const idx = items.findIndex((it) =&gt; String(it?.id ?? it?.Id) === tempKey);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        if (idx &gt;= 0) {</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>          items[idx] = real;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>          await tables.list.put({ ...list, items, updatedAt: Date.now() });</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        }</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      }</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    });</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    // Migrar localStorage meta de temp ID a real ID (materiales y cuerdas)</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    try {</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      if (resource === &#39;materials&#39;) {</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        const meta = localStorage.getItem(&#39;mat:meta:&#39; + tempKey);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        if (meta) {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>          localStorage.setItem(&#39;mat:meta:&#39; + realKey, meta);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>          localStorage.removeItem(&#39;mat:meta:&#39; + tempKey);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        }</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      } else if (resource === &#39;cuerdas&#39;) {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        const meta = localStorage.getItem(&#39;cuerda:meta:&#39; + tempKey);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        if (meta) {</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>          localStorage.setItem(&#39;cuerda:meta:&#39; + realKey, meta);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>          localStorage.removeItem(&#39;cuerda:meta:&#39; + tempKey);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        }</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      }</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    } catch { /* noop */ }</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  /** Actualiza la cache local con la respuesta real del servidor tras un PUT/PATCH/DELETE exitoso. */</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  private async applyCacheFromResponse(resource: SyncJob[&#39;resource&#39;], respBody: any): Promise&lt;void&gt; {</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    const tables = tablesForResource(resource);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    if (!tables) return;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    const now = Date.now();</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    const id = respBody?.id ?? respBody?.Id ?? null;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    if (!id) return;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    await offlineDB.transaction(&#39;rw&#39;, tables.entity, tables.list, async () =&gt; {</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>      await tables.entity.put({ key: String(id), data: respBody, updatedAt: now });</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>      const lists = await tables.list.toArray();</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>      for (const list of lists) {</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        const items = (list.items as any[]).map((it) =&gt;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>          String(it?.id ?? it?.Id) === String(id) ? respBody : it</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        );</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        await tables.list.put({ ...list, items, updatedAt: now });</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>      }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    });</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  }</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  /** Forzar una sincronización manual. */</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  async syncNow(): Promise&lt;void&gt; {</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    await this.drainQueue();</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  }</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  /** Cambia manualmente el estado online/offline. Persiste en localStorage. */</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  setManualOffline(offline: boolean): void {</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    console.log(&#39;[OfflineSync] setManualOffline(&#39;, offline, &#39;) — before: manualOffline =&#39;, this._manualOffline(), &#39;| network =&#39;, this._network());</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    this._manualOffline.set(offline);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    try {</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      localStorage.setItem(MANUAL_OFFLINE_KEY, offline ? &#39;1&#39; : &#39;0&#39;);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    } catch { /* noop */ }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    console.log(&#39;[OfflineSync] setManualOffline done — online() =&#39;, this.online());</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    if (!offline &amp;&amp; this._network()) {</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>      void this.drainQueue();</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    }</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  }</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  private isFormDataBody(body: unknown): boolean {</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    return !!body &amp;&amp; typeof body === &#39;object&#39; &amp;&amp; (body as any).__formData === true;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  }</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>  /** Convierte el body almacenado en cola al tipo correcto antes de enviarlo. */</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>  private rehydrateBody(body: unknown): any {</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    if (!this.isFormDataBody(body)) return body;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    const fields = (body as any).fields as Record&lt;string, any&gt;;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    const fd = new FormData();</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    for (const [k, v] of Object.entries(fields ?? {})) {</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>      if (v === undefined || v === null) continue;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>      fd.append(k, typeof v === &#39;object&#39; ? JSON.stringify(v) : String(v));</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    }</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    return fd;</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  }</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>  /** Borra toda la caché offline y la cola. Útil al cerrar sesión. */</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  async clearAll(): Promise&lt;void&gt; {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    await Promise.all([</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>      offlineDB.pedidos.clear(),</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>      offlineDB.pedidosList.clear(),</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>      offlineDB.materials.clear(),</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>      offlineDB.materialsList.clear(),</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>      offlineDB.cuerdas.clear(),</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>      offlineDB.cuerdasList.clear(),</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>      offlineDB.tournaments.clear(),</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>      offlineDB.tournamentsList.clear(),</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>      offlineDB.users.clear(),</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      offlineDB.usersList.clear(),</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      offlineDB.genericCache.clear(),</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      offlineDB.syncQueue.clear(),</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      offlineDB.meta.clear()</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    ]);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>  }</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_1e4c1e1ba784485a6f057d03bd8225e5.html">front-encordados</a></li><li class="navelem"><a class="el" href="dir_926dc43b74bd7bb2b391b76d673d57fb.html">src</a></li><li class="navelem"><a class="el" href="dir_bad3db17ab7eacd7fa6eff673f3b8e6b.html">app</a></li><li class="navelem"><a class="el" href="dir_746400c9d9ae26b5e8d697218db15a23.html">services</a></li><li class="navelem"><a class="el" href="offline-sync_8service_8ts.html">offline-sync.service.ts</a></li>
-    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 21:13:04 para ETR doc por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 21:29:13 para ETR doc por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
