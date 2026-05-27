@@ -112,6 +112,9 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:adf692d39a9ef9606fd1c5fc6c1bf74d9" id="r_adf692d39a9ef9606fd1c5fc6c1bf74d9"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Export_1_1Repository_1_1IExportRepository.html#adf692d39a9ef9606fd1c5fc6c1bf74d9">ImportDataAsync</a> (<a class="el" href="classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html">ExportDataDto</a> data)</td></tr>
 <tr class="memdesc:adf692d39a9ef9606fd1c5fc6c1bf74d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Importa todas las entidades en la base de datos respetando el orden de dependencias.  <br /></td></tr>
 <tr class="separator:adf692d39a9ef9606fd1c5fc6c1bf74d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3154b4ddd9a46bdcddd1c451bf2fbde" id="r_aa3154b4ddd9a46bdcddd1c451bf2fbde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Export_1_1Repository_1_1IExportRepository.html#aa3154b4ddd9a46bdcddd1c451bf2fbde">ClearChangeTrackers</a> ()</td></tr>
+<tr class="memdesc:aa3154b4ddd9a46bdcddd1c451bf2fbde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limpia el ChangeTracker de los cuatro DbContexts para eliminar cualquier referencia residual a entidades previamente trackeadas.  <br /></td></tr>
+<tr class="separator:aa3154b4ddd9a46bdcddd1c451bf2fbde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Contrato del repositorio para la exportación e importación global de todas las entidades de la base de datos. </p>
@@ -167,6 +170,26 @@ Importación: orden directo (Tournaments → Users → Materials → Cuerdas →
 <p><b>Orden de eliminación:</b> Pedidos (y líneas) → Materials/Cuerdas → Users → Tournaments. Este orden respeta las restricciones de clave foránea.</p>
 
 <p class="reference">Referenciado por <a class="el" href="ExportRepositoryTests_8cs_source.html#l00186">TestEncordados.Integration.Repositories.ExportRepositoryTests.ClearAllDataAsync_ClearsAllData()</a>.</p>
+
+</div>
+</div>
+<a id="aa3154b4ddd9a46bdcddd1c451bf2fbde" name="aa3154b4ddd9a46bdcddd1c451bf2fbde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3154b4ddd9a46bdcddd1c451bf2fbde">&#9670;&#160;</a></span>ClearChangeTrackers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BackEncordados.Export.Repository.IExportRepository.ClearChangeTrackers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Limpia el ChangeTracker de los cuatro DbContexts para eliminar cualquier referencia residual a entidades previamente trackeadas. </p>
+<p>Debe llamarse entre ClearAllDataAsync e ImportDataAsync para evitar conflictos de keys duplicadas en el change tracker de EF Core al reinsertar entidades con los mismos IDs que las recién eliminadas.</p>
 
 </div>
 </div>
@@ -244,7 +267,7 @@ Importación: orden directo (Tournaments → Users → Materials → Cuerdas →
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceBackEncordados.html">BackEncordados</a></li><li class="navelem"><a class="el" href="namespaceBackEncordados_1_1Export.html">Export</a></li><li class="navelem"><a class="el" href="namespaceBackEncordados_1_1Export_1_1Repository.html">Repository</a></li><li class="navelem"><a class="el" href="interfaceBackEncordados_1_1Export_1_1Repository_1_1IExportRepository.html">IExportRepository</a></li>
-    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 19:39:08 para ETR doc por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 20:03:42 para ETR doc por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

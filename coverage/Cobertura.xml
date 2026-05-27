@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.751324707332101" branch-rate="0.7506659563132658" lines-covered="6097" lines-valid="8115" branches-covered="1409" branches-valid="1877" complexity="2413" version="0" timestamp="1779910651">
+<coverage line-rate="0.7508927471986209" branch-rate="0.7506659563132658" lines-covered="6098" lines-valid="8121" branches-covered="1409" branches-valid="1877" complexity="2414" version="0" timestamp="1779912120">
   <sources>
     <source>/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/</source>
   </sources>
   <packages>
-    <package name="BackEncordados" line-rate="0.751324707332101" branch-rate="0.7506659563132658" complexity="2413">
+    <package name="BackEncordados" line-rate="0.7508927471986209" branch-rate="0.7506659563132658" complexity="2414">
       <classes>
         <class name="BackEncordados.Common.Database.Config.MaterialsDbContext" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Common/Database/Config/MaterialsDbContext.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
@@ -2182,7 +2182,7 @@
             </method>
             <method name="ConvertFromDb" signature="(System.String)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="38" hits="3250" branch="true" condition-coverage="100% (2/2)" />
+                <line number="38" hits="3251" branch="true" condition-coverage="100% (2/2)" />
               </lines>
             </method>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -2194,7 +2194,7 @@
           </methods>
           <lines>
             <line number="37" hits="3407" branch="false" />
-            <line number="38" hits="3250" branch="true" condition-coverage="100% (2/2)" />
+            <line number="38" hits="3251" branch="true" condition-coverage="100% (2/2)" />
             <line number="42" hits="26" branch="false" />
             <line number="44" hits="26" branch="false" />
           </lines>
@@ -6725,8 +6725,17 @@
             <line number="78" hits="52" branch="false" />
           </lines>
         </class>
-        <class name="BackEncordados.Export.Repository.ExportRepository" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Export/Repository/ExportRepository.cs" line-rate="0.6260869565217392" branch-rate="0.5454545454545454" complexity="25">
+        <class name="BackEncordados.Export.Repository.ExportRepository" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Export/Repository/ExportRepository.cs" line-rate="0.6" branch-rate="0.5454545454545454" complexity="26">
           <methods>
+            <method name="ClearChangeTrackers" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="363" hits="0" branch="false" />
+                <line number="364" hits="0" branch="false" />
+                <line number="365" hits="0" branch="false" />
+                <line number="366" hits="0" branch="false" />
+                <line number="367" hits="0" branch="false" />
+              </lines>
+            </method>
             <method name=".ctor" signature="(BackEncordados.Common.Database.Config.UserDbContext,BackEncordados.Common.Database.Config.MaterialsDbContext,BackEncordados.Common.Database.Config.PedidosDbContext,BackEncordados.Common.Database.Config.TalleresDbContext,Microsoft.Extensions.Logging.ILogger`1&lt;BackEncordados.Export.Repository.ExportRepository&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="53" hits="7" branch="false" />
@@ -6983,6 +6992,11 @@
             <line number="355" hits="1" branch="false" />
             <line number="358" hits="3" branch="false" />
             <line number="359" hits="3" branch="false" />
+            <line number="363" hits="0" branch="false" />
+            <line number="364" hits="0" branch="false" />
+            <line number="365" hits="0" branch="false" />
+            <line number="366" hits="0" branch="false" />
+            <line number="367" hits="0" branch="false" />
           </lines>
         </class>
         <class name="BackEncordados.Export.Service.ExportService" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Export/Service/ExportService.cs" line-rate="1" branch-rate="1" complexity="4">
@@ -7018,8 +7032,9 @@
                 <line number="138" hits="3" branch="false" />
                 <line number="139" hits="2" branch="false" />
                 <line number="140" hits="1" branch="false" />
-                <line number="142" hits="1" branch="false" />
+                <line number="141" hits="1" branch="false" />
                 <line number="143" hits="1" branch="false" />
+                <line number="144" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
@@ -7041,8 +7056,9 @@
             <line number="138" hits="3" branch="false" />
             <line number="139" hits="2" branch="false" />
             <line number="140" hits="1" branch="false" />
-            <line number="142" hits="1" branch="false" />
+            <line number="141" hits="1" branch="false" />
             <line number="143" hits="1" branch="false" />
+            <line number="144" hits="1" branch="false" />
           </lines>
         </class>
         <class name="BackEncordados.Infraestructure.AppConfig" filename="/home/runner/work/docker-enviroment/docker-enviroment/back-encordados/BackEncordados/Infraestructure/AppConfig.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -9287,7 +9303,7 @@
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="86" hits="85" branch="false" />
+                <line number="86" hits="87" branch="false" />
               </lines>
             </method>
             <method name="get_TournamentId" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -9297,12 +9313,12 @@
             </method>
             <method name="get_Marca" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="92" hits="418" branch="false" />
+                <line number="92" hits="419" branch="false" />
               </lines>
             </method>
             <method name="get_Modelo" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="95" hits="406" branch="false" />
+                <line number="95" hits="407" branch="false" />
               </lines>
             </method>
             <method name="get_Stock" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -9322,17 +9338,17 @@
             </method>
             <method name="get_CreatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="107" hits="218" branch="false" />
+                <line number="107" hits="219" branch="false" />
               </lines>
             </method>
             <method name="get_UpdatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="110" hits="218" branch="false" />
+                <line number="110" hits="219" branch="false" />
               </lines>
             </method>
             <method name="get_ImageUrl" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="113" hits="239" branch="false" />
+                <line number="113" hits="240" branch="false" />
               </lines>
             </method>
             <method name="get_CloudinaryPublicId" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -9347,16 +9363,16 @@
             </method>
           </methods>
           <lines>
-            <line number="86" hits="85" branch="false" />
+            <line number="86" hits="87" branch="false" />
             <line number="89" hits="130" branch="false" />
-            <line number="92" hits="418" branch="false" />
-            <line number="95" hits="406" branch="false" />
+            <line number="92" hits="419" branch="false" />
+            <line number="95" hits="407" branch="false" />
             <line number="98" hits="173" branch="false" />
             <line number="101" hits="171" branch="false" />
             <line number="104" hits="161" branch="false" />
-            <line number="107" hits="218" branch="false" />
-            <line number="110" hits="218" branch="false" />
-            <line number="113" hits="239" branch="false" />
+            <line number="107" hits="219" branch="false" />
+            <line number="110" hits="219" branch="false" />
+            <line number="113" hits="240" branch="false" />
             <line number="116" hits="15" branch="false" />
             <line number="119" hits="113" branch="false" />
           </lines>

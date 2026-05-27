@@ -113,8 +113,8 @@ var NAVTREEINDEX =
 "classTestEncordados_1_1Unit_1_1Validators_1_1Usuarios_1_1ChangeRoleRequestDtoValidatorTests.html#ae81649cc6e3f6e77a5e9b9052f608a6e",
 "dir_945bfff5f59af761eb6d05bf2183a732.html",
 "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#aac50e25eb73d15530d45466eb3828576",
-"materiales_8page_8html.html",
-"pedido-codes_8component_8ts_source.html"
+"material_8model_8ts.html",
+"pages.html"
 ];
 
 var SYNCONMSG = 'pulsar para deshabilitar sincronización';
