@@ -1,5 +1,6 @@
 var dir_ddf1162eec2c998148e2015b50ce76f8 =
 [
+    [ "change-password.page.html", "change-password_8page_8html.html", null ],
     [ "change-password.page.ts", "change-password_8page_8ts.html", null ],
     [ "contactos.page.html", "contactos_8page_8html.html", null ],
     [ "contactos.page.ts", "contactos_8page_8ts.html", null ],

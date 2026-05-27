@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"dir_94f90b41e0d9b037db0fec4739febd4e.html":[4,0,0,0,7,0,0],
+"dir_95202f85e878ee37fa39668575621ae1.html":[4,0,0,0,9,2],
 "dir_955219ee8a962f429cf459173620e477.html":[4,0,0,0,8,2],
 "dir_96654ec9772fda0e996016c003717efc.html":[4,0,0,0,3,0],
 "dir_9b6b4d0dcb9967ea2c265c3fe2d6baa0.html":[4,0,0,1,1,0],
@@ -179,10 +181,10 @@ var NAVTREEINDEX18 =
 "index_8html_source.html":[4,0,1,0,2],
 "index_8ts.html":[4,0,1,0,0,0,9,2],
 "index_8ts_source.html":[4,0,1,0,0,0,9,2],
-"informes_8page_8html.html":[4,0,1,0,0,4,5],
-"informes_8page_8html_source.html":[4,0,1,0,0,4,5],
-"informes_8page_8ts.html":[4,0,1,0,0,4,6],
-"informes_8page_8ts_source.html":[4,0,1,0,0,4,6],
+"informes_8page_8html.html":[4,0,1,0,0,4,6],
+"informes_8page_8html_source.html":[4,0,1,0,0,4,6],
+"informes_8page_8ts.html":[4,0,1,0,0,4,7],
+"informes_8page_8ts_source.html":[4,0,1,0,0,4,7],
 "interfaceBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1ITimestamped.html":[2,0,0,0,0,1,0],
 "interfaceBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1ITimestamped.html":[3,0,0,0,0,1,0],
 "interfaceBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1ITimestamped.html#a18616e0a8463335b5b9214e32affc059":[2,0,0,0,0,1,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#a0302e61ba8d53fc53bb5d26703034002":[2,0,0,1,3,0,0],
 "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#a1df85121d2c311bbedeb6183aa635bff":[3,0,0,1,2,0,3],
 "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#a1df85121d2c311bbedeb6183aa635bff":[2,0,0,1,3,0,3],
-"interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#aac50e25eb73d15530d45466eb3828576":[3,0,0,1,2,0,1],
-"interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#aac50e25eb73d15530d45466eb3828576":[2,0,0,1,3,0,1],
-"interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#ae5438c3765d0a36d4401c634e505f303":[3,0,0,1,2,0,2]
+"interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#aac50e25eb73d15530d45466eb3828576":[3,0,0,1,2,0,1]
 };
