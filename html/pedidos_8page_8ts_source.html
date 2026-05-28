@@ -479,7 +479,7 @@ $(document).ready(function(){initNavTree('pedidos_8page_8ts_source.html',''); in
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>      next: () =&gt; {</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        this.toast.success(</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>          nextStatus === &#39;lista&#39; ? &#39;Pedido completado&#39; : &#39;Pedido reactivado&#39;,</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>          `El pedido se movio a ${nextStatus === &#39;lista&#39; ? &#39;lista&#39; : &#39;proceso&#39;}`</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>          `El pedido se movió a ${nextStatus === &#39;lista&#39; ? &#39;lista&#39; : &#39;proceso&#39;}`</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>        );</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>      },</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>      error: () =&gt; {</div>
@@ -556,7 +556,7 @@ $(document).ready(function(){initNavTree('pedidos_8page_8ts_source.html',''); in
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>    const backendStatus = mapUiStatusToBackend(&#39;entregada&#39;);</div>
 <div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>    this.purchasedService.changeStatus(pedido.id, backendStatus).subscribe({</div>
 <div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>      next: () =&gt; {</div>
-<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>        this.toast.success(&#39;Pedido entregado&#39;, &#39;El pedido se marco como entregado.&#39;);</div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>        this.toast.success(&#39;Pedido entregado&#39;, &#39;El pedido se marcó como entregado.&#39;);</div>
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>        this.closeModal();</div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>        this.loadOrders();</div>
 <div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>      },</div>
@@ -611,7 +611,7 @@ $(document).ready(function(){initNavTree('pedidos_8page_8ts_source.html',''); in
 <div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>    const backendStatus = mapUiStatusToBackend(&#39;lista&#39;);</div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>    this.purchasedService.changeStatus(order.id, backendStatus).subscribe({</div>
 <div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>      next: () =&gt; {</div>
-<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>        this.toast.success(&#39;Pedido completado&#39;, &#39;El pedido se movio a lista de listos.&#39;);</div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>        this.toast.success(&#39;Pedido completado&#39;, &#39;El pedido se movió a lista de listos.&#39;);</div>
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>        this.loadOrders();</div>
 <div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>      },</div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>      error: () =&gt; {</div>
@@ -666,7 +666,7 @@ $(document).ready(function(){initNavTree('pedidos_8page_8ts_source.html',''); in
 <div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>    const request = this.toRepeatRequest(this.pedidoToRepeat);</div>
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>    this.purchasedService.create(request).subscribe({</div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>      next: (created) =&gt; {</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>        this.toast.success(&#39;Pedido repetido&#39;, `Se ha creado el pedido ${created.id} como repeticion.`);</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>        this.toast.success(&#39;Pedido repetido&#39;, `Se ha creado el pedido ${created.id} como repetición.`);</div>
 <div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>        this.closeRepeatModal();</div>
 <div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>        this.loadOrders();</div>
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>      },</div>
@@ -770,7 +770,7 @@ $(document).ready(function(){initNavTree('pedidos_8page_8ts_source.html',''); in
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_1e4c1e1ba784485a6f057d03bd8225e5.html">front-encordados</a></li><li class="navelem"><a class="el" href="dir_926dc43b74bd7bb2b391b76d673d57fb.html">src</a></li><li class="navelem"><a class="el" href="dir_bad3db17ab7eacd7fa6eff673f3b8e6b.html">app</a></li><li class="navelem"><a class="el" href="dir_ddf1162eec2c998148e2015b50ce76f8.html">pages</a></li><li class="navelem"><a class="el" href="pedidos_8page_8ts.html">pedidos.page.ts</a></li>
-    <li class="footer">Generado el Miércoles, 27 de mayo de 2026 22:26:08 para ETR doc por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Jueves, 28 de mayo de 2026 11:59:29 para ETR doc por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
