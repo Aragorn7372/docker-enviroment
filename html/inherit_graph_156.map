@@ -1,5 +1,5 @@
 <map id="Gráfico de jerarquía de clases" name="Gráfico de jerarquía de clases">
 <area shape="rect" id="Node000000" title=" " alt="" coords="5,13,128,38"/>
 <area shape="rect" id="Node000001" href="$classBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1UlidValueGenerator.html" title="Generador de valores para EF Core que crea nuevos identificadores Ulid para las propiedades de clave ..." alt="" coords="176,5,439,45"/>
-<area shape="poly" id="edge47_Node000000_Node000001" title=" " alt="" coords="142,23,176,23,176,28,142,28"/>
+<area shape="poly" id="edge50_Node000000_Node000001" title=" " alt="" coords="142,23,176,23,176,28,142,28"/>
 </map>

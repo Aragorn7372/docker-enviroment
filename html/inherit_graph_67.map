@@ -1,7 +1,7 @@
 <map id="Gráfico de jerarquía de clases" name="Gráfico de jerarquía de clases">
 <area shape="rect" id="Node000000" title=" " alt="" coords="5,56,128,81"/>
 <area shape="rect" id="Node000001" href="$classBackEncordados_1_1Migrations_1_1Materials_1_1MaterialsDbContextModelSnapshot.html" title=" " alt="" coords="176,5,433,60"/>
-<area shape="poly" id="edge39_Node000000_Node000001" title=" " alt="" coords="142,55,175,50,176,55,142,60"/>
+<area shape="poly" id="edge42_Node000000_Node000001" title=" " alt="" coords="142,55,175,50,176,55,142,60"/>
 <area shape="rect" id="Node000002" href="$classBackEncordados_1_1Migrations_1_1User_1_1UserDbContextModelSnapshot.html" title=" " alt="" coords="177,85,432,125"/>
-<area shape="poly" id="edge40_Node000000_Node000002" title=" " alt="" coords="142,77,177,83,177,88,142,83"/>
+<area shape="poly" id="edge43_Node000000_Node000002" title=" " alt="" coords="142,77,177,83,177,88,142,83"/>
 </map>

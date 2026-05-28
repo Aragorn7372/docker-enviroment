@@ -1,13 +1,23 @@
 var searchData=
 [
-  ['secondtestdbcontext_0',['SecondTestDbContext',['../classTestEncordados_1_1Unit_1_1Filters_1_1SecondTestDbContext.html',1,'TestEncordados::Unit::Filters']]],
-  ['serilogconfigtests_1',['SerilogConfigTests',['../classTestEncordados_1_1Unit_1_1Infrastructure_1_1SerilogConfigTests.html',1,'TestEncordados::Unit::Infrastructure']]],
-  ['signalhubtests_2',['SignalHubTests',['../classTestEncordados_1_1Unit_1_1Common_1_1SignalR_1_1SignalHubTests.html',1,'TestEncordados::Unit::Common::SignalR']]],
-  ['stringsetup_3',['StringSetup',['../classBackEncordados_1_1Purchased_1_1Model_1_1StringSetup.html',1,'BackEncordados::Purchased::Model']]],
-  ['stringsetupdto_4',['StringSetupDto',['../classBackEncordados_1_1Purchased_1_1Dto_1_1StringSetupDto.html',1,'BackEncordados::Purchased::Dto']]],
-  ['stringsetuppatchvalidator_5',['StringSetupPatchValidator',['../classBackEncordados_1_1Purchased_1_1Validator_1_1StringSetupPatchValidator.html',1,'BackEncordados::Purchased::Validator']]],
-  ['stringsetuppatchvalidatortests_6',['StringSetupPatchValidatorTests',['../classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1StringSetupPatchValidatorTests.html',1,'TestEncordados::Unit::Validators::Purchased']]],
-  ['stringsetuprequestvalidator_7',['StringSetupRequestValidator',['../classBackEncordados_1_1Purchased_1_1Validator_1_1StringSetupRequestValidator.html',1,'BackEncordados::Purchased::Validator']]],
-  ['stringsetuprequestvalidatortests_8',['StringSetupRequestValidatorTests',['../classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1StringSetupRequestValidatorTests.html',1,'TestEncordados::Unit::Validators::Purchased']]],
-  ['supervisorasignmentrequestdto_9',['SupervisorAsignmentRequestDto',['../classBackEncordados_1_1Talleres_1_1Dto_1_1SupervisorAsignmentRequestDto.html',1,'BackEncordados::Talleres::Dto']]]
+  ['pageresponsedtotests_0',['PageResponseDtoTests',['../classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PageResponseDtoTests.html',1,'TestEncordados::Unit::Common::Dto']]],
+  ['pedidolinea_1',['PedidoLinea',['../classBackEncordados_1_1Purchased_1_1Model_1_1PedidoLinea.html',1,'BackEncordados::Purchased::Model']]],
+  ['pedidolineapatchdto_2',['PedidoLineaPatchDto',['../classBackEncordados_1_1Purchased_1_1Dto_1_1PedidoLineaPatchDto.html',1,'BackEncordados::Purchased::Dto']]],
+  ['pedidolinearequestdto_3',['PedidoLineaRequestDto',['../classBackEncordados_1_1Purchased_1_1Dto_1_1PedidoLineaRequestDto.html',1,'BackEncordados::Purchased::Dto']]],
+  ['pedidolinearequestvalidator_4',['PedidoLineaRequestValidator',['../classBackEncordados_1_1Purchased_1_1Validator_1_1PedidoLineaRequestValidator.html',1,'BackEncordados::Purchased::Validator']]],
+  ['pedidolinearesponsedtotests_5',['PedidoLineaResponseDtoTests',['../classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PedidoLineaResponseDtoTests.html',1,'TestEncordados::Unit::Common::Dto']]],
+  ['pedidolineavalidatortests_6',['PedidoLineaValidatorTests',['../classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1PedidoLineaValidatorTests.html',1,'TestEncordados::Unit::Validators::Purchased']]],
+  ['pedidos_7',['Pedidos',['../classBackEncordados_1_1Purchased_1_1Model_1_1Pedidos.html',1,'BackEncordados::Purchased::Model']]],
+  ['postgresqltestbase_8',['PostgreSqlTestBase',['../classTestEncordados_1_1Integration_1_1Fixtures_1_1PostgreSqlTestBase.html',1,'TestEncordados::Integration::Fixtures']]],
+  ['purchasedcontrollertests_9',['PurchasedControllerTests',['../classTestEncordados_1_1Unit_1_1Controllers_1_1Purchased_1_1PurchasedControllerTests.html',1,'TestEncordados::Unit::Controllers::Purchased']]],
+  ['purchasederrorstests_10',['PurchasedErrorsTests',['../classTestEncordados_1_1Unit_1_1Errors_1_1PurchasedErrorsTests.html',1,'TestEncordados::Unit::Errors']]],
+  ['purchasedmappertests_11',['PurchasedMapperTests',['../classTestEncordados_1_1Unit_1_1Mappers_1_1PurchasedMapperTests.html',1,'TestEncordados::Unit::Mappers']]],
+  ['purchasedpatchvalidator_12',['PurchasedPatchValidator',['../classBackEncordados_1_1Purchased_1_1Validator_1_1PurchasedPatchValidator.html',1,'BackEncordados::Purchased::Validator']]],
+  ['purchasedpatchvalidatortests_13',['PurchasedPatchValidatorTests',['../classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1PurchasedPatchValidatorTests.html',1,'TestEncordados::Unit::Validators::Purchased']]],
+  ['purchasedrepositorytests_14',['PurchasedRepositoryTests',['../classTestEncordados_1_1Integration_1_1Repositories_1_1PurchasedRepositoryTests.html',1,'TestEncordados::Integration::Repositories']]],
+  ['purchasedrequestdto_15',['PurchasedRequestDto',['../classBackEncordados_1_1Purchased_1_1Dto_1_1PurchasedRequestDto.html',1,'BackEncordados::Purchased::Dto']]],
+  ['purchasedrequestvalidator_16',['PurchasedRequestValidator',['../classBackEncordados_1_1Purchased_1_1Validator_1_1PurchasedRequestValidator.html',1,'BackEncordados::Purchased::Validator']]],
+  ['purchasedrequestvalidatortests_17',['PurchasedRequestValidatorTests',['../classTestEncordados_1_1Unit_1_1Validators_1_1Purchased_1_1PurchasedRequestValidatorTests.html',1,'TestEncordados::Unit::Validators::Purchased']]],
+  ['purchasedresponsedtotests_18',['PurchasedResponseDtoTests',['../classTestEncordados_1_1Unit_1_1Common_1_1Dto_1_1PurchasedResponseDtoTests.html',1,'TestEncordados::Unit::Common::Dto']]],
+  ['purchasedservicetests_19',['PurchasedServiceTests',['../classTestEncordados_1_1Unit_1_1Services_1_1Purchased_1_1PurchasedServiceTests.html',1,'TestEncordados::Unit::Services::Purchased']]]
 ];

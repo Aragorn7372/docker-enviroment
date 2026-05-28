@@ -1,0 +1,4 @@
+var 20260528165532__AddUniqueIndexesMaterialsAndCuerdas_8Designer_8cs =
+[
+    [ "BackEncordados.Migrations.Materials.AddUniqueIndexesMaterialsAndCuerdas", "classBackEncordados_1_1Migrations_1_1Materials_1_1AddUniqueIndexesMaterialsAndCuerdas.html", "classBackEncordados_1_1Migrations_1_1Materials_1_1AddUniqueIndexesMaterialsAndCuerdas" ]
+];

@@ -345,7 +345,7 @@ var assemblies = [
       { "name": "BackEncordados.Export.Archive.ExportArchiveManager", "rp": "BackEncordados_ExportArchiveManager.html", "cl": 99, "ucl": 1, "cal": 100, "tl": 348, "cb": 33, "tb": 38, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Export.Controller.ExportController", "rp": "BackEncordados_ExportController.html", "cl": 35, "ucl": 2, "cal": 37, "tl": 223, "cb": 10, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Export.Dto.ExportDataDto", "rp": "BackEncordados_ExportDataDto.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 79, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "BackEncordados.Export.Repository.ExportRepository", "rp": "BackEncordados_ExportRepository.html", "cl": 72, "ucl": 40, "cal": 112, "tl": 356, "cb": 12, "tb": 22, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Export.Repository.ExportRepository", "rp": "BackEncordados_ExportRepository.html", "cl": 77, "ucl": 45, "cal": 122, "tl": 374, "cb": 13, "tb": 24, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Export.Service.ExportService", "rp": "BackEncordados_ExportService.html", "cl": 19, "ucl": 0, "cal": 19, "tl": 144, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.AppConfig", "rp": "BackEncordados_AppConfig.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 126, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.AppConfigExtensions", "rp": "BackEncordados_AppConfigExtensions.html", "cl": 21, "ucl": 2, "cal": 23, "tl": 163, "cb": 15, "tb": 18, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -399,6 +399,9 @@ var assemblies = [
       { "name": "BackEncordados.Materials.Validator.Strings.CuerdaRequestValidator", "rp": "BackEncordados_CuerdaRequestValidator.html", "cl": 21, "ucl": 0, "cal": 21, "tl": 51, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Middleware.GlobalExceptionHandler", "rp": "BackEncordados_GlobalExceptionHandler.html", "cl": 96, "ucl": 0, "cal": 96, "tl": 385, "cb": 16, "tb": 16, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Middleware.GlobalExceptionHandlerExtensions", "rp": "BackEncordados_GlobalExceptionHandlerExtensions.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 385, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Migrations.Materials.AddUniqueIndexesMaterialsAndCuerdas", "rp": "BackEncordados_AddUniqueIndexesMaterialsAndCuerdas.html", "cl": 0, "ucl": 394, "cal": 394, "tl": 441, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Migrations.Materials.DropUniqueIndexesMaterialsAndCuerdas", "rp": "BackEncordados_DropUniqueIndexesMaterialsAndCuerdas.html", "cl": 0, "ucl": 384, "cal": 384, "tl": 432, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Migrations.Materials.FixIdentitySequences", "rp": "BackEncordados_FixIdentitySequences.html", "cl": 0, "ucl": 420, "cal": 420, "tl": 468, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Migrations.Materials.InitialCreate", "rp": "BackEncordados_InitialCreate.html", "cl": 0, "ucl": 448, "cal": 448, "tl": 501, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Migrations.Materials.MaterialsDbContextModelSnapshot", "rp": "BackEncordados_MaterialsDbContextModelSnapshot.html", "cl": 0, "ucl": 368, "cal": 368, "tl": 392, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Migrations.User.InitialCreate", "rp": "BackEncordados_InitialCreate.2.html", "cl": 0, "ucl": 315, "cal": 315, "tl": 368, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -544,7 +547,7 @@ var riskHotspots = [
   {
     "assembly": "BackEncordados", "class": "BackEncordados.Export.Repository.ExportRepository", "reportPath": "BackEncordados_ExportRepository.html", "methodName": "ImportDataAsync()", "methodShortName": "ImportDataAsync()", "fileIndex": 0, "line": 289,
     "metrics": [
-      { "value": 65, "exceeded": true },
+      { "value": 61, "exceeded": true },
       { "value": 18, "exceeded": true },
     ]},
   {

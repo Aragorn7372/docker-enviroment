@@ -1,0 +1,4 @@
+var 20260528234737__DropUniqueIndexesMaterialsAndCuerdas_8cs =
+[
+    [ "BackEncordados.Migrations.Materials.DropUniqueIndexesMaterialsAndCuerdas", "classBackEncordados_1_1Migrations_1_1Materials_1_1DropUniqueIndexesMaterialsAndCuerdas.html", "classBackEncordados_1_1Migrations_1_1Materials_1_1DropUniqueIndexesMaterialsAndCuerdas" ]
+];

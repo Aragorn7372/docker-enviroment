@@ -154,6 +154,9 @@ var hierarchy =
     [ "TestEncordados.Unit.Common.Service.Cache.MemoryCacheServiceTests", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Cache_1_1MemoryCacheServiceTests.html", null ],
     [ "TestEncordados.Unit.Common.Service.Email.MemoryEmailServiceTests", "classTestEncordados_1_1Unit_1_1Common_1_1Service_1_1Email_1_1MemoryEmailServiceTests.html", null ],
     [ "Migration", null, [
+      [ "BackEncordados.Migrations.Materials.AddUniqueIndexesMaterialsAndCuerdas", "classBackEncordados_1_1Migrations_1_1Materials_1_1AddUniqueIndexesMaterialsAndCuerdas.html", null ],
+      [ "BackEncordados.Migrations.Materials.DropUniqueIndexesMaterialsAndCuerdas", "classBackEncordados_1_1Migrations_1_1Materials_1_1DropUniqueIndexesMaterialsAndCuerdas.html", null ],
+      [ "BackEncordados.Migrations.Materials.FixIdentitySequences", "classBackEncordados_1_1Migrations_1_1Materials_1_1FixIdentitySequences.html", null ],
       [ "BackEncordados.Migrations.Materials.InitialCreate", "classBackEncordados_1_1Migrations_1_1Materials_1_1InitialCreate.html", null ],
       [ "BackEncordados.Migrations.User.InitialCreate", "classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html", null ]
     ] ],
