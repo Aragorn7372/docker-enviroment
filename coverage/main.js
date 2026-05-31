@@ -486,7 +486,7 @@ var assemblies = [
       { "name": "BackEncordados.Usuarios.Service.Auth.AuthService", "rp": "BackEncordados_AuthService.html", "cl": 110, "ucl": 2, "cal": 112, "tl": 303, "cb": 18, "tb": 20, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Service.Auth.JwtService", "rp": "BackEncordados_JwtService.html", "cl": 55, "ucl": 0, "cal": 55, "tl": 155, "cb": 8, "tb": 14, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Service.Auth.JwtTokenExtractor", "rp": "BackEncordados_JwtTokenExtractor.html", "cl": 70, "ucl": 39, "cal": 109, "tl": 341, "cb": 44, "tb": 70, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "BackEncordados.Usuarios.Service.CrudService.UserService", "rp": "BackEncordados_UserService.html", "cl": 102, "ucl": 8, "cal": 110, "tl": 338, "cb": 35, "tb": 46, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Usuarios.Service.CrudService.UserService", "rp": "BackEncordados_UserService.html", "cl": 105, "ucl": 10, "cal": 115, "tl": 344, "cb": 38, "tb": 52, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Validator.ChangeRoleRequestDtoValidator", "rp": "BackEncordados_ChangeRoleRequestDtoValidator.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 36, "cb": 2, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Usuarios.Validator.UserRequestDtoValidator", "rp": "BackEncordados_UserRequestDtoValidator.html", "cl": 11, "ucl": 0, "cal": 11, "tl": 57, "cb": 2, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Microsoft.AspNetCore.OpenApi.Generated", "rp": "BackEncordados_Generated.html", "cl": 0, "ucl": 210, "cal": 210, "tl": 592, "cb": 0, "tb": 206, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -674,7 +674,7 @@ var riskHotspots = [
       { "value": 20, "exceeded": true },
     ]},
   {
-    "assembly": "BackEncordados", "class": "BackEncordados.Usuarios.Service.CrudService.UserService", "reportPath": "BackEncordados_UserService.html", "methodName": "PatchUserAsync()", "methodShortName": "PatchUserAsync()", "fileIndex": 0, "line": 197,
+    "assembly": "BackEncordados", "class": "BackEncordados.Usuarios.Service.CrudService.UserService", "reportPath": "BackEncordados_UserService.html", "methodName": "PatchUserAsync()", "methodShortName": "PatchUserAsync()", "fileIndex": 0, "line": 201,
     "metrics": [
       { "value": 28, "exceeded": false },
       { "value": 20, "exceeded": true },
