@@ -115,6 +115,10 @@ var hierarchy =
     [ "BackEncordados.Usuarios.Service.Auth.IJwtTokenExtractor", "interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtTokenExtractor.html", [
       [ "BackEncordados.Usuarios.Service.Auth.JwtTokenExtractor", "classBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1JwtTokenExtractor.html", null ]
     ] ],
+    [ "BackEncordados.Excel.Repository.IMaterialsExcelRepository", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IMaterialsExcelRepository.html", null ],
+    [ "BackEncordados.Export.Repository.IMaterialsExportRepository", "interfaceBackEncordados_1_1Export_1_1Repository_1_1IMaterialsExportRepository.html", null ],
+    [ "BackEncordados.Excel.Repository.IPedidosExcelRepository", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IPedidosExcelRepository.html", null ],
+    [ "BackEncordados.Export.Repository.IPedidosExportRepository", "interfaceBackEncordados_1_1Export_1_1Repository_1_1IPedidosExportRepository.html", null ],
     [ "BackEncordados.Materials.Repository.IProductsRepository< T, F >", "interfaceBackEncordados_1_1Materials_1_1Repository_1_1IProductsRepository.html", null ],
     [ "BackEncordados.Materials.Repository.IProductsRepository< Cuerdas, CuerdaFilterdto >", "interfaceBackEncordados_1_1Materials_1_1Repository_1_1IProductsRepository.html", [
       [ "BackEncordados.Materials.Repository.Strings.ICuerdasRepository", "interfaceBackEncordados_1_1Materials_1_1Repository_1_1Strings_1_1ICuerdasRepository.html", null ]
@@ -125,6 +129,8 @@ var hierarchy =
     [ "IRouteConstraint", null, [
       [ "BackEncordados.Infraestructure.Constraints.UlidRouteConstraint", "classBackEncordados_1_1Infraestructure_1_1Constraints_1_1UlidRouteConstraint.html", null ]
     ] ],
+    [ "BackEncordados.Excel.Repository.ITalleresExcelRepository", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1ITalleresExcelRepository.html", null ],
+    [ "BackEncordados.Export.Repository.ITalleresExportRepository", "interfaceBackEncordados_1_1Export_1_1Repository_1_1ITalleresExportRepository.html", null ],
     [ "BackEncordados.Common.Database.Helpers.ITimestamped", "interfaceBackEncordados_1_1Common_1_1Database_1_1Helpers_1_1ITimestamped.html", [
       [ "BackEncordados.Materials.Model.Cuerdas", "classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html", null ],
       [ "BackEncordados.Materials.Model.Material", "classBackEncordados_1_1Materials_1_1Model_1_1Material.html", null ],
@@ -134,6 +140,8 @@ var hierarchy =
     ] ],
     [ "BackEncordados.Talleres.Repository.ITournamentRepository", "interfaceBackEncordados_1_1Talleres_1_1Repository_1_1ITournamentRepository.html", null ],
     [ "BackEncordados.Talleres.Service.ITournamentService", "interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html", null ],
+    [ "BackEncordados.Excel.Repository.IUserExcelRepository", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IUserExcelRepository.html", null ],
+    [ "BackEncordados.Export.Repository.IUserExportRepository", "interfaceBackEncordados_1_1Export_1_1Repository_1_1IUserExportRepository.html", null ],
     [ "BackEncordados.Usuarios.Repository.IUserRepository", "interfaceBackEncordados_1_1Usuarios_1_1Repository_1_1IUserRepository.html", null ],
     [ "BackEncordados.Usuarios.Service.CrudService.IUserService", "interfaceBackEncordados_1_1Usuarios_1_1Service_1_1CrudService_1_1IUserService.html", null ],
     [ "BackEncordados.Common.Service.WhatsApp.IWhatsAppService", "interfaceBackEncordados_1_1Common_1_1Service_1_1WhatsApp_1_1IWhatsAppService.html", [

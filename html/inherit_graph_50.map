@@ -1,3 +1,3 @@
 <map id="Gráfico de jerarquía de clases" name="Gráfico de jerarquía de clases">
-<area shape="rect" id="Node000000" href="$interfaceBackEncordados_1_1Talleres_1_1Service_1_1ITournamentService.html" title="Interfaz del servicio de torneos que define las operaciones de negocio sobre la entidad Tournaments." alt="" coords="5,5,208,45"/>
+<area shape="rect" id="Node000000" href="$interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html" title="Defines data&#45;access contracts for the Purchased (pedidos) aggregate, covering both top&#45;level order op..." alt="" coords="5,5,236,45"/>
 </map>

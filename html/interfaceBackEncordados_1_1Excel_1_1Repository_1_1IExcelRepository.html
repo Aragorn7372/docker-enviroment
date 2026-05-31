@@ -97,93 +97,40 @@ $(document).ready(function(){initNavTree('interfaceBackEncordados_1_1Excel_1_1Re
   <div class="headertitle"><div class="title">Referencia de la interface BackEncordados.Excel.Repository.IExcelRepository</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Contrato del repositorio para la obtención de datos de torneos con destino a exportación e importación en formato Excel.  
- <a href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#details">Más...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
-<tr class="memitem:aac50e25eb73d15530d45466eb3828576" id="r_aac50e25eb73d15530d45466eb3828576"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="classBackEncordados_1_1Excel_1_1Dto_1_1TournamentExcelRowDto.html">TournamentExcelRowDto</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#aac50e25eb73d15530d45466eb3828576">GetTournamentDataAsync</a> (Ulid tournamentId)</td></tr>
-<tr class="memdesc:aac50e25eb73d15530d45466eb3828576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el resumen simple de un torneo agrupando pedidos por jugador.  <br /></td></tr>
-<tr class="separator:aac50e25eb73d15530d45466eb3828576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f556858a738543b1b7f24c960d6312" id="r_a65f556858a738543b1b7f24c960d6312"><td class="memItemLeft" align="right" valign="top">Task&lt; List&lt; <a class="el" href="classBackEncordados_1_1Purchased_1_1Model_1_1Pedidos.html">Pedidos</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#a65f556858a738543b1b7f24c960d6312">GetPedidosByTournamentAsync</a> (Ulid tournamentId)</td></tr>
+<tr class="separator:a65f556858a738543b1b7f24c960d6312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22e777ec00093ad499884abfc47a4bb3" id="r_a22e777ec00093ad499884abfc47a4bb3"><td class="memItemLeft" align="right" valign="top">Task&lt; Dictionary&lt; Ulid,(string Username, string Name)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#a22e777ec00093ad499884abfc47a4bb3">GetUsersByIdsAsync</a> (List&lt; Ulid &gt; ids)</td></tr>
+<tr class="separator:a22e777ec00093ad499884abfc47a4bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a7f831d21ffb63a8b89281787be2ac7" id="r_a9a7f831d21ffb63a8b89281787be2ac7"><td class="memItemLeft" align="right" valign="top">Task&lt; List&lt; <a class="el" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#a9a7f831d21ffb63a8b89281787be2ac7">GetUsersByTournamentAsync</a> (Ulid tournamentId)</td></tr>
+<tr class="separator:a9a7f831d21ffb63a8b89281787be2ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73444bd49e479eb2f9a6724345e8b570" id="r_a73444bd49e479eb2f9a6724345e8b570"><td class="memItemLeft" align="right" valign="top">Task&lt; List&lt; <a class="el" href="classBackEncordados_1_1Materials_1_1Model_1_1Material.html">Material</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#a73444bd49e479eb2f9a6724345e8b570">GetMaterialsByTournamentAsync</a> (Ulid tournamentId)</td></tr>
+<tr class="separator:a73444bd49e479eb2f9a6724345e8b570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4791548d40af4a6b593384ab0ecca705" id="r_a4791548d40af4a6b593384ab0ecca705"><td class="memItemLeft" align="right" valign="top">Task&lt; List&lt; <a class="el" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html">Cuerdas</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#a4791548d40af4a6b593384ab0ecca705">GetCuerdasByTournamentAsync</a> (Ulid tournamentId)</td></tr>
+<tr class="separator:a4791548d40af4a6b593384ab0ecca705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d9b46929635a19f5eebace88d8bee77" id="r_a5d9b46929635a19f5eebace88d8bee77"><td class="memItemLeft" align="right" valign="top">Task&lt; Tournaments?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#a5d9b46929635a19f5eebace88d8bee77">GetTournamentByIdAsync</a> (Ulid tournamentId)</td></tr>
+<tr class="separator:a5d9b46929635a19f5eebace88d8bee77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f4f3143d971cdb334b1a40b3c4eca9f" id="r_a2f4f3143d971cdb334b1a40b3c4eca9f"><td class="memItemLeft" align="right" valign="top">Task&lt; List&lt; <a class="el" href="classBackEncordados_1_1Purchased_1_1Model_1_1PedidoLinea.html">PedidoLinea</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#a2f4f3143d971cdb334b1a40b3c4eca9f">GetPedidoLineasByPedidoIdsAsync</a> (List&lt; Ulid &gt; pedidoIds)</td></tr>
+<tr class="separator:a2f4f3143d971cdb334b1a40b3c4eca9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1df85121d2c311bbedeb6183aa635bff" id="r_a1df85121d2c311bbedeb6183aa635bff"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#a1df85121d2c311bbedeb6183aa635bff">IsUserSupervisorOfTournamentAsync</a> (Ulid userId, Ulid tournamentId)</td></tr>
-<tr class="memdesc:a1df85121d2c311bbedeb6183aa635bff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si un usuario está en la lista de supervisores de un torneo.  <br /></td></tr>
 <tr class="separator:a1df85121d2c311bbedeb6183aa635bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5438c3765d0a36d4401c634e505f303" id="r_ae5438c3765d0a36d4401c634e505f303"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#ae5438c3765d0a36d4401c634e505f303">IsUserOwnerOfTournamentAsync</a> (Ulid userId, Ulid tournamentId)</td></tr>
-<tr class="memdesc:ae5438c3765d0a36d4401c634e505f303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si un usuario es el propietario de un torneo.  <br /></td></tr>
 <tr class="separator:ae5438c3765d0a36d4401c634e505f303"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0302e61ba8d53fc53bb5d26703034002" id="r_a0302e61ba8d53fc53bb5d26703034002"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedDataDto.html">ExcelAdvancedDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html#a0302e61ba8d53fc53bb5d26703034002">GetAdvancedDataAsync</a> (Ulid tournamentId, List&lt; string &gt; types)</td></tr>
-<tr class="memdesc:a0302e61ba8d53fc53bb5d26703034002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene datos multi-hoja de un torneo para exportación avanzada.  <br /></td></tr>
-<tr class="separator:a0302e61ba8d53fc53bb5d26703034002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p>Contrato del repositorio para la obtención de datos de torneos con destino a exportación e importación en formato Excel. </p>
-<p>Agrupa consultas a los cuatro DbContexts de la aplicación (<code>PedidosDbContext</code>, <code>UserDbContext</code>, <code>TalleresDbContext</code>, <code>MaterialsDbContext</code>) bajo una sola interfaz. Esto facilita el testeo unitario mediante mocking y centraliza la lógica de acceso a datos para los servicios IExcelService.</p>
-<p><b>Métodos del contrato:</b></p>
-<table class="doxtable">
-<tr>
-<th>Método </th><th>Retorno </th><th>Propósito  </th></tr>
-<tr>
-<td><code>GetTournamentDataAsync</code> </td><td><code>IEnumerable&lt;TournamentExcelRowDto&gt;</code> </td><td>Resumen simple del torneo: agrupa pedidos por jugador con conteo de raquetas y suma de precios.  </td></tr>
-<tr>
-<td><code>IsUserSupervisorOfTournamentAsync</code> </td><td><code>bool</code> </td><td>Verifica si un usuario está en la lista de supervisores del torneo.  </td></tr>
-<tr>
-<td><code>IsUserOwnerOfTournamentAsync</code> </td><td><code>bool</code> </td><td>Verifica si un usuario es el propietario del torneo.  </td></tr>
-<tr>
-<td><code>GetAdvancedDataAsync</code> </td><td><code>ExcelAdvancedDataDto</code> </td><td>Exportación multi-hoja filtrada por lista de tipos de datos.  </td></tr>
-</table>
-<p>Todos los métodos lanzan <code>KeyNotFoundException</code> si el tournamentId no existe (excepto <code>IsUserSupervisorOfTournamentAsync</code> y <code>IsUserOwnerOfTournamentAsync</code> que retornan <code>false</code> ante torneo inexistente).</p>
-
-<p class="definition">Definición en la línea <a class="el" href="IExcelRepository_8cs_source.html#l00047">47</a> del archivo <a class="el" href="IExcelRepository_8cs_source.html">IExcelRepository.cs</a>.</p>
+<div class="textblock">
+<p class="definition">Definición en la línea <a class="el" href="IExcelRepository_8cs_source.html#l00008">8</a> del archivo <a class="el" href="IExcelRepository_8cs_source.html">IExcelRepository.cs</a>.</p>
 </div><h2 class="groupheader">Documentación de funciones miembro</h2>
-<a id="a0302e61ba8d53fc53bb5d26703034002" name="a0302e61ba8d53fc53bb5d26703034002"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0302e61ba8d53fc53bb5d26703034002">&#9670;&#160;</a></span>GetAdvancedDataAsync()</h2>
+<a id="a4791548d40af4a6b593384ab0ecca705" name="a4791548d40af4a6b593384ab0ecca705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4791548d40af4a6b593384ab0ecca705">&#9670;&#160;</a></span>GetCuerdasByTournamentAsync()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt; <a class="el" href="classBackEncordados_1_1Excel_1_1Dto_1_1ExcelAdvancedDataDto.html">ExcelAdvancedDataDto</a> &gt; BackEncordados.Excel.Repository.IExcelRepository.GetAdvancedDataAsync </td>
-          <td>(</td>
-          <td class="paramtype">Ulid&#160;</td>
-          <td class="paramname"><em>tournamentId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">List&lt; string &gt;&#160;</td>
-          <td class="paramname"><em>types</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Obtiene datos multi-hoja de un torneo para exportación avanzada. </p>
-<p>Consulta los módulos especificados en <em>types</em>  y popula únicamente las listas correspondientes en el DTO de retorno. Los módulos no solicitados quedan como listas vacías.</p>
-<p>Usa <code>AsNoTracking()</code> en todas las consultas por ser de solo lectura.</p>
-<dl class="params"><dt>Parámetros</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">tournamentId</td><td>ID del torneo (ULID).</td></tr>
-    <tr><td class="paramname">types</td><td>Lista de tipos de datos a incluir. Valores válidos: "users", "materials", "cuerdas", "tournament", "pedidos".</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Devuelve</dt><dd>DTO con los datos solicitados agrupados por módulo.</dd></dl>
-
-</div>
-</div>
-<a id="aac50e25eb73d15530d45466eb3828576" name="aac50e25eb73d15530d45466eb3828576"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac50e25eb73d15530d45466eb3828576">&#9670;&#160;</a></span>GetTournamentDataAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Task&lt; IEnumerable&lt; <a class="el" href="classBackEncordados_1_1Excel_1_1Dto_1_1TournamentExcelRowDto.html">TournamentExcelRowDto</a> &gt; &gt; BackEncordados.Excel.Repository.IExcelRepository.GetTournamentDataAsync </td>
+          <td class="memname">Task&lt; List&lt; <a class="el" href="classBackEncordados_1_1Materials_1_1Model_1_1Cuerdas.html">Cuerdas</a> &gt; &gt; BackEncordados.Excel.Repository.IExcelRepository.GetCuerdasByTournamentAsync </td>
           <td>(</td>
           <td class="paramtype">Ulid&#160;</td>
           <td class="paramname"><em>tournamentId</em></td><td>)</td>
@@ -192,16 +139,113 @@ Métodos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Obtiene el resumen simple de un torneo agrupando pedidos por jugador. </p>
-<p>Cada fila del resultado (TournamentExcelRowDto) contiene el nombre de usuario, nombre completo, cantidad de raquetas encordadas y el precio total acumulado.</p>
-<p>Si no hay pedidos para el torneo, retorna una colección vacía.</p>
-<dl class="params"><dt>Parámetros</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">tournamentId</td><td>ID del torneo a consultar (ULID).</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Devuelve</dt><dd>Colección de filas con resumen por jugador, ordenadas por nombre de usuario.</dd></dl>
+</div>
+</div>
+<a id="a73444bd49e479eb2f9a6724345e8b570" name="a73444bd49e479eb2f9a6724345e8b570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73444bd49e479eb2f9a6724345e8b570">&#9670;&#160;</a></span>GetMaterialsByTournamentAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; List&lt; <a class="el" href="classBackEncordados_1_1Materials_1_1Model_1_1Material.html">Material</a> &gt; &gt; BackEncordados.Excel.Repository.IExcelRepository.GetMaterialsByTournamentAsync </td>
+          <td>(</td>
+          <td class="paramtype">Ulid&#160;</td>
+          <td class="paramname"><em>tournamentId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f4f3143d971cdb334b1a40b3c4eca9f" name="a2f4f3143d971cdb334b1a40b3c4eca9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f4f3143d971cdb334b1a40b3c4eca9f">&#9670;&#160;</a></span>GetPedidoLineasByPedidoIdsAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; List&lt; <a class="el" href="classBackEncordados_1_1Purchased_1_1Model_1_1PedidoLinea.html">PedidoLinea</a> &gt; &gt; BackEncordados.Excel.Repository.IExcelRepository.GetPedidoLineasByPedidoIdsAsync </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; Ulid &gt;&#160;</td>
+          <td class="paramname"><em>pedidoIds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65f556858a738543b1b7f24c960d6312" name="a65f556858a738543b1b7f24c960d6312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f556858a738543b1b7f24c960d6312">&#9670;&#160;</a></span>GetPedidosByTournamentAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; List&lt; <a class="el" href="classBackEncordados_1_1Purchased_1_1Model_1_1Pedidos.html">Pedidos</a> &gt; &gt; BackEncordados.Excel.Repository.IExcelRepository.GetPedidosByTournamentAsync </td>
+          <td>(</td>
+          <td class="paramtype">Ulid&#160;</td>
+          <td class="paramname"><em>tournamentId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d9b46929635a19f5eebace88d8bee77" name="a5d9b46929635a19f5eebace88d8bee77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d9b46929635a19f5eebace88d8bee77">&#9670;&#160;</a></span>GetTournamentByIdAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; Tournaments?&gt; BackEncordados.Excel.Repository.IExcelRepository.GetTournamentByIdAsync </td>
+          <td>(</td>
+          <td class="paramtype">Ulid&#160;</td>
+          <td class="paramname"><em>tournamentId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22e777ec00093ad499884abfc47a4bb3" name="a22e777ec00093ad499884abfc47a4bb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22e777ec00093ad499884abfc47a4bb3">&#9670;&#160;</a></span>GetUsersByIdsAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; Dictionary&lt; Ulid,(string Username, string Name)&gt; &gt; BackEncordados.Excel.Repository.IExcelRepository.GetUsersByIdsAsync </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; Ulid &gt;&#160;</td>
+          <td class="paramname"><em>ids</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a7f831d21ffb63a8b89281787be2ac7" name="a9a7f831d21ffb63a8b89281787be2ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a7f831d21ffb63a8b89281787be2ac7">&#9670;&#160;</a></span>GetUsersByTournamentAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; List&lt; <a class="el" href="classBackEncordados_1_1Usuarios_1_1Model_1_1User.html">User</a> &gt; &gt; BackEncordados.Excel.Repository.IExcelRepository.GetUsersByTournamentAsync </td>
+          <td>(</td>
+          <td class="paramtype">Ulid&#160;</td>
+          <td class="paramname"><em>tournamentId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -231,18 +275,6 @@ Métodos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Verifica si un usuario es el propietario de un torneo. </p>
-<p>Compara <em>userId</em>  con <code>Owner</code> del torneo.</p>
-<p>Si el torneo no existe, retorna <code>false</code> en lugar de lanzar excepción.</p>
-<dl class="params"><dt>Parámetros</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">userId</td><td>ID del usuario a verificar (ULID).</td></tr>
-    <tr><td class="paramname">tournamentId</td><td>ID del torneo (ULID).</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Devuelve</dt><dd><code>true</code> si el usuario es el propietario; <code>false</code> en caso contrario.</dd></dl>
-
 </div>
 </div>
 <a id="a1df85121d2c311bbedeb6183aa635bff" name="a1df85121d2c311bbedeb6183aa635bff"></a>
@@ -271,18 +303,6 @@ Métodos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Verifica si un usuario está en la lista de supervisores de un torneo. </p>
-<p>Busca el torneo por ID y luego verifica si <em>userId</em>  está presente en <code>SupervisorList</code> (búsqueda lineal O(n)).</p>
-<p>Si el torneo no existe, retorna <code>false</code> en lugar de lanzar excepción.</p>
-<dl class="params"><dt>Parámetros</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">userId</td><td>ID del usuario a verificar (ULID).</td></tr>
-    <tr><td class="paramname">tournamentId</td><td>ID del torneo (ULID).</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Devuelve</dt><dd><code>true</code> si el usuario es supervisor del torneo; <code>false</code> en caso contrario.</dd></dl>
-
 </div>
 </div>
 <hr/>La documentación de esta interface está generada del siguiente archivo:<ul>
@@ -294,7 +314,7 @@ Métodos públicos</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceBackEncordados.html">BackEncordados</a></li><li class="navelem"><a class="el" href="namespaceBackEncordados_1_1Excel.html">Excel</a></li><li class="navelem"><a class="el" href="namespaceBackEncordados_1_1Excel_1_1Repository.html">Repository</a></li><li class="navelem"><a class="el" href="interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html">IExcelRepository</a></li>
-    <li class="footer">Generado el Viernes, 29 de mayo de 2026 07:20:53 para ETR doc por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generado el Domingo, 31 de mayo de 2026 12:34:27 para ETR doc por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

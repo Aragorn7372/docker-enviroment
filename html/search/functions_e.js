@@ -38,6 +38,7 @@ var searchData=
   ['responsebody_5fargumentexception_5fhascorrecterrortype_35',['ResponseBody_ArgumentException_HasCorrectErrorType',['../classTestEncordados_1_1Unit_1_1Infrastructure_1_1GlobalExceptionHandlerTests.html#ae500b4ae92f0008fed0b950ec4328ef4',1,'TestEncordados::Unit::Infrastructure::GlobalExceptionHandlerTests']]],
   ['responsebody_5fhasrequiredfields_36',['ResponseBody_HasRequiredFields',['../classTestEncordados_1_1Unit_1_1Infrastructure_1_1GlobalExceptionHandlerTests.html#af6b08a2b37be4728dbf0c249180b066c',1,'TestEncordados::Unit::Infrastructure::GlobalExceptionHandlerTests']]],
   ['responsebody_5funauthorized_5fhascorrecterrortype_37',['ResponseBody_Unauthorized_HasCorrectErrorType',['../classTestEncordados_1_1Unit_1_1Infrastructure_1_1GlobalExceptionHandlerTests.html#a9b33848129bc2c4a428493f238a5e03e',1,'TestEncordados::Unit::Infrastructure::GlobalExceptionHandlerTests']]],
-  ['roundtrip_5fcreatethenextract_5fproducessamedata_38',['Roundtrip_CreateThenExtract_ProducesSameData',['../classTestEncordados_1_1Integration_1_1Export_1_1Archive_1_1ExportArchiveManagerTests.html#a1b8917e4b2bf18f391991437a565bb89',1,'TestEncordados::Integration::Export::Archive::ExportArchiveManagerTests']]],
-  ['run_39',['Run',['../Program_8cs.html#aaa3dbf02e269c3ef7e8546d290c6b3dd',1,'Program.cs']]]
+  ['resyncsequencesasync_38',['ResyncSequencesAsync',['../interfaceBackEncordados_1_1Export_1_1Repository_1_1IMaterialsExportRepository.html#a8932aa965aa3eb5f6d4242e604082084',1,'BackEncordados::Export::Repository::IMaterialsExportRepository']]],
+  ['roundtrip_5fcreatethenextract_5fproducessamedata_39',['Roundtrip_CreateThenExtract_ProducesSameData',['../classTestEncordados_1_1Integration_1_1Export_1_1Archive_1_1ExportArchiveManagerTests.html#a1b8917e4b2bf18f391991437a565bb89',1,'TestEncordados::Integration::Export::Archive::ExportArchiveManagerTests']]],
+  ['run_40',['Run',['../Program_8cs.html#aaa3dbf02e269c3ef7e8546d290c6b3dd',1,'Program.cs']]]
 ];

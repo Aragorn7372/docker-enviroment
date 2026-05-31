@@ -26,11 +26,13 @@ var searchData=
   ['materialsdbcontext_2ecs_23',['MaterialsDbContext.cs',['../MaterialsDbContext_8cs.html',1,'']]],
   ['materialsdbcontextfactory_2ecs_24',['MaterialsDbContextFactory.cs',['../MaterialsDbContextFactory_8cs.html',1,'']]],
   ['materialsdbcontextmodelsnapshot_2ecs_25',['MaterialsDbContextModelSnapshot.cs',['../MaterialsDbContextModelSnapshot_8cs.html',1,'']]],
-  ['materialsrepository_2ecs_26',['MaterialsRepository.cs',['../MaterialsRepository_8cs.html',1,'']]],
-  ['materialsrepositorytests_2ecs_27',['MaterialsRepositoryTests.cs',['../MaterialsRepositoryTests_8cs.html',1,'']]],
-  ['materialsservice_2ecs_28',['MaterialsService.cs',['../MaterialsService_8cs.html',1,'']]],
-  ['materialsservicetests_2ecs_29',['MaterialsServiceTests.cs',['../MaterialsServiceTests_8cs.html',1,'']]],
-  ['materialtype_2ecs_30',['MaterialType.cs',['../MaterialType_8cs.html',1,'']]],
-  ['memorycacheservice_2ecs_31',['MemoryCacheService.cs',['../MemoryCacheService_8cs.html',1,'']]],
-  ['memoryemailservice_2ecs_32',['MemoryEmailService.cs',['../MemoryEmailService_8cs.html',1,'']]]
+  ['materialsexcelrepository_2ecs_26',['MaterialsExcelRepository.cs',['../MaterialsExcelRepository_8cs.html',1,'']]],
+  ['materialsexportrepository_2ecs_27',['MaterialsExportRepository.cs',['../MaterialsExportRepository_8cs.html',1,'']]],
+  ['materialsrepository_2ecs_28',['MaterialsRepository.cs',['../MaterialsRepository_8cs.html',1,'']]],
+  ['materialsrepositorytests_2ecs_29',['MaterialsRepositoryTests.cs',['../MaterialsRepositoryTests_8cs.html',1,'']]],
+  ['materialsservice_2ecs_30',['MaterialsService.cs',['../MaterialsService_8cs.html',1,'']]],
+  ['materialsservicetests_2ecs_31',['MaterialsServiceTests.cs',['../MaterialsServiceTests_8cs.html',1,'']]],
+  ['materialtype_2ecs_32',['MaterialType.cs',['../MaterialType_8cs.html',1,'']]],
+  ['memorycacheservice_2ecs_33',['MemoryCacheService.cs',['../MemoryCacheService_8cs.html',1,'']]],
+  ['memoryemailservice_2ecs_34',['MemoryEmailService.cs',['../MemoryEmailService_8cs.html',1,'']]]
 ];

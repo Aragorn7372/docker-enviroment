@@ -51,12 +51,13 @@ var searchData=
   ['responsebody_5fargumentexception_5fhascorrecterrortype_48',['ResponseBody_ArgumentException_HasCorrectErrorType',['../classTestEncordados_1_1Unit_1_1Infrastructure_1_1GlobalExceptionHandlerTests.html#ae500b4ae92f0008fed0b950ec4328ef4',1,'TestEncordados::Unit::Infrastructure::GlobalExceptionHandlerTests']]],
   ['responsebody_5fhasrequiredfields_49',['ResponseBody_HasRequiredFields',['../classTestEncordados_1_1Unit_1_1Infrastructure_1_1GlobalExceptionHandlerTests.html#af6b08a2b37be4728dbf0c249180b066c',1,'TestEncordados::Unit::Infrastructure::GlobalExceptionHandlerTests']]],
   ['responsebody_5funauthorized_5fhascorrecterrortype_50',['ResponseBody_Unauthorized_HasCorrectErrorType',['../classTestEncordados_1_1Unit_1_1Infrastructure_1_1GlobalExceptionHandlerTests.html#a9b33848129bc2c4a428493f238a5e03e',1,'TestEncordados::Unit::Infrastructure::GlobalExceptionHandlerTests']]],
-  ['role_51',['role',['../classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a657e922bf2905fabbb4e69244ff9fd5d',1,'BackEncordados.Usuarios.Model.User.Role'],['../PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef',1,'Role:&#160;PurchasedController.cs'],['../PurchasedControllerTests_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef',1,'Role:&#160;PurchasedControllerTests.cs']]],
-  ['role_2eguard_2ets_52',['role.guard.ts',['../role_8guard_8ts.html',1,'']]],
-  ['roles_53',['Estructura de roles',['../index.html#estructura-de-roles',1,'']]],
-  ['roles_2emodel_2ets_54',['roles.model.ts',['../roles_8model_8ts.html',1,'']]],
-  ['roundtrip_5fcreatethenextract_5fproducessamedata_55',['Roundtrip_CreateThenExtract_ProducesSameData',['../classTestEncordados_1_1Integration_1_1Export_1_1Archive_1_1ExportArchiveManagerTests.html#a1b8917e4b2bf18f391991437a565bb89',1,'TestEncordados::Integration::Export::Archive::ExportArchiveManagerTests']]],
-  ['run_56',['Run',['../Program_8cs.html#aaa3dbf02e269c3ef7e8546d290c6b3dd',1,'Program.cs']]],
-  ['runtime_57',['Inyección de variables en runtime',['../md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#inyección-de-variables-en-runtime',1,'']]],
-  ['rutas_20y_20control_20de_20acceso_58',['Rutas y control de acceso',['../md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#rutas-y-control-de-acceso',1,'']]]
+  ['resyncsequencesasync_51',['ResyncSequencesAsync',['../interfaceBackEncordados_1_1Export_1_1Repository_1_1IMaterialsExportRepository.html#a8932aa965aa3eb5f6d4242e604082084',1,'BackEncordados::Export::Repository::IMaterialsExportRepository']]],
+  ['role_52',['role',['../classBackEncordados_1_1Usuarios_1_1Model_1_1User.html#a657e922bf2905fabbb4e69244ff9fd5d',1,'BackEncordados.Usuarios.Model.User.Role'],['../PurchasedController_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef',1,'Role:&#160;PurchasedController.cs'],['../PurchasedControllerTests_8cs.html#a2cca664a5a4cb21c8352e11d88fa47ef',1,'Role:&#160;PurchasedControllerTests.cs']]],
+  ['role_2eguard_2ets_53',['role.guard.ts',['../role_8guard_8ts.html',1,'']]],
+  ['roles_54',['Estructura de roles',['../index.html#estructura-de-roles',1,'']]],
+  ['roles_2emodel_2ets_55',['roles.model.ts',['../roles_8model_8ts.html',1,'']]],
+  ['roundtrip_5fcreatethenextract_5fproducessamedata_56',['Roundtrip_CreateThenExtract_ProducesSameData',['../classTestEncordados_1_1Integration_1_1Export_1_1Archive_1_1ExportArchiveManagerTests.html#a1b8917e4b2bf18f391991437a565bb89',1,'TestEncordados::Integration::Export::Archive::ExportArchiveManagerTests']]],
+  ['run_57',['Run',['../Program_8cs.html#aaa3dbf02e269c3ef7e8546d290c6b3dd',1,'Program.cs']]],
+  ['runtime_58',['Inyección de variables en runtime',['../md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#inyección-de-variables-en-runtime',1,'']]],
+  ['rutas_20y_20control_20de_20acceso_59',['Rutas y control de acceso',['../md__2home_2runner_2work_2docker-enviroment_2docker-enviroment_2front-encordados_2README.html#rutas-y-control-de-acceso',1,'']]]
 ];

@@ -340,12 +340,21 @@ var assemblies = [
       { "name": "BackEncordados.Excel.Dto.ExcelTournamentDto", "rp": "BackEncordados_ExcelTournamentDto.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 39, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Excel.Dto.ExcelUsersDto", "rp": "BackEncordados_ExcelUsersDto.html", "cl": 6, "ucl": 0, "cal": 6, "tl": 31, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Excel.Dto.TournamentExcelRowDto", "rp": "BackEncordados_TournamentExcelRowDto.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "BackEncordados.Excel.Repository.ExcelRepository", "rp": "BackEncordados_ExcelRepository.html", "cl": 146, "ucl": 0, "cal": 146, "tl": 400, "cb": 41, "tb": 42, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "BackEncordados.Excel.Service.ExcelService", "rp": "BackEncordados_ExcelService.html", "cl": 259, "ucl": 0, "cal": 259, "tl": 730, "cb": 68, "tb": 72, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Excel.Mapper.ExcelMapper", "rp": "BackEncordados_ExcelMapper.html", "cl": 19, "ucl": 59, "cal": 78, "tl": 118, "cb": 2, "tb": 22, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Excel.Repository.ExcelRepository", "rp": "BackEncordados_ExcelRepository.html", "cl": 32, "ucl": 0, "cal": 32, "tl": 67, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Excel.Repository.MaterialsExcelRepository", "rp": "BackEncordados_MaterialsExcelRepository.html", "cl": 18, "ucl": 0, "cal": 18, "tl": 33, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Excel.Repository.PedidosExcelRepository", "rp": "BackEncordados_PedidosExcelRepository.html", "cl": 17, "ucl": 1, "cal": 18, "tl": 34, "cb": 1, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Excel.Repository.TalleresExcelRepository", "rp": "BackEncordados_TalleresExcelRepository.html", "cl": 22, "ucl": 0, "cal": 22, "tl": 45, "cb": 6, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Excel.Repository.UserExcelRepository", "rp": "BackEncordados_UserExcelRepository.html", "cl": 21, "ucl": 0, "cal": 21, "tl": 38, "cb": 2, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Excel.Service.ExcelService", "rp": "BackEncordados_ExcelService.html", "cl": 277, "ucl": 1, "cal": 278, "tl": 442, "cb": 83, "tb": 88, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Export.Archive.ExportArchiveManager", "rp": "BackEncordados_ExportArchiveManager.html", "cl": 99, "ucl": 1, "cal": 100, "tl": 348, "cb": 33, "tb": 38, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Export.Controller.ExportController", "rp": "BackEncordados_ExportController.html", "cl": 35, "ucl": 2, "cal": 37, "tl": 223, "cb": 10, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Export.Dto.ExportDataDto", "rp": "BackEncordados_ExportDataDto.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 79, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "BackEncordados.Export.Repository.ExportRepository", "rp": "BackEncordados_ExportRepository.html", "cl": 77, "ucl": 45, "cal": 122, "tl": 374, "cb": 13, "tb": 24, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Export.Repository.ExportRepository", "rp": "BackEncordados_ExportRepository.html", "cl": 34, "ucl": 4, "cal": 38, "tl": 68, "cb": 1, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Export.Repository.MaterialsExportRepository", "rp": "BackEncordados_MaterialsExportRepository.html", "cl": 29, "ucl": 8, "cal": 37, "tl": 71, "cb": 6, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Export.Repository.PedidosExportRepository", "rp": "BackEncordados_PedidosExportRepository.html", "cl": 25, "ucl": 6, "cal": 31, "tl": 61, "cb": 5, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Export.Repository.TalleresExportRepository", "rp": "BackEncordados_TalleresExportRepository.html", "cl": 16, "ucl": 25, "cal": 41, "tl": 72, "cb": 2, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Export.Repository.UserExportRepository", "rp": "BackEncordados_UserExportRepository.html", "cl": 19, "ucl": 2, "cal": 21, "tl": 43, "cb": 3, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Export.Service.ExportService", "rp": "BackEncordados_ExportService.html", "cl": 19, "ucl": 0, "cal": 19, "tl": 144, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.AppConfig", "rp": "BackEncordados_AppConfig.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 126, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.AppConfigExtensions", "rp": "BackEncordados_AppConfigExtensions.html", "cl": 21, "ucl": 2, "cal": 23, "tl": 163, "cb": 15, "tb": 18, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -363,7 +372,7 @@ var assemblies = [
       { "name": "BackEncordados.Infraestructure.Migrations.MaterialsDbContextFactory", "rp": "BackEncordados_MaterialsDbContextFactory.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 17, "cb": 0, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.Migrations.UserDbContextFactory", "rp": "BackEncordados_UserDbContextFactory.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 17, "cb": 0, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.RateLimitConfig", "rp": "BackEncordados_RateLimitConfig.html", "cl": 10, "ucl": 34, "cal": 44, "tl": 71, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "BackEncordados.Infraestructure.RepositoriesConfig", "rp": "BackEncordados_RepositoriesConfig.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 100, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BackEncordados.Infraestructure.RepositoriesConfig", "rp": "BackEncordados_RepositoriesConfig.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 108, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.SerilogConfig", "rp": "BackEncordados_SerilogConfig.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 28, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.ServicesConfig", "rp": "BackEncordados_ServicesConfig.html", "cl": 15, "ucl": 0, "cal": 15, "tl": 145, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BackEncordados.Infraestructure.SignalRExtensions", "rp": "BackEncordados_SignalRExtensions.html", "cl": 10, "ucl": 0, "cal": 10, "tl": 103, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -533,9 +542,21 @@ var riskHotspots = [
       { "value": 18, "exceeded": true },
     ]},
   {
+    "assembly": "BackEncordados", "class": "BackEncordados.Excel.Mapper.ExcelMapper", "reportPath": "BackEncordados_ExcelMapper.html", "methodName": "ToExcelPedidoLineasDto(BackEncordados.Purchased.Model.PedidoLinea)", "methodShortName": "ToExcelPedidoLineasDto(...)", "fileIndex": 0, "line": 86,
+    "metrics": [
+      { "value": 272, "exceeded": true },
+      { "value": 16, "exceeded": true },
+    ]},
+  {
     "assembly": "BackEncordados", "class": "Microsoft.AspNetCore.OpenApi.Generated", "reportPath": "BackEncordados_Generated.html", "methodName": "CreateDocumentationId(System.Reflection.PropertyInfo)", "methodShortName": "CreateDocumentationId(...)", "fileIndex": 0, "line": 101,
     "metrics": [
       { "value": 110, "exceeded": true },
+      { "value": 10, "exceeded": false },
+    ]},
+  {
+    "assembly": "BackEncordados", "class": "BackEncordados.Export.Repository.TalleresExportRepository", "reportPath": "BackEncordados_TalleresExportRepository.html", "methodName": "ImportTournamentsAsync()", "methodShortName": "ImportTournamentsAsync()", "fileIndex": 0, "line": 39,
+    "metrics": [
+      { "value": 86, "exceeded": true },
       { "value": 10, "exceeded": false },
     ]},
   {
@@ -543,12 +564,6 @@ var riskHotspots = [
     "metrics": [
       { "value": 69, "exceeded": true },
       { "value": 14, "exceeded": false },
-    ]},
-  {
-    "assembly": "BackEncordados", "class": "BackEncordados.Export.Repository.ExportRepository", "reportPath": "BackEncordados_ExportRepository.html", "methodName": "ImportDataAsync()", "methodShortName": "ImportDataAsync()", "fileIndex": 0, "line": 289,
-    "metrics": [
-      { "value": 61, "exceeded": true },
-      { "value": 18, "exceeded": true },
     ]},
   {
     "assembly": "BackEncordados", "class": "BackEncordados.Materials.Repository.Strings.CuerdasRepository", "reportPath": "BackEncordados_CuerdasRepository.html", "methodName": "FindAllAsync()", "methodShortName": "FindAllAsync()", "fileIndex": 0, "line": 50,
@@ -611,6 +626,12 @@ var riskHotspots = [
       { "value": 26, "exceeded": true },
     ]},
   {
+    "assembly": "BackEncordados", "class": "BackEncordados.Excel.Service.ExcelService", "reportPath": "BackEncordados_ExcelService.html", "methodName": "ExportAdvancedAsync()", "methodShortName": "ExportAdvancedAsync()", "fileIndex": 0, "line": 62,
+    "metrics": [
+      { "value": 24, "exceeded": false },
+      { "value": 24, "exceeded": true },
+    ]},
+  {
     "assembly": "BackEncordados", "class": "BackEncordados.Export.Archive.ExportArchiveManager", "reportPath": "BackEncordados_ExportArchiveManager.html", "methodName": "ExtractZipAsync()", "methodShortName": "ExtractZipAsync()", "fileIndex": 0, "line": 233,
     "metrics": [
       { "value": 24, "exceeded": false },
@@ -659,7 +680,7 @@ var riskHotspots = [
       { "value": 20, "exceeded": true },
     ]},
   {
-    "assembly": "BackEncordados", "class": "BackEncordados.Excel.Service.ExcelService", "reportPath": "BackEncordados_ExcelService.html", "methodName": "ImportAsync()", "methodShortName": "ImportAsync()", "fileIndex": 0, "line": 258,
+    "assembly": "BackEncordados", "class": "BackEncordados.Excel.Service.ExcelService", "reportPath": "BackEncordados_ExcelService.html", "methodName": "ImportAsync()", "methodShortName": "ImportAsync()", "fileIndex": 0, "line": 132,
     "metrics": [
       { "value": 18, "exceeded": false },
       { "value": 18, "exceeded": true },
@@ -683,7 +704,7 @@ var riskHotspots = [
       { "value": 16, "exceeded": true },
     ]},
   {
-    "assembly": "BackEncordados", "class": "BackEncordados.Excel.Service.ExcelService", "reportPath": "BackEncordados_ExcelService.html", "methodName": "ImportPedidosAsync()", "methodShortName": "ImportPedidosAsync()", "fileIndex": 0, "line": 642,
+    "assembly": "BackEncordados", "class": "BackEncordados.Excel.Service.ExcelService", "reportPath": "BackEncordados_ExcelService.html", "methodName": "ImportPedidosAsync()", "methodShortName": "ImportPedidosAsync()", "fileIndex": 0, "line": 354,
     "metrics": [
       { "value": 16, "exceeded": false },
       { "value": 16, "exceeded": true },

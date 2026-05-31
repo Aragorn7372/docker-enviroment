@@ -1,3 +1,5 @@
 <map id="Gráfico de jerarquía de clases" name="Gráfico de jerarquía de clases">
-<area shape="rect" id="Node000000" href="$interfaceBackEncordados_1_1Purchased_1_1Repository_1_1IPuchasedRepository.html" title="Defines data&#45;access contracts for the Purchased (pedidos) aggregate, covering both top&#45;level order op..." alt="" coords="5,5,236,45"/>
+<area shape="rect" id="Node000000" href="$interfaceBackEncordados_1_1Materials_1_1Repository_1_1IProductsRepository.html" title=" " alt="" coords="5,5,229,60"/>
+<area shape="rect" id="Node000001" href="$interfaceBackEncordados_1_1Materials_1_1Repository_1_1Strings_1_1ICuerdasRepository.html" title="Interfaz del repositorio específico para Cuerdas." alt="" coords="277,13,548,53"/>
+<area shape="poly" id="edge21_Node000000_Node000001" title=" " alt="" coords="243,30,277,30,277,35,243,35"/>
 </map>

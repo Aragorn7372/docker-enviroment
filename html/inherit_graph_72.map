@@ -1,3 +1,7 @@
 <map id="Gráfico de jerarquía de clases" name="Gráfico de jerarquía de clases">
-<area shape="rect" id="Node000000" href="$classTestEncordados_1_1Integration_1_1Excel_1_1Archive_1_1ExcelArchiveManagerTests.html" title=" " alt="" coords="5,5,293,45"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,45,225,70"/>
+<area shape="rect" id="Node000001" href="$classBackEncordados_1_1Infraestructure_1_1Migrations_1_1MaterialsDbContextFactory.html" title=" " alt="" coords="273,5,545,45"/>
+<area shape="poly" id="edge34_Node000000_Node000001" title=" " alt="" coords="239,41,273,37,273,43,239,47"/>
+<area shape="rect" id="Node000002" href="$classBackEncordados_1_1Infraestructure_1_1Migrations_1_1UserDbContextFactory.html" title=" " alt="" coords="289,69,530,109"/>
+<area shape="poly" id="edge35_Node000000_Node000002" title=" " alt="" coords="239,68,289,74,288,79,239,73"/>
 </map>

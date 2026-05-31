@@ -66,7 +66,11 @@ var annotated_dup =
           [ "TournamentExcelRowDto", "classBackEncordados_1_1Excel_1_1Dto_1_1TournamentExcelRowDto.html", "classBackEncordados_1_1Excel_1_1Dto_1_1TournamentExcelRowDto" ]
         ] ],
         [ "Repository", "namespaceBackEncordados_1_1Excel_1_1Repository.html", [
-          [ "IExcelRepository", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository" ]
+          [ "IExcelRepository", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository.html", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IExcelRepository" ],
+          [ "IMaterialsExcelRepository", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IMaterialsExcelRepository.html", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IMaterialsExcelRepository" ],
+          [ "IPedidosExcelRepository", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IPedidosExcelRepository.html", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IPedidosExcelRepository" ],
+          [ "ITalleresExcelRepository", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1ITalleresExcelRepository.html", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1ITalleresExcelRepository" ],
+          [ "IUserExcelRepository", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IUserExcelRepository.html", "interfaceBackEncordados_1_1Excel_1_1Repository_1_1IUserExcelRepository" ]
         ] ],
         [ "Service", "namespaceBackEncordados_1_1Excel_1_1Service.html", [
           [ "IExcelService", "interfaceBackEncordados_1_1Excel_1_1Service_1_1IExcelService.html", "interfaceBackEncordados_1_1Excel_1_1Service_1_1IExcelService" ]
@@ -80,7 +84,11 @@ var annotated_dup =
           [ "ExportDataDto", "classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto.html", "classBackEncordados_1_1Export_1_1Dto_1_1ExportDataDto" ]
         ] ],
         [ "Repository", "namespaceBackEncordados_1_1Export_1_1Repository.html", [
-          [ "IExportRepository", "interfaceBackEncordados_1_1Export_1_1Repository_1_1IExportRepository.html", "interfaceBackEncordados_1_1Export_1_1Repository_1_1IExportRepository" ]
+          [ "IExportRepository", "interfaceBackEncordados_1_1Export_1_1Repository_1_1IExportRepository.html", "interfaceBackEncordados_1_1Export_1_1Repository_1_1IExportRepository" ],
+          [ "IMaterialsExportRepository", "interfaceBackEncordados_1_1Export_1_1Repository_1_1IMaterialsExportRepository.html", "interfaceBackEncordados_1_1Export_1_1Repository_1_1IMaterialsExportRepository" ],
+          [ "IPedidosExportRepository", "interfaceBackEncordados_1_1Export_1_1Repository_1_1IPedidosExportRepository.html", "interfaceBackEncordados_1_1Export_1_1Repository_1_1IPedidosExportRepository" ],
+          [ "ITalleresExportRepository", "interfaceBackEncordados_1_1Export_1_1Repository_1_1ITalleresExportRepository.html", "interfaceBackEncordados_1_1Export_1_1Repository_1_1ITalleresExportRepository" ],
+          [ "IUserExportRepository", "interfaceBackEncordados_1_1Export_1_1Repository_1_1IUserExportRepository.html", "interfaceBackEncordados_1_1Export_1_1Repository_1_1IUserExportRepository" ]
         ] ],
         [ "Service", "namespaceBackEncordados_1_1Export_1_1Service.html", [
           [ "IExportService", "interfaceBackEncordados_1_1Export_1_1Service_1_1IExportService.html", "interfaceBackEncordados_1_1Export_1_1Service_1_1IExportService" ]

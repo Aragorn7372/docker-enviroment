@@ -1,13 +1,3 @@
 <map id="Gráfico de jerarquía de clases" name="Gráfico de jerarquía de clases">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,171,89,196"/>
-<area shape="rect" id="Node000001" href="$classBackEncordados_1_1Migrations_1_1Materials_1_1AddUniqueIndexesMaterialsAndCuerdas.html" title=" " alt="" coords="140,5,409,60"/>
-<area shape="poly" id="edge37_Node000000_Node000001" title=" " alt="" coords="60,157,90,112,112,89,136,69,156,58,158,62,139,74,115,93,95,116,64,160"/>
-<area shape="rect" id="Node000002" href="$classBackEncordados_1_1Migrations_1_1Materials_1_1DropUniqueIndexesMaterialsAndCuerdas.html" title=" " alt="" coords="137,84,412,139"/>
-<area shape="poly" id="edge38_Node000000_Node000002" title=" " alt="" coords="95,163,136,149,177,136,178,141,138,154,96,168"/>
-<area shape="rect" id="Node000003" href="$classBackEncordados_1_1Migrations_1_1Materials_1_1FixIdentitySequences.html" title=" " alt="" coords="161,163,388,203"/>
-<area shape="poly" id="edge39_Node000000_Node000003" title=" " alt="" coords="103,181,161,181,161,186,103,186"/>
-<area shape="rect" id="Node000004" href="$classBackEncordados_1_1Migrations_1_1Materials_1_1InitialCreate.html" title=" " alt="" coords="171,227,378,267"/>
-<area shape="poly" id="edge40_Node000000_Node000004" title=" " alt="" coords="95,198,138,213,182,225,181,230,137,218,93,203"/>
-<area shape="rect" id="Node000005" href="$classBackEncordados_1_1Migrations_1_1User_1_1InitialCreate.html" title=" " alt="" coords="171,291,378,331"/>
-<area shape="poly" id="edge41_Node000000_Node000005" title=" " alt="" coords="66,206,97,243,117,262,139,277,172,292,170,297,136,282,113,266,93,247,62,209"/>
+<area shape="rect" id="Node000000" href="$interfaceBackEncordados_1_1Usuarios_1_1Service_1_1Auth_1_1IJwtService.html" title="Servicio para generación y validación de tokens JWT." alt="" coords="5,5,200,45"/>
 </map>
