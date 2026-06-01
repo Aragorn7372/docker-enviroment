@@ -195,6 +195,10 @@ jobs:
 
       - name: Start API server in background
         working-directory: back-encordados/BackEncordados
+        env:
+          Cloudinary__CloudName: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          Cloudinary__ApiKey: ${{ secrets.CLOUDINARY_API_KEY }}
+          Cloudinary__ApiSecret: ${{ secrets.CLOUDINARY_API_SECRET }}
         run: |
           dotnet run --urls "http://localhost:5032" &>/tmp/api.log &
           for i in $(seq 1 30); do
