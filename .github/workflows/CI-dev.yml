@@ -154,18 +154,106 @@ jobs:
       - name: Upload coverage report as artifact
         uses: actions/upload-artifact@v4
         with:
-            name: coverage-report
-            path: back-encordados/coverage-report
+          name: coverage-report
+          path: back-encordados/coverage-report
+
+  integration-test:
+    needs: build-back
+    runs-on: ubuntu-latest
+    env:
+      LANG: es_ES.UTF-8
+      LC_ALL: es_ES.UTF-8
+
+    steps:
+      - name: Install Spanish locale
+        run: |
+          sudo locale-gen es_ES.UTF-8
+          sudo update-locale LANG=es_ES.UTF-8 LC_ALL=es_ES.UTF-8
+
+      - name: Checkout monorepo
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          submodules: false
+
+      - name: Checkout back-encordados submodule
+        run: |
+          git clone --branch dev \
+            https://x-access-token:${{ secrets.BACKEND_REPO_PAT }}@github.com/Aragorn7372/back-encordados.git \
+            back-encordados
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Restore & Build API
+        working-directory: back-encordados
+        run: |
+          dotnet restore BackEncordados.slnx
+          dotnet build BackEncordados.slnx --no-restore -c Release
+
+      - name: Start API server in background
+        working-directory: back-encordados/BackEncordados
+        run: |
+          dotnet run --urls "http://localhost:5032" &>/tmp/api.log &
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:5032/health >/dev/null 2>&1; then
+              echo "API ready on :5032"
+              break
+            fi
+            echo "Waiting for API... ($((i*2))s)"
+            sleep 2
+          done
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Bruno CLI
+        run: npm install -g @usebruno/cli
+
+      - name: Run Bruno integration tests
+        working-directory: back-encordados/bruno-cli
+        run: |
+          bru run \
+            --env local \
+            --output ../../bruno-integration-report \
+            --format html
+
+      - name: Upload Bruno report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bruno-integration-report
+          path: bruno-integration-report
+
+  deploy-reports:
+    needs: [test-back, integration-test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout dev-test branch
+        uses: actions/checkout@v4
+        with:
+          ref: dev-test
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download coverage report
         uses: actions/download-artifact@v4
         with:
-            name: coverage-report
-            path: generated/coverage
+          name: coverage-report
+          path: generated/coverage
 
-      - name: Deploy to dev-test branch
+      - name: Download Bruno report
+        uses: actions/download-artifact@v4
+        with:
+          name: bruno-integration-report
+          path: generated/bruno
+
+      - name: Deploy both reports to dev-test
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-            folder: generated
-            branch: dev-test
-            token: ${{ secrets.GITHUB_TOKEN }}
+          folder: generated
+          branch: dev-test
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Deploy coverage & Bruno test reports [skip ci]"
