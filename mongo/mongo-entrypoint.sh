@@ -40,37 +40,53 @@ fi
 sleep 2
 
 echo "[3] Verificando/inicializando Replica Set..."
+CONTAINER_HOSTNAME=$(hostname)
 RS_STATUS=$(mongosh --quiet --eval "try { rs.status().ok } catch (e) { 0 }")
+STORED_CONFIG=$(mongosh --quiet --eval "db.getSiblingDB('local').getCollection('system.replset').countDocuments()")
 
 if [ "$RS_STATUS" = "1" ]; then
     echo "      Replica Set ya está inicializado"
-else
-    echo "      Inicializando Replica Set $REPLICA_SET_NAME..."
-    CONTAINER_HOSTNAME=$(hostname)
-    mongosh --quiet --eval "rs.initiate({_id: '$REPLICA_SET_NAME', members: [{_id: 0, host: '$CONTAINER_HOSTNAME:27017'}]})"
-    
-    echo "      Esperando a que el nodo sea PRIMARY..."
-    sleep 5
-    
-    MAX_WAIT=30
-    WAIT=0
-    while [ $WAIT -lt $MAX_WAIT ]; do
-        STATE=$(mongosh --quiet --quiet --eval "try { rs.status().members[0].stateStr } catch (e) { 'NOT_READY' }")
-        if [ "$STATE" = "PRIMARY" ]; then
-            echo "      ✓ Nodo PRIMARY listo"
+elif [ "$STORED_CONFIG" != "0" ]; then
+    # La config vive en el volumen: si cambia el hostname, este nodo deja de ser miembro
+    # y rs.initiate falla porque el replica set ya existe. Hay que reconfigurarlo.
+    echo "      Replica Set con otro hostname, reconfigurando a $CONTAINER_HOSTNAME..."
+    # mongod tarda unos segundos en cargar la config guardada: hasta entonces el comando falla
+    for ATTEMPT in $(seq 1 30); do
+        if mongosh --quiet --eval "
+          var cfg = db.getSiblingDB('local').getCollection('system.replset').findOne();
+          cfg.members[0].host = '$CONTAINER_HOSTNAME:27017';
+          var result = db.adminCommand({replSetReconfig: cfg, force: true});
+          if (!result.ok) throw new Error(result.errmsg);
+        " &>/dev/null; then
+            echo "      Reconfigurado"
             break
         fi
-        echo "      Estado: $STATE (esperando...)"
         sleep 2
-        WAIT=$((WAIT + 1))
     done
+else
+    echo "      Inicializando Replica Set $REPLICA_SET_NAME..."
+    mongosh --quiet --eval "rs.initiate({_id: '$REPLICA_SET_NAME', members: [{_id: 0, host: '$CONTAINER_HOSTNAME:27017'}]})"
 fi
+
+echo "      Esperando a que el nodo sea PRIMARY..."
+MAX_WAIT=30
+WAIT=0
+while [ $WAIT -lt $MAX_WAIT ]; do
+    STATE=$(mongosh --quiet --eval "try { rs.status().members[0].stateStr } catch (e) { 'NOT_READY' }")
+    if [ "$STATE" = "PRIMARY" ]; then
+        echo "      ✓ Nodo PRIMARY listo"
+        break
+    fi
+    echo "      Estado: $STATE (esperando...)"
+    sleep 2
+    WAIT=$((WAIT + 1))
+done
 
 echo "[4] Creando usuario en admin DB..."
 mongosh --quiet --eval "
 var adminDb = db.getSiblingDB('admin');
 if (!adminDb.getUser('$MONGO_USER')) {
-  adminDb.createUser({
+  adminDb.createUser({ 
     user: '$MONGO_USER',
     pwd: '$MONGO_PASSWORD',
     roles: [{role: 'root', db: 'admin'}]

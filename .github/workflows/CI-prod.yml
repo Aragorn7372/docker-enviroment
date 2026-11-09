@@ -39,22 +39,24 @@ jobs:
           submodules: false
 
       - name: Checkout front-encordados submodule
-        run: git clone --branch main https://x-access-token:${{ secrets.FRONTEND_REPO_PAT }}@github.com/JorgeMrj/front-encordados.git front-encordados
+        run: git clone --branch main https://x-access-token:${{ secrets.FRONTEND_REPO_PAT }}@github.com/Aragorn7372/front-encordados.git front-encordados
 
-      - name: Setup Node.js
+      # Front nuevo (Angular 22): pide Node ^22.22.3 o ^24.15. El CI de prod completo (lint,
+      # unitarios y e2e como en CI-dev) queda pendiente (ENCUERDATU-55)
+      - name: Setup Node.js 24
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
           cache-dependency-path: front-encordados/package-lock.json
 
       - name: Install dependencies
         working-directory: front-encordados
-        run: npm ci --legacy-peer-deps
+        run: npm ci
 
       - name: Build Angular (production)
         working-directory: front-encordados
-        run: npm run build -- --configuration production
+        run: npm run build
 
   build-back:
     needs: check-branch
@@ -234,7 +236,7 @@ jobs:
         run: git clone --branch main https://x-access-token:${{ secrets.BACKEND_REPO_PAT }}@github.com/Aragorn7372/back-encordados.git back-encordados
 
       - name: Checkout front-encordados submodule
-        run: git clone --branch main https://x-access-token:${{ secrets.FRONTEND_REPO_PAT }}@github.com/JorgeMrj/front-encordados.git front-encordados
+        run: git clone --branch main https://x-access-token:${{ secrets.FRONTEND_REPO_PAT }}@github.com/Aragorn7372/front-encordados.git front-encordados
 
       - name: Setup .NET 10
         uses: actions/setup-dotnet@v4

@@ -48,7 +48,7 @@ El proyecto está estructurado como un **monorepo con submódulos Git**:
 | Submódulo | Repositorio | Rol principal |
 |-----------|-------------|---------------|
 | `back-encordados` | [Aragorn7372/back-encordados](https://github.com/Aragorn7372/back-encordados) | API REST + SignalR (.NET 10) |
-| `front-encordados` | [JorgeMrj/front-encordados](https://github.com/JorgeMrj/front-encordados) | SPA Angular 21 (PWA) |
+| `front-encordados` | [Aragorn7372/front-encordados](https://github.com/Aragorn7372/front-encordados) | SPA Angular 22 (PWA) |
 
 Cada submódulo tiene su propio pipeline CI que notifica al repositorio padre mediante `repository_dispatch`.
 
@@ -79,10 +79,10 @@ Cada submódulo tiene su propio pipeline CI que notifica al repositorio padre me
 ```
 docker-enviroment/
 ├── back-encordados/        # API REST + SignalR (.NET 10)
-├── front-encordados/       # SPA Angular 21 (PWA)
+├── front-encordados/       # SPA Angular 22 (PWA)
 ├── nginx/                  # Reverse proxy (HTTPS, HTTP→HTTPS redirect)
 │   ├── nginx.conf          # Enruta /api/* → backend, /* → frontend
-│   └── certs/              # Certificados SSL (auto-firmados para desarrollo)
+│   └── certs/              # Certificados SSL de desarrollo (se generan, no se suben)
 ├── mongo/                  # Script de inicialización de Replica Set MongoDB
 ├── .github/workflows/      # CI: build + test + cobertura automática
 └── docker-compose.yml      # Orquestación completa del entorno
@@ -248,7 +248,7 @@ El archivo `.env.example` contiene todas las variables necesarias. Las más impo
 
 | Problema | Causa posible | Solución |
 |----------|---------------|----------|
-| `https://localhost` no carga | Certificados SSL no generados | Regenera con `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx/certs/llave.key -out nginx/certs/cert.crt` |
+| `https://localhost` no carga | Certificados SSL no generados (no están en el repo: `nginx/certs/` se ignora) | Con [mkcert](https://github.com/FiloSottile/mkcert), de confianza para el navegador y sin aviso de HSTS en `.dev`: `mkcert -install` y `mkcert -cert-file nginx/certs/cert.crt -key-file nginx/certs/llave.key www.encordados.dev localhost 127.0.0.1`. O autofirmado: `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx/certs/llave.key -out nginx/certs/cert.crt` |
 | MongoDB no arranca | Replica Set no inicializado | Revisa los logs de `mongo_pedidos` / `mongo_talleres`; el entrypoint lo configura automáticamente |
 | Backend no conecta a BD | Variables de entorno incorrectas | Verifica que las URLs en `.env` coincidan con los nombres de servicio en `docker-compose.yml` |
 | Tests fallan con `DbUpdateConcurrencyException` | Datos residuales en SQLite InMemory | Limpia `TestResults/` y reintenta |
@@ -265,8 +265,9 @@ El archivo `.env.example` contiene todas las variables necesarias. Las más impo
    ```bash
    # Backend
    dotnet test back-encordados/TestEncordados/TestEncordados.csproj -c Release
-   # Frontend
-   npm --prefix front-encordados run test
+   # Frontend: unitarios (Vitest) y e2e (Playwright, ver front-encordados/README.md)
+   npm --prefix front-encordados run test -- --watch=false
+   npm --prefix front-encordados run build && npm --prefix front-encordados run e2e
    ```
 5. Abre un Pull Request contra `dev`
 
