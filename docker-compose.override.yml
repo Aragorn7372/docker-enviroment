@@ -1,0 +1,6 @@
+# Solo desarrollo: Compose carga este fichero automáticamente.
+# Publica el backend para que el proxy de `ng serve` (proxy.conf.json) pueda llegar a él.
+services:
+  backend:
+    ports:
+      - "5032:80"
