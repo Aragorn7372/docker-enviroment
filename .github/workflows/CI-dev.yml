@@ -78,6 +78,10 @@ jobs:
         with:
           name: front-unit-report
           path: front/.vitest
+          # .vitest es una carpeta oculta: upload-artifact@v4 no sube ficheros ocultos si no se pide,
+          # y sin este informe fallaba el deploy-reports ("Artifact not found")
+          include-hidden-files: true
+          if-no-files-found: error
 
   # ============================================
   # Front: e2e (Playwright, 2 workers) contra el back con bases de datos en memoria
